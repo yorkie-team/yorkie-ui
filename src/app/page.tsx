@@ -1,11 +1,21 @@
 'use client';
-import { Container } from '@styled/jsx';
+import { Container, Flex } from '@styled/jsx';
 import { Button } from '@components/ui';
 
 export default function Home() {
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
-      <Button size="md">Hello Park UI</Button>
+      <Flex gap="3">
+        <Button colorPalette="red" variant="solid">
+          Button
+        </Button>
+        <Button colorPalette="red" variant="outline">
+          Button
+        </Button>
+        <Button colorPalette="red" variant="ghost">
+          Button
+        </Button>
+      </Flex>
     </Container>
   );
 }

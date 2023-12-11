@@ -42,5 +42,5 @@ npm run storybook
 6. Run for app
 
 ```sh
-npm run start
+npm run dev
 ```
