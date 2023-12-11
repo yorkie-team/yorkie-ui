@@ -4,7 +4,7 @@ Welcome to the Yorkie UI component library!
 
 ## Coding Convention
 
-Use ESLint and Prettier, Stylelint to write consitent code and improve code quality. We use React and TypeScript standard lint rules. For details, refer to the [ESLint configuration file](./.eslintrc.js), [Prettier configuration file](./prettier.config.js), [Stylelint configuration file](./.stylelint).
+Use ESLint and Prettier, Stylelint to write consitent code and improve code quality. We use React and TypeScript standard lint rules. For details, refer to the [ESLint configuration file](./.eslintrc.json), [Prettier configuration file](./prettier.config.js), [Stylelint configuration file](./.stylelintrc.json).
 
 Run check eslint and stylelint
 
