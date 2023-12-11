@@ -1,4 +1,3 @@
-
 # Yorkie UI Poc
 
 Welcome to the Yorkie UI component library!
@@ -15,7 +14,7 @@ npm run lint
 
 ## Steps to configure Development Environment
 
-1. Install [Node.js LTS](https://nodejs.org/en/)  > 18.17.0
+1. Install Node > 18.17.0
 2. Install npm
 
 ```sh
@@ -28,7 +27,7 @@ npm install
 npm run prepare
 ```
 
-3. Run build app
+4. Run build app
 
 ```sh
 npm run build
@@ -40,7 +39,7 @@ npm run build
 npm run storybook
 ```
 
-5. Run for app
+6. Run for app
 
 ```sh
 npm run start
