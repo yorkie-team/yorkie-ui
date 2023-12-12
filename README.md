@@ -21,7 +21,7 @@ npm run lint
 npm install
 ```
 
-3. Run build styled system (panda css)
+3. Run build styled system (Park UI + Panda Css)
 
 ```sh
 npm run prepare
