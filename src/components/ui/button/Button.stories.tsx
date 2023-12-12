@@ -13,20 +13,6 @@ export const Overview: Story = {
   args: {
     children: 'Default',
   },
-  argTypes: {
-    size: {
-      control: {
-        type: 'select',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
-      },
-    },
-    variant: {
-      control: {
-        type: 'select',
-        options: ['link', 'outline', 'ghost', 'fill'],
-      },
-    },
-  },
 };
 // Examples
 export const Basic: Story = {
