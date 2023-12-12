@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@ark-ui/react": "^1.1.0",
+    "@storybook/addon-docs": "^7.6.4",
+    "@storybook/builder-webpack5": "^7.6.4",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
