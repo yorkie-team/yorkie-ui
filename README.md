@@ -24,7 +24,7 @@ npm install
 3. Run build styled system (Park UI + Panda Css)
 
 ```sh
-npm run prepare
+npm run style
 ```
 
 4. Run build app
