@@ -4,6 +4,16 @@ import { Button } from '@components/ui';
 const meta = {
   title: 'Form / Button',
   component: Button,
+  argTypes: {
+    size: {
+      control: { type: 'radio' },
+      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+    },
+    variant: {
+      control: { type: 'radio' },
+      options: ['link', 'outline', 'ghost', 'fill'],
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
