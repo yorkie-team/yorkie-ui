@@ -1,5 +1,14 @@
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import type { AddonOptionsBabel } from '@storybook/addon-coverage';
+
+const coverageConfig: AddonOptionsBabel = {
+  istanbul: {
+    include: ['**/src/*'],
+    exclude: ['**/styled-system/**'],
+    excludeNodeModules: true,
+  },
+};
 
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -10,6 +19,12 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
+    {
+      name: '@storybook/addon-coverage',
+      options: {
+        ...coverageConfig,
+      },
+    },
   ],
   framework: {
     name: '@storybook/nextjs',
