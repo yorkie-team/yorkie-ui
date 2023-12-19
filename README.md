@@ -44,3 +44,19 @@ npm run storybook
 ```sh
 npm run dev
 ```
+
+## Test Coverage
+
+Run test
+
+```sh
+npm run test-storybook -- --coverage
+```
+
+
+
+Run report
+
+```sh
+npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook
+```
