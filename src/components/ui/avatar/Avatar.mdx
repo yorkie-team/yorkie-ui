@@ -1,0 +1,101 @@
+# Avatar
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Examples](#examples)
+
+## Overview
+
+A graphical representation of the user, often used in profile sections.
+
+<Canvas
+  of={AvatarStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Avatar size="md">
+        <AvatarFallback>PA</AvatarFallback>
+        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar>
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Usage
+
+There are 6 sizes: `xs`, `sm`, `md` (default), `lg`, `xl`, `2xl`.
+
+If `AvatarImage`'s src is error or undefined then `AvatarFallback` will be displayed by default.
+
+<Source format={true} code={`
+  <Avatar size="md">
+    <AvatarFallback>PA</AvatarFallback>
+    <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
+  </Avatar>
+`} />
+
+## Examples
+
+### Default
+
+Default has `size='md'`.
+
+<Canvas
+  of={AvatarStories.AvatarMd}
+  source={{
+    format: true,
+    code: `
+      <Avatar size="md">
+        <AvatarFallback>PA</AvatarFallback>
+        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar>
+    `,
+  }}
+/>
+
+### Sizes
+
+<Canvas
+source={{
+    format: true,
+    code: `
+      <Avatar size="md">
+        <AvatarFallback>PA</AvatarFallback>
+        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar>
+    `,
+  }}
+  >
+  <Story of={AvatarStories.AvatarXs} />
+  <Story of={AvatarStories.AvatarSm} />
+  <Story of={AvatarStories.AvatarMd} />
+  <Story of={AvatarStories.AvatarLg} />
+  <Story of={AvatarStories.AvatarXl} />
+  <Story of={AvatarStories.Avatar2xl} />
+</Canvas>
+
+
+### With Error Image
+
+<Canvas
+  of={AvatarStories.WithErrorImage}
+  source={{
+    format: true,
+    code: `
+      <Avatar size="md">
+        <AvatarFallback>PA</AvatarFallback>
+        <AvatarImage src="" alt="avatar" />
+      </Avatar>
+    `,
+  }}
+/>
