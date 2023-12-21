@@ -1,0 +1,42 @@
+# Button
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+- [Usage](#usage)
+
+## Overview
+
+Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
+
+<Canvas of={ButtonStories.Overview} />
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Button Variant](#button-kinds)
+
+There are 4 types: `link`, `outline`, `solid` and `ghost`.
+
+<Canvas
+  of={ButtonStories.Basic}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button variant="link">Fill</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="solid">Outline</Button>
+        <Button variant="ghost">Outline</Button>
+      </div>
+    `,
+  }}
+/>
