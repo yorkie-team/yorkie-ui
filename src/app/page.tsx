@@ -1,6 +1,6 @@
 'use client';
-import { Container, Flex } from '@styled/jsx';
-import { Button } from '@components/ui';
+import { Container, Flex } from '@/styled/jsx';
+import { Button } from '@/components/ui';
 
 export default function Home() {
   return (

@@ -20,10 +20,10 @@
       }
     ],
     "baseUrl": ".",
+    "outDir": "ts-build",
     "paths": {
-      "@/*": ["./src"],
-      "@styled/*": ["./styled-system/*"],
-      "@components/*": ["./src/components/*"]
+      "@/styled/*": ["./styled-system/*"],
+      "@/components/*": ["./src/components/*"]
     }
   },
   "include": [
