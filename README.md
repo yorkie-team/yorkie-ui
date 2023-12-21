@@ -21,10 +21,10 @@ npm run lint
 npm install
 ```
 
-3. Run build styled system (panda css)
+3. Run build styled system (Park UI + Panda Css)
 
 ```sh
-npm run prepare
+npm run style
 ```
 
 4. Run build app
@@ -43,4 +43,20 @@ npm run storybook
 
 ```sh
 npm run dev
+```
+
+## Test Coverage
+
+Run test
+
+```sh
+npm run test-storybook -- --coverage
+```
+
+
+
+Run report
+
+```sh
+npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook
 ```
