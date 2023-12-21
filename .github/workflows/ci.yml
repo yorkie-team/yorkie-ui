@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: ['main']
   workflow_dispatch:
+    inputs:
+      notify:
+        description: 'Notify on failure'
+        default: 'false'
 
 jobs:
   build:
