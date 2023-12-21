@@ -18,7 +18,8 @@
     "@storybook/builder-webpack5": "^7.6.4",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-jsx": "^5.1.2"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.21.0",
