@@ -19,8 +19,7 @@
     "@storybook/mdx2-csf": "^1.1.0",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18",
-    "styled-jsx": "^5.1.2"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.21.0",
@@ -49,6 +48,8 @@
     "storybook": "^7.6.3",
     "stylelint": "^16.0.1",
     "stylelint-config-standard": "^35.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0"
   }
 }
