@@ -1,5 +1,6 @@
 import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@components/ui/avatar/AvatarSlotRecipes';
+import { checkboxSlotRecipe } from '@components/ui/checkbox/CheckboxSlotRecipes';
 
 export default defineConfig({
   preflight: true,
@@ -10,6 +11,7 @@ export default defineConfig({
     extend: {
       slotRecipes: {
         avatar: avatarSlotRecipe,
+        checkbox: checkboxSlotRecipe,
       },
     },
   },

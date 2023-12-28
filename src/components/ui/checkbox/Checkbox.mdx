@@ -1,0 +1,196 @@
+# Checkbox
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Examples](#examples)
+
+## Overview
+
+A control element that allows for multiple selections within a set.
+
+<Canvas
+  of={CheckboxStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root>
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
+
+## Controls
+
+<Controls />
+
+## Usage
+
+A `Checkbox` consists of some properties:
+- `size`
+- `defaultChecked`
+- `checked="indeterminate"`
+- `colorPalette`
+- `disabled`
+
+The following code shows how you can use the `Checkbox` component:
+
+<Source format={true} code={`
+  <Checkbox.Root>
+    {(state) => (
+      <>
+        <Checkbox.Control>
+          {state.isChecked && <CheckIcon />}
+          {state.isIndeterminate && <MinusIcon />}
+        </Checkbox.Control>
+        <Checkbox.Label>Label</Checkbox.Label>
+      </>
+    )}
+  </Checkbox.Root>
+`} />
+
+## Examples
+
+### Default
+
+Default checkbox is unchecked in the initial render, has `size="md"` and `colorPalette="accent"`.
+
+<Canvas
+  of={CheckboxStories.Default}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root {...args}>
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
+
+### Sizes
+
+Using the `size` prop to change the icon's size. There are 3 sizes: `sm`, `md` (default), and `lg`.
+
+<Canvas>
+  <Story of={CheckboxStories.Small} />
+  <Story of={CheckboxStories.Default} />
+  <Story of={CheckboxStories.Large} />
+</Canvas>
+
+### DefaultChecked
+
+Using the `defaultChecked` prop to set checked state in the initial render.
+
+<Canvas
+  of={CheckboxStories.DefaultChecked}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root defaultChecked>
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
+
+### Indeterminate
+
+Using the `checked="indeterminate"` to indicate a checkbox with only some related options selected.
+
+<Canvas
+  of={CheckboxStories.Indeterminate}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root checked="indeterminate">
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
+
+### Custom color
+
+Using the `colorPalette` prop to custom checkbox color based on theme colors. By default, the checkbox uses the `accent` color from the theme.
+
+<Canvas
+  of={CheckboxStories.WithRedColor}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root defaultChecked colorPalette="red">
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
+
+### Disabled
+
+Using the `disabled` prop to prevent interacting with the `Checkbox`.
+
+<Canvas
+  of={CheckboxStories.Disabled}
+  source={{
+    format: true,
+    code: `
+      <Checkbox.Root defaultChecked disabled>
+        {(state) => (
+          <>
+            <Checkbox.Control>
+              {state.isChecked && <CheckIcon />}
+              {state.isIndeterminate && <MinusIcon />}
+            </Checkbox.Control>
+            <Checkbox.Label>Label</Checkbox.Label>
+          </>
+        )}
+      </Checkbox.Root>
+    `,
+  }}
+/>
