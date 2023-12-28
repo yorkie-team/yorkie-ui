@@ -1,27 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Avatar, AvatarImage, AvatarFallback } from '@components/ui';
+import * as Avatar from '@components/ui/avatar';
 
 const meta = {
   title: 'Common / Avatar',
-  component: Avatar,
+  component: Avatar.Root,
   argTypes: {
     size: {
       control: { type: 'radio' },
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
     },
   },
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta<typeof Avatar.Root>;
 
 export default meta;
-type Story = StoryObj<typeof Avatar>;
+type Story = StoryObj<typeof Avatar.Root>;
 
 export const Overview: Story = {
   args: {
     size: 'md',
     children: (
       <>
-        <AvatarFallback>PA</AvatarFallback>
-        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
+        <Avatar.Fallback>PA</Avatar.Fallback>
+        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
       </>
     ),
   },
@@ -30,63 +30,63 @@ export const Overview: Story = {
 // Examples
 export const AvatarXs: Story = {
   render: (args) => (
-    <Avatar size="xs" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="xs" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const AvatarSm: Story = {
   render: (args) => (
-    <Avatar size="sm" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="sm" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const AvatarMd: Story = {
   render: (args) => (
-    <Avatar size="md" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="md" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const AvatarLg: Story = {
   render: (args) => (
-    <Avatar size="lg" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="lg" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const AvatarXl: Story = {
   render: (args) => (
-    <Avatar size="xl" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="xl" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const Avatar2xl: Story = {
   render: (args) => (
-    <Avatar size="2xl" {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-    </Avatar>
+    <Avatar.Root size="2xl" {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+    </Avatar.Root>
   ),
 };
 
 export const WithErrorImage: Story = {
   render: (args) => (
-    <Avatar {...args}>
-      <AvatarFallback>PA</AvatarFallback>
-      <AvatarImage src="" alt="avatar" />
-    </Avatar>
+    <Avatar.Root {...args}>
+      <Avatar.Fallback>PA</Avatar.Fallback>
+      <Avatar.Image src="" alt="avatar" />
+    </Avatar.Root>
   ),
 };

@@ -19,10 +19,10 @@ A graphical representation of the user, often used in profile sections.
   source={{
     format: true,
     code: `
-      <Avatar size="md">
-        <AvatarFallback>PA</AvatarFallback>
-        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-      </Avatar>
+      <Avatar.Root>
+        <Avatar.Fallback>PA</Avatar.Fallback>
+        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar.Root>
     `,
   }}
 />
@@ -38,10 +38,10 @@ There are 6 sizes: `xs`, `sm`, `md` (default), `lg`, `xl`, `2xl`.
 If `AvatarImage`'s src is error or undefined then `AvatarFallback` will be displayed by default.
 
 <Source format={true} code={`
-  <Avatar size="md">
-    <AvatarFallback>PA</AvatarFallback>
-    <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-  </Avatar>
+  <Avatar.Root>
+    <Avatar.Fallback>PA</Avatar.Fallback>
+    <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+  </Avatar.Root>
 `} />
 
 ## Examples
@@ -55,27 +55,17 @@ Default has `size='md'`.
   source={{
     format: true,
     code: `
-      <Avatar size="md">
-        <AvatarFallback>PA</AvatarFallback>
-        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-      </Avatar>
+      <Avatar.Root>
+        <Avatar.Fallback>PA</Avatar.Fallback>
+        <Avatar.Image src="https://i.pravatar.cc/300" alt="avatar" />
+      </Avatar.Root>
     `,
   }}
 />
 
 ### Sizes
 
-<Canvas
-source={{
-    format: true,
-    code: `
-      <Avatar size="md">
-        <AvatarFallback>PA</AvatarFallback>
-        <AvatarImage src="https://i.pravatar.cc/300" alt="avatar" />
-      </Avatar>
-    `,
-  }}
-  >
+<Canvas>
   <Story of={AvatarStories.AvatarXs} />
   <Story of={AvatarStories.AvatarSm} />
   <Story of={AvatarStories.AvatarMd} />
@@ -92,10 +82,10 @@ source={{
   source={{
     format: true,
     code: `
-      <Avatar size="md">
-        <AvatarFallback>PA</AvatarFallback>
-        <AvatarImage src="" alt="avatar" />
-      </Avatar>
+      <Avatar.Root>
+        <Avatar.Fallback>PA</Avatar.Fallback>
+        <Avatar.Image src="" alt="avatar" />
+      </Avatar.Root>
     `,
   }}
 />
