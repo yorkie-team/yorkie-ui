@@ -2,12 +2,18 @@
   "name": "@park-ui/examples-react-next-js",
   "version": "0.1.0",
   "private": true,
+  "target": "esnext",
+  "module": "commonjs",
   "scripts": {
     "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --fix && stylelint --fix \"**/*.{css,scss}\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts",
+    "style": "panda codegen"
   },
   "dependencies": {
     "@ark-ui/react": "1.2.1",
