@@ -1,0 +1,114 @@
+# Avatar
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Examples](#examples)
+
+## Overview
+
+A graphical representation of the user, often used in profile sections.
+
+<Canvas
+  of={AvatarStories.Overview}
+  source={{
+    format: true,
+    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe" />`,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Usage
+
+A `Avatar` consists of 3 properties:
+- `size`
+- `src`
+- `name`
+
+The following code shows how you can use the `Avatar` component:
+
+<Source
+  format={true}
+  code={`
+    import { Avatar } from '@/components/ui';
+
+    <Avatar size="sm" src="https://i.pravatar.cc/300" name="John Doe" />
+  `}
+/>
+
+## Examples
+
+### Sizes
+
+Using the `size` prop to change the avatar's size. There are 6 sizes: `xs`, `sm`, `md` (default), `lg`, `xl`, `2xl`.
+
+<Canvas>
+  <Story of={AvatarStories.AvatarXs} />
+  <Story of={AvatarStories.AvatarSm} />
+  <Story of={AvatarStories.AvatarMd} />
+  <Story of={AvatarStories.AvatarLg} />
+  <Story of={AvatarStories.AvatarXl} />
+  <Story of={AvatarStories.Avatar2xl} />
+</Canvas>
+
+### Src
+
+Using the `src` prop to import the avatar image.
+
+<Canvas
+  of={AvatarStories.AvatarMd}
+  source={{
+    format: true,
+    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe"} />`,
+  }}
+/>
+
+### Name
+
+Using the `name` prop to import the avatar name.
+
+<Canvas
+  of={AvatarStories.AvatarMd}
+  source={{
+    format: true,
+    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe"} />`,
+  }}
+/>
+
+### Basic
+
+<Canvas
+  of={AvatarStories.AvatarMd}
+  source={{
+    format: true,
+    code: `<Avatar size="md" src="https://i.pravatar.cc/300" name="John Doe" />`,
+  }}
+/>
+
+### With Name Only
+
+<Canvas
+  of={AvatarStories.WithNameOnly}
+  source={{
+    format: true,
+    code: `<Avatar name="John Doe"} />`,
+  }}
+/>
+
+### With No User Data
+
+<Canvas
+  of={AvatarStories.WithNoUserData}
+  source={{
+    format: true,
+    code: `<Avatar />`,
+  }}
+/>
