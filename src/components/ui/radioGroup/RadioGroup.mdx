@@ -1,0 +1,217 @@
+# RadioGroup
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as RadioGroupStories from './RadioGroup.stories';
+
+<Meta of={RadioGroupStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Examples](#examples)
+
+## Overview
+
+Allows single selection from multiple options.
+
+<Canvas
+  of={RadioGroupStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <RadioGroup.Root size="md" orientation="vertical" defaultValue="react">
+        {options.map((option) => (
+          <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+            <RadioGroup.ItemControl />
+            <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+          </RadioGroup.Item>
+        ))}
+      </RadioGroup.Root>
+    `,
+  }}
+/>
+
+## Controls
+
+<Controls />
+
+## Usage
+
+A `RadioGroup` consists of some properties:
+- `size`
+- `orientation`
+- `disabled` (default `false`)
+- `colorPalette`
+
+The following code shows how you can use the `RadioGroup` component:
+
+<Source format={true} code={`
+  const options = [
+    { id: 'react', label: 'React', disabled: false },
+    { id: 'solid', label: 'Solid' },
+    { id: 'svelte', label: 'Svelte' },
+    { id: 'vue', label: 'Vue' },
+  ];
+
+  <RadioGroup.Root size="md" orientation="horizontal" defaultValue="react" colorPalette="red">
+    {options.map((option) => (
+      <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+        <RadioGroup.ItemControl />
+        <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+      </RadioGroup.Item>
+    ))}
+  </RadioGroup.Root>
+`} />
+
+## Examples
+
+### Sizes
+
+Add the `size` prop to `RadioGroup.Root` to change the size. There are 3 sizes: `sm`, `md` (default), and `lg`.
+
+<Source format={true} code={`
+  <RadioGroup.Root size="sm">
+    //
+  </RadioGroup.Root>
+`} />
+
+<Canvas>
+  <Story of={RadioGroupStories.Small} />
+  <Story of={RadioGroupStories.Medium} />
+  <Story of={RadioGroupStories.Large} />
+</Canvas>
+
+### Orientation
+
+Add the `orientation` prop to `RadioGroup.Root` to change the direction. There are `horizonral` and `vertical` (default).
+
+<Source format={true} code={`
+  <RadioGroup.Root orientation="horizontal">
+    //
+  </RadioGroup.Root>
+`} />
+
+<Canvas
+  of={RadioGroupStories.Horizontal}
+  source={{
+    format: true,
+    code: `
+      <RadioGroup.Root orientation="horizontal" {...args}>
+      {options.map((option) => (
+        <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+        </RadioGroup.Item>
+      ))}
+    </RadioGroup.Root>
+    `,
+  }}
+/>
+
+<Canvas
+  of={RadioGroupStories.Medium}
+  source={{
+    format: true,
+    code: `
+      <RadioGroup.Root {...args}>
+      {options.map((option) => (
+        <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+          <RadioGroup.ItemControl />
+          <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+        </RadioGroup.Item>
+      ))}
+    </RadioGroup.Root>
+    `,
+  }}
+/>
+
+### With default option
+
+Add the `defaultValue` prop to `RadioGroup.Root` like this:
+
+<Source format={true} code={`
+  <RadioGroup.Root defaultValue="react">
+    //
+  </RadioGroup.Root>
+`} />
+
+<Canvas
+  of={RadioGroupStories.WithDefaultOption}
+  source={{
+    format: true,
+    code: `
+      <RadioGroup.Root defaultValue="react">
+        {options.map((option) => (
+          <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+            <RadioGroup.ItemControl />
+            <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+          </RadioGroup.Item>
+        ))}
+      </RadioGroup.Root>
+    `,
+  }}
+/>
+
+### Disabled
+
+Add `disabled: true` to `options`'s items to render with disabled items.
+
+<Source format={true} code={`
+  const options = [
+    { id: 'react', label: 'React' },
+    { id: 'solid', label: 'Solid' },
+    { id: 'svelte', label: 'Svelte', disabled: true },
+    { id: 'vue', label: 'Vue' },
+  ];
+`} />
+
+<Canvas
+  of={RadioGroupStories.WithDisabledOption}
+  source={{
+    format: true,
+    code: `
+      <RadioGroup.Root>
+        {options.map((option) => (
+          <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+            <RadioGroup.ItemControl />
+            <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+          </RadioGroup.Item>
+        ))}
+      </RadioGroup.Root>
+    `,
+  }}
+/>
+
+### ColorPalette
+
+Using the `colorPalette` prop to `RadioGroup.Root` custom the `Control` color based on theme colors.
+
+<Canvas
+  of={RadioGroupStories.WithColor}
+  source={{
+    format: true,
+    code: `
+      const options = [
+        { id: 'react', label: 'React' },
+        { id: 'solid', label: 'Solid' },
+        { id: 'svelte', label: 'Svelte' },
+        { id: 'vue', label: 'Vue' },
+      ];
+
+      <RadioGroup.Root colorPalette="red" defaultValue="react">
+        {options.map((option) => (
+          <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
+            <RadioGroup.ItemControl />
+            <RadioGroup.ItemText>{option.label}</RadioGroup.ItemText>
+          </RadioGroup.Item>
+        ))}
+      </RadioGroup.Root>
+    `,
+  }}
+/>
+
+If you want to custom the `Text` color, add `color` prop to `RadioGroup.ItemText` like this.
+
+<Source format={true} code={`
+  <RadioGroup.ItemText color="red">{option.label}</RadioGroup.ItemText>
+`} />
