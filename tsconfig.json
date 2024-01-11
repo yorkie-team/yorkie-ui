@@ -24,7 +24,7 @@
     "baseUrl": ".",
     "outDir": "ts-build",
     "paths": {
-      "@/*": ["./src"],
+      "@/*": ["./src/*"],
       "@/styled/*": [
         "./styled-system/*"
       ],

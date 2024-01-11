@@ -1,11 +1,8 @@
-import { Avatar as ArkAvatar, type AvatarProps as ArkAvatarProps } from '@ark-ui/react/avatar';
+import { Avatar as ArkAvatar } from '@ark-ui/react/avatar';
 import { forwardRef } from 'react';
-import { avatar, type AvatarVariantProps } from '@/styled/recipes';
-
-export interface AvatarProps extends ArkAvatarProps, AvatarVariantProps {
-  name?: string;
-  src?: string;
-}
+import { avatar } from '@/styled/recipes';
+import { AvatarProps } from '@/components/ui/avatar/interface';
+import { getInitials } from '@/lib/utils/getInitials';
 
 export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
   const [variantProps, localProps] = avatar.splitVariantProps(props);
@@ -28,11 +25,3 @@ const UserIcon = () => (
     <circle cx="12" cy="7" r="4" />
   </svg>
 );
-
-const getInitials = (name = '') =>
-  name
-    .split(' ')
-    .map((part) => part[0])
-    .splice(0, 2)
-    .join('')
-    .toUpperCase();
