@@ -1,0 +1,316 @@
+# Accordion
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Examples](#examples)
+
+## Overview
+
+A collapsible component that displays content in a vertical stack.
+
+<Canvas
+  of={AccordionStories.Overview}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { name: 'React', content: 'content of React item' },
+        { name: 'Solid', content: 'content of Solid item' },
+        { name: 'Svelte', content: 'content of Svelte item' },
+        { name: 'Vue', content: 'content of Vue item' },
+      ];
+
+      <Accordion.Root>
+        {items.map((item, id) => (
+          <Accordion.Item key={id} value={item.name}>
+            <Accordion.ItemTrigger>
+              {item.name}
+              <Accordion.ItemIndicator>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <div>{item.content}</div>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    `,
+  }}
+/>
+
+## Controls
+
+<Controls />
+
+## Usage
+
+A `Accordion` consists of some properties:
+- `multiple`
+- `defaultValue`
+- `disabled`
+
+The following code shows how you can use the `Accordion` component:
+
+<Source format={true} code={`
+  import { Accordion } from '@/components/ui';
+
+  const items = [
+    { name: 'React', content: 'content of React item' },
+    { name: 'Solid', content: 'content of Solid item' },
+    { name: 'Svelte', content: 'content of Svelte item' },
+    { name: 'Vue', content: 'content of Vue item' },
+  ];
+
+  <Accordion.Root {...args}>
+      {items.map((item, id) => (
+        <Accordion.Item key={id} value={item.name}>
+          <Accordion.ItemTrigger>
+            {item.name}
+            <Accordion.ItemIndicator>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </Accordion.ItemIndicator>
+          </Accordion.ItemTrigger>
+          <Accordion.ItemContent>
+            <div>{item.content}</div>
+          </Accordion.ItemContent>
+        </Accordion.Item>
+      ))}
+    </Accordion.Root>
+`} />
+
+## Examples
+
+### Basic
+
+An basic `Accordion` has one panel opened at the same time.
+
+<Canvas
+  of={AccordionStories.Basic}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { name: 'React', content: 'content of React item' },
+        { name: 'Solid', content: 'content of Solid item' },
+        { name: 'Svelte', content: 'content of Svelte item' },
+        { name: 'Vue', content: 'content of Vue item' },
+      ];
+
+      <Accordion.Root>
+        {items.map((item, id) => (
+          <Accordion.Item key={id} value={item.name}>
+            <Accordion.ItemTrigger>
+              {item.name}
+              <Accordion.ItemIndicator>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <div>{item.content}</div>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    `,
+  }}
+/>
+
+### Multiple
+
+Using the `multiple` prop for `Accordion.Root` to allow multiple panels opened at the same time.
+
+<Source format={true} code={`
+  <Accordion.Root multiple>
+    //
+  </Accordion.Root>
+`} />
+
+<Canvas
+  of={AccordionStories.Multiple}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { name: 'React', content: 'content of React item' },
+        { name: 'Solid', content: 'content of Solid item' },
+        { name: 'Svelte', content: 'content of Svelte item' },
+        { name: 'Vue', content: 'content of Vue item' },
+      ];
+
+      <Accordion.Root multiple>
+        {items.map((item, id) => (
+          <Accordion.Item key={id} value={item.name}>
+            <Accordion.ItemTrigger>
+              {item.name}
+              <Accordion.ItemIndicator>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <div>{item.content}</div>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    `,
+  }}
+/>
+
+### DefaultValue
+Using the `defaultValue` prop for `Accordion.Root` to set initially opened panels. It has type `string[]` so you can set multiple initially opened panels.
+
+<Source format={true} code={`
+  <Accordion.Root multiple defaultValue={['Solid', 'React']}>
+    //
+  </Accordion.Root>
+`} />
+
+<Canvas
+  of={AccordionStories.DefaultOpen}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { name: 'React', content: 'content of React item' },
+        { name: 'Solid', content: 'content of Solid item' },
+        { name: 'Svelte', content: 'content of Svelte item' },
+        { name: 'Vue', content: 'content of Vue item' },
+      ];
+
+      <Accordion.Root multiple defaultValue={['Solid', 'React']}>
+        {items.map((item, id) => (
+          <Accordion.Item key={id} value={item.name}>
+            <Accordion.ItemTrigger>
+              {item.name}
+              <Accordion.ItemIndicator>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <div>{item.content}</div>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    `,
+  }}
+/>
+
+### Disabled
+Using the `disabled` prop for `Accordion.Item` to set disabled panels.
+
+<Source format={true} code={`
+  <Accordion.Item key={id} value={item.name} disabled={item.name === 'Svelte'}>
+    //
+  </Accordion.Item>
+`} />
+
+<Canvas
+  of={AccordionStories.Disabled}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { name: 'React', content: 'content of React item' },
+        { name: 'Solid', content: 'content of Solid item' },
+        { name: 'Svelte', content: 'content of Svelte item' },
+        { name: 'Vue', content: 'content of Vue item' },
+      ];
+
+      <Accordion.Root>
+        {items.map((item, id) => (
+          <Accordion.Item key={id} value={item.name} disabled={item.name === 'Svelte'}>
+            <Accordion.ItemTrigger>
+              {item.name}
+              <Accordion.ItemIndicator>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>
+              <div>{item.content}</div>
+            </Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
+    `,
+  }}
+/>
