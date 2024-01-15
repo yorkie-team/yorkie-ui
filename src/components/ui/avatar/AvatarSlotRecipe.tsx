@@ -1,6 +1,9 @@
 import { avatarAnatomy } from '@ark-ui/anatomy';
 import { defineSlotRecipe } from '@pandacss/dev';
 
+/**
+ * Update styles for Avatar component.
+ */
 export const avatarSlotRecipe = defineSlotRecipe({
   className: 'avatar',
   description: 'The styles for the Checkbox component',

@@ -2,13 +2,19 @@ import { Avatar as ArkAvatar } from '@ark-ui/react/avatar';
 import { forwardRef } from 'react';
 import { avatar } from '@/styled/recipes';
 import { AvatarProps } from '@/components/ui/avatar/interface';
+import { UserIcon } from '@/components/ui/icons';
 import { getInitials } from '@/lib/utils/getInitials';
 
+/**
+ * Render Avatar component.
+ * @param {string} name - The name of the avatar.
+ * @param {string} src - The image src of the avatar .
+ * @returns {JSX.Element} - The avatar component.
+ */
 export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
   const [variantProps, localProps] = avatar.splitVariantProps(props);
   const { name, src, ...rootProps } = localProps;
   const styles = avatar(variantProps);
-
   return (
     <ArkAvatar.Root ref={ref} className={styles.root} {...rootProps}>
       <ArkAvatar.Fallback className={styles.fallback}>{getInitials(name) || <UserIcon />}</ArkAvatar.Fallback>
@@ -18,10 +24,3 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
 });
 
 Avatar.displayName = 'Avatar';
-
-const UserIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-    <circle cx="12" cy="7" r="4" />
-  </svg>
-);
