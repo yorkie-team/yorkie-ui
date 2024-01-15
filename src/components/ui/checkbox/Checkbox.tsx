@@ -1,16 +1,15 @@
-import { Checkbox as ArkCheckbox, type CheckboxProps as ArkCheckboxProps } from '@ark-ui/react/checkbox';
-import { forwardRef, type ReactNode } from 'react';
+import { forwardRef } from 'react';
+import { Checkbox as ArkCheckbox } from '@ark-ui/react/checkbox';
 import { css, cx } from '@/styled/css';
-import { checkbox, type CheckboxVariantProps } from '@/styled/recipes';
-import type { HTMLStyledProps } from '@/styled/types';
+import { checkbox } from '@/styled/recipes';
+import { CheckboxProps } from '@/components/ui/checkbox/interface';
+import { CheckIcon, MinusIcon } from '@/components/ui/icons';
 
-export interface CheckboxProps
-  extends ArkCheckboxProps,
-    CheckboxVariantProps,
-    Omit<HTMLStyledProps<'label'>, 'defaultChecked' | 'dir' | 'translate' | 'content' | 'color'> {
-  children?: ReactNode;
-}
-
+/**
+ * Render Checkbox component.
+ * @param {ReactNode} children - The label of the checkbox.
+ * @returns {JSX.Element} - A checkbox component.
+ */
 export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>((props, ref) => {
   const [variantProps, localProps] = checkbox.splitVariantProps(props);
   const { children, ...rootProps } = localProps;
@@ -32,21 +31,3 @@ export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>((props, ref)
 });
 
 Checkbox.displayName = 'Checkbox';
-
-const CheckIcon = () => (
-  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M11.6666 3.5L5.24992 9.91667L2.33325 7"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const MinusIcon = () => (
-  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2.91675 7H11.0834" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
