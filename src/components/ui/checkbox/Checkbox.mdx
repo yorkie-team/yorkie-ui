@@ -12,7 +12,9 @@ import * as CheckboxStories from './Checkbox.stories';
 
 ## Overview
 
-A control element that allows for multiple selections within a set.
+A `Checkbox` is an input control that allows user to select zero, one, or any options from a list.
+
+Each checkbox works independently from others in a list, therefore selecting additional checkbox does not affect any other selections.
 
 <Canvas
   of={CheckboxStories.Overview}
@@ -50,7 +52,7 @@ The following code shows how you can use the `Checkbox` component:
 
 ### Sizes
 
-Using the `size` prop to change the checkbox's size. There are 3 sizes: `sm`, `md` (default), and `lg`.
+The default value for the `size` prop is `md`. You can use the `size` prop to modify the checkbox's dimensions, with three available options: `sm`, `md`, and `lg`.
 
 <Canvas>
   <Story of={CheckboxStories.Small} />
@@ -60,7 +62,7 @@ Using the `size` prop to change the checkbox's size. There are 3 sizes: `sm`, `m
 
 ### DefaultChecked
 
-Using the `defaultChecked` prop to set checked state in the initial render.
+To set the checkbox to have a checked state in the initial render, add the `defaultChecked` prop.
 
 <Canvas
   of={CheckboxStories.DefaultChecked}
@@ -84,7 +86,9 @@ Using the `checked="indeterminate"` to indicate a checkbox with only some relate
 
 ### Custom color
 
-Using the `colorPalette` prop to custom checkbox color based on theme colors. By default, the checkbox uses the `accent` color from the theme.
+To custom checkbox control color, use the `colorPalette` prop. The color specified in the color system is required.
+
+By default, the checkbox uses the `accent` color from the theme.
 
 <Canvas
   of={CheckboxStories.WithRedColor}
@@ -96,7 +100,7 @@ Using the `colorPalette` prop to custom checkbox color based on theme colors. By
 
 ### Disabled
 
-Using the `disabled` prop to prevent interacting with the `Checkbox`.
+Using `disabled` prop to prevent interaction with the checkbox.
 
 <Canvas
   of={CheckboxStories.Disabled}

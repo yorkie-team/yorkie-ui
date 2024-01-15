@@ -8,17 +8,28 @@ const meta = {
     size: {
       control: { type: 'radio' },
       options: ['sm', 'md', 'lg'],
+      description: `**Size of Checkbox control - default: \`md\`.**
+      \n \`sm:\`: width: 4px, height: 4px
+      \n \`md:\` width: 5px, height: 5px
+      \n \`lg:\` width: 6px, height: 6px`,
     },
     checked: {
       control: { type: 'radio' },
       options: ['indeterminate', false, true],
+      description: `**Checked state**
+      \nUsing \`checked = "indeterminate"\` to signifies a checkbox with only some of its related options selected.
+      \n\`true\` and \`false\` states are set automatically and **cannot be passed** to the \`checked\` prop`,
     },
     colorPalette: {
       control: { type: 'radio' },
       options: ['red'],
+      description: `**Color of Checkbox control**
+      \nThe color specified in the **color system is required.**`,
     },
     disabled: {
       control: { type: 'boolean' },
+      description: `**Disabled state of Checkbox**
+      \nUsing \`true\` state to prevent interaction or \`false\` to enable it.`,
     },
   },
 } satisfies Meta<typeof Checkbox>;
