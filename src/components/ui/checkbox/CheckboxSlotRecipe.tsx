@@ -10,11 +10,6 @@ export const checkboxSlotRecipe = defineSlotRecipe({
   base: {
     root: {
       display: 'inline-flex',
-      _disabled: {
-        cursor: 'not-allowed',
-      },
-    },
-    label: {
       cursor: 'pointer',
       _disabled: {
         cursor: 'not-allowed',
