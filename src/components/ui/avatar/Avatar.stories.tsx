@@ -8,12 +8,23 @@ const meta = {
     size: {
       control: { type: 'radio' },
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+      description: `**Size of Avatar (default: \`md\`)**
+      \n \`xs:\` width: 8px, height: 8px
+      \n \`sm:\`: width: 9px, height: 9px
+      \n \`md:\` width: 10px, height: 10px
+      \n \`lg:\` width: 11px, height: 11px
+      \n \`xl:\` width: 12px, height: 12px
+      \n \`2xl:\` width: 16px, height: 16px `,
     },
     src: {
       control: { type: 'text' },
+      description: `**Image src of Avatar**
+      \nIf not provided, the avatar will be displayed by the \`name\` prop if provided or the \`UserIcon\` by default.`,
     },
     name: {
       control: { type: 'text' },
+      description: `**Name of Avatar.**
+      \nIt will be displayed if the \`src\` prop is omitted.`,
     },
   },
 } satisfies Meta<typeof Avatar>;

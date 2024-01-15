@@ -12,7 +12,8 @@ import * as AvatarStories from './Avatar.stories';
 
 ## Overview
 
-A graphical representation of the user, often used in profile sections.
+An `Avatar` is a visual representation of a user, usually in the form of a profile picture, initials, or icon that represents the user.
+It serves as a visual identifier for users, making it easier to distinguish between different individuals in the digital environment.
 
 <Canvas
   of={AvatarStories.Overview}
@@ -28,7 +29,7 @@ A graphical representation of the user, often used in profile sections.
 
 ## Usage
 
-A `Avatar` consists of 3 properties:
+An `Avatar` object consists of some optional properties:
 - `size`
 - `src`
 - `name`
@@ -48,7 +49,7 @@ The following code shows how you can use the `Avatar` component:
 
 ### Sizes
 
-Using the `size` prop to change the avatar's size. There are 6 sizes: `xs`, `sm`, `md` (default), `lg`, `xl`, `2xl`.
+The default value for the `size` prop is `md`. You can use the `size` prop to modify the avatar's dimensions, with six available options: `xs`, `sm`, `md`, `lg`, xl, and `2xl`.
 
 <Canvas>
   <Story of={AvatarStories.AvatarXs} />
@@ -61,7 +62,9 @@ Using the `size` prop to change the avatar's size. There are 6 sizes: `xs`, `sm`
 
 ### Src
 
-Using the `src` prop to import the avatar image.
+To import the avatar image, you can use the `src` prop.
+
+If not provided, the avatar will be displayed by the `name` prop if provided or the user icon by default.
 
 <Canvas
   of={AvatarStories.AvatarMd}
@@ -73,27 +76,7 @@ Using the `src` prop to import the avatar image.
 
 ### Name
 
-Using the `name` prop to import the avatar name.
-
-<Canvas
-  of={AvatarStories.AvatarMd}
-  source={{
-    format: true,
-    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe"} />`,
-  }}
-/>
-
-### Basic
-
-<Canvas
-  of={AvatarStories.AvatarMd}
-  source={{
-    format: true,
-    code: `<Avatar size="md" src="https://i.pravatar.cc/300" name="John Doe" />`,
-  }}
-/>
-
-### With Name Only
+By utilizing the `name` prop, you can import the name for the avatar. It will be displayed if the `src` prop is omitted.
 
 <Canvas
   of={AvatarStories.WithNameOnly}
@@ -104,6 +87,8 @@ Using the `name` prop to import the avatar name.
 />
 
 ### With No User Data
+
+If the `src` and `name` props are omitted, the avatar will display with `UserIcon` by default.
 
 <Canvas
   of={AvatarStories.WithNoUserData}
