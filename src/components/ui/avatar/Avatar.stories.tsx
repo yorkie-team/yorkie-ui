@@ -8,7 +8,7 @@ const meta = {
     size: {
       control: { type: 'radio' },
       options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
-      description: `**Size of Avatar (default: \`md\`)**
+      description: `**Size of Avatar - default: \`md\`. (Optional prop)**
       \n \`xs:\` width: 8px, height: 8px
       \n \`sm:\`: width: 9px, height: 9px
       \n \`md:\` width: 10px, height: 10px
@@ -18,12 +18,12 @@ const meta = {
     },
     src: {
       control: { type: 'text' },
-      description: `**Image src of Avatar**
+      description: `**Image src of Avatar (Optional prop)**
       \nIf not provided, the avatar will be displayed by the \`name\` prop if provided or the \`UserIcon\` by default.`,
     },
     name: {
       control: { type: 'text' },
-      description: `**Name of Avatar.**
+      description: `**Name of Avatar (Optional prop)**
       \nIt will be displayed if the \`src\` prop is omitted.`,
     },
   },
