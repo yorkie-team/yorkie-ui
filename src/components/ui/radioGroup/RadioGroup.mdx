@@ -12,7 +12,7 @@ import * as RadioGroupStories from './RadioGroup.stories';
 
 ## Overview
 
-Allows single selection from multiple options.
+An `RadioGroup` allows the user to select one option from a set. The user can only choose one radio selection at a time.
 
 <Canvas
   of={RadioGroupStories.Overview}
@@ -37,7 +37,7 @@ Allows single selection from multiple options.
 
 ## Usage
 
-A `RadioGroup` consists of some properties:
+A `RadioGroup` object consists of some optional properties:
 - `size`
 - `orientation`
 - `disabled` (default `false`)
@@ -46,6 +46,8 @@ A `RadioGroup` consists of some properties:
 The following code shows how you can use the `RadioGroup` component:
 
 <Source format={true} code={`
+  import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
   const options = [
     { id: 'react', label: 'React', disabled: false },
     { id: 'solid', label: 'Solid' },
@@ -67,7 +69,9 @@ The following code shows how you can use the `RadioGroup` component:
 
 ### Sizes
 
-Add the `size` prop to `RadioGroup.Root` to change the size. There are 3 sizes: `sm`, `md` (default), and `lg`.
+You can use the `size` prop of `RadioGroup.Root` to modify the `ItemControl`'s dimensions.
+
+It has three available options: `sm`, `md`, and `lg`. The default value is `md`.
 
 <Source format={true} code={`
   <RadioGroup.Root size="sm">
@@ -83,8 +87,11 @@ Add the `size` prop to `RadioGroup.Root` to change the size. There are 3 sizes: 
 
 ### Orientation
 
-Add the `orientation` prop to `RadioGroup.Root` to change the direction. There are `horizonral` and `vertical` (default).
+By using the `orientation` prop of `RadioGroup.Root`, you can change the RadioGroup direction. There are two options: `horizonral` and `vertical`.
 
+`vertical` is set by default because it is the easier for users to scan, especially if the labels are more than 3 words or if the listing is dropped.
+
+But you can customize with RadioGroup `horizontal` like the code snippet below:
 <Source format={true} code={`
   <RadioGroup.Root orientation="horizontal">
     //
@@ -96,6 +103,15 @@ Add the `orientation` prop to `RadioGroup.Root` to change the direction. There a
   source={{
     format: true,
     code: `
+      import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
+      const options = [
+        { id: 'react', label: 'React', disabled: false },
+        { id: 'solid', label: 'Solid' },
+        { id: 'svelte', label: 'Svelte' },
+        { id: 'vue', label: 'Vue' },
+      ];
+
       <RadioGroup.Root orientation="horizontal" {...args}>
       {options.map((option) => (
         <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
@@ -113,6 +129,15 @@ Add the `orientation` prop to `RadioGroup.Root` to change the direction. There a
   source={{
     format: true,
     code: `
+    import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
+    const options = [
+      { id: 'react', label: 'React', disabled: false },
+      { id: 'solid', label: 'Solid' },
+      { id: 'svelte', label: 'Svelte' },
+      { id: 'vue', label: 'Vue' },
+    ];
+
       <RadioGroup.Root {...args}>
       {options.map((option) => (
         <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
@@ -127,7 +152,7 @@ Add the `orientation` prop to `RadioGroup.Root` to change the direction. There a
 
 ### With default option
 
-Add the `defaultValue` prop to `RadioGroup.Root` like this:
+By default, the RadioGroup doesn't apply a pre-selected option, but you can add `defaultValue` prop to `RadioGroup.Root` like the code snippet below to create pre-selected option:
 
 <Source format={true} code={`
   <RadioGroup.Root defaultValue="react">
@@ -135,11 +160,26 @@ Add the `defaultValue` prop to `RadioGroup.Root` like this:
   </RadioGroup.Root>
 `} />
 
+You can apply RadioGroup with default option only if:
+
+- The default value is a safe and secure.
+
+- You're willing to collect biased data because the user may not care about the default options.
+
 <Canvas
   of={RadioGroupStories.WithDefaultOption}
   source={{
     format: true,
     code: `
+    import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
+    const options = [
+      { id: 'react', label: 'React', disabled: false },
+      { id: 'solid', label: 'Solid' },
+      { id: 'svelte', label: 'Svelte' },
+      { id: 'vue', label: 'Vue' },
+    ];
+
       <RadioGroup.Root defaultValue="react">
         {options.map((option) => (
           <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
@@ -154,7 +194,9 @@ Add the `defaultValue` prop to `RadioGroup.Root` like this:
 
 ### Disabled
 
-Add `disabled: true` to `options`'s items to render with disabled items.
+You can add `disabled: true` to `options` data to render a RadioGroup with disabled items.
+
+With `disabled` property, the option will has an `opacity` attribute and user cannot interaction with it.
 
 <Source format={true} code={`
   const options = [
@@ -170,6 +212,8 @@ Add `disabled: true` to `options`'s items to render with disabled items.
   source={{
     format: true,
     code: `
+      import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
       <RadioGroup.Root>
         {options.map((option) => (
           <RadioGroup.Item key={option.id} value={option.id} disabled={option.disabled}>
@@ -184,13 +228,17 @@ Add `disabled: true` to `options`'s items to render with disabled items.
 
 ### ColorPalette
 
-Using the `colorPalette` prop to `RadioGroup.Root` custom the `Control` color based on theme colors.
+You can use the `colorPalette` prop of `RadioGroup.Root` to custom the `Control` color. The color specified in the color system is required.
+
+By default, the RadioGroup uses the `accent` color from the theme.
 
 <Canvas
   of={RadioGroupStories.WithColor}
   source={{
     format: true,
     code: `
+      import * as RadioGroup from '@/components/ui/radioGroup/RadioGroup';
+
       const options = [
         { id: 'react', label: 'React' },
         { id: 'solid', label: 'Solid' },
@@ -210,8 +258,7 @@ Using the `colorPalette` prop to `RadioGroup.Root` custom the `Control` color ba
   }}
 />
 
-If you want to custom the `Text` color, add `color` prop to `RadioGroup.ItemText` like this.
-
+If you want to custom the `Text` color, add `color` prop of `RadioGroup.ItemText` like the code snippet below:
 <Source format={true} code={`
   <RadioGroup.ItemText color="red">{option.label}</RadioGroup.ItemText>
 `} />

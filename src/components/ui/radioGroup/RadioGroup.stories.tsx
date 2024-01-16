@@ -8,10 +8,18 @@ const meta = {
     size: {
       control: { type: 'radio' },
       options: ['sm', 'md', 'lg'],
+      description: `**Size of RadioGroup - default: \`md\`**
+      \n With \`ItemControl\`:
+      \n \`sm:\` width: 4px, height: 4px
+      \n \`md:\` width: 5px, height: 5px
+      \n \`lg:\` width: 6px, height: 6px`,
     },
     orientation: {
       control: { type: 'radio' },
       options: ['horizontal', 'vertical'],
+      description: `**Radio items direction**
+      \n \`horizontal\`: align radio items in horizontal
+      \n \`vertical\`: align radio items in vertical`,
     },
   },
 } satisfies Meta<typeof RadioGroup.Root>;
@@ -45,8 +53,6 @@ export const Overview: Story = {
     </RadioGroup.Root>
   ),
 };
-
-//Example
 
 export const Small: Story = {
   render: (args) => (
