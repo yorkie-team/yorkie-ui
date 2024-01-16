@@ -1,10 +1,14 @@
 import { RadioGroup as ArkRadioGroup } from '@ark-ui/react/radio-group';
-import { styled, type HTMLStyledProps } from '@/styled/jsx';
+import { styled } from '@/styled/jsx';
 import { radioGroup } from '@/styled/recipes';
 import { createStyleContext } from '@/lib/create-style-context';
 
 const { withProvider, withContext } = createStyleContext(radioGroup);
 
+/*
+  A RadioGroup include `Indicator`, `Label` and `Item`.
+  An `Item` include `ItemControl` and `ItemText`.
+*/
 const RadioGroup = withProvider(styled(ArkRadioGroup.Root), 'root');
 const RadioGroupIndicator = withContext(styled(ArkRadioGroup.Indicator), 'indicator');
 const RadioGroupItem = withContext(styled(ArkRadioGroup.Item), 'item');
@@ -33,10 +37,3 @@ export {
   RadioGroupLabel,
   Root,
 };
-
-export interface RadioGroupProps extends HTMLStyledProps<typeof RadioGroup> {}
-export interface RadioGroupIndicatorProps extends HTMLStyledProps<typeof RadioGroupIndicator> {}
-export interface RadioGroupItemProps extends HTMLStyledProps<typeof RadioGroupItem> {}
-export interface RadioGroupItemControlProps extends HTMLStyledProps<typeof RadioGroupItemControl> {}
-export interface RadioGroupItemTextProps extends HTMLStyledProps<typeof RadioGroupItemText> {}
-export interface RadioGroupLabelProps extends HTMLStyledProps<typeof RadioGroupLabel> {}
