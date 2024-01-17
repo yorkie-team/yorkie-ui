@@ -1,4 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
+import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -6,7 +7,11 @@ export default defineConfig({
   include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
   theme: {
-    extend: {},
+    extend: {
+      slotRecipes: {
+        avatar: avatarSlotRecipe,
+      },
+    },
   },
   jsxFramework: 'react',
   outdir: 'styled-system',
