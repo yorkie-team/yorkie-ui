@@ -1,5 +1,6 @@
 import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
+import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -10,6 +11,9 @@ export default defineConfig({
     extend: {
       slotRecipes: {
         avatar: avatarSlotRecipe,
+      },
+      recipes: {
+        button: buttonRecipe,
       },
     },
   },
