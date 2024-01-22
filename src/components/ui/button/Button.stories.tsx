@@ -24,8 +24,7 @@ const meta = {
       \n \`solid:\` uniform background color for buttons
       \n \`outline:\` the border or edge surrounding buttons
       \n \`ghost:\` style characterized by a transparent or semi-transparent background and a visible border
-      \n \`link:\` styles designed to resemble traditional hyperlinks
-      \n \`subtle:\` gentle and fit seamlessly into the overall visual space`,
+      \n \`link:\` styles designed to resemble traditional hyperlinks`,
     },
     disabled: {
       control: { type: 'boolean' },
@@ -52,7 +51,7 @@ export const Overview: Story = {
     children: 'Default',
   },
 };
-// Examples
+
 export const Basic: Story = {
   render: (args) => {
     return (
@@ -63,7 +62,6 @@ export const Basic: Story = {
   },
 };
 
-// Examples
 export const Sizes: Story = {
   render: (args) => {
     return (
@@ -106,9 +104,6 @@ export const Variant: Story = {
         </Button>
         <Button {...args} variant="link">
           Link
-        </Button>
-        <Button {...args} variant="subtle">
-          Subtle
         </Button>
       </Flex>
     );
