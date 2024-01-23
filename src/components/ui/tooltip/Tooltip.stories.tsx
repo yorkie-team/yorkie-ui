@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import type { StoryObj } from '@storybook/react';
+import React, { useState } from 'react';
 import { Tooltip } from '@/components/ui';
 
 const meta = {
