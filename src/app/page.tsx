@@ -1,6 +1,6 @@
 'use client';
 import { Container, Flex } from '@/styled/jsx';
-import { Button } from '@/components/ui';
+import { Button, Checkbox } from '@/components/ui';
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         <Button colorPalette="red" variant="ghost">
           Button
         </Button>
+        <Checkbox disabled>kacs</Checkbox>
       </Flex>
     </Container>
   );
