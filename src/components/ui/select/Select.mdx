@@ -1,0 +1,102 @@
+# Button
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+- [Usage](#usage)
+
+## Overview
+
+Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
+
+<Canvas
+  of={SelectStories.Overview}
+  source={{
+    format: true,
+    code: `
+        const items = [
+            { label: 'React', value: 'react' },
+            { label: 'Solid', value: 'solid' },
+            { label: 'Svelte', value: 'svelte', disabled: true },
+            { label: 'Vue', value: 'vue' },
+        ];
+
+        return (
+        <Select.Root positioning={{ sameWidth: true }} width="2xs" items={items}>
+            <Select.Label>Framework</Select.Label>
+            <Select.Control>
+            <Select.Trigger>
+                <Select.ValueText placeholder={'Select a Framework'} />
+                <DownIcon />
+            </Select.Trigger>
+            </Select.Control>
+            <Select.Positioner>
+            <Select.Content>
+                <Select.ItemGroup id="framework">
+                <Select.ItemGroupLabel htmlFor="framework">Framework</Select.ItemGroupLabel>
+                {items.map((item) => (
+                    <Select.Item key={item.value} item={item}>
+                    <Select.ItemText>{item.label}</Select.ItemText>
+                    <Select.ItemIndicator>
+                        <DownIcon />
+                    </Select.ItemIndicator>
+                    </Select.Item>
+                ))}
+                </Select.ItemGroup>
+            </Select.Content>
+            </Select.Positioner>
+        </Select.Root>
+        );
+    `,
+
+}}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Customization](#button-customization)
+
+There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
+
+<Canvas
+  of={SelectStories.Customization}
+  source={{
+    format: true,
+    code: `
+      <Select.Root items={items}>
+        <Select.Label>Framework</Select.Label>
+        <Select.Control>
+          <Select.Trigger>
+            <Select.ValueText placeholder="Select a Framework" />
+            <Select.Indicator>
+              <DownIcon />
+            </Select.Indicator>
+          </Select.Trigger>
+          <Select.ClearTrigger>Clear</Select.ClearTrigger>
+        </Select.Control>
+        <Select.Positioner>
+          <Select.Content>
+            <Select.ItemGroup id="framework">
+              <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
+              {items.map((item) => (
+                <Select.Item key={item.value} item={item}>
+                  <Select.ItemText>{item.label}</Select.ItemText>
+                  <Select.ItemIndicator>✓</Select.ItemIndicator>
+                </Select.Item>
+              ))}
+            </Select.ItemGroup>
+          </Select.Content>
+        </Select.Positioner>
+      </Select.Root>
+    `,
+  }}
+/>
