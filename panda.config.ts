@@ -1,5 +1,6 @@
 import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
+import { Tooltip } from '@/components/ui/tooltip/TooltipRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
 
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
         avatar: avatarSlotRecipe,
       },
       recipes: {
+        tooltip: Tooltip,
         button: buttonRecipe,
       },
     },
