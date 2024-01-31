@@ -22,21 +22,110 @@ Buttons empower users to take action with a single tap. Incorporate them into yo
 
 ## Examples
 
-### [Button Variant](#button-kinds)
+### [Sizes](#button-sizes)
 
-There are 4 types: `link`, `outline`, `solid` and `ghost`.
+There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
 
 <Canvas
-  of={ButtonStories.Basic}
+  of={ButtonStories.Sizes}
   source={{
     format: true,
     code: `
       <div>
-        <Button variant="link">Fill</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="solid">Outline</Button>
-        <Button variant="ghost">Outline</Button>
+        <Button {...args} size="xs">
+          XS
+        </Button>
+        <Button {...args} size="sm">
+          SM
+        </Button>
+        <Button {...args} size="md">
+          MD
+        </Button>
+        <Button {...args} size="lg">
+          LG
+        </Button>
+        <Button {...args} size="xl">
+          XL
+        </Button>
+        <Button {...args} size="2xl">
+          2XL
+        </Button>
       </div>
     `,
   }}
 />
+
+### [Variant](#button-variant)
+
+There are 4 types: `link`, `outline`, `solid` and `ghost`.
+
+<Canvas
+  of={ButtonStories.Variant}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button {...args} variant="solid">
+          Solid
+        </Button>
+        <Button {...args} variant="outline">
+          Outline
+        </Button>
+        <Button {...args} variant="ghost">
+          Ghost
+        </Button>
+        <Button {...args} variant="link">
+          Link
+        </Button>
+        <Button {...args} variant="subtle">
+          Subtle
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+### [Disabled](#button-disabled)
+
+By using the `disabled` prop, you can quickly and easily convey to your users that a button is unavailable for selection.
+
+<Canvas
+  of={ButtonStories.Disabled}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button {...args} disabled>
+          Disabled
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+### [Color Palette](#button-color)
+
+Use the defined color codes in the system to change the background for the button.
+
+<Canvas
+  of={ButtonStories.ColorPalette}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button colorPalette="red">
+          Color Palette
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+## Usage
+
+Buttons are used throughout the UI to initiate actions such as saving changes, navigating or canceling. They can be found on pages, widgets, and modals.
+
+- There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
+- There are 4 types: `link`, `outline`, `solid` and `ghost`.
+- Using the `disabled` prop indicates that a button is unavailable for selection.
+- Use defined color codes for button background.
