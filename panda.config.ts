@@ -2,6 +2,7 @@ import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
 import { Tooltip } from '@/components/ui/tooltip/TooltipRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
+import { selectRecipe } from '@/components/ui/select/SelectRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -16,6 +17,7 @@ export default defineConfig({
       recipes: {
         tooltip: Tooltip,
         button: buttonRecipe,
+        select: selectRecipe,
       },
     },
   },
