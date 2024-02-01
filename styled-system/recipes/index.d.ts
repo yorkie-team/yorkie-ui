@@ -1,6 +1,5 @@
 /* eslint-disable */
 export * from './badge';
-export * from './button';
 export * from './code';
 export * from './heading';
 export * from './icon';
@@ -11,6 +10,8 @@ export * from './label';
 export * from './link';
 export * from './textarea';
 export * from './tooltip';
+export * from './button';
+export * from './select';
 export * from './accordion';
 export * from './alert';
 export * from './card';
@@ -33,7 +34,6 @@ export * from './radio-group';
 export * from './radio-button-group';
 export * from './rating-group';
 export * from './segment-group';
-export * from './select';
 export * from './slider';
 export * from './splitter';
 export * from './switch-recipe';
