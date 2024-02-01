@@ -16,12 +16,12 @@ export type AvatarVariantProps = {
 
 export interface AvatarRecipe {
   __type: AvatarVariantProps
-  (props?: AvatarVariantProps): Pretty<Record<"root" | "image" | "fallback", string>>
+  (props?: AvatarVariantProps): Pretty<Record<"root" | "image" | "fallback" | "root" | "image" | "fallback", string>>
   raw: (props?: AvatarVariantProps) => AvatarVariantProps
   variantMap: AvatarVariantMap
   variantKeys: Array<keyof AvatarVariant>
   splitVariantProps<Props extends AvatarVariantProps>(props: Props): [AvatarVariantProps, Pretty<DistributiveOmit<Props, keyof AvatarVariantProps>>]
 }
 
-
+/** The styles for the Checkbox component */
 export declare const avatar: AvatarRecipe

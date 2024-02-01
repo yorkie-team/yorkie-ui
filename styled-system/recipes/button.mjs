@@ -11,7 +11,8 @@ const buttonVariantMap = {
     "solid",
     "outline",
     "ghost",
-    "link"
+    "link",
+    "subtle"
   ],
   "size": [
     "xs",
