@@ -2,6 +2,7 @@ import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
 import { Tooltip } from '@/components/ui/tooltip/TooltipRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
+import { checkboxSlotRecipe } from '@/components/ui/checkbox/CheckboxSlotRecipe';
 import { selectRecipe } from '@/components/ui/select/SelectRecipe';
 
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
     extend: {
       slotRecipes: {
         avatar: avatarSlotRecipe,
+        checkbox: checkboxSlotRecipe,
       },
       recipes: {
         tooltip: Tooltip,

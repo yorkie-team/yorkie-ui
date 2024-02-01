@@ -1,4 +1,5 @@
 export * from './button';
-export { Avatar } from './avatar';
+export * from './avatar';
+export * from './checkbox';
 export * from './select';
 export * from './tooltip';
