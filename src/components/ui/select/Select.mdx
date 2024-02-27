@@ -63,9 +63,9 @@ Buttons empower users to take action with a single tap. Incorporate them into yo
 
 ## Examples
 
-### [Customization](#button-customization)
+### [Customization](#select-customization)
 
-There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
+For advanced customizations and like `disabled` item properties.
 
 <Canvas
   of={SelectStories.Customization}
@@ -97,6 +97,55 @@ There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
           </Select.Content>
         </Select.Positioner>
       </Select.Root>
+    `,
+  }}
+/>
+
+### [Multiple Selection](#multiple-selection)
+
+To allow for the selection of multiple items, follow these steps:
+
+<Canvas
+  of={SelectStories.MultipleSelection}
+  source={{
+    format: true,
+    code: `
+      type Item = { label: string; value: string; disabled?: boolean }
+      const items: Item[] = [
+        { label: 'React', value: 'react' },
+        { label: 'Solid', value: 'solid' },
+        { label: 'Vue', value: 'vue' },
+        { label: 'Svelte', value: 'svelte', disabled: true },
+      ]
+      return (
+        <Select.Root items={items} multiple>
+          <Select.Label>Framework</Select.Label>
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder="Select a Framework" />
+              <Select.Indicator>
+                <ChevronDownIcon />
+              </Select.Indicator>
+            </Select.Trigger>
+            <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          </Select.Control>
+          <Portal>
+            <Select.Positioner>
+              <Select.Content>
+                <Select.ItemGroup id="framework">
+                  <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
+                  {items.map((item) => (
+                    <Select.Item key={item.value} item={item}>
+                      <Select.ItemText>{item.label}</Select.ItemText>
+                      <Select.ItemIndicator>✓</Select.ItemIndicator>
+                    </Select.Item>
+                  ))}
+                </Select.ItemGroup>
+              </Select.Content>
+            </Select.Positioner>
+          </Portal>
+        </Select.Root>
+      )
     `,
   }}
 />
