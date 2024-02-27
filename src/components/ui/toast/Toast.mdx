@@ -1,0 +1,49 @@
+# Toast
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+- [Usage](#usage)
+
+## Overview
+
+Get real-time feedback on your actions with our on-screen messages.
+To use the Toast component, set it up with createToaster hook. This hook manages grouping and placement of toasts. Use toast.create method to display a notification.
+
+<Canvas
+  of={ToastStories.Overview}
+  source={{
+    format: true,
+    code: `
+      const [Toaster, toast] = createToaster({
+        placement: 'top-end',
+        render(toast) {
+          return (
+            <Toast.Root>
+              <Toast.Title>{toast.title}</Toast.Title>
+              <Toast.Description>{toast.description}</Toast.Description>
+              <Toast.CloseTrigger asChild>
+                <CloseIcon />
+              </Toast.CloseTrigger>
+            </Toast.Root>
+          );
+        },
+      });
+
+      return (
+        <>
+          <Button variant="outline" onClick={() => toast.create({ title: 'Title', description: 'Description' })}>
+            Create Toast
+          </Button>
+          <Toaster />
+        </>
+      );
+    `,
+
+}}
+/>
