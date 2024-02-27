@@ -12,7 +12,7 @@ import * as SelectStories from './Select.stories';
 
 ## Overview
 
-Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
+The `Select` element presents a collection of choices for the user to select from.
 
 <Canvas
   of={SelectStories.Overview}
@@ -81,7 +81,9 @@ For advanced customizations and like `disabled` item properties.
               <DownIcon />
             </Select.Indicator>
           </Select.Trigger>
-          <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          <Select.ClearTrigger>
+            <Button variant="solid">Clear</Button>
+          </Select.ClearTrigger>
         </Select.Control>
         <Select.Positioner>
           <Select.Content>
@@ -97,8 +99,10 @@ For advanced customizations and like `disabled` item properties.
           </Select.Content>
         </Select.Positioner>
       </Select.Root>
+      );
     `,
-  }}
+
+}}
 />
 
 ### [Multiple Selection](#multiple-selection)
