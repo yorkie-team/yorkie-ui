@@ -1,4 +1,4 @@
-# Button
+# Select
 
 import { Controls, Canvas, Meta } from '@storybook/blocks';
 import * as SelectStories from './Select.stories';
@@ -63,119 +63,16 @@ The `Select` element presents a collection of choices for the user to select fro
 
 ## Examples
 
-### [Multiple](#select-multiple)
+### [Customization](#select-customization)
 
-Customize items with advanced properties such as disabling.
-
-<Canvas
-  of={SelectStories.Multiple}
-  source={{
-    format: true,
-    code: `
-      type Item = { label: string; value: string; disabled?: boolean };
-      const items: Item[] = [
-        { label: 'React', value: 'react' },
-        { label: 'Solid', value: 'solid' },
-        { label: 'Vue', value: 'vue' },
-        { label: 'Svelte', value: 'svelte', disabled: true },
-      ];
-
-      return (
-        <Select.Root items={items} multiple width="2xs">
-          <Select.Label>Framework</Select.Label>
-          <Select.Control>
-            <Select.Trigger>
-              <Select.ValueText placeholder="Select a Framework" />
-              <Select.Indicator>
-                <DownIcon />
-              </Select.Indicator>
-            </Select.Trigger>
-            <Select.ClearTrigger>
-              <Button variant="solid">Clear</Button>
-            </Select.ClearTrigger>
-          </Select.Control>
-          <Select.Positioner>
-            <Select.Content>
-              <Select.ItemGroup id="framework">
-                <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
-                {items.map((item) => (
-                  <Select.Item key={item.value} item={item}>
-                    <Select.ItemText>{item.label}</Select.ItemText>
-                    <Select.ItemIndicator>✓</Select.ItemIndicator>
-                  </Select.Item>
-                ))}
-              </Select.ItemGroup>
-            </Select.Content>
-          </Select.Positioner>
-        </Select.Root>
-      );
-    `,
-
-}}
-/>
-
-### [Advanced Customization](#select-customization)
-
-Customize items with advanced properties such as disabling.
+For advanced customizations and like `disabled` item properties.
 
 <Canvas
   of={SelectStories.Customization}
   source={{
     format: true,
     code: `
-      type Item = { label: string; value: string; disabled?: boolean };
-      const items: Item[] = [
-        { label: 'React', value: 'react' },
-        { label: 'Solid', value: 'solid' },
-        { label: 'Vue', value: 'vue' },
-        { label: 'Svelte', value: 'svelte', disabled: true },
-      ];
-
-      return (
-        <Select.Root items={items} multiple width="2xs">
-          <Select.Label>Framework</Select.Label>
-          <Select.Control>
-            <Select.Trigger>
-              <Select.ValueText placeholder="Select a Framework" />
-              <Select.Indicator>
-                <DownIcon />
-              </Select.Indicator>
-            </Select.Trigger>
-            <Select.ClearTrigger>
-              <Button variant="solid">Clear</Button>
-            </Select.ClearTrigger>
-          </Select.Control>
-          <Select.Positioner>
-            <Select.Content>
-              <Select.ItemGroup id="framework">
-                <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
-                {items.map((item) => (
-                  <Select.Item key={item.value} item={item}>
-                    <Select.ItemText>{item.label}</Select.ItemText>
-                    <Select.ItemIndicator>✓</Select.ItemIndicator>
-                  </Select.Item>
-                ))}
-              </Select.ItemGroup>
-            </Select.Content>
-          </Select.Positioner>
-        </Select.Root>
-      );
-    `,
-
-}}
-/>
-
-### [Controlled](#select-controlled)
-
-Manage the state of the Select component.
-
-<Canvas
-  of={SelectStories.Controlled}
-  source={{
-    format: true,
-    code: `
-      return (
-        <Select.Root items={items} width="2xs" onValueChange={(e) => setSelectedItems(e.items)}>
+      <Select.Root items={items} positioning={{ sameWidth: true }} width="2xs" height="280px">
         <Select.Label>Framework</Select.Label>
         <Select.Control>
           <Select.Trigger>
@@ -208,10 +105,51 @@ Manage the state of the Select component.
 }}
 />
 
-## Usage
+### [Multiple Selection](#multiple-selection)
 
-The `Select` element is a user interface component that displays a list of options for the user to choose from.
+To allow for the selection of multiple items, follow these steps:
 
-- Disable advanced properties to customize items.
-- Customize items with advanced properties such as disabling.
-- Manage the state of the Select component.
+<Canvas
+  of={SelectStories.MultipleSelection}
+  source={{
+    format: true,
+    code: `
+      type Item = { label: string; value: string; disabled?: boolean }
+      const items: Item[] = [
+        { label: 'React', value: 'react' },
+        { label: 'Solid', value: 'solid' },
+        { label: 'Vue', value: 'vue' },
+        { label: 'Svelte', value: 'svelte', disabled: true },
+      ]
+      return (
+        <Select.Root items={items} multiple positioning={{ sameWidth: true }} width="2xs" height="280px">
+          <Select.Label>Framework</Select.Label>
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder="Select a Framework" />
+              <Select.Indicator>
+                <ChevronDownIcon />
+              </Select.Indicator>
+            </Select.Trigger>
+            <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          </Select.Control>
+          <Portal>
+            <Select.Positioner>
+              <Select.Content>
+                <Select.ItemGroup id="framework">
+                  <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
+                  {items.map((item) => (
+                    <Select.Item key={item.value} item={item}>
+                      <Select.ItemText>{item.label}</Select.ItemText>
+                      <Select.ItemIndicator>✓</Select.ItemIndicator>
+                    </Select.Item>
+                  ))}
+                </Select.ItemGroup>
+              </Select.Content>
+            </Select.Positioner>
+          </Portal>
+        </Select.Root>
+      )
+    `,
+  }}
+/>
