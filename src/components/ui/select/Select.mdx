@@ -72,7 +72,7 @@ For advanced customizations and like `disabled` item properties.
   source={{
     format: true,
     code: `
-      <Select.Root items={items}>
+      <Select.Root items={items} positioning={{ sameWidth: true }} width="2xs" height="280px">
         <Select.Label>Framework</Select.Label>
         <Select.Control>
           <Select.Trigger>
@@ -118,7 +118,7 @@ To allow for the selection of multiple items, follow these steps:
         { label: 'Svelte', value: 'svelte', disabled: true },
       ]
       return (
-        <Select.Root items={items} multiple>
+        <Select.Root items={items} multiple positioning={{ sameWidth: true }} width="2xs" height="280px">
           <Select.Label>Framework</Select.Label>
           <Select.Control>
             <Select.Trigger>
