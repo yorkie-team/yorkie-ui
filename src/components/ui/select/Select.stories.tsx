@@ -1,6 +1,7 @@
 import React from 'react';
 import { Select } from '@/components/ui';
 import { DownIcon } from '@/components/ui/icons';
+import { Button } from '../button/Button';
 
 const meta = {
   title: 'COMMUNICATION / Select',
@@ -180,7 +181,9 @@ export const Customization = {
               <DownIcon />
             </Select.Indicator>
           </Select.Trigger>
-          <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          <Select.ClearTrigger>
+            <Button>Clear</Button>
+          </Select.ClearTrigger>
         </Select.Control>
         <Select.Positioner>
           <Select.Content>
@@ -211,7 +214,7 @@ export const MultipleSelection = {
     ];
 
     return (
-      <Select.Root positioning={{ sameWidth: true }} width="2xs" height="280px" items={items}>
+      <Select.Root positioning={{ sameWidth: true }} width="2xs" height="280px" items={items} multiple>
         <Select.Label>Framework</Select.Label>
         <Select.Control>
           <Select.Trigger>
@@ -220,7 +223,9 @@ export const MultipleSelection = {
               <DownIcon />
             </Select.Indicator>
           </Select.Trigger>
-          <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          <Select.ClearTrigger>
+            <Button>Clear</Button>
+          </Select.ClearTrigger>
         </Select.Control>
         <Select.Positioner>
           <Select.Content>

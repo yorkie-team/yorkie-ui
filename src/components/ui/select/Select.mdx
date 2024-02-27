@@ -12,7 +12,7 @@ import * as SelectStories from './Select.stories';
 
 ## Overview
 
-The `Select` element presents a collection of choices for the user to select from.
+Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
 
 <Canvas
   of={SelectStories.Overview}
@@ -72,59 +72,7 @@ For advanced customizations and like `disabled` item properties.
   source={{
     format: true,
     code: `
-      type Item = { label: string; value: string; disabled?: boolean };
-      const items: Item[] = [
-        { label: 'React', value: 'react' },
-        { label: 'Solid', value: 'solid' },
-        { label: 'Vue', value: 'vue' },
-        { label: 'Svelte', value: 'svelte', disabled: true },
-      ];
-
-      return (
-        <Select.Root items={items} multiple width="2xs">
-          <Select.Label>Framework</Select.Label>
-          <Select.Control>
-            <Select.Trigger>
-              <Select.ValueText placeholder="Select a Framework" />
-              <Select.Indicator>
-                <DownIcon />
-              </Select.Indicator>
-            </Select.Trigger>
-            <Select.ClearTrigger>
-              <Button variant="solid">Clear</Button>
-            </Select.ClearTrigger>
-          </Select.Control>
-          <Select.Positioner>
-            <Select.Content>
-              <Select.ItemGroup id="framework">
-                <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
-                {items.map((item) => (
-                  <Select.Item key={item.value} item={item}>
-                    <Select.ItemText>{item.label}</Select.ItemText>
-                    <Select.ItemIndicator>✓</Select.ItemIndicator>
-                  </Select.Item>
-                ))}
-              </Select.ItemGroup>
-            </Select.Content>
-          </Select.Positioner>
-        </Select.Root>
-      );
-    `,
-
-}}
-/>
-
-### [Controlled](#select-controlled)
-
-Manage the state of the Select component.
-
-<Canvas
-  of={SelectStories.Controlled}
-  source={{
-    format: true,
-    code: `
-      return (
-        <Select.Root items={items} width="2xs" onValueChange={(e) => setSelectedItems(e.items)}>
+      <Select.Root items={items}>
         <Select.Label>Framework</Select.Label>
         <Select.Control>
           <Select.Trigger>
@@ -133,9 +81,7 @@ Manage the state of the Select component.
               <DownIcon />
             </Select.Indicator>
           </Select.Trigger>
-          <Select.ClearTrigger>
-            <Button variant="solid">Clear</Button>
-          </Select.ClearTrigger>
+          <Select.ClearTrigger>Clear</Select.ClearTrigger>
         </Select.Control>
         <Select.Positioner>
           <Select.Content>
@@ -151,10 +97,8 @@ Manage the state of the Select component.
           </Select.Content>
         </Select.Positioner>
       </Select.Root>
-      );
     `,
-
-}}
+  }}
 />
 
 ### [Multiple Selection](#multiple-selection)
