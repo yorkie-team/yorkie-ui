@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Tooltip } from '@/components/ui';
 
 const meta = {
-  title: 'COMMUNICATION / Tooltip',
+  title: 'OVERLAY / Tooltip',
   argTypes: {
     openDelay: {
       control: { type: 'number' },

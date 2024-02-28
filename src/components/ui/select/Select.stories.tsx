@@ -4,7 +4,7 @@ import { DownIcon } from '@/components/ui/icons';
 import { Button } from '../button/Button';
 
 const meta = {
-  title: 'COMMUNICATION / Select',
+  title: 'FORM / Select',
   argTypes: {
     closeOnSelect: {
       control: { type: 'boolean' },
