@@ -86,7 +86,7 @@ export const Overview = () => {
 
 export const ConfiguringToast = () => {
   const [Toaster, toast] = createToaster({
-    placement: 'bottom-start',
+    placement: 'bottom-end',
     render(toast) {
       return (
         <Toast.Root>
