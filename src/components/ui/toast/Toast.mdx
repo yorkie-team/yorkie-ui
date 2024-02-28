@@ -8,7 +8,6 @@ import * as ToastStories from './Toast.stories';
 - [Overview](#overview)
 - [Props](#props)
 - [Examples](#examples)
-- [Usage](#usage)
 
 ## Overview
 
@@ -43,6 +42,104 @@ To use the Toast component, set it up with createToaster hook. This hook manages
           <Toaster />
         </>
       );
+    `,
+
+}}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Configuring Toast](#configuring-toast)
+
+To effectively configure the Toast component, it is imperative that you pass diverse options to the toast.create method. These options include, but are not limited to, `title`, `description`, `type`, `duration`, and `removeDelay`.
+
+<Canvas
+  of={ToastStories.ConfiguringToast}
+  source={{
+    format: true,
+    code: `
+      const [Toaster, toast] = createToaster({
+        placement: 'bottom-start',
+        render(toast) {
+          return (
+            <Toast.Root>
+              <Toast.Title>{toast.title}</Toast.Title>
+              <Toast.Description>{toast.description}</Toast.Description>
+              <Toast.CloseTrigger>Close</Toast.CloseTrigger>
+            </Toast.Root>
+          )
+        },
+      })
+
+      return (
+        <>
+          <Button
+            onClick={() =>
+              toast.create({
+                title: 'Success',
+                description: 'This is a success toast',
+                type: 'success',
+                duration: 20000,
+                removeDelay: 250,
+              })
+            }
+          >
+            Toast
+          </Button>
+          <Toaster />
+        </>
+      )
+    `,
+
+}}
+/>
+
+### [Custom Rendered Toast](#custom-rendered-toast)
+
+The Toast component provides the ability to use custom render functions, granting users greater flexibility in rendering content.
+
+<Canvas
+  of={ToastStories.CustomRenderedToast}
+  source={{
+    format: true,
+    code: `
+      const [Toaster, toast] = createToaster({
+        placement: 'bottom-end',
+        // custom render may go directly into the function below
+        render(toast) {
+          return (
+            <Toast.Root>
+              <Toast.Title>{toast.title}</Toast.Title>
+              <Toast.Description>{toast.description}</Toast.Description>
+              <Toast.CloseTrigger>Close</Toast.CloseTrigger>
+            </Toast.Root>
+          )
+        },
+      })
+
+      return (
+        <>
+          <Button
+            onClick={() =>
+              toast.create({
+                title: 'Please checkout',
+                render: (toast) => (
+                  <div>
+                    {toast.title} <a href="https://ark-ui.com">Ark UI</a>
+                  </div>
+                ),
+              })
+            }
+          >
+            Toast
+          </Button>
+          <Toaster />
+        </>
+      )
     `,
 
 }}

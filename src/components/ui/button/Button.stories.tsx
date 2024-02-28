@@ -3,7 +3,7 @@ import { Button } from '@/components/ui';
 import { Flex } from '@/styled/jsx';
 
 const meta = {
-  title: 'GENERAL / Button',
+  title: 'FORM / Button',
   component: Button,
   argTypes: {
     size: {
