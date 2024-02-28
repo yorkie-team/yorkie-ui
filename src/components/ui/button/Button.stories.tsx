@@ -19,7 +19,7 @@ const meta = {
     },
     variant: {
       control: { type: 'radio' },
-      options: ['solid', 'outline', 'ghost', 'link', 'subtle'],
+      options: ['solid', 'outline', 'ghost', 'link'],
       description: `**Variant of Button - default: \`solid\`. **
       \n \`solid:\` uniform background color for buttons
       \n \`outline:\` the border or edge surrounding buttons
