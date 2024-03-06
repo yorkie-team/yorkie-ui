@@ -1,0 +1,200 @@
+# Tabs
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as TabStories from './Tab.stories';
+
+<Meta of={TabStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Overview
+
+This is a versatile navigation tool that comes with a range of modes and features to help you get around more easily.
+
+<Canvas
+  of={TabStories.Overview}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root>
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Tab 3</Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+      );
+    `,
+
+}}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Tab Indicator](#tab-tab-indicator)
+
+To visually highlight the active tab, you can use the `Tabs.Indicator` component.
+
+<Canvas
+  of={TabStories.TabIndicator}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root>
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+            <Tabs.Indicator />
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+      )
+    `,
+  }}
+/>
+
+### [Lazy Mounting](#tab-lazy-mounting)
+
+Lazy mounting is a useful feature that helps optimize the performance of a web page. It enables the content of a tab to be loaded only when the tab is first activated. This is particularly useful when the tab content is large or complex. To enable lazy mounting, you can make use of the lazyMount prop on the `Tabs.Content` component.
+
+In addition, the `unmountOnExit` prop can be used in conjunction with lazyMount to unmount the tab content when the tab is deactivated, freeing up resources. The next time the tab is activated, its content will be re-rendered.
+
+<Canvas
+  of={TabStories.LazyMounting}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root lazyMount unmountOnExit>
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+            <Tabs.Indicator />
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+      )
+    `,
+  }}
+/>
+
+### [Disabled Tab](#tab-disabled-tab)
+
+To disable a tab, you can pass the `disabled` prop to the `Tabs.Trigger` component. This will prevent the user from clicking or interacting with the tab.
+
+<Canvas
+  of={TabStories.DisabledTab}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2" disabled>
+              of Tab Pane 2
+            </Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+      )
+    `,
+  }}
+/>
+
+### [Controlled Tabs](#controlled-tabs)
+
+To create a controlled Tabs component, manage the currently selected tab using the value prop and update it when the `onValueChange` event handler is called.
+
+<Canvas
+  of={TabStories.Controlled}
+  source={{
+    format: true,
+    code: `
+        const [value, setValue] = useState<string | null>('react')
+        return (
+          <Tabs.Root value={value} onValueChange={(e) => setValue(e.value)}>
+            <Tabs.List>
+              <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+              <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+              <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+            </Tabs.List>
+            <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+            <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+            <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+          </Tabs.Root>
+        )
+      )
+    `,
+  }}
+/>
+
+### [Vertical Tabs](#vertical-tabs)
+
+The default orientation of tabs is horizontal. To set a `vertical` orientation, use the `orientation` prop.
+
+<Canvas
+  of={TabStories.Vertical}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root orientation="vertical" defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+        )
+      )
+    `,
+  }}
+/>
+
+### [Manual Activation](#manual-activation)
+
+By default, the tab can be selected when it receives focus from either the keyboard or pointer interaction. This is called automatic tab activation.
+
+In contrast, manual tab activation means the tab is selected with the
+
+`Enter` key or by clicking on the tab
+
+<Canvas
+  of={TabStories.Manual}
+  source={{
+    format: true,
+    code: `
+        <Tabs.Root activationMode="manual" defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
+        )
+      )
+    `,
+  }}
+/>
