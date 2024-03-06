@@ -11,7 +11,7 @@ const meta = {
       description: 'Whether the select should close after an item is selected',
     },
     defaultValue: {
-      control: 'string',
+      control: 'text',
       description: '\nThe initial value of the select. `string[]`',
     },
     dir: {
@@ -34,7 +34,7 @@ const meta = {
         '\nA root node to correctly resolve document in custom environments. E.x.: Iframes, Electron. `() => ShadowRoot | Node | Document',
     },
     highlightedValue: {
-      control: { type: 'string' },
+      control: { type: 'text' },
       description: 'The key of the highlighted item',
     },
     invalid: {
@@ -115,7 +115,7 @@ const meta = {
       description: 'Whether to unmount on exit.',
     },
     value: {
-      control: 'string',
+      control: 'text',
       description: 'The keys of the selected items',
     },
   },
