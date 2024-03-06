@@ -1,6 +1,6 @@
 import { defineRecipe } from '@pandacss/dev';
 
-export const badge = defineRecipe({
+export const badgeRecipe = defineRecipe({
   className: 'badge',
   base: {
     alignItems: 'center',

@@ -1,9 +1,14 @@
 import { defineConfig } from '@pandacss/dev';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
-import { Tooltip } from '@/components/ui/tooltip/TooltipRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
 import { checkboxSlotRecipe } from '@/components/ui/checkbox/CheckboxSlotRecipe';
 import { selectRecipe } from '@/components/ui/select/SelectRecipe';
+import { badgeRecipe } from '@/components/ui/badge/BadgeRecipe';
+import { paginationSlotRecipe } from '@/components/ui/pagination/PaginationRecipe';
+import { popoverSlotRecipe } from '@/components/ui/popover/PopoverRecipe';
+import { radioGroupSlotRecipe } from '@/components/ui/radio/RadioRecipe';
+import { tabsSlotRecipe } from '@/components/ui/tabs/TabRecipe';
+import { tooltipSlotRecipe } from '@/components/ui/tooltip/TooltipRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -15,11 +20,16 @@ export default defineConfig({
       slotRecipes: {
         avatar: avatarSlotRecipe,
         checkbox: checkboxSlotRecipe,
+        pagination: paginationSlotRecipe,
+        popover: popoverSlotRecipe,
+        radioGroup: radioGroupSlotRecipe,
+        tabs: tabsSlotRecipe,
+        tooltip: tooltipSlotRecipe,
       },
       recipes: {
-        tooltip: Tooltip,
         button: buttonRecipe,
         select: selectRecipe,
+        badge: badgeRecipe,
       },
     },
   },

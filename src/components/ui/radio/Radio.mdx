@@ -1,0 +1,125 @@
+# Tabs
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as RadioStories from './Radio.stories';
+
+<Meta of={RadioStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Overview
+
+This feature enables users to choose only one option from several available choices.
+
+<Canvas
+  of={RadioStories.Overview}
+  source={{
+    format: true,
+    code: `
+        const frameworks = ['Option 1', 'Option 2', 'Option 3'];
+        return (
+          <RadioGroup.Root>
+            <RadioGroup.Label>Option</RadioGroup.Label>
+            <RadioGroup.Indicator />
+            {frameworks.map((framework) => (
+              <RadioGroup.Item key={framework} value={framework}>
+                <RadioGroup.ItemText>{framework}</RadioGroup.ItemText>
+                <RadioGroup.ItemControl />
+              </RadioGroup.Item>
+            ))}
+          </RadioGroup.Root>
+        );
+      );
+    `,
+
+}}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Disabling the radio group](#radio-disabled)
+
+To disable a radio group, simply set the `disabled` property to true.
+
+<Canvas
+  of={RadioStories.Disabled}
+  source={{
+    format: true,
+    code: `
+        const options = ['Option 1', 'Option 2', 'Option 3'];
+        return (
+          <RadioGroup.Root disabled>
+            <RadioGroup.Label>Option</RadioGroup.Label>
+            <RadioGroup.Indicator />
+            {options.map((option) => (
+              <RadioGroup.Item key={option} value={option}>
+                <RadioGroup.ItemText>{option}</RadioGroup.ItemText>
+                <RadioGroup.ItemControl />
+              </RadioGroup.Item>
+            ))}
+          </RadioGroup.Root>
+        );
+      )
+    `,
+  }}
+/>
+
+### [Setting the initial value](#radio-set-initial-value)
+
+To preselect a radio item, set the `defaultValue` prop to its value.
+
+<Canvas
+  of={RadioStories.InitialValue}
+  source={{
+    format: true,
+    code: `
+        const options = ['Option1', 'Option2', 'Option3'];
+        return (
+          <RadioGroup.Root defaultValue="Option1">
+            <RadioGroup.Label>Option</RadioGroup.Label>
+            <RadioGroup.Indicator />
+            {options.map((option) => (
+              <RadioGroup.Item key={option} value={option}>
+                <RadioGroup.ItemText>{option}</RadioGroup.ItemText>
+                <RadioGroup.ItemControl />
+              </RadioGroup.Item>
+            ))}
+          </RadioGroup.Root>
+        );
+      )
+    `,
+  }}
+/>
+
+### [Listening for changes](#radio-event)
+
+Whenever the value of the radio group is modified, it triggers the `onValueChange` callback function.
+
+<Canvas
+  of={RadioStories.OnEvent}
+  source={{
+    format: true,
+    code: `
+        const options = ['Option 1', 'Option 2', 'Option 3'];
+        return (
+          <RadioGroup.Root onValueChange={(details) => console.log(details.value)}>
+            <RadioGroup.Label>Option</RadioGroup.Label>
+            <RadioGroup.Indicator />
+            {options.map((option) => (
+              <RadioGroup.Item key={option} value={option}>
+                <RadioGroup.ItemText>{option}</RadioGroup.ItemText>
+                <RadioGroup.ItemControl />
+              </RadioGroup.Item>
+            ))}
+          </RadioGroup.Root>
+        );
+      )
+    `,
+  }}
+/>

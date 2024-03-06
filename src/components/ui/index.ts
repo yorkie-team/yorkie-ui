@@ -8,3 +8,4 @@ export * from './badge';
 export * from './popover';
 export * from './pagination';
 export * from './tabs';
+export * from './radio';
