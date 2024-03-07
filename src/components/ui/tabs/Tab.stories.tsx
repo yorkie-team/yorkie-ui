@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Tabs } from '@/components/ui/tabs';
 
 const meta = {
-  title: 'DISPLAY / Tab',
+  title: 'DATA DISPLAY / Tab',
   argTypes: {
     activationMode: {
       description:

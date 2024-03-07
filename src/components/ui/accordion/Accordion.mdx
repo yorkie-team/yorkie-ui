@@ -1,0 +1,148 @@
+# Radio
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Overview
+
+This feature enables users to choose only one option from several available choices.
+
+<Canvas
+  of={AccordionStories.Overview}
+  source={{
+    format: true,
+    code: `
+      return (
+        <Accordion.Root defaultValue={['React']} collapsible>
+          {['Accordion 1', 'Accordion 2', 'Accordion 3'].map((item, id) => (
+            <Accordion.Item key={id} value={item}>
+              <Accordion.ItemTrigger>
+                {item}
+                <Accordion.ItemIndicator>
+                  <DownIcon />
+                </Accordion.ItemIndicator>
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>{item} is a JavaScript library for building user interfaces.</Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      );
+    `,
+
+}}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Multiple Panels Open](#accordion-multiple)
+
+To enable an accordion that allows keeping multiple panels open, you can use the "multiple" prop.
+
+<Canvas
+  of={AccordionStories.Multiple}
+  source={{
+    format: true,
+    code: `
+      return (
+        <Accordion.Root defaultValue={['Accordion 1']} multiple>
+          {['Accordion 1', 'Accordion 2', 'Accordion 3'].map((item, id) => (
+            <Accordion.Item key={id} value={item}>
+              <Accordion.ItemTrigger>
+                {item}
+                <Accordion.ItemIndicator>
+                  <ChevronDownIcon />
+                </Accordion.ItemIndicator>
+              </Accordion.ItemTrigger>
+              <Accordion.ItemContent>
+                {item} is a JavaScript library for building user interfaces.
+              </Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      )
+    `,
+  }}
+/>
+
+### [Controlled Accordion](#accordion-controlled)
+
+For effective state management of the Accordion, employ the value prop and ensure to update it through the `onValueChange` event:
+
+<Canvas
+  of={AccordionStories.Controlled}
+  source={{
+    format: true,
+    code: `
+      const items = ['panel-1', 'panel-2', 'panel-3']
+      const [value, setValue] = useState<string[]>([])
+      return (
+        <Accordion.Root value={value} onValueChange={(details) => setValue(details.value)}>
+          {items.map((item, id) => (
+            <Accordion.Item key={id} value={item}>
+              <Accordion.ItemTrigger>{item} trigger</Accordion.ItemTrigger>
+              <Accordion.ItemContent>{item} content</Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      )
+    `,
+  }}
+/>
+
+### [Vertical](#accordion-vertical)
+
+Configure the Accordion to display vertically by using the `orientation` prop:
+
+<Canvas
+  of={AccordionStories.Vertical}
+  source={{
+    format: true,
+    code: `
+      const items = ['panel-1', 'panel-2', 'panel-3'];
+      return (
+        <Accordion.Root orientation="vertical">
+          {items.map((item, id) => (
+            <Accordion.Item key={id} value={item} disabled={item === 'panel-2'}>
+              <Accordion.ItemTrigger>{item} trigger</Accordion.ItemTrigger>
+              <Accordion.ItemContent>{item} content</Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      );
+    `,
+  }}
+/>
+
+### [Disabled](#accordion-disabled)
+
+Utilize the `disabled` prop to deactivate a specific Accordion Item:
+
+<Canvas
+  of={AccordionStories.Disabled}
+  source={{
+    format: true,
+    code: `
+      const items = ['panel-1', 'panel-2', 'panel-3'];
+      return (
+        <Accordion.Root>
+          {items.map((item, id) => (
+            <Accordion.Item key={id} value={item} disabled={item === 'panel-2'}>
+              <Accordion.ItemTrigger>{item} trigger</Accordion.ItemTrigger>
+              <Accordion.ItemContent>{item} content</Accordion.ItemContent>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+      );
+    `,
+  }}
+/>

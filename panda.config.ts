@@ -9,6 +9,7 @@ import { popoverSlotRecipe } from '@/components/ui/popover/PopoverRecipe';
 import { radioGroupSlotRecipe } from '@/components/ui/radio/RadioRecipe';
 import { tabsSlotRecipe } from '@/components/ui/tabs/TabRecipe';
 import { tooltipSlotRecipe } from '@/components/ui/tooltip/TooltipRecipe';
+import { accordionSlotRecipe } from '@/components/ui/accordion/AccordionRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -25,6 +26,7 @@ export default defineConfig({
         radioGroup: radioGroupSlotRecipe,
         tabs: tabsSlotRecipe,
         tooltip: tooltipSlotRecipe,
+        accordion: accordionSlotRecipe,
       },
       recipes: {
         button: buttonRecipe,

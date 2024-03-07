@@ -70,7 +70,7 @@ In order to create a controlled Tooltip component, it is essential to manage the
 
       return (
         <>
-          <button onClick={() => setIsOpen(!isOpen)}>Toggle</button>
+          <Button onClick={() => setIsOpen(!isOpen)}>Toggle</Button>
           <Tooltip.Root open={isOpen}>
             <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
             <Tooltip.Positioner>
