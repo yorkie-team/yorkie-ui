@@ -4,7 +4,7 @@ import { Badge, type BadgeProps } from '@/components/ui';
 import { Flex } from '@/styled/jsx';
 
 const meta = {
-  title: 'DISPLAY / Badge',
+  title: 'DATA DISPLAY / Badge',
   argTypes: {
     size: {
       control: { type: 'radio' },
