@@ -42,3 +42,4 @@ export * from './radio-group.mjs';
 export * from './tabs.mjs';
 export * from './tooltip.mjs';
 export * from './accordion.mjs';
+export * from './switchs.mjs';
