@@ -11,3 +11,4 @@ export * from './tabs';
 export * from './radio';
 export * from './accordion';
 export * from './switch';
+export * from './menu';

@@ -17,7 +17,7 @@ const meta = {
     },
     value: {
       control: { type: 'text' },
-      description: 'The selected accordion id',
+      description: 'The selected accordion id.',
     },
     onValueChange: {
       description:
@@ -25,11 +25,11 @@ const meta = {
     },
     onFocusChange: {
       description:
-        '\nThe callback fired when the focused accordion item changes.. `(details: ValueChangeDetails) => void`',
+        '\nThe callback fired when the focused accordion item changes. `(details: ValueChangeDetails) => void`',
     },
     disabled: {
       control: { type: 'boolean' },
-      description: 'Whether the accordion items are disabled',
+      description: 'Whether the accordion items are disabled.',
     },
     collapsible: {
       control: { type: 'boolean' },
