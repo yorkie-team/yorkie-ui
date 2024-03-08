@@ -43,3 +43,4 @@ export * from './radio-group';
 export * from './tabs';
 export * from './tooltip';
 export * from './accordion';
+export * from './switchs';

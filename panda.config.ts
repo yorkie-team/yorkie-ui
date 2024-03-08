@@ -10,6 +10,7 @@ import { radioGroupSlotRecipe } from '@/components/ui/radio/RadioRecipe';
 import { tabsSlotRecipe } from '@/components/ui/tabs/TabRecipe';
 import { tooltipSlotRecipe } from '@/components/ui/tooltip/TooltipRecipe';
 import { accordionSlotRecipe } from '@/components/ui/accordion/AccordionRecipe';
+import { switchSlotRecipe } from '@/components/ui/switch/SwitchRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -27,6 +28,7 @@ export default defineConfig({
         tabs: tabsSlotRecipe,
         tooltip: tooltipSlotRecipe,
         accordion: accordionSlotRecipe,
+        switchs: switchSlotRecipe,
       },
       recipes: {
         button: buttonRecipe,
