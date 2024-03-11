@@ -1,0 +1,68 @@
+# Datepicker
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as DatepickerStories from './Datepicker.stories';
+
+<Meta of={DatepickerStories} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Overview
+
+This feature enables users to choose only one option from several available choices.
+
+<Canvas
+  of={DatepickerStories.Overview}
+  source={{
+    format: true,
+    code: `
+      const frameworks = ['Option 1', 'Option 2', 'Option 3'];
+      return (
+        <RadioGroup.Root>
+          <RadioGroup.Label>Option</RadioGroup.Label>
+          <RadioGroup.Indicator />
+          {frameworks.map((framework) => (
+            <RadioGroup.Item key={framework} value={framework}>
+              <RadioGroup.ItemText>{framework}</RadioGroup.ItemText>
+              <RadioGroup.ItemControl />
+            </RadioGroup.Item>
+          ))}
+        </RadioGroup.Root>
+      );
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Standalone Date Picker](#standalone-datepicker)
+
+In some cases, you may want to display a non-dismissable date picker. You can do this by setting the open prop to true and the `closeOnSelect` prop to false.
+
+<Canvas
+  of={DatepickerStories.Standalone}
+  source={{
+    format: true,
+    code: `
+      const options = ['Option 1', 'Option 2', 'Option 3'];
+      return (
+        <RadioGroup.Root disabled>
+          <RadioGroup.Label>Option</RadioGroup.Label>
+          <RadioGroup.Indicator />
+          {options.map((option) => (
+            <RadioGroup.Item key={option} value={option}>
+              <RadioGroup.ItemText>{option}</RadioGroup.ItemText>
+              <RadioGroup.ItemControl />
+            </RadioGroup.Item>
+          ))}
+        </RadioGroup.Root>
+      );
+    `,
+  }}
+/>
