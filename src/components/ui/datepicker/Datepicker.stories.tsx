@@ -6,7 +6,7 @@ const meta = {
   argTypes: {
     defaultValue: {
       control: 'text',
-      description: 'The initial value of the tabs.',
+      description: '\nThe initial value of the tabs. `string[]`',
     },
     dir: {
       control: { type: 'radio' },
@@ -16,10 +16,7 @@ const meta = {
     },
     value: {
       control: { type: 'text' },
-      description: 'The selected tab id',
-    },
-    onValueChange: {
-      description: '\nFunction called once a radio is checked. `(details: ValueChangeDetails) => void`',
+      description: '\nThe keys of the selected items. `string[]`',
     },
     orientation: {
       description:
@@ -27,11 +24,92 @@ const meta = {
     },
     disabled: {
       control: { type: 'boolean' },
-      description: 'If `true`, the radio group will be disabled',
+      description: 'Whether the select is disabled',
     },
     form: {
       control: { type: 'text' },
-      description: 'The associate form of the underlying input.',
+      description: 'The associate form of the underlying select.',
+    },
+    closeOnSelect: {
+      control: { type: 'boolean' },
+      description: 'Whether the select should close after an item is selected.',
+    },
+    highlightedValue: {
+      control: { type: 'text' },
+      description: 'The key of the highlighted item.',
+    },
+    invalid: {
+      control: { type: 'boolean' },
+      description: 'Whether the select is invalid.',
+    },
+    isItemDisabled: {
+      description: '\nWhether the item is disabled. `(item: T) => boolean`',
+    },
+    itemToString: {
+      description: '\nThe label of the item. `(item: T) => string`',
+    },
+    itemToValue: {
+      description: '\nThe value of the item. `(item: T) => string`',
+    },
+    lazyMount: {
+      control: { type: 'boolean' },
+      description: 'Whether to enable lazy mounting.',
+    },
+    loop: {
+      control: { type: 'boolean' },
+      description: 'If `Whether to loop the keyboard navigation through the options.',
+    },
+    multiple: {
+      control: { type: 'boolean' },
+      description: 'Whether to allow multiple selection.',
+    },
+    name: {
+      control: { type: 'text' },
+      description: 'The `name` attribute of the underlying select.',
+    },
+    onExitComplete: {
+      description: '\nFunction called when the animation ends in the closed state. `() => void`',
+    },
+    onFocusOutside: {
+      description:
+        '\nFunction called when the focus is moved outside the component. `(event: FocusOutsideEvent) => void`',
+    },
+    onHighlightChange: {
+      description:
+        '\nThe callback fired when the highlighted item changes. `(details: HighlightChangeDetails<T>) => void`',
+    },
+    onInteractOutside: {
+      description:
+        '\nFunction called when an interaction happens outside the component. `	(event: InteractOutsideEvent) => void`',
+    },
+    onOpenChange: {
+      description: '\nFunction called when the popup is opened. `(details: OpenChangeDetails) => void`',
+    },
+    onPointerDownOutside: {
+      description:
+        '\nFunction called when the pointer is pressed down outside the component. `(event: PointerDownOutsideEvent) => void`',
+    },
+    onValueChange: {
+      description: '\nThe callback fired when the selected item changes. `(details: ValueChangeDetails<T>) => void`',
+    },
+    open: {
+      control: { type: 'boolean' },
+      description: 'Whether the select menu is open.',
+    },
+    positioning: {
+      description: 'The positioning options of the menu.',
+    },
+    present: {
+      control: { type: 'boolean' },
+      description: 'Whether the node is present (controlled by the user).',
+    },
+    selectOnBlur: {
+      control: { type: 'boolean' },
+      description: 'Whether to select the highlighted item when the user presses Tab, and the menu is open..',
+    },
+    unmountOnExit: {
+      control: { type: 'boolean' },
+      description: 'Whether to unmount on exit.',
     },
   },
 };
