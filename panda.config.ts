@@ -12,6 +12,7 @@ import { tooltipSlotRecipe } from '@/components/ui/tooltip/TooltipRecipe';
 import { accordionSlotRecipe } from '@/components/ui/accordion/AccordionRecipe';
 import { switchSlotRecipe } from '@/components/ui/switch/SwitchRecipe';
 import { datePickerSlotRecipe } from '@/components/ui/datepicker/DatepickerRecipe';
+import { inputRecipe } from '@/components/ui/input/InputRecipe';
 
 export default defineConfig({
   preflight: true,
@@ -36,6 +37,7 @@ export default defineConfig({
         button: buttonRecipe,
         select: selectRecipe,
         badge: badgeRecipe,
+        input: inputRecipe,
       },
     },
   },
