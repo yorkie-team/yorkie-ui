@@ -33,6 +33,7 @@ module.exports = {
       ...config.resolve.alias,
       '@/components': path.resolve(__dirname, '../src/components'),
       '@/styled': path.resolve(__dirname, '../styled-system'),
+      '@/stories': path.resolve(__dirname, '../src/stories'),
     };
     return config;
   },
