@@ -1,6 +1,5 @@
 import { Icon } from '@/components/ui';
 
-import { DiamondIcon } from 'lucide-react';
 import { Flex } from '@/styled/jsx';
 import type { Meta, StoryObj } from '@storybook/react';
 import { CalendarIcon } from '@/components/ui';
