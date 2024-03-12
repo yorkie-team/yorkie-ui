@@ -1,6 +1,5 @@
 export * from './code.mjs';
 export * from './heading.mjs';
-export * from './icon.mjs';
 export * from './icon-button.mjs';
 export * from './kbd.mjs';
 export * from './label.mjs';
@@ -10,6 +9,7 @@ export * from './button.mjs';
 export * from './select.mjs';
 export * from './badge.mjs';
 export * from './input.mjs';
+export * from './icon.mjs';
 export * from './alert.mjs';
 export * from './card.mjs';
 export * from './carousel.mjs';

@@ -1,7 +1,6 @@
 /* eslint-disable */
 export * from './code';
 export * from './heading';
-export * from './icon';
 export * from './icon-button';
 export * from './kbd';
 export * from './label';
@@ -11,6 +10,7 @@ export * from './button';
 export * from './select';
 export * from './badge';
 export * from './input';
+export * from './icon';
 export * from './alert';
 export * from './card';
 export * from './carousel';
