@@ -13,3 +13,6 @@ export * from './accordion';
 export * from './switch';
 export * from './menu';
 export * from './input';
+export * from './datepicker';
+export * from './icon';
+export * from './icons';

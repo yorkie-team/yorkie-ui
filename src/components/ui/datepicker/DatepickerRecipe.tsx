@@ -19,7 +19,7 @@ export const datePickerSlotRecipe = defineSlotRecipe({
       flexDirection: 'column',
       gap: '3',
       p: '4',
-      width: '344px',
+      width: 'fit-content',
       zIndex: 'dropdown',
       _open: {
         animation: 'fadeIn 0.25s ease-out',
