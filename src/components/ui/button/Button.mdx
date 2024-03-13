@@ -8,13 +8,21 @@ import * as ButtonStories from './Button.stories';
 - [Overview](#overview)
 - [Props](#props)
 - [Examples](#examples)
-- [Usage](#usage)
 
 ## Overview
 
 Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
 
-<Canvas of={ButtonStories.Overview} />
+<Canvas
+  of={ButtonStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Button {...args}>
+        Default
+      </Button>`,
+  }}
+/>
 
 ## Props
 
@@ -120,12 +128,3 @@ Use the defined color codes in the system to change the background for the butto
     `,
   }}
 />
-
-## Usage
-
-Buttons are used throughout the UI to initiate actions such as saving changes, navigating or canceling. They can be found on pages, widgets, and modals.
-
-- There are 6 sizes: `xs`, `sm`, `md`, `lg`, `xl` and `2xl`.
-- There are 4 types: `link`, `outline`, `solid` and `ghost`.
-- Using the `disabled` prop indicates that a button is unavailable for selection.
-- Use defined color codes for button background.

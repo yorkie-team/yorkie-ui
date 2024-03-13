@@ -3,7 +3,7 @@ import type { ConditionalValue } from '../types/index';
 import type { DistributiveOmit, Pretty } from '../types/system-types';
 
 interface PinInputVariant {
-  size: "sm" | "md" | "lg" | "xl"
+  size: "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
 }
 
 type PinInputVariantMap = {
@@ -16,7 +16,7 @@ export type PinInputVariantProps = {
 
 export interface PinInputRecipe {
   __type: PinInputVariantProps
-  (props?: PinInputVariantProps): Pretty<Record<"root" | "label" | "input" | "control", string>>
+  (props?: PinInputVariantProps): Pretty<Record<"root" | "label" | "input" | "control" | "root" | "label" | "input" | "control", string>>
   raw: (props?: PinInputVariantProps) => PinInputVariantProps
   variantMap: PinInputVariantMap
   variantKeys: Array<keyof PinInputVariant>

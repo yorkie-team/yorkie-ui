@@ -16,6 +16,18 @@ const splitterSlotNames = [
   [
     "resizeTrigger",
     "splitter__resizeTrigger"
+  ],
+  [
+    "root",
+    "splitter__root"
+  ],
+  [
+    "panel",
+    "splitter__panel"
+  ],
+  [
+    "resizeTrigger",
+    "splitter__resizeTrigger"
   ]
 ]
 const splitterSlotFns = /* @__PURE__ */ splitterSlotNames.map(([slotName, slotKey]) => [slotName, createRecipe(slotKey, splitterDefaultVariants, getSlotCompoundVariant(splitterCompoundVariants, slotName))])
