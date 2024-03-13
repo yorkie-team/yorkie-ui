@@ -20,17 +20,21 @@ Add Yorkie UI Poc to your project.
 
 Import components you want into your UI
 
-`import { Button, Badge } from 'yorkie-ui-poc';`
+```jsx
+import { Button, Badge } from 'yorkie-ui-poc';
+```
 
 and use them like so
 
-```
-  const example = () => (
-    <div>
-      <Button appearance="primary" onClick={() => 0}>Do something</Button>
-      <Badge onClick={this.clear}>+1</Badge>
-    </div>
-  )
+```jsx
+const example = () => (
+  <div>
+    <Button appearance="primary" onClick={() => 0}>
+      Do something
+    </Button>
+    <Badge onClick={this.clear}>+1</Badge>
+  </div>
+);
 ```
 
 <Overview />
