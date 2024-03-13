@@ -22,6 +22,22 @@ const ratingGroupSlotNames = [
   [
     "control",
     "ratingGroup__control"
+  ],
+  [
+    "root",
+    "ratingGroup__root"
+  ],
+  [
+    "label",
+    "ratingGroup__label"
+  ],
+  [
+    "item",
+    "ratingGroup__item"
+  ],
+  [
+    "control",
+    "ratingGroup__control"
   ]
 ]
 const ratingGroupSlotFns = /* @__PURE__ */ ratingGroupSlotNames.map(([slotName, slotKey]) => [slotName, createRecipe(slotKey, ratingGroupDefaultVariants, getSlotCompoundVariant(ratingGroupCompoundVariants, slotName))])

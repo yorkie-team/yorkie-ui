@@ -1,4 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
+import { createPreset } from '@park-ui/panda-preset';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
 import { checkboxSlotRecipe } from '@/components/ui/checkbox/CheckboxSlotRecipe';
@@ -17,7 +18,15 @@ import { iconRecipe } from '@/components/ui/icon/IconRecipe';
 
 export default defineConfig({
   preflight: true,
-  presets: ['@pandacss/preset-base', '@park-ui/panda-preset'],
+  presets: [
+    '@pandacss/preset-base',
+    '@park-ui/panda-preset',
+    createPreset({
+      accentColor: 'orange',
+      grayColor: 'neutral',
+      borderRadius: 'sm',
+    }),
+  ],
   include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
   theme: {

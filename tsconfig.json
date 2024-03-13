@@ -19,7 +19,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/styled/*": ["./styled-system/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/stories/*": ["./src/stories/*"]
     },
     "plugins": [
       {

@@ -3,7 +3,7 @@ import type { ConditionalValue } from '../types/index';
 import type { DistributiveOmit, Pretty } from '../types/system-types';
 
 interface DrawerVariant {
-  placement: "left" | "right"
+  variant: "left" | "right"
 }
 
 type DrawerVariantMap = {
@@ -16,7 +16,7 @@ export type DrawerVariantProps = {
 
 export interface DrawerRecipe {
   __type: DrawerVariantProps
-  (props?: DrawerVariantProps): Pretty<Record<"trigger" | "backdrop" | "positioner" | "content" | "title" | "description" | "closeTrigger" | "header" | "body" | "footer", string>>
+  (props?: DrawerVariantProps): Pretty<Record<"trigger" | "backdrop" | "positioner" | "content" | "title" | "description" | "closeTrigger" | "header" | "body" | "footer" | "trigger" | "backdrop" | "positioner" | "content" | "title" | "description" | "closeTrigger" | "header" | "body" | "footer", string>>
   raw: (props?: DrawerVariantProps) => DrawerVariantProps
   variantMap: DrawerVariantMap
   variantKeys: Array<keyof DrawerVariant>

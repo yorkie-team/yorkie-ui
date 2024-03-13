@@ -6,10 +6,10 @@ export const tooltipSlotRecipe = defineSlotRecipe({
   slots: tooltipAnatomy.keys(),
   base: {
     content: {
-      background: 'gray.a12',
+      background: 'accent.default',
       borderRadius: 'l2',
       boxShadow: 'sm',
-      color: 'bg.default',
+      color: 'accent.fg',
       fontWeight: 'semibold',
       px: '3',
       py: '2',

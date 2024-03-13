@@ -11,7 +11,8 @@ const iconButtonVariantMap = {
     "solid",
     "outline",
     "ghost",
-    "link"
+    "link",
+    "subtle"
   ],
   "size": [
     "xs",

@@ -16,3 +16,5 @@ export * from './input';
 export * from './datepicker';
 export * from './icon';
 export * from './icons';
+export * from './card';
+export * from './label';
