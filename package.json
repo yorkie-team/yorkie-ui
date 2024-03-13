@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.21.0",
-    "@park-ui/panda-preset": "^0.36.1",
+    "@park-ui/panda-preset": "^0.25.0",
     "@storybook/addon-a11y": "^7.6.3",
     "@storybook/addon-essentials": "^7.6.3",
     "@storybook/addon-interactions": "^7.6.3",
