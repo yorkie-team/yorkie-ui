@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   createContext,
@@ -8,7 +8,7 @@ import {
   type ComponentProps,
   type ElementType,
   type JSX,
-} from "react";
+} from 'react';
 
 type GenericProps = Record<string, unknown>;
 type StyleRecipe = {
@@ -20,7 +20,7 @@ type StyleSlotRecipe<R extends StyleRecipe> = Record<StyleSlot<R>, string>;
 type StyleVariantProps<R extends StyleRecipe> = Parameters<R>[0];
 type CombineProps<T, U> = Omit<T, keyof U> & U;
 
-const cx = (...args: (string | undefined)[]) => args.filter(Boolean).join(" ");
+const cx = (...args: (string | undefined)[]) => args.filter(Boolean).join(' ');
 
 export interface ComponentVariants<
   T extends ElementType,
@@ -44,12 +44,12 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
           <Component
             ref={ref}
             {...otherProps}
-            className={cx(slotStyles[slot ?? ""], otherProps.className)}
+            className={cx(slotStyles[slot ?? ''], otherProps.className)}
           />
         </StyleContext.Provider>
       );
     });
-    StyledComponent.displayName = "StyledComponent";
+    StyledComponent.displayName = 'StyledComponent';
     return StyledComponent as unknown as ComponentVariants<T, R>;
   };
 
@@ -62,11 +62,11 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
       const slotStyles = useContext(StyleContext);
       return createElement(Component, {
         ...props,
-        className: cx(slotStyles?.[slot ?? ""], props.className),
+        className: cx(slotStyles?.[slot ?? ''], props.className),
         ref,
       });
     });
-    StyledComponent.displayName = "StyledComponent";
+    StyledComponent.displayName = 'StyledComponent';
     return StyledComponent as unknown as T;
   };
 
