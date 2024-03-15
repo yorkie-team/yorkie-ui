@@ -1,43 +1,60 @@
-const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import * as path from "path";
+import type { StorybookConfig } from "@storybook/nextjs";
 
-module.exports = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+const config: StorybookConfig = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    '@storybook/addon-actions',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
-    '@storybook/addon-docs',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
+    "@storybook/addon-themes",
+    {
+      name: "@storybook/addon-styling-webpack",
+      options: {
+        rules: [
+          // Replaces existing CSS rules to support PostCSS
+          {
+            test: /\.css$/,
+            use: [
+              "style-loader",
+              {
+                loader: "css-loader",
+                options: { importLoaders: 1 },
+              },
+              {
+                // Gets options from `postcss.config.js` in your project root
+                loader: "postcss-loader",
+                options: { implementation: require.resolve("postcss") },
+              },
+            ],
+          },
+        ],
+      },
+    },
   ],
+  // ref: https://zenn.dev/nitaking/articles/0d5eb19d6d9529
+  webpackFinal(config) {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@/components": path.resolve(__dirname, "../src/components"),
+        "@/styled": path.resolve(__dirname, "../styled-system"),
+        "@/stories": path.resolve(__dirname, "../src/stories"),
+        "@/lib": path.resolve(__dirname, "../src/lib"),
+      };
+    }
+    return config;
+  },
   framework: {
-    name: '@storybook/nextjs',
+    name: "@storybook/nextjs",
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: "tag",
   },
-  core: {
-    builder: 'webpack5',
-  },
-  webpackFinal: (config) => {
-    config.resolve.plugins = [
-      ...(config.resolve.plugins || []),
-      new TsconfigPathsPlugin({
-        extensions: ['.ts', '.tsx', '.js'],
-      }),
-    ];
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@/components': path.resolve(__dirname, '../src/components'),
-      '@/styled': path.resolve(__dirname, '../styled-system'),
-      '@/stories': path.resolve(__dirname, '../src/stories'),
-    };
-    return config;
-  },
-  typescript: {
-    reactDocgen: false,
+  features: {
+    experimentalRSC: true,
   },
 };
+export default config;
