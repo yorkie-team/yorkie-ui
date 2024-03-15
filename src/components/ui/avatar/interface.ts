@@ -1,7 +1,7 @@
-import { type AvatarProps as ArkAvatarProps } from '@ark-ui/react/avatar';
+import { type AvatarRootProps } from '@ark-ui/react/avatar';
 import { type AvatarVariantProps } from '@/styled/recipes';
 
-export interface AvatarProps extends ArkAvatarProps, AvatarVariantProps {
+export interface AvatarProps extends AvatarRootProps, AvatarVariantProps {
   /*
     "name" is an optional property for the avatar's name.
     It will be displayed if the `src` property is omitted.

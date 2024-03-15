@@ -52,7 +52,7 @@ export const Controlled = () => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Switch checked={checked} onCheckedChange={(e) => setChecked(e.checked)}>
+    <Switch checked={checked} onCheckedChange={(e: any) => setChecked(e.checked)}>
       Label
     </Switch>
   );

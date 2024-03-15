@@ -17,6 +17,7 @@ import { inputRecipe } from '@/components/ui/input/InputRecipe';
 import { iconRecipe } from '@/components/ui/icon/IconRecipe';
 
 export default defineConfig({
+  // Whether to use css reset
   preflight: true,
   presets: [
     '@pandacss/preset-base',
@@ -27,31 +28,44 @@ export default defineConfig({
       borderRadius: 'sm',
     }),
   ],
-  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
+
+  // Where to look for your css declarations
+  include: ['./src/**/*.{ts,tsx,js,jsx}'],
+
+  // Files to exclude
   exclude: [],
-  theme: {
+
+  conditions: {
     extend: {
-      slotRecipes: {
-        avatar: avatarSlotRecipe,
-        checkbox: checkboxSlotRecipe,
-        pagination: paginationSlotRecipe,
-        popover: popoverSlotRecipe,
-        radioGroup: radioGroupSlotRecipe,
-        tabs: tabsSlotRecipe,
-        tooltip: tooltipSlotRecipe,
-        accordion: accordionSlotRecipe,
-        switchs: switchSlotRecipe,
-        datePicker: datePickerSlotRecipe,
-      },
-      recipes: {
-        button: buttonRecipe,
-        select: selectRecipe,
-        badge: badgeRecipe,
-        input: inputRecipe,
-        icon: iconRecipe,
-      },
+      light: '[data-theme=light] &',
+      dark: '[data-theme=dark] &',
     },
   },
+  // Useful for theme customization
+  theme: {
+    slotRecipes: {
+      avatar: avatarSlotRecipe,
+      checkbox: checkboxSlotRecipe,
+      pagination: paginationSlotRecipe,
+      popover: popoverSlotRecipe,
+      radioGroup: radioGroupSlotRecipe,
+      tabs: tabsSlotRecipe,
+      tooltip: tooltipSlotRecipe,
+      accordion: accordionSlotRecipe,
+      switchs: switchSlotRecipe,
+      datePicker: datePickerSlotRecipe,
+    },
+    recipes: {
+      button: buttonRecipe,
+      select: selectRecipe,
+      badge: badgeRecipe,
+      input: inputRecipe,
+      icon: iconRecipe,
+    },
+  },
+
   jsxFramework: 'react',
+
+  // The output directory for your css system
   outdir: 'styled-system',
 });

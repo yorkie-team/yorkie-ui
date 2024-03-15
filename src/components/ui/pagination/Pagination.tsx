@@ -1,16 +1,26 @@
-import { Pagination as ArkPagination, type PaginationProps as ArkPaginationProps } from '@ark-ui/react/pagination';
+import { Pagination as ArkPagination, type PaginationRootProps } from '@ark-ui/react/pagination';
 import { forwardRef } from 'react';
-import { pagination, type PaginationVariantProps } from '@/styled/recipes';
+import { css, cx } from 'styled-system/css';
+import { splitCssProps } from 'styled-system/jsx';
+import { pagination, type PaginationVariantProps } from 'styled-system/recipes';
+import type { Assign, JsxStyleProps } from 'styled-system/types';
 import { Button } from '@/components/ui/button';
 
-export interface PaginationProps extends ArkPaginationProps, PaginationVariantProps {}
+export interface PaginationProps extends Assign<JsxStyleProps, PaginationRootProps>, PaginationVariantProps {}
 
-export const Pagination = forwardRef<HTMLDivElement, PaginationProps>((props, ref) => {
-  const [variantProps, localProps] = pagination.splitVariantProps(props);
+export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
+  const [variantProps, paginationProps] = pagination.splitVariantProps(props);
+  const [cssProps, localProps] = splitCssProps(paginationProps);
+  const { className, ...rootProps } = localProps;
   const styles = pagination(variantProps);
 
   return (
-    <ArkPagination.Root ref={ref} className={styles.root} {...localProps}>
+    <ArkPagination.Root
+      // @ts-expect-error TODO cssProps is to complex to be typed
+      className={cx(styles.root, css(cssProps), className)}
+      ref={ref}
+      {...rootProps}
+    >
       {({ pages }) => (
         <>
           <ArkPagination.PrevTrigger className={styles.prevTrigger} asChild>
@@ -44,12 +54,13 @@ Pagination.displayName = 'Pagination';
 
 const ChevronLeftIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <title>Chevron Left Icon</title>
     <path
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       d="m15 18l-6-6l6-6"
     />
   </svg>
@@ -57,12 +68,13 @@ const ChevronLeftIcon = () => (
 
 const ChevronRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <title>Chevron Right Icon</title>
     <path
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       d="m9 18l6-6l-6-6"
     />
   </svg>

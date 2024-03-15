@@ -1,10 +1,10 @@
 import { type ReactNode } from 'react';
-import { type CheckboxProps as ArkCheckboxProps } from '@ark-ui/react/checkbox';
+import { type CheckboxRootProps } from '@ark-ui/react/checkbox';
 import { type CheckboxVariantProps } from '@/styled/recipes';
 import type { HTMLStyledProps } from '@/styled/types';
 
 export interface CheckboxProps
-  extends ArkCheckboxProps,
+  extends CheckboxRootProps,
     CheckboxVariantProps,
     Omit<HTMLStyledProps<'label'>, 'defaultChecked' | 'dir' | 'translate' | 'content' | 'color'> {
   /*
