@@ -63,6 +63,5 @@
       "eslint --fix",
       "prettier --parser typescript --write"
     ]
-  },
-  "packageManager": "pnpm@7.24.3+sha1.48094934266041ab123b3c269b64afc9b67c5f7b"
+  }
 }
