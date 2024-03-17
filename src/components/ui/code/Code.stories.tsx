@@ -9,5 +9,5 @@ const meta = {
 export default meta;
 
 export const Overview = () => {
-  return <Code>@park-ui/panda-preset</Code>;
+  return <Code>yorkie ui code</Code>;
 };
