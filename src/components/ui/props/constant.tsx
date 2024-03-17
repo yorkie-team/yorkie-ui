@@ -1,4 +1,4 @@
-export const PropertyTypes = {
+export const PropertyTypes: { [key: string]: string } = {
   pos: 'position',
   insetX: 'insetInline',
   insetY: 'insetBlock',

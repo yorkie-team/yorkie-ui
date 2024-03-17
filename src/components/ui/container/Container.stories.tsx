@@ -19,14 +19,14 @@ export const Overview = {
   render: () => {
     return (
       <VStack>
-        <Container width="base" bg="accent.2" color="accent.text">
-          base Container
-        </Container>
-        <Container width="sm" bg="accent.3" color="accent.text">
+        <Container width="breakpoint-sm" bg="accent.2" color="accent.text">
           sm Container
         </Container>
-        <Container width="md" bg="accent.4" color="accent.text">
+        <Container width="breakpoint-md" bg="accent.3" color="accent.text">
           md Container
+        </Container>
+        <Container width="breakpoint-lg" bg="accent.4" color="accent.text">
+          lg Container
         </Container>
       </VStack>
     );
