@@ -5,9 +5,12 @@ import '@/styles/globals.css';
 
 const preview: Preview = {
   parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
     options: {
       storySort: {
-        order: ['THEME', 'CONFIG', 'TYPOGRAPHY'],
+        method: 'alphabetical',
+        order: ['Introduction', 'THEME', 'CONFIG', 'TYPOGRAPHY'],
+        includeName: true,
       },
     },
     controls: {
