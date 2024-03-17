@@ -1,0 +1,99 @@
+# Props
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as PropsStories from './Props.stories';
+
+<Meta of={PropsStories} />
+
+- [Spacing Token](#spacing-token)
+- [Short Props](#short-props)
+
+## Spacing Tokens
+
+Using a spacing system creates a better user experience and enables responsive design and customizable UI density, improving product accessibility and quality.
+Apply use to value props: `mt`, `p`, `mb`, etc....
+
+`0`: 0rem;
+
+`1`: 0.25rem;
+
+`2`: 0.5rem;
+
+`3`: 0.75rem;
+
+`4`: 1rem;
+
+`5`: 1.25rem;
+
+`6`: 1.5rem;
+
+`7`: 1.75rem;
+
+`8`: 2rem;
+
+`9`: 2.25rem;
+
+`10`: 2.5rem;
+
+`11`: 2.75rem;
+
+`12`: 3rem;
+
+`14`: 3.5rem;
+
+`16`: 4rem;
+
+`20`: 5rem;
+
+`24`: 6rem;
+
+`28`: 7rem;
+
+`32`: 8rem;
+
+`36`: 9rem;
+
+`40`: 10rem;
+
+`44`: 11rem;
+
+`48`: 12rem;
+
+`52`: 13rem;
+
+`56`: 14rem;
+
+`60`: 15rem;
+
+`64`: 16rem;
+
+`72`: 18rem;
+
+`80`: 20rem;
+
+`96`: 24rem;
+
+`0.5`: 0.125rem;
+
+`15`: 0.375rem;
+
+`25`: 0.625rem;
+
+`35`: 0.875rem;
+
+`45`: 1.125rem;
+
+## Overview
+
+Provides a shorter way to pass styles through props (such as using bg instead of backgroundColor).
+
+<Canvas
+  of={PropsStories.ShortProps}
+  source={{
+    format: true,
+    code: `
+        <Box bg="orange.1"> Hello Yorkie </Box>
+    `,
+
+}}
+/>
