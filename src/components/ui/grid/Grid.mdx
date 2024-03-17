@@ -1,0 +1,227 @@
+# Grid
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as GridStories from './Grid.stories';
+
+<Meta of={GridStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Grid, GridItem } from '@/component/ui';
+```
+
+- **_Grid_**: The main wrapper with display: grid.
+- **_GridItem_**: Used as a child of Grid to control the span, and start positions within the grid.
+
+<Controls />
+
+## Overview
+
+`Grid` is a type of layout that is used to manage and organize grid structures.
+
+<Canvas
+  of={GridStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Grid columns={4}>
+        <Box color="accent.fg" bg="accent.default">
+          Column 1
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          Column 2
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          Column 3
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          Column 4
+        </Box>
+      </Grid>
+    `,
+  }}
+/>
+
+### [Grid Responsive](#grid-responsive)
+
+You can customize the number of columns with breakpoints: `base`, `sm`, `md`, `lg`, and `xl`. Other props also can use breakpoints.
+
+<Canvas
+  of={GridStories.ResponsiveGrid}
+  source={{
+    format: true,
+    code: `
+      <Grid gap={6} columns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
+        <Box color="accent.fg" bg="accent.default">
+          1
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          2
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          3
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          4
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          5
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          6
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          7
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          8
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          9
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          10
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          11
+        </Box>
+        <Box color="accent.fg" bg="accent.default">
+          12
+        </Box>
+      </Grid>
+    `,
+  }}
+/>
+
+### [Template columns](#template-columns)
+
+Example using grid component with grid template columns and gap between grid items.
+
+<Canvas
+  of={GridStories.TemplateColumns}
+  source={{
+    format: true,
+    code: `
+      <Grid gap={6} columns={4}>
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
+      </Grid>
+    `,
+  }}
+/>
+
+### [Spanning Columns](#spansning-columns)
+
+To span specific columns or rows in a grid layout, use the `colSpan` and `rowSpan` props in the `GridItem` component. Also, specify the `templateColumns` and `templateRows`.
+
+<Canvas
+  of={GridStories.Spanning}
+  source={{
+    format: true,
+    code: `
+      <Grid h="200px" gridTemplateRows={'repeat(2, 1fr)'} gridTemplateColumns="repeat(5, 1fr)" gap={4}>
+        <GridItem gridRow={2} colSpan={1} bg="accent.default" />
+        <GridItem colSpan={2} bg="papayawhip" />
+        <GridItem colSpan={2} bg="papayawhip" />
+        <GridItem colSpan={4} bg="accent.default" />
+      </Grid>
+    `,
+  }}
+/>
+
+### [Starting and ending lines](#spansning-columns)
+
+Pass the `colStart` and `colEnd` props to the GridItem component to define the start and end positions of an element in the grid.
+
+<Canvas
+  of={GridStories.StartingEnding}
+  source={{
+    format: true,
+    code: `
+      <Grid gridTemplateColumns="repeat(5, 1fr)" gap={4}>
+        <GridItem colSpan={2} h="10" bg="tomato" />
+        <GridItem colStart={4} colEnd={6} h="10" bg="papayawhip" />
+      </Grid>
+    `,
+  }}
+/>
+
+### [Grid Row Start End](#grid-row-start-end)
+
+Pass the `gridRowStart` and `gridRowEnd` props to the `GridItem` component to specify the grid position of an element.
+
+<Canvas
+  of={GridStories.StartEndRow}
+  source={{
+    format: true,
+    code: `
+      <Grid gap={4} gridRow={3} gridAutoFlow="row">
+        <GridItem h="20" bg="tomato" gridRowStart={2} gridRow={2} />
+        <GridItem h="20" bg="papayawhip" gridRowEnd={3} gridRow={2} />
+        <GridItem h="20" bg="tomato" gridRowStart={1} gridRowEnd={4} />
+      </Grid>
+    `,
+  }}
+/>
+
+### [Grid Columns Start End](#grid-columns-start-end)
+
+Use the `gridColumnStart` and `gridColumnEnd` prop of GridItem to position an element in the nth grid position.
+
+<Canvas
+  of={GridStories.StartEndColumns}
+  source={{
+    format: true,
+    code: `
+      <Grid gap={4} gridColumn={3}>
+        <GridItem h="16" bg="tomato" gridColumnStart={2} gridColumn={4} />
+        <GridItem h="16" bg="papayawhip" gridColumnStart={1} gridColumnEnd={3} />
+        <GridItem h="16" bg="tomato" gridColumnEnd={7} gridColumn={2} />
+        <GridItem h="16" bg="tomato" gridColumnStart={1} gridColumnEnd={7} />
+      </Grid>
+    `,
+  }}
+/>
+
+### [Template Areas](#template-area)
+
+<Canvas
+  of={GridStories.TemplateAreas}
+  source={{
+    format: true,
+    code: `
+      <Grid
+        gridTemplateAreas={"header header"
+                  "nav main"
+                  "nav footer"}
+        gridTemplateRows={'50px 1fr 30px'}
+        gridTemplateColumns={'150px 1fr'}
+        h="200px"
+        gap="1"
+        color="blackAlpha.700"
+        fontWeight="bold"
+      >
+        <GridItem pl="2" bg="tomato" gridArea={'header'}>
+          Header
+        </GridItem>
+        <GridItem pl="2" bg="tomato" gridArea={'nav'}>
+          Nav
+        </GridItem>
+        <GridItem pl="2" bg="tomato" gridArea={'main'}>
+          Main
+        </GridItem>
+        <GridItem pl="2" bg="tomato" gridArea={'footer'}>
+          Footer
+        </GridItem>
+      </Grid>
+    `,
+  }}
+/>

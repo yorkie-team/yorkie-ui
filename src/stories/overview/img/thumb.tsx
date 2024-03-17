@@ -17,6 +17,16 @@ import Switch from '@/stories/overview/img/switch.png';
 import Menu from '@/stories/overview/img/menu.png';
 import Popover from '@/stories/overview/img/popover.png';
 import Tooltip from '@/stories/overview/img/tooltip.png';
+import Grids from '@/stories/overview/img/grid.png';
+import Flex from '@/stories/overview/img/flex.png';
+import Heading from '@/stories/overview/img/heading.png';
+import Text from '@/stories/overview/img/text.png';
+import Shape from '@/stories/overview/img/shape.png';
+import Aspectratio from '@/stories/overview/img/aspectratio.png';
+import Container from '@/stories/overview/img/container.png';
+import BoxThumb from '@/stories/overview/img/box.png';
+import Color from '@/stories/overview/img/color.png';
+import Code from '@/stories/overview/img/tag.png';
 
 export {
   Accordion,
@@ -38,4 +48,14 @@ export {
   Menu,
   Popover,
   Tooltip,
+  Grids,
+  Flex,
+  Heading,
+  Text,
+  Shape,
+  Aspectratio,
+  Container,
+  BoxThumb,
+  Color,
+  Code,
 };

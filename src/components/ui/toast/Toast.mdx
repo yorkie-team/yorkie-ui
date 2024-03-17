@@ -5,9 +5,16 @@ import * as ToastStories from './Toast.stories';
 
 <Meta of={ToastStories} />
 
+- [Import](#import)
 - [Overview](#overview)
 - [Props](#props)
 - [Examples](#examples)
+
+## Toast
+
+```jsx
+import { Select } from '@/component/ui';
+```
 
 ## Overview
 
@@ -129,7 +136,7 @@ The Toast component provides the ability to use custom render functions, grantin
                 title: 'Please checkout',
                 render: (toast) => (
                   <div>
-                    {toast.title} <a href="https://ark-ui.com">Ark UI</a>
+                    {toast.title} <a href="https://yorkie.io">Yorkie UI</a>
                   </div>
                 ),
               })

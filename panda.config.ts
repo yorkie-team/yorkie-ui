@@ -3,7 +3,7 @@ import { createPreset } from '@park-ui/panda-preset';
 import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
 import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
 import { checkboxSlotRecipe } from '@/components/ui/checkbox/CheckboxSlotRecipe';
-import { selectRecipe } from '@/components/ui/select/SelectRecipe';
+import { selectSlotRecipe } from '@/components/ui/select/SelectRecipe';
 import { badgeRecipe } from '@/components/ui/badge/BadgeRecipe';
 import { paginationSlotRecipe } from '@/components/ui/pagination/PaginationRecipe';
 import { popoverSlotRecipe } from '@/components/ui/popover/PopoverRecipe';
@@ -15,6 +15,8 @@ import { switchSlotRecipe } from '@/components/ui/switch/SwitchRecipe';
 import { datePickerSlotRecipe } from '@/components/ui/datepicker/DatepickerRecipe';
 import { inputRecipe } from '@/components/ui/input/InputRecipe';
 import { iconRecipe } from '@/components/ui/icon/IconRecipe';
+import { textRecipe } from '@/components/ui/text/TextRecipe';
+import { codeRecipe } from '@/components/ui/code/CodeRecipe';
 
 export default defineConfig({
   // Whether to use css reset
@@ -54,13 +56,15 @@ export default defineConfig({
       accordion: accordionSlotRecipe,
       switchs: switchSlotRecipe,
       datePicker: datePickerSlotRecipe,
+      select: selectSlotRecipe,
     },
     recipes: {
       button: buttonRecipe,
-      select: selectRecipe,
       badge: badgeRecipe,
       input: inputRecipe,
       icon: iconRecipe,
+      text: textRecipe,
+      code: codeRecipe,
     },
   },
 

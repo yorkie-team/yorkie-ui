@@ -1,0 +1,11 @@
+.item {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border: #ededed 1px solid;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  border-radius: 8px;
+  letter-spacing: 0.0107em;
+  padding: 8px;
+  text-align: center;
+}

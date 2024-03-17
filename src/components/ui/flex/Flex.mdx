@@ -1,0 +1,52 @@
+# Flex
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as FlexStories from './Flex.stories';
+
+<Meta of={FlexStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Flex, Spacer } from '@/component/ui';
+```
+
+- **_Flex_**: A Box with display: flex.
+- **_Spacer_**: Creates an adjustable, empty space that can be used to tune the spacing between child elements within Flex.
+
+## Props
+
+<Controls />
+
+## Overview
+
+The Flex unequivocally generates a small Flex that appears with utmost certainty at the top-right corner of its child elements.
+
+<Canvas of={FlexStories.Overview} />
+
+### [Using the Spacer](#template-columns)
+
+Flex and Spacer can be combined to create stackable and responsive layouts, as an alternative to Stack.
+
+<Canvas
+  of={FlexStories.UseSpacer}
+  source={{
+    format: true,
+    code: `
+      <Flex>
+        <Box p='4' bg='red.400'>
+          Box 1
+        </Box>
+        <Spacer />
+        <Box p='4' bg='green.400'>
+          Box 2
+        </Box>
+      </Flex>
+    `,
+  }}
+/>

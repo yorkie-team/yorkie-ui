@@ -1,0 +1,45 @@
+# Container
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as ContainerStories from './Container.stories';
+
+<Meta of={ContainerStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Container } from '@/component/ui';
+```
+
+## Props
+
+<Controls />
+
+## Overview
+
+Containers keep content fluid while constraining width to breakpoint.
+
+<Canvas
+  of={ContainerStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Container width="base" bg="accent.2" color="accent.text">
+          base Container
+        </Container>
+        <Container width="sm" bg="accent.3" color="accent.text">
+          sm Container
+        </Container>
+        <Container width="md" bg="accent.4" color="accent.text">
+          md Container
+        </Container>
+      </div>
+    `,
+  }}
+/>

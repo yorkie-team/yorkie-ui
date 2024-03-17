@@ -21,10 +21,85 @@ import {
   Menu,
   Popover,
   Tooltip,
+  Grids,
+  Flex,
+  Heading,
+  Text,
+  Code,
+  Shape,
+  Aspectratio,
+  Container,
+  BoxThumb,
+  Color,
 } from '@/stories/overview/img/thumb';
 import Link from 'next/link';
 
 const listComponent = [
+  {
+    namespace: 'THEME',
+    children: [
+      {
+        title: 'Color',
+        component: <Image src={Color} alt="Picture of the color" width={300} height={160} />,
+        path: '/?path=/docs/theme-colors--docs',
+      },
+    ],
+  },
+  {
+    namespace: 'TYPOGRAPHY',
+    children: [
+      {
+        title: 'Text',
+        component: <Image src={Text} alt="Picture of the text" width={300} height={160} />,
+        path: '/?path=/docs/typography-text--docs',
+      },
+      {
+        title: 'Heading',
+        component: <Image src={Heading} alt="Picture of the heading" width={300} height={160} />,
+        path: '/?path=/docs/typography-heading--docs',
+      },
+      {
+        title: 'Code',
+        component: <Image src={Code} alt="Picture of the code" width={100} height={160} />,
+        path: '/?path=/docs/typography-code--docs',
+      },
+    ],
+  },
+  {
+    namespace: 'LAYOUT',
+    children: [
+      {
+        title: 'Grid',
+        component: <Image src={Grids} alt="Picture of the Grid" width={300} height={160} />,
+        path: '/?path=/docs/layout-grid--docs',
+      },
+      {
+        title: 'Flex',
+        component: <Image src={Flex} alt="Picture of the Flex" width={300} height={160} />,
+        path: '/?path=/docs/layout-flex--docs',
+      },
+      {
+        title: 'Aspect Ratio',
+        component: <Image src={Aspectratio} alt="Picture of the Aspect Ratio" width={300} height={160} />,
+        path: '/?path=/docs/layout-aspectratio--docs',
+      },
+      {
+        title: 'Shape',
+        component: <Image src={Shape} alt="Picture of the Shape" width={300} height={160} />,
+        path: '/?path=/docs/layout-shape--docs',
+      },
+      {
+        title: 'Container',
+        component: <Image src={Container} alt="Picture of the container" width={300} height={160} />,
+        path: '/?path=/docs/layout-container--docs',
+      },
+      {
+        title: 'Box',
+        component: <Image src={BoxThumb} alt="Picture of the box" width={300} height={160} />,
+        path: '/?path=/docs/layout-box--docs',
+      },
+    ],
+  },
   {
     namespace: 'FEEDBACK',
     children: [
@@ -46,7 +121,7 @@ const listComponent = [
       {
         title: 'Avatar',
         component: <Image src={Avatar} alt="Picture of the avatar" width={300} height={160} />,
-        path: '/?path=/docs/feedback-avatar--docs',
+        path: '/?path=/docs/common-avatar--docs',
       },
     ],
   },
@@ -56,22 +131,22 @@ const listComponent = [
       {
         title: 'Badge',
         component: <Image src={Badge} alt="Picture of the Badge" width={300} height={160} />,
-        path: '/?path=/docs/feedback-badge--docs',
+        path: '/?path=/docs/data-display-badge--docs',
       },
       {
         title: 'Card',
         component: <Image src={Cards} alt="Picture of the card" width={180} height={160} />,
-        path: '/?path=/docs/feedback-card--docs',
+        path: '/?path=/docs/data-display-card--docs',
       },
       {
         title: 'Pagination',
         component: <Image src={Pagination} alt="Picture of the pagination" width={200} height={160} />,
-        path: '/?path=/docs/feedback-pagination--docs',
+        path: '/?path=/docs/data-display-pagination--docs',
       },
       {
         title: 'Tab',
         component: <Image src={Tab} alt="Picture of the tab" width={200} height={160} />,
-        path: '/?path=/docs/feedback-tab--docs',
+        path: '/?path=/docs/data-display-tab--docs',
       },
     ],
   },
@@ -81,47 +156,47 @@ const listComponent = [
       {
         title: 'Button',
         component: <Image src={Button} alt="Picture of the button" width={200} height={160} />,
-        path: '/?path=/docs/feedback-button--docs',
+        path: '/?path=/docs/form-button--docs',
       },
       {
         title: 'Checkbox',
-        component: <Image src={Checkbox} alt="Picture of the checkbox" width={200} height={160} />,
-        path: '/?path=/docs/feedback-checkbox--docs',
+        component: <Image src={Checkbox} alt="Picture of the checkbox" width={60} height={60} />,
+        path: '/?path=/docs/form-checkbox--docs',
       },
       {
         title: 'DatePicker',
         component: <Image src={DatePicker} alt="Picture of the datePicker" width={200} height={160} />,
-        path: '/?path=/docs/feedback-datePicker--docs',
+        path: '/?path=/docs/form-datePicker--docs',
       },
       {
         title: 'Icon',
         component: <Image src={Icon} alt="Picture of the icon" width={200} height={160} />,
-        path: '/?path=/docs/feedback-icon--docs',
+        path: '/?path=/docs/form-icon--docs',
       },
       {
         title: 'Input',
         component: <Image src={Input} alt="Picture of the input" width={200} height={160} />,
-        path: '/?path=/docs/feedback-input--docs',
+        path: '/?path=/docs/form-input--docs',
       },
       {
         title: 'Radio',
-        component: <Image src={Radio} alt="Picture of the radio" width={200} height={160} />,
-        path: '/?path=/docs/feedback-radio--docs',
+        component: <Image src={Radio} alt="Picture of the radio" width={60} height={160} />,
+        path: '/?path=/docs/form-radio--docs',
       },
       {
         title: 'Select',
         component: <Image src={Select} alt="Picture of the select" width={200} height={160} />,
-        path: '/?path=/docs/feedback-select--docs',
+        path: '/?path=/docs/form-select--docs',
       },
       {
         title: 'Switch',
-        component: <Image src={Switch} alt="Picture of the switch" width={200} height={160} />,
-        path: '/?path=/docs/feedback-switch--docs',
+        component: <Image src={Switch} alt="Picture of the switch" width={60} height={160} />,
+        path: '/?path=/docs/form-switch--docs',
       },
       {
         title: 'Label',
         component: <Image src={Label} alt="Picture of the label" width={200} height={160} />,
-        path: '/?path=/docs/feedback-label--docs',
+        path: '/?path=/docs/form-label--docs',
       },
     ],
   },
@@ -131,7 +206,7 @@ const listComponent = [
       {
         title: 'Menu',
         component: <Image src={Menu} alt="Picture of the menu" width={200} height={160} />,
-        path: '/?path=/docs/feedback-menu--docs',
+        path: '/?path=/docs/navigation-menu--docs',
       },
     ],
   },
@@ -140,13 +215,13 @@ const listComponent = [
     children: [
       {
         title: 'Popover',
-        component: <Image src={Popover} alt="Picture of the popover" width={300} height={160} />,
-        path: '/?path=/docs/feedback-popover--docs',
+        component: <Image src={Popover} alt="Picture of the popover" width={200} height={160} />,
+        path: '/?path=/docs/overlay-popover--docs',
       },
       {
         title: 'Tooltip',
         component: <Image src={Tooltip} alt="Picture of the tooltip" width={200} height={160} />,
-        path: '/?path=/docs/feedback-tooltip--docs',
+        path: '/?path=/docs/overlay-tooltip--docs',
       },
     ],
   },

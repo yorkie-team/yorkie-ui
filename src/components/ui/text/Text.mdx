@@ -1,0 +1,75 @@
+# Text
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as TextStories from './Text.stories';
+
+<Meta of={TextStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Text } from '@/component/ui';
+```
+
+## Overview
+
+Use the `as` property to specify an HTML tag. This changes the semantic meaning without affecting the visual style.
+
+<Canvas of={TextStories.Overview} />
+
+## Props
+
+<Controls />
+
+### Font Size
+
+Use `size` or `textStyle` for text size. It makes line height and spacing smaller as text size grows and also ensures text size is even for better layout.
+
+<Canvas
+  of={TextStories.FontSize}
+  source={{
+    format: true,
+    code: `
+     <>
+        <Text size="xs">Yorike</Text>
+        <Text size="sm">Yorike</Text>
+        <Text size="md">Yorike</Text>
+        <Text size="lg">Yorike</Text>
+        <Text size="xl">Yorike</Text>
+        <Text size="2xl">Yorike</Text>
+        <Text size="3xl">Yorike</Text>
+        <Text size="4xl">Yorike</Text>
+        <Text size="5xl">Yorike</Text>
+        <Text size="6xl">Yorike</Text>
+        <Text size="7xl">Yorike</Text>
+    </>
+    `,
+
+}}
+/>
+
+### Font Weight
+
+To adjust the weight of text, use the `fontWeight` prop.
+
+<Canvas
+  of={TextStories.FontWeight}
+  source={{
+    format: true,
+    code: `
+     <>
+        <Text fontWeight="light">Sphinx of black quartz, judge my vow.</Text>
+        <Text fontWeight="normal">Sphinx of black quartz, judge my vow.</Text>
+        <Text fontWeight="medium">Sphinx of black quartz, judge my vow.</Text>
+        <Text fontWeight="semibold">Sphinx of black quartz, judge my vow.</Text>
+        <Text fontWeight="bold">Sphinx of black quartz, judge my vow.</Text>
+    </>
+    `,
+
+}}
+/>
