@@ -34,6 +34,9 @@ import {
 } from '@/stories/overview/img/thumb';
 import Link from 'next/link';
 
+const host = window.location.host;
+const subdomain = host.split('/').slice(0, 4).join('/');
+console.log(subdomain);
 const listComponent = [
   {
     namespace: 'THEME',
@@ -41,7 +44,7 @@ const listComponent = [
       {
         title: 'Color',
         component: <Image src={Color} alt="Picture of the color" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/theme-colors--docs',
+        path: `${subdomain}/?path=/docs/theme-colors--docs`,
       },
     ],
   },
@@ -51,17 +54,17 @@ const listComponent = [
       {
         title: 'Text',
         component: <Image src={Text} alt="Picture of the text" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/typography-text--docs',
+        path: `${subdomain}/?path=/docs/typography-text--docs`,
       },
       {
         title: 'Heading',
         component: <Image src={Heading} alt="Picture of the heading" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/typography-heading--docs',
+        path: `${subdomain}/?path=/docs/typography-heading--docs`,
       },
       {
         title: 'Code',
         component: <Image src={Code} alt="Picture of the code" width={100} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/typography-code--docs',
+        path: `${subdomain}/?path=/docs/typography-code--docs`,
       },
     ],
   },
@@ -71,32 +74,32 @@ const listComponent = [
       {
         title: 'Grid',
         component: <Image src={Grids} alt="Picture of the Grid" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-grid--docs',
+        path: `${subdomain}/?path=/docs/layout-grid--docs`,
       },
       {
         title: 'Flex',
         component: <Image src={Flex} alt="Picture of the Flex" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-flex--docs',
+        path: `${subdomain}/?path=/docs/layout-flex--docs`,
       },
       {
         title: 'Aspect Ratio',
         component: <Image src={Aspectratio} alt="Picture of the Aspect Ratio" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-aspectratio--docs',
+        path: `${subdomain}/?path=/docs/layout-aspectratio--docs`,
       },
       {
         title: 'Shape',
         component: <Image src={Shape} alt="Picture of the Shape" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-shape--docs',
+        path: `${subdomain}/?path=/docs/layout-shape--docs`,
       },
       {
         title: 'Container',
         component: <Image src={Container} alt="Picture of the container" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-container--docs',
+        path: `${subdomain}/?path=/docs/layout-container--docs`,
       },
       {
         title: 'Box',
         component: <Image src={BoxThumb} alt="Picture of the box" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/layout-box--docs',
+        path: `${subdomain}/?path=/docs/layout-box--docs`,
       },
     ],
   },
@@ -106,12 +109,12 @@ const listComponent = [
       {
         title: 'Checkbox Group',
         component: <Image src={Accordion} alt="Picture of the accordion" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/feedback-accordion--docs',
+        path: `${subdomain}/?path=/docs/feedback-accordion--docs`,
       },
       {
         title: 'Toast',
         component: <Image src={Toast} alt="Picture of the toast" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/feedback-toast--docs',
+        path: `${subdomain}/?path=/docs/feedback-toast--docs`,
       },
     ],
   },
@@ -121,7 +124,7 @@ const listComponent = [
       {
         title: 'Avatar',
         component: <Image src={Avatar} alt="Picture of the avatar" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/common-avatar--docs',
+        path: `${subdomain}-poc/?path=/docs/common-avatar--docs`,
       },
     ],
   },
@@ -131,22 +134,22 @@ const listComponent = [
       {
         title: 'Badge',
         component: <Image src={Badge} alt="Picture of the Badge" width={300} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/data-display-badge--docs',
+        path: `${subdomain}-poc/?path=/docs/data-display-badge--docs`,
       },
       {
         title: 'Card',
         component: <Image src={Cards} alt="Picture of the card" width={180} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/data-display-card--docs',
+        path: `${subdomain}-poc/?path=/docs/data-display-card--docs`,
       },
       {
         title: 'Pagination',
         component: <Image src={Pagination} alt="Picture of the pagination" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/data-display-pagination--docs',
+        path: `${subdomain}-poc/?path=/docs/data-display-pagination--docs`,
       },
       {
         title: 'Tab',
         component: <Image src={Tab} alt="Picture of the tab" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/data-display-tab--docs',
+        path: `${subdomain}-poc/?path=/docs/data-display-tab--docs`,
       },
     ],
   },
@@ -156,47 +159,47 @@ const listComponent = [
       {
         title: 'Button',
         component: <Image src={Button} alt="Picture of the button" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-button--docs',
+        path: `${subdomain}-poc/?path=/docs/form-button--docs`,
       },
       {
         title: 'Checkbox',
         component: <Image src={Checkbox} alt="Picture of the checkbox" width={60} height={60} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-checkbox--docs',
+        path: `${subdomain}-poc/?path=/docs/form-checkbox--docs`,
       },
       {
         title: 'DatePicker',
         component: <Image src={DatePicker} alt="Picture of the datePicker" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-datePicker--docs',
+        path: `${subdomain}-poc/?path=/docs/form-datePicker--docs`,
       },
       {
         title: 'Icon',
         component: <Image src={Icon} alt="Picture of the icon" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-icon--docs',
+        path: `${subdomain}-poc/?path=/docs/form-icon--docs`,
       },
       {
         title: 'Input',
         component: <Image src={Input} alt="Picture of the input" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-input--docs',
+        path: `${subdomain}-poc/?path=/docs/form-input--docs`,
       },
       {
         title: 'Radio',
         component: <Image src={Radio} alt="Picture of the radio" width={60} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-radio--docs',
+        path: `${subdomain}-poc/?path=/docs/form-radio--docs`,
       },
       {
         title: 'Select',
         component: <Image src={Select} alt="Picture of the select" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-select--docs',
+        path: `${subdomain}-poc/?path=/docs/form-select--docs`,
       },
       {
         title: 'Switch',
         component: <Image src={Switch} alt="Picture of the switch" width={60} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-switch--docs',
+        path: `${subdomain}-poc/?path=/docs/form-switch--docs`,
       },
       {
         title: 'Label',
         component: <Image src={Label} alt="Picture of the label" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/form-label--docs',
+        path: `${subdomain}-poc/?path=/docs/form-label--docs`,
       },
     ],
   },
@@ -206,7 +209,7 @@ const listComponent = [
       {
         title: 'Menu',
         component: <Image src={Menu} alt="Picture of the menu" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/navigation-menu--docs',
+        path: `${subdomain}-poc/?path=/docs/navigation-menu--docs`,
       },
     ],
   },
@@ -216,12 +219,12 @@ const listComponent = [
       {
         title: 'Popover',
         component: <Image src={Popover} alt="Picture of the popover" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/overlay-popover--docs',
+        path: `${subdomain}-poc/?path=/docs/overlay-popover--docs`,
       },
       {
         title: 'Tooltip',
         component: <Image src={Tooltip} alt="Picture of the tooltip" width={200} height={160} />,
-        path: '/yorkie-ui-poc/?path=/docs/overlay-tooltip--docs',
+        path: `${subdomain}-poc/?path=/docs/overlay-tooltip--docs`,
       },
     ],
   },
