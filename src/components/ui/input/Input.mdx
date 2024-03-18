@@ -20,7 +20,18 @@ import { Input } from 'yorkie-ui';
 
 Menus empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
 
-<Canvas of={InputStories.Overview} />
+<Canvas
+  of={InputStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Label htmlFor="name">Name</Label>
+        <Input id="name" placeholder="Your Name" {...args} />
+      <div>
+    `,
+  }}
+/>
 
 ## Props
 

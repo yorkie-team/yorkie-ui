@@ -27,7 +27,19 @@ import { Flex, Spacer } from 'yorkie-ui';
 
 The Flex unequivocally generates a small Flex that appears with utmost certainty at the top-right corner of its child elements.
 
-<Canvas of={FlexStories.Overview} />
+<Canvas
+  of={FlexStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Flex minWidth="max-content" alignItems="center" gap="2" justifyContent="space-between">
+        <Box p="2" fontWeight={700}>
+          Yorkie UI App
+        </Box>
+        <Button colorScheme="teal">Log in</Button>
+      </Flex>`,
+  }}
+/>
 
 ### [Using the Spacer](#template-columns)
 

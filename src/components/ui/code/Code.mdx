@@ -20,4 +20,10 @@ import { Code } from 'yorkie-ui';
 
 An inline code snippet display component is needed.
 
-<Canvas of={CodeStories.Overview} />
+<Canvas
+  of={CodeStories.Overview}
+  source={{
+    format: true,
+    code: `<Code>yorkie ui code</Code>`,
+  }}
+/>

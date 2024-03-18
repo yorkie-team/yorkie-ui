@@ -83,7 +83,7 @@ export const Overview = {
       <Box height="240px">
         <Menu.Root>
           <Menu.Trigger>
-            <Button variant="outline">Open menu</Button>
+            <Box>Open menu</Box>
           </Menu.Trigger>
           <Menu.Positioner>
             <Menu.Content>
@@ -109,7 +109,7 @@ export const Controlled = () => {
       <Button onClick={() => setIsOpen(!isOpen)}>Trigger from the outside</Button>
       <Menu.Root open={isOpen} onSelect={(id) => console.log(id)}>
         <Menu.Trigger>
-          <Button variant="outline">Open menu</Button>
+          <Box ml="4">Open menu</Box>
         </Menu.Trigger>
         <Menu.Positioner>
           <Menu.Content>

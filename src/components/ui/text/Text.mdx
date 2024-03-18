@@ -20,7 +20,28 @@ import { Text } from 'yorkie-ui';
 
 Use the `as` property to specify an HTML tag. This changes the semantic meaning without affecting the visual style.
 
-<Canvas of={TextStories.Overview} />
+<Canvas
+  of={TextStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <div>
+      <Text as="p">
+        This is a <strong>p</strong> element.
+      </Text>
+      <Text as="label">
+        This is a <strong>label</strong> element.
+      </Text>
+      <Text as="div">
+        This is a <strong>div</strong> element.
+      </Text>
+      <Text as="span">
+        This is a <strong>span</strong> element.
+      </Text>
+    </div>
+    `,
+  }}
+/>
 
 ## Props
 

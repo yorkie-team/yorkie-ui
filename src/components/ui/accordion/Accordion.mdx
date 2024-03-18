@@ -25,21 +25,19 @@ This feature enables users to choose only one option from several available choi
   source={{
     format: true,
     code: `
-      return (
-        <Accordion.Root defaultValue={['React']} collapsible>
-          {['Accordion 1', 'Accordion 2', 'Accordion 3'].map((item, id) => (
-            <Accordion.Item key={id} value={item}>
-              <Accordion.ItemTrigger>
-                {item}
-                <Accordion.ItemIndicator>
-                  <DownIcon />
-                </Accordion.ItemIndicator>
-              </Accordion.ItemTrigger>
-              <Accordion.ItemContent>{item} is a JavaScript library for building user interfaces.</Accordion.ItemContent>
-            </Accordion.Item>
-          ))}
-        </Accordion.Root>
-      );
+      <Accordion.Root defaultValue={['React']} collapsible>
+        {['Accordion 1', 'Accordion 2', 'Accordion 3'].map((item, id) => (
+          <Accordion.Item key={id} value={item}>
+            <Accordion.ItemTrigger>
+              {item}
+              <Accordion.ItemIndicator>
+                <DownIcon />
+              </Accordion.ItemIndicator>
+            </Accordion.ItemTrigger>
+            <Accordion.ItemContent>{item} is a JavaScript library for building user interfaces.</Accordion.ItemContent>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
     `,
 
 }}
