@@ -18,7 +18,7 @@ import { Tooltip } from 'yorkie-ui';
 
 ## Overview
 
-Providing information through a label that appears when the user hovers or focuses on an element can be a helpful way to enhance the user experience.
+Providing information through a label that appears when the user hovers or focuses on an element can be a helpful way to enhance the user experience. Default open delay 3s.
 
 <Canvas
   of={TooltipStories.Overview}
@@ -28,9 +28,6 @@ Providing information through a label that appears when the user hovers or focus
       <Tooltip.Root closeDelay={3}>
         <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
         <Tooltip.Positioner>
-          <Tooltip.Arrow>
-            <Tooltip.ArrowTip />
-          </Tooltip.Arrow>
           <Tooltip.Content>I am a Tooltip!</Tooltip.Content>
         </Tooltip.Positioner>
       </Tooltip.Root>
@@ -43,25 +40,6 @@ Providing information through a label that appears when the user hovers or focus
 <Controls />
 
 ## Examples
-
-### [Basic](#tooltip-kinds)
-
-Use the Tooltip component basic.
-
-<Canvas
-  of={TooltipStories.Basic}
-  source={{
-    format: true,
-    code: `
-      <Tooltip.Root lazyMount unmountOnExit>
-        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
-        <Tooltip.Positioner>
-          <Tooltip.Content>I am a tooltip!</Tooltip.Content>
-        </Tooltip.Positioner>
-      </Tooltip.Root>
-    `,
-  }}
-/>
 
 ### [Controlled](#tooltip-Controlled)
 

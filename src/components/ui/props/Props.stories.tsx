@@ -36,7 +36,7 @@ export const SpacingToken = {
               p="4"
               key={value + 'props'}
             >
-              <strong>{value}: </strong> <span>{SpacingTokens[value]}</span>
+              <strong>{value} </strong> <span>{SpacingTokens[value]}</span>
             </Grid>
           );
         })}
@@ -72,7 +72,7 @@ export const ShortProps = {
               p="4"
               key={value + 'props'}
             >
-              <strong>{value}: </strong> <span>{PropertyTypes[value]}</span>
+              <strong>{value} </strong> <span>{PropertyTypes[value]}</span>
             </Grid>
           );
         })}

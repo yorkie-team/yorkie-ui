@@ -22,5 +22,9 @@ export const tooltipSlotRecipe = defineSlotRecipe({
         animation: 'fadeOut 0.2s ease-out',
       },
     },
+    arrow: {
+      '--arrow-size': 'var(--sizes-3)',
+      '--arrow-background': 'var(--colors-gray-a12)',
+    },
   },
 });
