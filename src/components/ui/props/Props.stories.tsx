@@ -46,7 +46,7 @@ export const ShortProps = {
               borderBottomColor={'border.default'}
               borderStyle={'solid'}
               columns={2}
-              mt="4"
+              mt="2"
               p="4"
               key={value + 'props'}
             >
