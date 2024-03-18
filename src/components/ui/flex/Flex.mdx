@@ -13,7 +13,7 @@ import * as FlexStories from './Flex.stories';
 ## Import
 
 ```jsx
-import { Flex, Spacer } from '@/component/ui';
+import { Flex, Spacer } from 'yorkie-ui';
 ```
 
 - **_Flex_**: A Box with display: flex.
@@ -39,13 +39,9 @@ Flex and Spacer can be combined to create stackable and responsive layouts, as a
     format: true,
     code: `
       <Flex>
-        <Box p='4' bg='red.400'>
-          Box 1
-        </Box>
+        <Box p="10" bg="tomato" />
         <Spacer />
-        <Box p='4' bg='green.400'>
-          Box 2
-        </Box>
+        <Box p="10" bg="tomato" />
       </Flex>
     `,
   }}
