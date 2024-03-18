@@ -1,0 +1,54 @@
+# Swith
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as SwitchStories from './Switch.stories';
+
+<Meta of={SwitchStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Switch } from 'yorkie-ui';
+```
+
+## Props
+
+<Controls />
+
+## Overview
+
+This feature enables users to choose only one option from several available choices.
+
+<Canvas
+  of={SwitchStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Switch defaultChecked>Label</Switch>
+    `,
+  }}
+/>
+
+## Examples
+
+### [Controlled Switch](#controlled-switch)
+
+The state of the toggle for a controlled Switch component is managed using the checked prop, which updates when the `onCheckedChange` event handler is called.
+
+<Canvas
+  of={SwitchStories.Controlled}
+  source={{
+    format: true,
+    code: `
+      <Switch checked={checked} onCheckedChange={(e) => setChecked(e.checked)}>
+        Label
+      </Switch>
+    `,
+
+}}
+/>

@@ -1,0 +1,34 @@
+# Pagination
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+
+## Import
+
+```jsx
+import { Menu } from 'yorkie-ui';
+```
+
+## Props
+
+<Controls />
+
+## Overview
+
+A navigation feature that enables users to browse through different pages.
+
+<Canvas
+  of={PaginationStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Pagination count={5000} pageSize={10} siblingCount={2}></Pagination>
+    `,
+  }}
+/>

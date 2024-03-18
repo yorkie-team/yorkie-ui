@@ -1,0 +1,27 @@
+# Code
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as CodeStories from './Code.stories';
+
+<Meta of={CodeStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+
+## Import
+
+```jsx
+import { Code } from 'yorkie-ui';
+```
+
+## Overview
+
+An inline code snippet display component is needed.
+
+<Canvas
+  of={CodeStories.Overview}
+  source={{
+    format: true,
+    code: `<Code>yorkie ui code</Code>`,
+  }}
+/>

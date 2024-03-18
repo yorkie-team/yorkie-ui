@@ -1,0 +1,158 @@
+# Select
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Select } from 'yorkie-ui';
+```
+
+## Props
+
+<Controls />
+
+## Overview
+
+The `Select` element presents a collection of choices for the user to select from.
+
+<Canvas
+  of={SelectStories.Overview}
+  source={{
+    format: true,
+    code: `
+      const items = [
+        { label: 'React', value: 'react' },
+        { label: 'Solid', value: 'solid' },
+        { label: 'Svelte', value: 'svelte', disabled: true },
+        { label: 'Vue', value: 'vue' },
+      ];
+      return (
+        <Select.Root positioning={{ sameWidth: true }} width="2xs" items={items}>
+          <Select.Label>Framework</Select.Label>
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder={'Select a Framework'} />
+              <DownIcon />
+            </Select.Trigger>
+          </Select.Control>
+          <Select.Positioner>
+            <Select.Content>
+                <Select.ItemGroup id="framework">
+                <Select.ItemGroupLabel htmlFor="framework">Framework</Select.ItemGroupLabel>
+                {items.map((item) => (
+                    <Select.Item key={item.value} item={item}>
+                    <Select.ItemText>{item.label}</Select.ItemText>
+                    <Select.ItemIndicator>
+                        <DownIcon />
+                    </Select.ItemIndicator>
+                    </Select.Item>
+                ))}
+                </Select.ItemGroup>
+            </Select.Content>
+          </Select.Positioner>
+        </Select.Root>
+      );
+    `,
+  }}
+/>
+
+## Examples
+
+### [Customization](#select-customization)
+
+For advanced customizations and like `disabled` item properties.
+
+<Canvas
+  of={SelectStories.Customization}
+  source={{
+    format: true,
+    code: `
+      <Select.Root items={items} positioning={{ sameWidth: true }} width="2xs" height="280px">
+        <Select.Label>Framework</Select.Label>
+        <Select.Control>
+          <Select.Trigger>
+            <Select.ValueText placeholder="Select a Framework" />
+            <Select.Indicator>
+              <DownIcon />
+            </Select.Indicator>
+          </Select.Trigger>
+          <Select.ClearTrigger>
+            <Button variant="solid">Clear</Button>
+          </Select.ClearTrigger>
+        </Select.Control>
+        <Select.Positioner>
+          <Select.Content>
+            <Select.ItemGroup id="framework">
+              <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
+              {items.map((item) => (
+                <Select.Item key={item.value} item={item}>
+                  <Select.ItemText>{item.label}</Select.ItemText>
+                  <Select.ItemIndicator>✓</Select.ItemIndicator>
+                </Select.Item>
+              ))}
+            </Select.ItemGroup>
+          </Select.Content>
+        </Select.Positioner>
+      </Select.Root>
+      );
+    `,
+  }}
+/>
+
+### [Multiple Selection](#multiple-selection)
+
+To allow for the selection of multiple items, follow these steps:
+
+<Canvas
+  of={SelectStories.MultipleSelection}
+  source={{
+    format: true,
+    code: `
+      type Item = { label: string; value: string; disabled?: boolean }
+      const items: Item[] = [
+        { label: 'React', value: 'react' },
+        { label: 'Solid', value: 'solid' },
+        { label: 'Vue', value: 'vue' },
+        { label: 'Svelte', value: 'svelte', disabled: true },
+      ]
+      return (
+        <Select.Root items={items} multiple positioning={{ sameWidth: true }} width="2xs" height="280px">
+          <Select.Label>Framework</Select.Label>
+          <Select.Control>
+            <Select.Trigger>
+              <Select.ValueText placeholder="Select a Framework" />
+              <Select.Indicator>
+                <ChevronDownIcon />
+              </Select.Indicator>
+            </Select.Trigger>
+            <Select.ClearTrigger>Clear</Select.ClearTrigger>
+          </Select.Control>
+          <Portal>
+            <Select.Positioner>
+              <Select.Content>
+                <Select.ItemGroup id="framework">
+                  <Select.ItemGroupLabel htmlFor="framework">Frameworks</Select.ItemGroupLabel>
+                  {items.map((item) => (
+                    <Select.Item key={item.value} item={item}>
+                      <Select.ItemText>{item.label}</Select.ItemText>
+                      <Select.ItemIndicator>✓</Select.ItemIndicator>
+                    </Select.Item>
+                  ))}
+                </Select.ItemGroup>
+              </Select.Content>
+            </Select.Positioner>
+          </Portal>
+        </Select.Root>
+      )
+    `,
+  }}
+/>

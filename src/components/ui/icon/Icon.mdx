@@ -1,0 +1,69 @@
+# Icon
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as IconStories from './Icon.stories';
+
+<Meta of={IconStories} />
+
+- [Import](#import)
+- [Props](#props)
+- [Overview](#overview)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Icon } from 'yorkie-ui';
+```
+
+## Props
+
+<Controls />
+
+## Overview
+
+Menus empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
+
+<Canvas
+  of={IconStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Icon>
+        <CalendarIcon />
+      </Icon>
+    `,
+  }}
+/>
+
+## Examples
+
+### [Sizes](#icon-size)
+
+There are seven sizes available for an Icon box: xs, sm, md, lg, xl, and 2xl. The default size is `md`.
+
+<Canvas
+  of={IconStories.Sizes}
+  source={{
+    format: true,
+    code: `
+      <Flex gap="6" align="center">
+        <Icon size="xs" {...args}>
+          <CalendarIcon />
+        </Icon>
+        <Icon size="sm" {...args}>
+          <CalendarIcon />
+        </Icon>
+        <Icon size="md" {...args}>
+          <CalendarIcon />
+        </Icon>
+        <Icon size="xl" {...args}>
+          <CalendarIcon />
+        </Icon>
+        <Icon size="2xl" {...args}>
+          <CalendarIcon />
+        </Icon>
+      </Flex>
+    `,
+  }}
+/>
