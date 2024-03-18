@@ -25,23 +25,22 @@ The `Select` element presents a collection of choices for the user to select fro
   source={{
     format: true,
     code: `
-        const items = [
-            { label: 'React', value: 'react' },
-            { label: 'Solid', value: 'solid' },
-            { label: 'Svelte', value: 'svelte', disabled: true },
-            { label: 'Vue', value: 'vue' },
-        ];
-
-        return (
+      const items = [
+        { label: 'React', value: 'react' },
+        { label: 'Solid', value: 'solid' },
+        { label: 'Svelte', value: 'svelte', disabled: true },
+        { label: 'Vue', value: 'vue' },
+      ];
+      return (
         <Select.Root positioning={{ sameWidth: true }} width="2xs" items={items}>
-            <Select.Label>Framework</Select.Label>
-            <Select.Control>
+          <Select.Label>Framework</Select.Label>
+          <Select.Control>
             <Select.Trigger>
-                <Select.ValueText placeholder={'Select a Framework'} />
-                <DownIcon />
+              <Select.ValueText placeholder={'Select a Framework'} />
+              <DownIcon />
             </Select.Trigger>
-            </Select.Control>
-            <Select.Positioner>
+          </Select.Control>
+          <Select.Positioner>
             <Select.Content>
                 <Select.ItemGroup id="framework">
                 <Select.ItemGroupLabel htmlFor="framework">Framework</Select.ItemGroupLabel>
@@ -55,12 +54,11 @@ The `Select` element presents a collection of choices for the user to select fro
                 ))}
                 </Select.ItemGroup>
             </Select.Content>
-            </Select.Positioner>
+          </Select.Positioner>
         </Select.Root>
-        );
+      );
     `,
-
-}}
+  }}
 />
 
 ## Props

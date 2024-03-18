@@ -7,7 +7,7 @@ import * as BoxStories from './Box.stories';
 
 - [Import](#import)
 - [Overview](#overview)
-- [Examples](#examples)
+- [Props](#props)
 
 ## Import
 
@@ -21,8 +21,6 @@ The Box component is a useful tool as it helps with three common use cases.
 - Secondly, it provides a shorter way to pass styles through props (such as using `bg` instead of `backgroundColor`).
 - Finally, it allows for component composition and overrides through the "as" prop.
 
-<Controls />
-
 ## Overview
 
 Box is the fundamental building block of all other UI components. By default, it renders a `div` element.
@@ -32,31 +30,33 @@ Box is the fundamental building block of all other UI components. By default, it
   source={{
     format: true,
     code: `
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-            <Image src={property.imageUrl} alt={property.imageAlt} width={400} height={100} />
-            <Box p="6">
-                <Box display="flex" alignItems="baseline">
-                    <Badge borderRadius="full" px="2" colorScheme="teal">
-                        New
-                    </Badge>
-                    <Box
-                        color="gray.500"
-                        fontWeight="semibold"
-                        letterSpacing="wide"
-                        fontSize="xs"
-                        textTransform="uppercase"
-                        ml="2"
-                    >
-                        {property.views} views &bull; {property.rating} ratings
-                    </Box>
-                </Box>
-
-                <Box mt="3" fontWeight="semibold" lineHeight="tight">
-                    {property.title}
-                </Box>
+      <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Image src={property.imageUrl} alt={property.imageAlt} width={400} height={100} />
+        <Box p="6">
+          <Box display="flex" alignItems="baseline">
+            <Badge borderRadius="full" px="2" colorScheme="teal">
+              New
+            </Badge>
+            <Box
+              color="gray.500"
+              fontWeight="semibold"
+              letterSpacing="wide"
+              fontSize="xs"
+              textTransform="uppercase"
+              ml="2"
+            >
+                {property.views} views &bull; {property.rating} ratings
             </Box>
+          </Box>
+          <Box mt="3" fontWeight="semibold" lineHeight="tight">
+              {property.title}
+          </Box>
         </Box>
+      </Box>
     `,
-
-}}
+  }}
 />
+
+## Props
+
+<Controls />

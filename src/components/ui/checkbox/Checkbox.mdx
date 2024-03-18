@@ -30,23 +30,31 @@ Each checkbox works independently from others in a list, therefore selecting add
   }}
 />
 
-## Controls
+## Props
 
 <Controls />
 
 ## Examples
 
-### Sizes
+### [Sizes](#checkbox-sizes)
 
 The default value for the `size` prop is `md`. You can use the `size` prop to modify the checkbox's dimensions, with three available options: `sm`, `md`, and `lg`.
 
 <Canvas>
-  <Story of={CheckboxStories.Small} />
-  <Story of={CheckboxStories.Medium} />
-  <Story of={CheckboxStories.Large} />
+  <Story
+    of={CheckboxStories.Medium}
+    source={{
+      format: true,
+      code: `
+        <Checkbox size="md">
+          Label
+        </Checkbox>
+      `,
+    }}
+  />
 </Canvas>
 
-### DefaultChecked
+### [Default Checked](#checkbox-default-checked)
 
 To set the checkbox to have a checked state in the initial render, add the `defaultChecked` prop.
 
@@ -58,7 +66,7 @@ To set the checkbox to have a checked state in the initial render, add the `defa
   }}
 />
 
-### Indeterminate
+### [Indeterminate](#checkbox-indeterminate)
 
 Using the `checked="indeterminate"` to indicate a checkbox with only some related options selected.
 
@@ -70,7 +78,7 @@ Using the `checked="indeterminate"` to indicate a checkbox with only some relate
   }}
 />
 
-### Custom color
+### [Custom Color](#checkbox-custom-color)
 
 To custom checkbox control color, use the `colorPalette` prop. The color specified in the color system is required.
 
@@ -84,7 +92,7 @@ By default, the checkbox uses the `accent` color from the theme.
   }}
 />
 
-### Disabled
+### [Disabled](#checkbox-disabled)
 
 Using `disabled` prop to prevent interaction with the checkbox.
 

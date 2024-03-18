@@ -73,9 +73,8 @@ In order to create a controlled Tooltip component, it is essential to manage the
     format: true,
     code: `
       const [isOpen, setIsOpen] = useState(false);
-
       return (
-        <>
+        <div>
           <Button onClick={() => setIsOpen(!isOpen)}>Toggle</Button>
           <Tooltip.Root open={isOpen}>
             <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
@@ -83,10 +82,10 @@ In order to create a controlled Tooltip component, it is essential to manage the
               <Tooltip.Content>I am a tooltip!</Tooltip.Content>
             </Tooltip.Positioner>
           </Tooltip.Root>
-        </>
-      );`,
-    }}
-
+        </div>
+      );
+    `,
+  }}
 />
 
 ### [Arrow](#tooltip-arrow)
