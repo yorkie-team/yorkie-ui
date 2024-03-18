@@ -9,7 +9,10 @@
     "lint": "next lint --fix && stylelint --fix \"**/*.{css,scss}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "style": "panda codegen"
+    "style": "panda codegen",
+    "gh-pages": "https://github.com/yorkie-team/yorkie-ui-poc",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
@@ -53,6 +56,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "gh-pages": "^6.1.1",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "remark-frontmatter": "^5.0.0",
