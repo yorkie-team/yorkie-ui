@@ -6,8 +6,8 @@ import * as TooltipStories from './Tooltip.stories';
 <Meta of={TooltipStories} />
 
 - [Import](#import)
-- [Props](#props)
 - [Overview](#overview)
+- [Props](#props)
 - [Examples](#examples)
 
 ## Import
@@ -15,10 +15,6 @@ import * as TooltipStories from './Tooltip.stories';
 ```jsx
 import { Tooltip } from 'yorkie-ui';
 ```
-
-## Props
-
-<Controls />
 
 ## Overview
 
@@ -41,6 +37,10 @@ Providing information through a label that appears when the user hovers or focus
     `,
   }}
 />
+
+## Props
+
+<Controls />
 
 ## Examples
 
@@ -73,9 +73,8 @@ In order to create a controlled Tooltip component, it is essential to manage the
     format: true,
     code: `
       const [isOpen, setIsOpen] = useState(false);
-
       return (
-        <>
+        <div>
           <Button onClick={() => setIsOpen(!isOpen)}>Toggle</Button>
           <Tooltip.Root open={isOpen}>
             <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
@@ -83,10 +82,10 @@ In order to create a controlled Tooltip component, it is essential to manage the
               <Tooltip.Content>I am a tooltip!</Tooltip.Content>
             </Tooltip.Positioner>
           </Tooltip.Root>
-        </>
-      );`,
-    }}
-
+        </div>
+      );
+    `,
+  }}
 />
 
 ### [Arrow](#tooltip-arrow)
