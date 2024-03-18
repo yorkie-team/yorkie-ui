@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tooltip } from '@/components/ui';
+import { Box, Button, Tooltip } from '@/components/ui';
 
 const meta = {
   title: 'OVERLAY / Tooltip',
@@ -7,6 +7,7 @@ const meta = {
     openDelay: {
       control: { type: 'number' },
       description: 'The open delay of the tooltip.',
+      default: 3,
     },
     closeDelay: {
       control: { type: 'number' },
@@ -59,26 +60,10 @@ export default meta;
 export const Overview = {
   render: () => {
     return (
-      <Tooltip.Root lazyMount unmountOnExit>
-        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+      <Tooltip.Root>
+        <Tooltip.Trigger>Hover Me, waiting 3s</Tooltip.Trigger>
         <Tooltip.Positioner>
-          <Tooltip.Arrow>
-            <Tooltip.ArrowTip />
-          </Tooltip.Arrow>
           <Tooltip.Content>I am a Tooltip!</Tooltip.Content>
-        </Tooltip.Positioner>
-      </Tooltip.Root>
-    );
-  },
-};
-
-export const Basic = {
-  render: () => {
-    return (
-      <Tooltip.Root lazyMount unmountOnExit>
-        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
-        <Tooltip.Positioner>
-          <Tooltip.Content>I am a tooltip!</Tooltip.Content>
         </Tooltip.Positioner>
       </Tooltip.Root>
     );
@@ -90,20 +75,27 @@ export const Controlled = () => {
 
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)}>Toggle </button>
-      <Tooltip.Root open={isOpen}>
-        <Tooltip.Trigger> Hover Me</Tooltip.Trigger>
-        <Tooltip.Positioner>
-          <Tooltip.Content>I am a tooltip!</Tooltip.Content>
-        </Tooltip.Positioner>
-      </Tooltip.Root>
+      <Button onClick={() => setIsOpen(!isOpen)}>Toggle </Button>
+      <Box display="inline" ml="20">
+        <Tooltip.Root open={isOpen}>
+          <Tooltip.Trigger>Tooltip</Tooltip.Trigger>
+          <Tooltip.Positioner>
+            <Tooltip.Content>
+              <Tooltip.Arrow>
+                <Tooltip.ArrowTip />
+              </Tooltip.Arrow>
+              I am a tooltip!
+            </Tooltip.Content>
+          </Tooltip.Positioner>
+        </Tooltip.Root>
+      </Box>
     </>
   );
 };
 
 export const Arrow = () => {
   return (
-    <Tooltip.Root>
+    <Tooltip.Root openDelay={300}>
       <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
       <Tooltip.Positioner>
         <Tooltip.Content>
@@ -119,7 +111,7 @@ export const Arrow = () => {
 
 export const TimeDelays = () => {
   return (
-    <Tooltip.Root closeDelay={300} openDelay={100}>
+    <Tooltip.Root closeDelay={600} openDelay={300}>
       <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
       <Tooltip.Positioner>
         <Tooltip.Content>I am a tooltip!</Tooltip.Content>
@@ -130,7 +122,10 @@ export const TimeDelays = () => {
 
 export const Positioning = () => {
   return (
-    <Tooltip.Root positioning={{ placement: 'left-start', gutter: 16, offset: { mainAxis: 12, crossAxis: 12 } }}>
+    <Tooltip.Root
+      openDelay={300}
+      positioning={{ placement: 'left-start', gutter: 16, offset: { mainAxis: 12, crossAxis: 12 } }}
+    >
       <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
       <Tooltip.Positioner>
         <Tooltip.Content>I am a tooltip!</Tooltip.Content>
