@@ -69,30 +69,29 @@ To display an arrow within the popover, include `Popover.Arrow` and `Popover.Arr
   source={{
     format: true,
     code: `
-        <Popover.Root>
-          <Popover.Trigger asChild>
-            <Button>Open Popover</Button>
-          </Popover.Trigger>
-          <Popover.Positioner>
-            <Popover.Content>
-              <Popover.Arrow>
-                <Popover.ArrowTip />
-              </Popover.Arrow>
-              <Stack gap="1">
-                <Popover.Title>Favorite Framework</Popover.Title>
-                <Popover.Description>
-                  Tell us what is your favorite framework and why you love to use it.
-                </Popover.Description>
-              </Stack>
-              <Box position="absolute" top="1" right="1">
-                <Popover.CloseTrigger asChild>
-                  <CloseIcon />
-                </Popover.CloseTrigger>
-              </Box>
-            </Popover.Content>
-          </Popover.Positioner>
-        </Popover.Root>
-      );
+      <Popover.Root>
+        <Popover.Trigger asChild>
+          <Button>Open Popover</Button>
+        </Popover.Trigger>
+        <Popover.Positioner>
+          <Popover.Content>
+            <Popover.Arrow>
+              <Popover.ArrowTip />
+            </Popover.Arrow>
+            <Stack gap="1">
+              <Popover.Title>Favorite Framework</Popover.Title>
+              <Popover.Description>
+                Tell us what is your favorite framework and why you love to use it.
+              </Popover.Description>
+            </Stack>
+            <Box position="absolute" top="1" right="1">
+              <Popover.CloseTrigger asChild>
+                <CloseIcon />
+              </Popover.CloseTrigger>
+            </Box>
+          </Popover.Content>
+        </Popover.Positioner>
+      </Popover.Root>
     `,
   }}
 />
@@ -106,20 +105,19 @@ We trigger the `onOpenChange` callback both when the popover is opened and when 
   source={{
     format: true,
     code: `
-        <Popover.Root onOpenChange={(open) => alert(open ? 'opened' : 'closed')}>
-          <Popover.Trigger>
-            <Button>
-              Click Me <Popover.Indicator>{'>'}</Popover.Indicator>
-            </Button>
-          </Popover.Trigger>
-          <Popover.Positioner>
-            <Popover.Content>
-              <Popover.Title>Title</Popover.Title>
-              <Popover.Description>Description</Popover.Description>
-            </Popover.Content>
-          </Popover.Positioner>
-        </Popover.Root>
-      );
+      <Popover.Root onOpenChange={(open) => alert(open ? 'opened' : 'closed')}>
+        <Popover.Trigger>
+          <Button>
+            Click Me <Popover.Indicator>{'>'}</Popover.Indicator>
+          </Button>
+        </Popover.Trigger>
+        <Popover.Positioner>
+          <Popover.Content>
+            <Popover.Title>Title</Popover.Title>
+            <Popover.Description>Description</Popover.Description>
+          </Popover.Content>
+        </Popover.Positioner>
+      </Popover.Root>
     `,
   }}
 />
@@ -133,7 +131,7 @@ To control the open state of the popover, you can make use of the `isOpen` prop.
   source={{
     format: true,
     code: `
-       <Popover.Root open={isOpen}>
+      <Popover.Root open={isOpen}>
         <Button onClick={() => setIsOpen(!isOpen)}>Toggle</Button>
         <Popover.Positioner>
           <Popover.Content>
@@ -154,7 +152,6 @@ To control the open state of the popover, you can make use of the `isOpen` prop.
           </Popover.Content>
         </Popover.Positioner>
       </Popover.Root>
-      );
     `,
   }}
 />
@@ -173,7 +170,44 @@ and set it to `false`.
   source={{
     format: true,
     code: `
-        <Popover.Root modal>
+      <Popover.Root modal>
+        <Popover.Trigger asChild>
+          <Button>Open Popover</Button>
+        </Popover.Trigger>
+        <Popover.Positioner>
+          <Popover.Content>
+            <Popover.Arrow>
+              <Popover.ArrowTip />
+            </Popover.Arrow>
+            <Stack gap="1">
+              <Popover.Title>Favorite Framework</Popover.Title>
+              <Popover.Description>
+                Tell us what is your favorite framework and why you love to use it.
+              </Popover.Description>
+            </Stack>
+            <Box position="absolute" top="1" right="1">
+              <Popover.CloseTrigger asChild>
+                <CloseIcon />
+              </Popover.CloseTrigger>
+            </Box>
+          </Popover.Content>
+        </Popover.Positioner>
+      </Popover.Root>
+    `,
+  }}
+/>
+
+### Changing the placement
+
+In order to adjust the position of the popover, you can use the "positioning" property.
+
+<Canvas
+  of={PopoverStories.Positioning}
+  source={{
+    format: true,
+    code: `
+      <Box height="160px">
+        <Popover.Root positioning={{ placement: 'left-start', gutter: 16, offset: { mainAxis: 12, crossAxis: 12 } }}>
           <Popover.Trigger asChild>
             <Button>Open Popover</Button>
           </Popover.Trigger>
@@ -196,46 +230,7 @@ and set it to `false`.
             </Popover.Content>
           </Popover.Positioner>
         </Popover.Root>
-      );
-    `,
-  }}
-/>
-
-### Changing the placement
-
-In order to adjust the position of the popover, you can use the "positioning" property.
-
-<Canvas
-  of={PopoverStories.Positioning}
-  source={{
-    format: true,
-    code: `
-        <Box height="160px">
-          <Popover.Root positioning={{ placement: 'left-start', gutter: 16, offset: { mainAxis: 12, crossAxis: 12 } }}>
-            <Popover.Trigger asChild>
-              <Button>Open Popover</Button>
-            </Popover.Trigger>
-            <Popover.Positioner>
-              <Popover.Content>
-                <Popover.Arrow>
-                  <Popover.ArrowTip />
-                </Popover.Arrow>
-                <Stack gap="1">
-                  <Popover.Title>Favorite Framework</Popover.Title>
-                  <Popover.Description>
-                    Tell us what is your favorite framework and why you love to use it.
-                  </Popover.Description>
-                </Stack>
-                <Box position="absolute" top="1" right="1">
-                  <Popover.CloseTrigger asChild>
-                    <CloseIcon />
-                  </Popover.CloseTrigger>
-                </Box>
-              </Popover.Content>
-            </Popover.Positioner>
-          </Popover.Root>
-        </Box>
-      );
+      </Box>
     `,
   }}
 />
@@ -256,30 +251,29 @@ To enable modal behavior for the popover, simply set the `modal` prop to `true`.
   source={{
     format: true,
     code: `
-        <Popover.Root modal>
-          <Popover.Trigger asChild>
-            <Button>Open Popover</Button>
-          </Popover.Trigger>
-          <Popover.Positioner>
-            <Popover.Content>
-              <Popover.Arrow>
-                <Popover.ArrowTip />
-              </Popover.Arrow>
-              <Stack gap="1">
-                <Popover.Title>Favorite Framework</Popover.Title>
-                <Popover.Description>
-                  Tell us what is your favorite framework and why you love to use it.
-                </Popover.Description>
-              </Stack>
-              <Box position="absolute" top="1" right="1">
-                <Popover.CloseTrigger asChild>
-                  <CloseIcon />
-                </Popover.CloseTrigger>
-              </Box>
-            </Popover.Content>
-          </Popover.Positioner>
-        </Popover.Root>
-      );
+      <Popover.Root modal>
+        <Popover.Trigger asChild>
+          <Button>Open Popover</Button>
+        </Popover.Trigger>
+        <Popover.Positioner>
+          <Popover.Content>
+            <Popover.Arrow>
+              <Popover.ArrowTip />
+            </Popover.Arrow>
+            <Stack gap="1">
+              <Popover.Title>Favorite Framework</Popover.Title>
+              <Popover.Description>
+                Tell us what is your favorite framework and why you love to use it.
+              </Popover.Description>
+            </Stack>
+            <Box position="absolute" top="1" right="1">
+              <Popover.CloseTrigger asChild>
+                <CloseIcon />
+              </Popover.CloseTrigger>
+            </Box>
+          </Popover.Content>
+        </Popover.Positioner>
+      </Popover.Root>
     `,
   }}
 />
