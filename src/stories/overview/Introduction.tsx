@@ -34,10 +34,9 @@ import {
 } from '@/stories/overview/img/thumb';
 import Link from 'next/link';
 
-const host = window.location.pathname;
-const pathname = host.pathname;
-const subpath = pathname ? pathname.split('/')[1] : '';
-console.log(subpath);
+const url = new URL(window.location.href);
+const pathname = url.pathname && url.pathname != '/iframe.html' ? url.pathname : '';
+const subpath = pathname.split('/');
 
 const listComponent = [
   {
