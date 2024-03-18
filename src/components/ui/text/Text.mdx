@@ -13,14 +13,35 @@ import * as TextStories from './Text.stories';
 ## Import
 
 ```jsx
-import { Text } from '@/component/ui';
+import { Text } from 'yorkie-ui';
 ```
 
 ## Overview
 
 Use the `as` property to specify an HTML tag. This changes the semantic meaning without affecting the visual style.
 
-<Canvas of={TextStories.Overview} />
+<Canvas
+  of={TextStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Text as="p">
+          This is a <strong>p</strong> element.
+        </Text>
+        <Text as="label">
+          This is a <strong>label</strong> element.
+        </Text>
+        <Text as="div">
+          This is a <strong>div</strong> element.
+        </Text>
+        <Text as="span">
+          This is a <strong>span</strong> element.
+        </Text>
+      </div>
+    `,
+  }}
+/>
 
 ## Props
 
@@ -35,7 +56,7 @@ Use `size` or `textStyle` for text size. It makes line height and spacing smalle
   source={{
     format: true,
     code: `
-     <>
+     <div>
         <Text size="xs">Yorike</Text>
         <Text size="sm">Yorike</Text>
         <Text size="md">Yorike</Text>
@@ -47,7 +68,7 @@ Use `size` or `textStyle` for text size. It makes line height and spacing smalle
         <Text size="5xl">Yorike</Text>
         <Text size="6xl">Yorike</Text>
         <Text size="7xl">Yorike</Text>
-    </>
+    </div>
     `,
 
 }}
@@ -62,13 +83,13 @@ To adjust the weight of text, use the `fontWeight` prop.
   source={{
     format: true,
     code: `
-     <>
+      <div>
         <Text fontWeight="light">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="normal">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="medium">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="semibold">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="bold">Sphinx of black quartz, judge my vow.</Text>
-    </>
+      </div>
     `,
 
 }}

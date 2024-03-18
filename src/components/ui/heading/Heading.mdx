@@ -13,12 +13,22 @@ import * as HeadingStories from './Heading.stories';
 ## Import
 
 ```jsx
-import { Heading } from '@/component/ui';
+import { Heading } from 'yorkie-ui';
 ```
 
 ## Overview
 
-<Canvas of={HeadingStories.Overview} />
+<Canvas
+  of={HeadingStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Heading as="h1">
+        This is a <strong>H1</strong> element.
+      </Heading>
+    `,
+  }}
+/>
 
 ## Props
 

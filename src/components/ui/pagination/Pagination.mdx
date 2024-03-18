@@ -12,14 +12,22 @@ import * as PaginationStories from './Pagination.stories';
 ## Import
 
 ```jsx
-import { Menu } from '@/component/ui';
+import { Menu } from 'yorkie-ui';
 ```
 
 ## Overview
 
 A navigation feature that enables users to browse through different pages.
 
-<Canvas of={PaginationStories.Overview} />
+<Canvas
+  of={PaginationStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Pagination count={5000} pageSize={10} siblingCount={2}></Pagination>
+    `,
+  }}
+/>
 
 ## Props
 

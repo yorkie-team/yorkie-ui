@@ -1,4 +1,4 @@
-import { Input } from '@/components/ui';
+import { Input, Label } from '@/components/ui';
 import { Flex, Stack } from '@/styled/jsx';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -82,7 +82,7 @@ export const Overview: Story = {
   render: (args) => {
     return (
       <Stack gap="1.5" width="2xs">
-        <label htmlFor="name">Name</label>
+        <Label htmlFor="name">Name</Label>
         <Input id="name" placeholder="Your Name" {...args} />
       </Stack>
     );

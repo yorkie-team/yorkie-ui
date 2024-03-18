@@ -8,13 +8,12 @@ import * as AvatarStories from './Avatar.stories';
 - [Import](#import)
 - [Overview](#overview)
 - [Props](#props)
-- [Usage](#usage)
 - [Examples](#examples)
 
 ## Import
 
 ```jsx
-import { Avatar } from '@/component/ui';
+import { Avatar } from 'yorkie-ui';
 ```
 
 ## Overview
@@ -34,26 +33,6 @@ It serves as a visual identifier for users, making it easier to distinguish betw
 
 <Controls />
 
-## Usage
-
-An `Avatar` object consists of some optional properties:
-
-- `size`
-- `src`
-- `name`
-
-The following code shows how you can use the `Avatar` component:
-
-<Source
-  format={true}
-  code={`
-    import { Avatar } from '@/components/ui';
-
-    <Avatar size="sm" src="https://i.pravatar.cc/300" name="John Doe" />
-
-`}
-/>
-
 ## Examples
 
 ### Sizes
@@ -61,12 +40,15 @@ The following code shows how you can use the `Avatar` component:
 The default value for the `size` prop is `md`. You can use the `size` prop to modify the avatar's dimensions, with six available options: `xs`, `sm`, `md`, `lg`, xl, and `2xl`.
 
 <Canvas>
-  <Story of={AvatarStories.AvatarXs} />
-  <Story of={AvatarStories.AvatarSm} />
-  <Story of={AvatarStories.AvatarMd} />
-  <Story of={AvatarStories.AvatarLg} />
-  <Story of={AvatarStories.AvatarXl} />
-  <Story of={AvatarStories.Avatar2xl} />
+  <Story
+    of={AvatarStories.AvatarXs}
+    source={{
+      format: true,
+      code: `
+      <Avatar size="xs" src="https://i.pravatar.cc/300" name="John Doe"/>
+    `,
+    }}
+  />
 </Canvas>
 
 ### Src
@@ -79,7 +61,7 @@ If not provided, the avatar will be displayed by the `name` prop if provided or 
   of={AvatarStories.AvatarMd}
   source={{
     format: true,
-    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe"} />`,
+    code: `<Avatar src="https://i.pravatar.cc/300" name="John Doe" />`,
   }}
 />
 
@@ -91,7 +73,7 @@ By utilizing the `name` prop, you can import the name for the avatar. It will be
   of={AvatarStories.WithNameOnly}
   source={{
     format: true,
-    code: `<Avatar name="John Doe"} />`,
+    code: `<Avatar name="John Doe" />`,
   }}
 />
 

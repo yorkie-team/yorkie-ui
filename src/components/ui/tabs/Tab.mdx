@@ -13,7 +13,7 @@ import * as TabStories from './Tab.stories';
 ## Import
 
 ```jsx
-import { Tab } from '@/component/ui';
+import { Tab } from 'yorkie-ui';
 ```
 
 ## Overview
@@ -25,20 +25,18 @@ This is a versatile navigation tool that comes with a range of modes and feature
   source={{
     format: true,
     code: `
-        <Tabs.Root>
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Tab 3</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-      );
+      <Tabs.Root>
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Tab 3</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
     `,
-
-}}
+  }}
 />
 
 ## Props
@@ -56,18 +54,17 @@ To visually highlight the active tab, you can use the `Tabs.Indicator` component
   source={{
     format: true,
     code: `
-        <Tabs.Root>
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-            <Tabs.Indicator />
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-      )
+      <Tabs.Root>
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          <Tabs.Indicator />
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
     `,
   }}
 />
@@ -83,18 +80,17 @@ In addition, the `unmountOnExit` prop can be used in conjunction with lazyMount 
   source={{
     format: true,
     code: `
-        <Tabs.Root lazyMount unmountOnExit>
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-            <Tabs.Indicator />
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-      )
+      <Tabs.Root lazyMount unmountOnExit>
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          <Tabs.Indicator />
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
     `,
   }}
 />
@@ -108,19 +104,18 @@ To disable a tab, you can pass the `disabled` prop to the `Tabs.Trigger` compone
   source={{
     format: true,
     code: `
-        <Tabs.Root defaultValue="tab1">
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2" disabled>
-              of Tab Pane 2
-            </Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-      )
+      <Tabs.Root defaultValue="tab1">
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2" disabled>
+            of Tab Pane 2
+          </Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
     `,
   }}
 />
@@ -134,19 +129,18 @@ To create a controlled Tabs component, manage the currently selected tab using t
   source={{
     format: true,
     code: `
-        const [value, setValue] = useState<string | null>('react')
-        return (
-          <Tabs.Root value={value} onValueChange={(e) => setValue(e.value)}>
-            <Tabs.List>
-              <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-              <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
-              <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-            </Tabs.List>
-            <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-            <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-            <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-          </Tabs.Root>
-        )
+      const [value, setValue] = useState<string | null>('react')
+      return (
+        <Tabs.Root value={value} onValueChange={(e) => setValue(e.value)}>
+          <Tabs.List>
+            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+        </Tabs.Root>
       )
     `,
   }}
@@ -161,18 +155,16 @@ The default orientation of tabs is horizontal. To set a `vertical` orientation, 
   source={{
     format: true,
     code: `
-        <Tabs.Root orientation="vertical" defaultValue="tab1">
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-        )
-      )
+      <Tabs.Root orientation="vertical" defaultValue="tab1">
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
     `,
   }}
 />
@@ -190,17 +182,16 @@ In contrast, manual tab activation means the tab is selected with the
   source={{
     format: true,
     code: `
-        <Tabs.Root activationMode="manual" defaultValue="tab1">
-          <Tabs.List>
-            <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
-            <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
-            <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
-          <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
-          <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
-        </Tabs.Root>
-        )
+      <Tabs.Root activationMode="manual" defaultValue="tab1">
+        <Tabs.List>
+          <Tabs.Trigger value="tab1">Content of Tab Pane 1</Tabs.Trigger>
+          <Tabs.Trigger value="tab2">Content of Tab Pane 2</Tabs.Trigger>
+          <Tabs.Trigger value="tab3">Content of Tab Pane 3</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="tab1">Content of Tab Pane 1</Tabs.Content>
+        <Tabs.Content value="tab2">Content of Tab Pane 2</Tabs.Content>
+        <Tabs.Content value="tab3">Content of Tab Pane 3</Tabs.Content>
+      </Tabs.Root>
       )
     `,
   }}

@@ -10,11 +10,27 @@ import * as IconStories from './Icon.stories';
 - [Props](#props)
 - [Examples](#examples)
 
+## Import
+
+```jsx
+import { Icon } from 'yorkie-ui';
+```
+
 ## Overview
 
 Menus empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
 
-<Canvas of={IconStories.Overview} />
+<Canvas
+  of={IconStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Icon>
+        <CalendarIcon />
+      </Icon>
+    `,
+  }}
+/>
 
 ## Props
 

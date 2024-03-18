@@ -13,7 +13,7 @@ import * as FlexStories from './Flex.stories';
 ## Import
 
 ```jsx
-import { Flex, Spacer } from '@/component/ui';
+import { Flex, Spacer } from 'yorkie-ui';
 ```
 
 - **_Flex_**: A Box with display: flex.
@@ -27,7 +27,19 @@ import { Flex, Spacer } from '@/component/ui';
 
 The Flex unequivocally generates a small Flex that appears with utmost certainty at the top-right corner of its child elements.
 
-<Canvas of={FlexStories.Overview} />
+<Canvas
+  of={FlexStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Flex minWidth="max-content" alignItems="center" gap="2" justifyContent="space-between">
+        <Box p="2" fontWeight={700}>
+          Yorkie UI App
+        </Box>
+        <Button colorScheme="teal">Log in</Button>
+      </Flex>`,
+  }}
+/>
 
 ### [Using the Spacer](#template-columns)
 
@@ -39,13 +51,9 @@ Flex and Spacer can be combined to create stackable and responsive layouts, as a
     format: true,
     code: `
       <Flex>
-        <Box p='4' bg='red.400'>
-          Box 1
-        </Box>
+        <Box p="10" bg="tomato" />
         <Spacer />
-        <Box p='4' bg='green.400'>
-          Box 2
-        </Box>
+        <Box p="10" bg="tomato" />
       </Flex>
     `,
   }}
