@@ -1,4 +1,4 @@
-# Yorkie UI Poc
+# Yorkie UI
 
 Welcome to the Yorkie UI component library!
 
