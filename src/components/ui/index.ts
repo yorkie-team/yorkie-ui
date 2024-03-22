@@ -18,6 +18,9 @@ export * from './icon';
 export * from './icons';
 export * from './card';
 export * from './label';
+export * from './text';
+export * from './heading';
+export * from './code';
 export {
     Grid,
     GridItem,
@@ -33,6 +36,3 @@ export {
     Square,
     Container
 } from '@/styled/jsx';
-export * from './text';
-export * from './heading';
-export * from './code';
