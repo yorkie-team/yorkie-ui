@@ -1,3 +1,5 @@
+'use client'
+
 import { Menu } from '@ark-ui/react';
 import type { ComponentProps } from 'react';
 import { styled } from '@/styled/jsx';

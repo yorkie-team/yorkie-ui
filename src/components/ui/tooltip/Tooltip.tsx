@@ -1,3 +1,5 @@
+'use client'
+
 import { Tooltip as ArkTooltip } from '@ark-ui/react/tooltip';
 import type { ComponentProps } from 'react';
 import { styled } from '@/styled/jsx';

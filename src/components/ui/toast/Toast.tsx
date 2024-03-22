@@ -1,3 +1,5 @@
+'use client'
+
 import { Toast } from '@ark-ui/react/toast';
 import type { ComponentProps } from 'react';
 import { styled } from '@/styled/jsx';

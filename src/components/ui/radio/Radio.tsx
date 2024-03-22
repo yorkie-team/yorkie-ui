@@ -1,3 +1,5 @@
+'use client'
+
 import { RadioGroup } from '@ark-ui/react/radio-group';
 import type { ComponentProps } from 'react';
 import { styled } from '@/styled/jsx';
