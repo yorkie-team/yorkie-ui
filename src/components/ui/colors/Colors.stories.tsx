@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Grid } from '@/components/ui';
-import { token } from 'styled-system/tokens/index.mjs';
 
 import {
   defaultColorLight,
@@ -122,7 +121,7 @@ export const Overview = {
                         h="50px"
                         mt="10"
                         width="100%"
-                        style={{ background: token.var('colors.' + colors) }}
+                        style={{ background: `var(--colors-${colors})` }}
                         borderRadius="md"
                         borderWidth="thin"
                         borderColor="gray.2 "

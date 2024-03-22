@@ -67,7 +67,6 @@ export default defineConfig({
       code: codeRecipe,
     },
   },
-
   jsxFramework: 'react',
 
   // The output directory for your css system
