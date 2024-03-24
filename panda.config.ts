@@ -17,6 +17,9 @@ import { inputRecipe } from '@/components/ui/input/InputRecipe';
 import { iconRecipe } from '@/components/ui/icon/IconRecipe';
 import { textRecipe } from '@/components/ui/text/TextRecipe';
 import { codeRecipe } from '@/components/ui/code/CodeRecipe';
+import { cardSlotRecipe } from '@/components/ui/card/CardRecipe';
+import { toastSlotRecipe } from '@/components/ui/toast/ToastRecipe';
+import { labelRecipe } from '@/components/ui/label/LabelRecipe';
 
 export default defineConfig({
   // Whether to use css reset
@@ -57,6 +60,9 @@ export default defineConfig({
       switchs: switchSlotRecipe,
       datePicker: datePickerSlotRecipe,
       select: selectSlotRecipe,
+      card: cardSlotRecipe,
+      toast: toastSlotRecipe,
+      radio: radioGroupSlotRecipe,
     },
     recipes: {
       button: buttonRecipe,
@@ -65,6 +71,7 @@ export default defineConfig({
       icon: iconRecipe,
       text: textRecipe,
       code: codeRecipe,
+      label: labelRecipe
     },
   },
   jsxFramework: 'react',

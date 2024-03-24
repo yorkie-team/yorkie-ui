@@ -1,7 +1,7 @@
 import { toastAnatomy } from '@ark-ui/anatomy';
 import { defineSlotRecipe } from '@pandacss/dev';
 
-export const toastRecipe = defineSlotRecipe({
+export const toastSlotRecipe = defineSlotRecipe({
   className: 'toast',
   slots: toastAnatomy.keys(),
   base: {

@@ -1,7 +1,15 @@
-import React from 'react';
-import '@/styles/globals.css';
-import { Text, Container } from '@/components/ui';
 
-export default function RootLayout() {
-  return <Container><Text fontSize="50">Hello Yorkie</Text></Container>;
+import { PropsWithChildren } from 'react'
+import './globals.css'
+
+
+const RootLayout = (props: PropsWithChildren) => {
+  const { children } = props
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
 }
+
+export default RootLayout
