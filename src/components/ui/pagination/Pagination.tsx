@@ -3,20 +3,24 @@ import { forwardRef } from 'react';
 import { css, cx } from '@/styled/css';
 import { splitCssProps } from '@/styled/jsx';
 import { pagination, type PaginationVariantProps } from '@/styled/recipes';
-import type { Assign, JsxStyleProps } from '@/styled/types';
-import { Button } from '@/components/ui/button';
+import type { JsxStyleProps } from '@/styled/types/system-types';
 
-export interface PaginationProps extends Assign<JsxStyleProps, PaginationRootProps>, PaginationVariantProps {}
+import { Button, ChevronLeftIcon, ChevronRightIcon} from '@/components/ui';
+export type Assign<T, U> = {
+  [K in keyof T]: K extends keyof U ? U[K] : T[K]
+} & U
+export interface PaginationProps
+  extends Assign<JsxStyleProps, PaginationRootProps>,
+    PaginationVariantProps {}
 
 export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
-  const [variantProps, paginationProps] = pagination.splitVariantProps(props);
-  const [cssProps, localProps] = splitCssProps(paginationProps);
-  const { className, ...rootProps } = localProps;
-  const styles = pagination(variantProps);
+  const [variantProps, paginationProps] = pagination.splitVariantProps(props)
+  const [cssProps, localProps] = splitCssProps(paginationProps)
+  const { className, ...rootProps } = localProps
+  const styles = pagination(variantProps)
 
   return (
     <ArkPagination.Root
-      // @ts-expect-error TODO cssProps is to complex to be typed
       className={cx(styles.root, css(cssProps), className)}
       ref={ref}
       {...rootProps}
@@ -47,35 +51,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) 
         </>
       )}
     </ArkPagination.Root>
-  );
-});
+  )
+})
 
-Pagination.displayName = 'Pagination';
-
-const ChevronLeftIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <title>Chevron Left Icon</title>
-    <path
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="m15 18l-6-6l6-6"
-    />
-  </svg>
-);
-
-const ChevronRightIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <title>Chevron Right Icon</title>
-    <path
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="m9 18l6-6l-6-6"
-    />
-  </svg>
-);
+Pagination.displayName = 'Pagination'

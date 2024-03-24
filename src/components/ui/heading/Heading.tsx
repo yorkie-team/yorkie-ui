@@ -1,7 +1,9 @@
 import { forwardRef } from 'react';
 import { Text, type TextProps } from '@/components/ui';
 
-export type HeadingProps = Omit<TextProps, 'variant'> & {
+type TextPropsWithoutVariant = TextProps;
+
+export type HeadingProps = TextPropsWithoutVariant & {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };
 

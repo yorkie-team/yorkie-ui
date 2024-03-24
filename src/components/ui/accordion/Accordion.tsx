@@ -1,3 +1,5 @@
+'use client'
+
 import { Accordion } from '@ark-ui/react/accordion';
 import type { ComponentProps } from 'react';
 import { styled } from '@/styled/jsx';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid } from '@/components/ui';
-import { token } from 'styled-system/tokens/index.mjs';
+import { token } from '@/styled/tokens/index.mjs';
 
 import {
   defaultColorLight,

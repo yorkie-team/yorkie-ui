@@ -1,8 +1,7 @@
 {
   "name": "yorkie-ui",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "description": "Yorkie UI",
-  "main": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yorkie-team/yorkie-ui.git"
@@ -19,15 +18,46 @@
     "css",
     "ui"
   ],
+  "files": [
+    "dist",
+    "src",
+    "public",
+    "styled-system",
+    "tsconfig.json",
+    "*.ts",
+    "*.mjs"
+  ],
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/styles.css": "./dist/styles.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "build": "pnpm run clean && npm run style && pnpm run build:esm+types && pnpm run build:misc && pnpm run build:panda",
+    "build:esm+types": "pnpm build:postcss && tsc -b tsconfig.build.json --declaration --declarationMap",
+    "build:misc": "pnpm copy:styled-system && tsc-alias -p tsconfig.build.json",
+    "build:postcss": "postcss -o dist/esm/styles/globals.css src/styles/globals.css",
+    "build:panda": "panda cssgen --outfile dist/styles.css",
+    "copy:styled-system": "copyfiles ./styled-system/**/*.d.ts ./styled-system/*.d.ts ./styled-system/**/*.mjs ./styled-system/*.mjs dist/esm",
+    "prepare": "panda codegen",
     "dev": "next dev",
-    "build": "next build",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
     "start": "next start",
-    "lint": "next lint --fix && stylelint --fix \"**/*.{css,scss}\"",
+    "lint": "next lint --fix && stylelint --fix \"src/**/*.{css,scss}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "style": "panda codegen",
-    "gh-pages": "https://github.com/yorkie-team/yorkie-ui",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "test-storybook": "test-storybook"
@@ -39,24 +69,30 @@
     "@storybook/addon-docs": "^8.0.0",
     "@typescript-eslint/parser": "^7.2.0",
     "classnames": "^2.5.1",
+    "copyfiles": "^2.4.1",
     "i": "^0.3.7",
     "next": "14.1.0",
     "next-mdx-remote": "^4.4.1",
     "next-themes": "^0.2.1",
     "npm": "^10.5.0",
+    "panda": "^0.6.5",
+    "pnpm": "^8.15.5",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
+    "tsc-alias": "^1.8.8",
     "yaml": "^2.4.1",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@pandacss/dev": "^0.36.1"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.3",
-    "@pandacss/dev": "^0.33.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",

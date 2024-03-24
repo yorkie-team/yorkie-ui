@@ -18,19 +18,21 @@ export * from './icon';
 export * from './icons';
 export * from './card';
 export * from './label';
-export * from '@/styled/jsx/grid';
-export * from '@/styled/jsx/grid-item';
-export * from '@/styled/jsx/box';
-export * from '@/styled/jsx/flex';
-export * from '@/styled/jsx/spacer';
-export * from '@/styled/jsx/aspect-ratio';
-export * from '@/styled/jsx/center';
-export * from '@/styled/jsx/hstack';
-export * from '@/styled/jsx/vstack';
-export * from '@/styled/jsx/stack';
-export * from '@/styled/jsx/circle';
-export * from '@/styled/jsx/square';
-export * from '@/styled/jsx/container';
 export * from './text';
 export * from './heading';
 export * from './code';
+export {
+    Grid,
+    GridItem,
+    Box,
+    Flex,
+    Spacer,
+    AspectRatio,
+    Center,
+    HStack,
+    VStack,
+    Stack,
+    Circle,
+    Square,
+    Container
+} from '@/styled/jsx';

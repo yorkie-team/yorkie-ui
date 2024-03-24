@@ -1,6 +1,15 @@
-import React from 'react';
-import '../styles/globals.css';
 
-export default function RootLayout() {
-  return <div></div>;
+import { PropsWithChildren } from 'react'
+import './globals.css'
+
+
+const RootLayout = (props: PropsWithChildren) => {
+  const { children } = props
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
 }
+
+export default RootLayout

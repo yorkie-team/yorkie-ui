@@ -1,7 +1,7 @@
 import React from 'react';
 import { AspectRatio } from '@/components/ui';
 import Image from 'next/image';
-import Yorkie from '@/stories/overview/yorkie.png';
+import Yorkie from './yorkie.png';
 
 const meta = {
   title: 'LAYOUT / AspectRatio',

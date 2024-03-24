@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge, Box } from '@/components/ui';
 import Image from 'next/image';
-import Yorkie from '@/stories/overview/yorkie.png';
+import Yorkie from '@/components/ui/box/yorkie.png';
 const meta = {
   title: 'LAYOUT / Box',
   component: Box,
