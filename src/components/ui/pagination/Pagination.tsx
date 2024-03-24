@@ -18,7 +18,6 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) 
 
   return (
     <ArkPagination.Root
-      // @ts-expect-error TODO cssProps is to complex to be typed
       className={cx(styles.root, css(cssProps), className)}
       ref={ref}
       {...rootProps}
