@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Tabs } from '@/components/ui/tabs';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'DATA DISPLAY / Tab',
@@ -51,14 +52,16 @@ const meta = {
       description: 'The selected tab id',
     },
   },
-};
+}satisfies Meta<typeof Tabs.Root>;
+
+type Story = StoryObj<typeof Tabs.Root>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
+export const Overview: Story  = {
+  render: (args) => {
     return (
-      <Tabs.Root>
+      <Tabs.Root {...args}>
         <Tabs.List>
           <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
           <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>

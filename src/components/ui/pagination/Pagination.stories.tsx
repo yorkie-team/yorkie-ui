@@ -1,3 +1,4 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import { Pagination } from '@/components/ui';
 
 const meta = {
@@ -41,12 +42,14 @@ const meta = {
       default: 'button',
     },
   },
-};
+} satisfies Meta<typeof Pagination>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
-    return <Pagination count={5000} pageSize={10} siblingCount={2}></Pagination>;
+type Story = StoryObj<typeof Pagination>;
+
+export const Overview: Story  = {
+  render: (args) => {
+    return <Pagination {...args} count={5000} pageSize={10} siblingCount={2} ></Pagination>;
   },
 };

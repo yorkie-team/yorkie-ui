@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading } from '@/components/ui';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'TYPOGRAPHY / Heading',
@@ -10,25 +11,27 @@ const meta = {
     },
     size: {
       control: { type: 'text' },
-      description: 'Change the font size.',
+      description: 'Change the font size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl` and `7xl`.',
     },
     fontWeight: {
       control: { type: 'text' },
       description: 'Change the font weight.',
     },
   },
-};
+}satisfies Meta<typeof Heading>;
+
+type Story = StoryObj<typeof Heading>;
 
 export default meta;
 
-export const Overview = () => {
-  return (
-    <>
-      <Heading as="h1">
+export const Overview: Story  = {
+  render: (args) => {
+    return (
+      <Heading {...args} as="h1">
         This is a <strong>H1</strong> element.
       </Heading>
-    </>
-  );
+    );
+  },
 };
 
 export const FontSize = () => {

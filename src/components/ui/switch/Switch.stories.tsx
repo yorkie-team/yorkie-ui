@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Switch } from '@/components/ui/switch';
 
 const meta = {
@@ -38,13 +39,15 @@ const meta = {
       description: 'The id of the form that the switch belongs to',
     },
   },
-};
+}satisfies Meta<typeof Switch>;
+
+type Story = StoryObj<typeof Switch>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
-    return <Switch defaultChecked>Label</Switch>;
+export const Overview: Story = {
+  render: (args) => {
+    return <Switch {...args} defaultChecked>Label</Switch>;
   },
 };
 

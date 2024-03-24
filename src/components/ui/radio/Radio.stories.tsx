@@ -1,5 +1,6 @@
 import React from 'react';
 import { RadioGroup } from '@/components/ui/radio';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'FORM / Radio',
@@ -34,15 +35,17 @@ const meta = {
       description: 'The associate form of the underlying input.',
     },
   },
-};
+}satisfies Meta<typeof RadioGroup.Root>;
+
+type Story = StoryObj<typeof RadioGroup.Root>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
+export const Overview: Story = {
+  render: (args) => {
     const options = ['Option 1', 'Option 2', 'Option 3'];
     return (
-      <RadioGroup.Root>
+      <RadioGroup.Root {...args}>
         <RadioGroup.Label>Option</RadioGroup.Label>
         <RadioGroup.Indicator />
         {options.map((option) => (
@@ -55,6 +58,8 @@ export const Overview = {
     );
   },
 };
+
+
 
 export const Disabled = {
   render: () => {

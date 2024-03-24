@@ -24,7 +24,7 @@ export const tooltipSlotRecipe = defineSlotRecipe({
     },
     arrow: {
       '--arrow-size': 'var(--sizes-3)',
-      '--arrow-background': 'var(--colors-gray-a12)',
+      '--arrow-background': '#141313',
     },
   },
 });

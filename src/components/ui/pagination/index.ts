@@ -1,3 +1,4 @@
-import { Pagination } from '@/components/ui/pagination/Pagination';
+import { Pagination, PaginationProps} from '@/components/ui/pagination/Pagination';
 
 export { Pagination };
+export type { PaginationProps }

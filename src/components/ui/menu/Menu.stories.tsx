@@ -1,10 +1,11 @@
 import { Button, Menu } from '@/components/ui';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Box } from '@/styled/jsx';
 import { useState } from 'react';
 
 const meta = {
   title: 'NAVIGATION / Menu',
-  component: Menu,
+  component: Menu.Root,
   argTypes: {
     anchorPoint: {
       description:
@@ -47,10 +48,6 @@ const meta = {
       description:
         '\nCallback to be called when the menu values change (for radios and checkboxes).. `(details: ValueChangeDetails) => void`',
     },
-    disabled: {
-      control: { type: 'boolean' },
-      description: 'Whether the accordion items are disabled.',
-    },
     loop: {
       control: { type: 'boolean' },
       description: 'Whether to loop the keyboard navigation.',
@@ -73,17 +70,19 @@ const meta = {
       description: 'Whether to unmount on exit.',
     },
   },
-};
+}satisfies Meta<typeof Menu.Root>;
+
+type Story = StoryObj<typeof Menu.Root>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
+export const Overview: Story = {
+  render: (args) => {
     return (
       <Box height="240px">
-        <Menu.Root>
+        <Menu.Root {...args}>
           <Menu.Trigger>
-            <Box>Open menu</Box>
+            <Box cursor="pointer">Open menu</Box>
           </Menu.Trigger>
           <Menu.Positioner>
             <Menu.Content>
@@ -129,7 +128,9 @@ export const Controlled = () => {
 export const Group = () => (
   <Box height="240px">
     <Menu.Root>
-      <Menu.Trigger>Open menu</Menu.Trigger>
+      <Menu.Trigger>
+        <Box cursor="pointer">Open menu</Box>
+      </Menu.Trigger>
       <Menu.Positioner>
         <Menu.Content>
           <Menu.ItemGroup id="group-1">
@@ -152,7 +153,9 @@ export const Separating = () => {
   return (
     <Box height="240px">
       <Menu.Root>
-        <Menu.Trigger>Open menu</Menu.Trigger>
+        <Menu.Trigger>
+          <Box cursor="pointer">Open menu</Box>
+        </Menu.Trigger>
         <Menu.Positioner>
           <Menu.Content>
             <Menu.Item id="search">Search</Menu.Item>
@@ -186,7 +189,7 @@ export const Options = () => {
         }}
       >
         <Menu.Trigger>
-          <Button variant="outline">Open menu</Button>
+          <Box cursor="pointer">Open menu</Box>
         </Menu.Trigger>
         <Menu.Positioner>
           <Menu.Content>
