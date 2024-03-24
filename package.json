@@ -54,7 +54,7 @@
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
     "start": "next start",
-    "lint": "next lint --fix && stylelint --fix \"**/*.{css,scss}\"",
+    "lint": "next lint --fix && stylelint --fix \"src/**/*.{css,scss}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "style": "panda codegen",
