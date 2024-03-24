@@ -3,7 +3,7 @@ import { forwardRef, type ReactNode } from 'react';
 import { css, cx } from '@/styled/css';
 import { splitCssProps } from '@/styled/jsx';
 import { switchRecipe, type SwitchRecipeVariantProps } from '@/styled/recipes';
-import type { Assign, JsxStyleProps } from '@/styled/types';
+import type { Assign, JsxStyleProps } from '@/styled/types/system-types';
 
 export interface SwitchProps extends Assign<JsxStyleProps, SwitchRootProps>, SwitchRecipeVariantProps {
   children?: ReactNode;

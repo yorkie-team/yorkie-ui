@@ -1,9 +1,9 @@
-import { Pagination as ArkPagination, type PaginationRootProps } from '@ark-ui/react/pagination'
-import { forwardRef } from 'react'
-import { css, cx } from '@/styled/css'
-import { splitCssProps } from '@/styled/jsx'
-import { pagination, type PaginationVariantProps } from '@/styled/recipes'
-import type { Assign, JsxStyleProps } from '@/styled/types'
+import { Pagination as ArkPagination, type PaginationRootProps } from '@ark-ui/react/pagination';
+import { forwardRef } from 'react';
+import { css, cx } from '@/styled/css';
+import { splitCssProps } from '@/styled/jsx';
+import { pagination, type PaginationVariantProps } from '@/styled/recipes';
+import type { Assign, JsxStyleProps } from '@/styled/types/system-types';
 import { Button, ChevronLeftIcon, ChevronRightIcon} from '@/components/ui';
 
 export interface PaginationProps
