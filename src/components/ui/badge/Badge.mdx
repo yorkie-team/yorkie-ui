@@ -20,7 +20,15 @@ import { Badge } from 'yorkie-ui';
 
 The Badge unequivocally generates a small badge that appears with utmost certainty at the top-right corner of its child elements.
 
-<Canvas of={BadgeStories.Overview} />
+<Canvas of={BadgeStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Badge>
+        Yorkie UI
+      </Badge>
+    `,
+  }}/>
 
 ## Props
 

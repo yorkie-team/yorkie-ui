@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from '@/components/ui/accordion';
 import { DownIcon } from '@/components/ui/icons';
 
@@ -45,14 +46,16 @@ const meta = {
       description: 'Whether multiple accordion items can be open at the same time.',
     },
   },
-};
+}satisfies Meta<typeof Accordion.Root>;
+
+type Story = StoryObj<typeof Accordion.Root>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
+export const Overview: Story  = {
+  render: (args) => {
     return (
-      <Accordion.Root defaultValue={['Accordion-1']} collapsible>
+      <Accordion.Root {...args} defaultValue={['Accordion-1']} collapsible>
         {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (
           <Accordion.Item key={id} value={item}>
             <Accordion.ItemTrigger>
@@ -70,6 +73,7 @@ export const Overview = {
     );
   },
 };
+
 
 export const Multiple = {
   render: () => {

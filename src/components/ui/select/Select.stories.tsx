@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Select } from '@/components/ui';
 import { DownIcon } from '@/components/ui/icons';
 import { Button } from '../button/Button';
@@ -102,10 +103,6 @@ const meta = {
       control: { type: 'boolean' },
       description: 'Whether the node is present (controlled by the user)',
     },
-    openreadOnly: {
-      control: { type: 'boolean' },
-      description: 'Whether the select is read-only',
-    },
     selectOnBlur: {
       control: { type: 'boolean' },
       description: 'Whether to select the highlighted item when the user presses Tab, and the menu is open.',
@@ -119,12 +116,14 @@ const meta = {
       description: 'The keys of the selected items',
     },
   },
-};
+}satisfies Meta<typeof Select.Root>;
+
+type Story = StoryObj<typeof Select.Root>;
 
 export default meta;
 
-export const Overview = {
-  render: () => {
+export const Overview: Story = {
+  render: (args) => {
     const items = [
       { label: 'React', value: 'react' },
       { label: 'Solid', value: 'solid' },
@@ -133,7 +132,7 @@ export const Overview = {
     ];
 
     return (
-      <Select.Root positioning={{ sameWidth: true }} width="2xs" height="280px" items={items}>
+      <Select.Root {...args} positioning={{ sameWidth: true }} width="2xs" height="280px" items={items}>
         <Select.Label>Framework</Select.Label>
         <Select.Control>
           <Select.Trigger>
