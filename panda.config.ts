@@ -75,7 +75,7 @@ export default defineConfig({
     },
   },
   jsxFramework: 'react',
-
+  outExtension: 'js',
   // The output directory for your css system
   outdir: 'styled-system',
 });

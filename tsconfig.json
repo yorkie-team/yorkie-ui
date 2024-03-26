@@ -1,19 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/styled/*": ["./styled-system/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/stories/*": ["./src/stories/*"],
-      "@/lib/*": ["./src/lib/*"]
-    },
     "allowJs": true,
     "incremental": true,
     "resolveJsonModule": true,

@@ -1,0 +1,13 @@
+
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "module": "ES2020",
+        "outDir": "dist/esm",
+        "declarationDir": "dist/types",
+        "jsx": "react-jsx"
+    },
+    "files": ["src/index.ts"],
+    "include": ["src/**/*"],
+    "exclude": ["src/stories/**/*", "src/**/**/**/*.stories.tsx"],
+}

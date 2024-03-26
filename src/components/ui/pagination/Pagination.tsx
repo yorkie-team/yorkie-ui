@@ -4,14 +4,15 @@ import { css, cx } from '@/styled/css';
 import { splitCssProps } from '@/styled/jsx';
 import { pagination, type PaginationVariantProps } from '@/styled/recipes';
 import type { JsxStyleProps } from '@/styled/types/system-types';
-
 import { Button, ChevronLeftIcon, ChevronRightIcon} from '@/components/ui';
+
 export type Assign<T, U> = {
   [K in keyof T]: K extends keyof U ? U[K] : T[K]
 } & U
 export interface PaginationProps
   extends Assign<JsxStyleProps, PaginationRootProps>,
-    PaginationVariantProps {}
+    PaginationVariantProps {
+    }
 
 export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
   const [variantProps, paginationProps] = pagination.splitVariantProps(props)
