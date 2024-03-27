@@ -48,7 +48,7 @@ A modal window overlays the main content.
 
 ### [Controlled](#dialog-controlled)
 
-To implement a controlled Dialog component, you can handle the state of the dialog using the open and onOpenChange props.
+To implement a controlled Dialog component, you can handle the state of the dialog using the open and `onOpenChange` props.
 
 <Canvas
   of={DialogStories.Controlled}
@@ -77,7 +77,7 @@ To implement a controlled Dialog component, you can handle the state of the dial
 
 ### [Lazy Mounting](#lazy-mounting)
 
-Lazy mounting renders dialog content only when the dialog is opened, enhancing performance. Use the lazyMount prop on Dialog.Root to enable this feature. Additionally, employ unmountOnExit to unmount dialog content when it's closed, freeing up resources for subsequent rendering upon reopening.
+Lazy mounting renders dialog content only when the dialog is opened, enhancing performance. Use the `lazyMount` prop on `Dialog.Root` to enable this feature. Additionally, employ `unmountOnExit` to unmount dialog content when it's closed, freeing up resources for subsequent rendering upon reopening.
 
 <Canvas
   of={DialogStories.LazyMounting}
@@ -101,7 +101,7 @@ Lazy mounting renders dialog content only when the dialog is opened, enhancing p
 
 ### [Using Render Function](#using-render-function)
 
-The Dialog component offers the option to use a render function as a child, providing greater control. This approach allows access to dialog states such as isOpen.
+The Dialog component offers the option to use a render function as a child, providing greater control. This approach allows access to dialog states such as `isOpen`.
 
 <Canvas
   of={DialogStories.RenderFn}
