@@ -7,7 +7,7 @@ const meta = {
   argTypes: {
     as: {
       control: { type: 'text' },
-      description: 'Changes the semantic meaning without affecting the visual style..',
+      description: 'Changes the semantic meaning without affecting the visual style.',
     },
     size: {
       control: { type: 'text' },

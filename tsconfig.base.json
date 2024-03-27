@@ -17,11 +17,20 @@
     "traceResolution": false,
     "types": ["node", "jest"],
     "jsx": "react-jsx",
+    "outDir": "./dist/",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/styled/*": ["./styled-system/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/stories/*": ["./src/stories/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/styles/*": ["./src/styles/*"]
+    },
   },
   "compileOnSave": false,
   "exclude": ["node_modules", "dist"],

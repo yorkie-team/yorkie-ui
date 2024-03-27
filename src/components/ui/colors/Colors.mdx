@@ -19,4 +19,16 @@ The color code used for props with color-changing properties. For example: `bg`,
   , [Neutral Color](#neutralcolor)
 - [Accent Color](#accentcolor), [Function Color](#functioncolor), [Border Color](#bordercolor)
 
+```jsx
+import { Box } from 'yorkie-ui';
+
+export default function Home() {
+  return (
+    <Box color="gray.3" bg="orange.3">
+      Hello Yorkie
+    </Box>
+  )
+}
+```
+
 <Canvas of={ColorsStories.Overview} sourceState="none" />

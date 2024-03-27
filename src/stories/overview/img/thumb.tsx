@@ -27,6 +27,7 @@ import Container from '@/stories/overview/img/container.png';
 import BoxThumb from '@/stories/overview/img/box.png';
 import Color from '@/stories/overview/img/color.png';
 import Code from '@/stories/overview/img/tag.png';
+import Dialog from '@/stories/overview/img/dialog.png';
 
 export {
   Accordion,
@@ -58,4 +59,5 @@ export {
   BoxThumb,
   Color,
   Code,
+  Dialog
 };

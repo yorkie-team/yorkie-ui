@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -19,13 +19,7 @@
     "ui"
   ],
   "files": [
-    "dist",
-    "src",
-    "public",
-    "styled-system",
-    "tsconfig.json",
-    "*.ts",
-    "*.mjs"
+    "dist"
   ],
   "type": "module",
   "main": "dist/esm/index.js",
@@ -37,19 +31,18 @@
       "types": "./dist/types/index.d.ts",
       "default": "./dist/esm/index.js"
     },
-    "./package.json": "./package.json",
-    "./dist/styles.css": "./dist/styles.css"
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "pnpm run clean && npm run style && pnpm run build:esm+types && pnpm run build:misc && pnpm run build:panda",
-    "build:esm+types": "pnpm build:postcss && tsc -b tsconfig.build.json --declaration --declarationMap",
-    "build:misc": "pnpm copy:styled-system && tsc-alias -p tsconfig.build.json",
-    "build:postcss": "postcss -o dist/esm/styles/globals.css src/styles/globals.css",
-    "build:panda": "panda cssgen --outfile dist/styles.css",
-    "copy:styled-system": "copyfiles ./styled-system/**/*.d.ts ./styled-system/*.d.ts ./styled-system/**/*.mjs ./styled-system/*.mjs dist/esm",
+    "test-alias": "tsc-alias --verbose --debug",
+    "build": "pnpm run clean && npm run style && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run build:cjs && pnpm run test-alias",
+    "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
+    "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
+    "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/",
     "prepare": "panda codegen",
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
@@ -64,6 +57,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
+    "@pandacss/dev": "^0.36.1",
     "@park-ui/panda-preset": "^0.36.1",
     "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-docs": "^8.0.0",
