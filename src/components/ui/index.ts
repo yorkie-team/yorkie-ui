@@ -21,6 +21,7 @@ export * from './label';
 export * from './text';
 export * from './heading';
 export * from './code';
+export * from './dialog';
 export {
     Grid,
     GridItem,
@@ -34,5 +35,5 @@ export {
     Stack,
     Circle,
     Square,
-    Container
+    Container,
 } from '@/styled/jsx';

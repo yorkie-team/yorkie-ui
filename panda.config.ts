@@ -20,6 +20,7 @@ import { codeRecipe } from '@/components/ui/code/CodeRecipe';
 import { cardSlotRecipe } from '@/components/ui/card/CardRecipe';
 import { toastSlotRecipe } from '@/components/ui/toast/ToastRecipe';
 import { labelRecipe } from '@/components/ui/label/LabelRecipe';
+import { dialogSlotRecipe } from '@/components/ui/dialog/DialogRecipe';
 
 export default defineConfig({
   // Whether to use css reset
@@ -63,6 +64,7 @@ export default defineConfig({
       card: cardSlotRecipe,
       toast: toastSlotRecipe,
       radio: radioGroupSlotRecipe,
+      dialog: dialogSlotRecipe,
     },
     recipes: {
       button: buttonRecipe,

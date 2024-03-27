@@ -31,6 +31,7 @@ import {
   Container,
   BoxThumb,
   Color,
+  Dialog
 } from '@/stories/overview/img/thumb';
 import Link from 'next/link';
 
@@ -226,6 +227,11 @@ const listComponent = [
         title: 'Tooltip',
         component: <Image src={Tooltip} alt="Picture of the tooltip" width={200} height={160} />,
         path: `${subpath}/?path=/docs/overlay-tooltip--docs`,
+      },
+      {
+        title: 'Dialog',
+        component: <Image src={Dialog} alt="Picture of the dialog" width={300} height={160} />,
+        path: `${subpath}/?path=/docs/overlay-dialog--docs`,
       },
     ],
   },
