@@ -366,7 +366,6 @@ export default defineConfig({
   minify: true,
   jsxFramework: 'react',
   outExtension: 'js',
-  lightningcss: true,
   // The output directory for your css system
   outdir: 'styled-system',
 });
