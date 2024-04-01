@@ -160,32 +160,30 @@ The Dialog component offers the option to use a render function as a child, prov
     code: `
       <Dialog.Root lazyMount unmountOnExit onExitComplete={() => console.log('onExitComplete')}>
         <Dialog.Trigger>Open Dialog</Dialog.Trigger>
-
-          <Dialog.Backdrop />
-          <Dialog.Positioner>
-            <Dialog.Content>
-              <Stack gap="8" p="6">
-                <Stack gap="1">
-                  <Dialog.Title>Dialog Title</Dialog.Title>
-                  <Dialog.Description>Dialog Description</Dialog.Description>
-                </Stack>
-                <Stack gap="3" direction="row" width="full">
-                  <Dialog.CloseTrigger asChild>
-                    <Button variant="outline" width="full">
-                      Cancel
-                    </Button>
-                  </Dialog.CloseTrigger>
-                  <Button width="full">Confirm</Button>
-                </Stack>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
               </Stack>
-              <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
-                <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                  <CloseIcon />
-                </Button>
-              </Dialog.CloseTrigger>
-            </Dialog.Content>
-          </Dialog.Positioner>
-        </Portal>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
+          </Dialog.Content>
+        </Dialog.Positioner>
       </Dialog.Root>
     `,
   }}
