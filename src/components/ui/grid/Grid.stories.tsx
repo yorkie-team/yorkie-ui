@@ -160,7 +160,7 @@ export const Overview = {
 export const ResponsiveGrid = {
   render: () => {
     return (
-      <Grid gap={6} columns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
+      <Grid gap={6} gridTemplateColumns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
         <Box className={cx('item')} color="accent.fg" bg="accent.default">
           1
         </Box>

@@ -76,10 +76,10 @@ export default defineConfig({
       label: labelRecipe
     },
   },
+  // Because Panda works by generating a CSS file at build-time, we need to export css to support for bundles packaged T___T
   staticCss: {
     css: [
       {
-        // Because Panda works by generating a CSS file at build-time, we need to export css to support for bundles packaged T___T
         properties: {
           'aspectRatio': ['*'],
           'zIndex': ['*'],
@@ -92,6 +92,10 @@ export default defineConfig({
           'bottom': ['*'],
           'float': ['*'],
           'visibility': ['*'],
+        },
+      },
+      {
+        properties: {
           'display': ['*'],
           'flexBasis': ['*'],
           'flex': ['*'],
@@ -100,8 +104,8 @@ export default defineConfig({
           'flexShrink': ['*'],
           'gridTemplateColumns': ['*'],
           'gridTemplateRows': ['*'],
-          'gridColumns': ['*'],
           'gridRow': ['*'],
+          'gridColumn': ['*'],
           'gridColumnStart': ['*'],
           'gridColumnEnd': ['*'],
           'gridAutoFlow': ['*'],
@@ -117,6 +121,11 @@ export default defineConfig({
           'alignContent': ['*'],
           'alignItems': ['*'],
           'alignSelf': ['*'],
+        },
+        responsive: true,
+      },
+      {
+        properties: {
           'padding': ['*'],
           'paddingLeft': ['*'],
           'paddingRight': ['*'],
@@ -150,6 +159,10 @@ export default defineConfig({
           'minBlockSize': ['*'],
           'maxHeight': ['*'],
           'maxBlockSize': ['*'],
+        },
+      },
+      {
+        properties: {
           'color': ['*'],
           'fontFamily': ['*'],
           'fontSize': ['*'],
@@ -177,6 +190,9 @@ export default defineConfig({
           'listStyleType': ['*'],
           'listStylePosition': ['*'],
           'listStyleImage': ['*'],
+        },
+      },{
+        properties: {
           'backgroundPosition': ['*'],
           'backgroundPositionX': ['*'],
           'backgroundPositionY': ['*'],
@@ -190,6 +206,19 @@ export default defineConfig({
           'backgroundBlendMode': ['*'],
           'backgroundSize': ['*'],
           'backgroundGradient': ['*'],
+          'backdropFilter': ['*'],
+          'backdropBlur': ['*'],
+          'backdropBrightness': ['*'],
+          'backdropContrast': ['*'],
+          'backdropGrayscale': ['*'],
+          'backdropHueRotate': ['*'],
+          'backdropInvert': ['*'],
+          'backdropOpacity': ['*'],
+          'backdropSaturate': ['*'],
+          'backdropSepia': ['*'],
+        }
+      },{
+        properties: {
           'borderRadius': ['*'],
           'borderTopLeftRadius': ['*'],
           'borderTopRightRadius': ['*'],
@@ -240,16 +269,6 @@ export default defineConfig({
           'boxShadowColor': ['*'],
           'dropShadow': ['*'],
           'blur': ['*'],
-          'backdropFilter': ['*'],
-          'backdropBlur': ['*'],
-          'backdropBrightness': ['*'],
-          'backdropContrast': ['*'],
-          'backdropGrayscale': ['*'],
-          'backdropHueRotate': ['*'],
-          'backdropInvert': ['*'],
-          'backdropOpacity': ['*'],
-          'backdropSaturate': ['*'],
-          'backdropSepia': ['*'],
           'borderCollapse': ['*'],
           'borderSpacing': ['*'],
           'borderSpacingX': ['*'],
@@ -262,16 +281,12 @@ export default defineConfig({
           'translateY': ['*'],
           'accentColor': ['*'],
           'caretColor': ['*'],
-          'userSelect': ['*'],
           'fill': ['*'],
-          'stroke': ['*'],
-          'strokeWidth': ['*'],
           'container': ['*'],
           'containerName': ['*'],
           'containerType': ['*'],
           'textStyle': ['*']
-        },
-        responsive: true
+        }
       }
     ]
   },
