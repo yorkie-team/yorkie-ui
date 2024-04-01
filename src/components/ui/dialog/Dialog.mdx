@@ -26,15 +26,33 @@ A modal window overlays the main content.
     format: true,
     code: `
       <Dialog.Root>
-        <Dialog.Trigger>Open Dialog</Dialog.Trigger>
-          <Dialog.Backdrop />
-          <Dialog.Positioner>
-            <Dialog.Content>
-              <Dialog.Title>Dialog Title</Dialog.Title>
-              <Dialog.Description>Dialog Description</Dialog.Description>
-              <Dialog.CloseTrigger>Close</Dialog.CloseTrigger>
-            </Dialog.Content>
-          </Dialog.Positioner>
+        <Dialog.Trigger asChild>
+          <Button>Open Dialog</Button>
+        </Dialog.Trigger>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
+          </Dialog.Content>
+        </Dialog.Positioner>
       </Dialog.Root>
     `,
   }}
@@ -57,15 +75,31 @@ To implement a controlled Dialog component, you can handle the state of the dial
     code: `
       const [isOpen, setIsOpen] = useState(false);
       return (
-        <div>
+         <div>
           <Button onClick={() => setIsOpen(true)}>Open Dialog</Button>
           <Dialog.Root open={isOpen} onOpenChange={(e) => setIsOpen(e.open)}>
             <Dialog.Backdrop />
             <Dialog.Positioner>
               <Dialog.Content>
-                <Dialog.Title>Dialog Title</Dialog.Title>
-                <Dialog.Description>Dialog Description</Dialog.Description>
-                <Dialog.CloseTrigger>Close</Dialog.CloseTrigger>
+                <Stack gap="8" p="6">
+                  <Stack gap="1">
+                    <Dialog.Title>Dialog Title</Dialog.Title>
+                    <Dialog.Description>Dialog Description</Dialog.Description>
+                  </Stack>
+                  <Stack gap="3" direction="row" width="full">
+                    <Dialog.CloseTrigger asChild>
+                      <Button variant="outline" width="full">
+                        Cancel
+                      </Button>
+                    </Dialog.CloseTrigger>
+                    <Button width="full">Confirm</Button>
+                  </Stack>
+                </Stack>
+                <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+                  <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                    <CloseIcon />
+                  </Button>
+                </Dialog.CloseTrigger>
               </Dialog.Content>
             </Dialog.Positioner>
           </Dialog.Root>
@@ -89,9 +123,25 @@ Lazy mounting renders dialog content only when the dialog is opened, enhancing p
         <Dialog.Backdrop />
         <Dialog.Positioner>
           <Dialog.Content>
-            <Dialog.Title>Dialog Title</Dialog.Title>
-            <Dialog.Description>Dialog Description</Dialog.Description>
-            <Dialog.CloseTrigger>Close</Dialog.CloseTrigger>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
           </Dialog.Content>
         </Dialog.Positioner>
       </Dialog.Root>
@@ -113,9 +163,25 @@ The Dialog component offers the option to use a render function as a child, prov
         <Dialog.Backdrop />
         <Dialog.Positioner>
           <Dialog.Content>
-            <Dialog.Title>Dialog Title</Dialog.Title>
-            <Dialog.Description>Dialog Description</Dialog.Description>
-            <Dialog.CloseTrigger>Close</Dialog.CloseTrigger>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
           </Dialog.Content>
         </Dialog.Positioner>
       </Dialog.Root>
