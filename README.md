@@ -2,45 +2,50 @@
 
 Welcome to the Yorkie UI component library!
 
-## Coding Convention
+# Get started
 
-Use ESLint and Prettier, Stylelint to write consitent code and improve code quality. We use React and TypeScript standard lint rules. For details, refer to the [ESLint configuration file](./.eslintrc.json), [Prettier configuration file](./prettier.config.js), [Stylelint configuration file](./.stylelintrc.json).
+Yorkie UI is a component library that helps build UIs faster. The goal is to make building UIs more productive.
 
-Run check eslint and stylelint
+## Install
 
-```sh
-npm run lint
+UI components are written in React. It requires Storybook version 8.0.0 and up.
+
+Add Yorkie UI to your project.
+
 ```
 
-## Steps to configure Development Environment
+npm install --save yorkie-ui
 
-1. Install Node > 18.17.0
-2. Install npm
-
-```sh
-npm install
 ```
 
-3. Run build styled system (Park UI + Panda Css)
+### **Use**
 
-```sh
-npm run style
+Import components you want into your UI
+
+```jsx
+
+import { Button, Badge } from'yorkie-ui';
+
 ```
 
-4. Run build app
+and use them like so
 
-```sh
-npm run build
-```
+```jsx
 
-5. Run storybook
+const example = () => (
 
-```sh
-npm run storybook
-```
+<div>
 
-6. Run for app
+    <Buttonvariant="solid"onClick={()=>0}>
 
-```sh
-npm run dev
+        Do something
+
+    </Button>
+
+    <BadgeonClick={this.clear}>+1</Badge>
+
+</div>
+
+);
+
 ```
