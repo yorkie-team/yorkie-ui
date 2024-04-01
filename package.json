@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
   },
   "scripts": {
     "test-alias": "tsc-alias --verbose",
-    "build": "pnpm run clean && pnpm panda && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run test-alias",
+    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run test-alias",
     "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
     "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/",
