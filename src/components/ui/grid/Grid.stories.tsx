@@ -15,10 +15,6 @@ const meta = {
   title: 'LAYOUT / Grid',
   component: Grid,
   argTypes: {
-    columns: {
-      control: { type: 'number' },
-      description: 'Column widths are integer values between 1 and 12.',
-    },
     gap: {
       control: { type: 'number' },
       description: 'Controlling the gutters between grid and flexbox items.',
@@ -197,19 +193,6 @@ export const ResponsiveGrid = {
         <Box className={cx('item')} color="accent.fg" bg="accent.default">
           12
         </Box>
-      </Grid>
-    );
-  },
-};
-
-export const TemplateColumns = {
-  render: () => {
-    return (
-      <Grid gap={6} columns={4}>
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
       </Grid>
     );
   },

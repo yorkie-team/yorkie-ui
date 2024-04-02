@@ -57,13 +57,11 @@ import { Grid, GridItem } from 'yorkie-ui';
 You can customize the number of columns with breakpoints: `base`, `sm`, `md`, `lg`, and `xl`. Other props also can use breakpoints.
 
 ```jsx
-  {
-    base: '0rem', // 0px
-    sm: '40rem', // ~640px - base font size 16px
-    md: '48rem', // ~768px
-    lg: '64rem', // ~1024px
-    xl: '80rem', // ~1280px
-  };
+  base: '0rem', // 0px
+  sm: '40rem', // ~640px - base font size 16px
+  md: '48rem', // ~768px
+  lg: '64rem', // ~1024px
+  xl: '80rem', // ~1280px
 ```
 
 <Canvas
@@ -108,25 +106,6 @@ You can customize the number of columns with breakpoints: `base`, `sm`, `md`, `l
         <Box color="accent.fg" bg="accent.default">
           12
         </Box>
-      </Grid>
-    `,
-  }}
-/>
-
-### [Template columns](#template-columns)
-
-Example using grid component with grid template columns and gap between grid items.
-
-<Canvas
-  of={GridStories.TemplateColumns}
-  source={{
-    format: true,
-    code: `
-      <Grid gap={6} columns={4}>
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
-        <GridItem h="10" bg="accent.default" />
       </Grid>
     `,
   }}
