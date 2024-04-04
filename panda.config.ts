@@ -159,7 +159,6 @@ export default defineConfig({
           'maxHeight': ['*'],
           'maxBlockSize': ['*'],
         },
-        responsive: true,
       },
       {
         properties: {
@@ -191,7 +190,6 @@ export default defineConfig({
           'listStylePosition': ['*'],
           'listStyleImage': ['*'],
         },
-        responsive: true,
       },{
         properties: {
           'backgroundPosition': ['*'],

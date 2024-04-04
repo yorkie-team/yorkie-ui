@@ -74,12 +74,3 @@ export const FontWeight = () => {
     </>
   );
 };
-
-export const ResponsiveFont = () => {
-  return (
-    <>
-      <Text size={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a text</Text>
-      <Text size={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a text</Text>
-    </>
-  )
-}
