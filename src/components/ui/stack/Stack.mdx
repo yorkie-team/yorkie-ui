@@ -1,0 +1,52 @@
+# Stack
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as StackStories from './Stack.stories';
+
+<Meta of={StackStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+
+## Import
+
+```jsx
+import { Stack, HStack, VStack } from 'yorkie-ui';
+```
+
+- **_Stack:_** This phrase describes the action of arranging multiple items on top of each other in a vertical manner.
+  - Have props
+    - `align`, `justify`, `direction`, and `gap`
+- **_HStack:_** is employed to stack elements horizontally.
+  - Have props
+    - `justify`:  and `gap`
+- **_VStack:_** is utilized to vertically stack elements.
+  - Have props
+    - `justify`:  and `gap`
+
+## Overview
+
+Stack is a component used to group elements and apply a space between them.
+To stack elements exclusively in either horizontal or vertical direction, you can employ the `HStack` or `VStack` components, respectively.
+
+<Canvas
+  of={StackStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <HStack spacing='24px'>
+        <Box px="6" px="10" bg='orange.3'>
+          1
+        </Box>
+        <Box px="6" px="10" bg='orange.4'>
+          2
+        </Box>
+        <Box px="6" px="10" bg='orange.5'>
+          3
+        </Box>
+      </HStack>
+    `,
+  }}
+/>
+
+<Controls />

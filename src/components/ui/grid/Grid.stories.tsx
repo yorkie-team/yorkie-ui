@@ -15,6 +15,10 @@ const meta = {
   title: 'LAYOUT / Grid',
   component: Grid,
   argTypes: {
+    columns: {
+      control: { type: 'number' },
+      description: 'Column widths are integer values between 1 and 12.',
+    },
     gap: {
       control: { type: 'number' },
       description: 'Controlling the gutters between grid and flexbox items.',
@@ -136,18 +140,18 @@ export const Overview = {
   render: () => {
     return (
       <Grid columns={4}>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 1
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 2
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 3
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 4
-        </Box>
+        </GridItem>
       </Grid>
     );
   },
@@ -157,42 +161,55 @@ export const ResponsiveGrid = {
   render: () => {
     return (
       <Grid gap={6} gridTemplateColumns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           1
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           2
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           3
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           4
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           5
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           6
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           7
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           8
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           9
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           10
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           11
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           12
-        </Box>
+        </GridItem>
+      </Grid>
+    );
+  },
+};
+
+export const TemplateColumns = {
+  render: () => {
+    return (
+      <Grid gap={6} columns={4}>
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
+        <GridItem h="10" bg="accent.default" />
       </Grid>
     );
   },

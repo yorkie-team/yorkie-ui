@@ -94,3 +94,20 @@ To adjust the weight of text, use the `fontWeight` prop.
     `,
   }}
 />
+
+### [Responsive Font](#responsive-font)
+
+You can adjust the font according to screen.
+
+<Canvas
+  of={TextStories.ResponsiveFont}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Text size={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a text</Text>
+        <Text size={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a text</Text>
+      </div>
+    `,
+  }}
+/>
