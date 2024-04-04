@@ -49,7 +49,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "predeploy": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "style": "pnpm panda codegen"
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
