@@ -50,7 +50,7 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "style": "pnpm panda codegen",
+    "style": "panda codegen",
     "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts"
   },
   "dependencies": {

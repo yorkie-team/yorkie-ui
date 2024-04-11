@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Grid } from '@/components/ui';
-import { token } from '@/styled/tokens/index.mjs';
+import { token } from '@/styled/tokens';
+import type { Token } from '@/styled/tokens/tokens';
 
 import {
   defaultColorLight,
@@ -103,7 +104,6 @@ const colors: ColorItem[] = [
     color: borderColor,
   },
 ];
-
 export const Overview = {
   render: () => {
     return (
@@ -116,13 +116,14 @@ export const Overview = {
               </Box>
               <Grid columns={6}>
                 {color.color.map((colors, index) => {
+                  console.log(colors);
                   return (
                     <div key={index}>
                       <Box
                         h="50px"
                         mt="10"
                         width="100%"
-                        style={{ background: token.var('colors.' + colors) }}
+                        style={{ background: token.var(colors as Token) }}
                         borderRadius="md"
                         borderWidth="thin"
                         borderColor="gray.2 "
