@@ -290,6 +290,7 @@ export default defineConfig({
       }
     ]
   },
+  minify: true,
   jsxFramework: 'react',
   outExtension: 'js',
   // The output directory for your css system
