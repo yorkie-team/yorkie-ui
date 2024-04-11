@@ -1,0 +1,190 @@
+# Dialog
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as DialogStories from './Dialog.stories';
+
+<Meta of={DialogStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Dialog } from 'yorkie-ui';
+```
+
+## Overview
+
+A modal window overlays the main content.
+
+<Canvas
+  of={DialogStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Dialog.Root>
+        <Dialog.Trigger asChild>
+          <Button>Open Dialog</Button>
+        </Dialog.Trigger>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Controlled](#dialog-controlled)
+
+To implement a controlled Dialog component, you can handle the state of the dialog using the open and `onOpenChange` props.
+
+<Canvas
+  of={DialogStories.Controlled}
+  source={{
+    format: true,
+    code: `
+      const [isOpen, setIsOpen] = useState(false);
+      return (
+         <div>
+          <Button onClick={() => setIsOpen(true)}>Open Dialog</Button>
+          <Dialog.Root open={isOpen} onOpenChange={(e) => setIsOpen(e.open)}>
+            <Dialog.Backdrop />
+            <Dialog.Positioner>
+              <Dialog.Content>
+                <Stack gap="8" p="6">
+                  <Stack gap="1">
+                    <Dialog.Title>Dialog Title</Dialog.Title>
+                    <Dialog.Description>Dialog Description</Dialog.Description>
+                  </Stack>
+                  <Stack gap="3" direction="row" width="full">
+                    <Dialog.CloseTrigger asChild>
+                      <Button variant="outline" width="full">
+                        Cancel
+                      </Button>
+                    </Dialog.CloseTrigger>
+                    <Button width="full">Confirm</Button>
+                  </Stack>
+                </Stack>
+                <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+                  <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                    <CloseIcon />
+                  </Button>
+                </Dialog.CloseTrigger>
+              </Dialog.Content>
+            </Dialog.Positioner>
+          </Dialog.Root>
+        </div>
+      );
+    `,
+  }}
+/>
+
+### [Lazy Mounting](#lazy-mounting)
+
+Lazy mounting renders dialog content only when the dialog is opened, enhancing performance. Use the `lazyMount` prop on `Dialog.Root` to enable this feature. Additionally, employ `unmountOnExit` to unmount dialog content when it's closed, freeing up resources for subsequent rendering upon reopening.
+
+<Canvas
+  of={DialogStories.LazyMounting}
+  source={{
+    format: true,
+    code: `
+      <Dialog.Root lazyMount unmountOnExit onExitComplete={() => console.log('onExitComplete invoked')}>
+        <Dialog.Trigger>Open Dialog</Dialog.Trigger>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
+    `,
+  }}
+/>
+
+### [Using Render Function](#using-render-function)
+
+The Dialog component offers the option to use a render function as a child, providing greater control. This approach allows access to dialog states such as `isOpen`.
+
+<Canvas
+  of={DialogStories.RenderFn}
+  source={{
+    format: true,
+    code: `
+      <Dialog.Root lazyMount unmountOnExit onExitComplete={() => console.log('onExitComplete')}>
+        <Dialog.Trigger>Open Dialog</Dialog.Trigger>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Stack gap="8" p="6">
+              <Stack gap="1">
+                <Dialog.Title>Dialog Title</Dialog.Title>
+                <Dialog.Description>Dialog Description</Dialog.Description>
+              </Stack>
+              <Stack gap="3" direction="row" width="full">
+                <Dialog.CloseTrigger asChild>
+                  <Button variant="outline" width="full">
+                    Cancel
+                  </Button>
+                </Dialog.CloseTrigger>
+                <Button width="full">Confirm</Button>
+              </Stack>
+            </Stack>
+            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+              <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                <CloseIcon />
+              </Button>
+            </Dialog.CloseTrigger>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
+    `,
+  }}
+/>

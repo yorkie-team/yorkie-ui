@@ -1,0 +1,84 @@
+# Shape
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as ShapeStories from './Shape.stories';
+
+<Meta of={ShapeStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+
+## Import
+
+```jsx
+import { Center, Square, Circle } from 'yorkie-ui';
+```
+
+- **_Center:_** centers its child given width and height
+- **_Square:_** centers its child given size (width and height)
+- **_Circle:_** a Square with round border-radius
+- **_AbsoluteCenter:_** centers relative to its parent by given axis
+
+## Overview
+
+Component is a layout element that helps in centering its child element within itself. It is a useful feature for creating aesthetic designs and ensuring that the child element is positioned at the center of the parent element.
+
+### Center
+
+<Canvas
+  of={ShapeStories.CenterShape}
+  source={{
+    format: true,
+    code: `
+      <Box>
+        <Center bg="tomato" h="40px" color="white">
+          This is the Center
+        </Center>
+        <HStack mt="40px">
+          <Center w="40px" h="40px" bg="tomato">
+            <CalendarIcon />
+          </Center>
+          <Center w="40px" h="40px" bg="tomato" color="white">
+            <Box fontWeight="bold" fontSize="lg">
+              1
+            </Box>
+          </Center>
+        </HStack>
+      </Box>
+    `,
+  }}
+/>
+
+### Circle
+
+<Canvas
+  of={ShapeStories.CircleShape}
+  source={{
+    format: true,
+    code: `
+      <HStack mt="40px">
+        <Circle size="40px" bg="tomato" color="white">
+          <CalendarIcon />
+        </Circle>
+      </HStack>
+    `,
+  }}
+/>
+
+### Square
+
+<Canvas
+  of={ShapeStories.SquareShape}
+  source={{
+    format: true,
+    code: `
+      <Box>
+        <HStack mt="40px">
+          <Square size="40px" bg="tomato" color="white">
+            <CalendarIcon />
+          </Square>
+        </HStack>
+      </Box>
+    `,
+  }}
+/>

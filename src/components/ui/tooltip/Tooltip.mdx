@@ -1,0 +1,131 @@
+# Tooltip
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Tooltip } from 'yorkie-ui';
+```
+
+## Overview
+
+Providing information through a label that appears when the user hovers or focuses on an element can be a helpful way to enhance the user experience. Default open delay 3s.
+
+<Canvas
+  of={TooltipStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Tooltip.Root closeDelay={3}>
+        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+        <Tooltip.Positioner>
+          <Tooltip.Content>I am a Tooltip!</Tooltip.Content>
+        </Tooltip.Positioner>
+      </Tooltip.Root>
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Controlled](#tooltip-Controlled)
+
+In order to create a controlled Tooltip component, it is essential to manage the state of whether the tooltip is open by utilizing the `open` prop.
+
+<Canvas
+  of={TooltipStories.Controlled}
+  source={{
+    format: true,
+    code: `
+      const [isOpen, setIsOpen] = useState(false);
+      return (
+        <div>
+          <Button onClick={() => setIsOpen(!isOpen)}>Toggle</Button>
+          <Tooltip.Root open={isOpen}>
+            <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+            <Tooltip.Positioner>
+              <Tooltip.Content>I am a tooltip!</Tooltip.Content>
+            </Tooltip.Positioner>
+          </Tooltip.Root>
+        </div>
+      );
+    `,
+  }}
+/>
+
+### [Arrow](#tooltip-arrow)
+
+Use Tooltip.Arrow and Tooltip.ArrowTip components to add an arrow to your tooltip trigger.
+
+<Canvas
+  of={TooltipStories.Arrow}
+  source={{
+    format: true,
+    code: `
+      <Tooltip.Root>
+        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+        <Tooltip.Positioner>
+          <Tooltip.Content>
+            <Tooltip.Arrow>
+              <Tooltip.ArrowTip />
+            </Tooltip.Arrow>
+            I am a tooltip!
+          </Tooltip.Content>
+        </Tooltip.Positioner>
+      </Tooltip.Root>
+    `,
+  }}
+/>
+
+### [Delay Timings](#tooltip-delay-timings)
+
+Use closeDelay and openDelay to configure the Tooltip delay timings.
+
+<Canvas
+  of={TooltipStories.TimeDelays}
+  source={{
+    format: true,
+    code: `
+      <Tooltip.Root closeDelay={300} openDelay={100}>
+        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+        <Tooltip.Positioner>
+          <Tooltip.Content>I am a tooltip!</Tooltip.Content>
+        </Tooltip.Positioner>
+      </Tooltip.Root>
+    `,
+  }}
+/>
+
+### [Positioning](#tooltip-positioning)
+
+Take charge of your Tooltip's position. Use the `positioning` prop to dictate its location relative to the trigger.
+
+<Canvas
+  of={TooltipStories.Positioning}
+  source={{
+    format: true,
+    code: `
+      <Tooltip.Root
+        positioning={{ placement: 'left-start', gutter: 16, offset: { mainAxis: 12, crossAxis: 12 } }}
+      >
+        <Tooltip.Trigger>Hover Me</Tooltip.Trigger>
+        <Tooltip.Positioner>
+          <Tooltip.Content>I am a tooltip!</Tooltip.Content>
+        </Tooltip.Positioner>
+      </Tooltip.Root>
+    `,
+  }}
+/>

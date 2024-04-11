@@ -1,0 +1,49 @@
+# Props
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as PropsStories from './Props.stories';
+
+<Meta of={PropsStories} />
+
+- [Spacing Token](#spacing-token)
+- [Short Props](#short-props)
+
+## Spacing Tokens
+
+Using a spacing system creates a better user experience and enables responsive design and customizable UI density, improving product accessibility and quality.
+
+Apply use to value props: `mt`, `p`, `mb`, etc....
+
+You can use negative numbers.
+
+```jsx
+<Box mt="-4" pd="10">
+  Using Tokens
+</Box>
+```
+
+<Canvas
+  of={PropsStories.SpacingToken}
+  source={{
+    format: true,
+    code: `
+      <Box mt="-4" pd="10">
+        Using Tokens
+      </Box>
+    `,
+  }}
+/>
+
+## Short Props
+
+Provides a shorter way to pass styles through props (such as using `bg` instead of `backgroundColor`).
+
+<Canvas
+  of={PropsStories.ShortProps}
+  source={{
+    format: true,
+    code: `
+      <Box bg="orange.1"> Hello Yorkie </Box>
+    `,
+  }}
+/>

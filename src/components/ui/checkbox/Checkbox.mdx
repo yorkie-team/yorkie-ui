@@ -1,0 +1,105 @@
+# Checkbox
+
+import { Controls, Canvas, Meta, Story, Source } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Checkbox } from 'yorkie-ui';
+```
+
+## Overview
+
+A `Checkbox` is an input control that allows user to select zero, one, or any options from a list.
+
+Each checkbox works independently from others in a list, therefore selecting additional checkbox does not affect any other selections.
+
+<Canvas
+  of={CheckboxStories.Overview}
+  source={{
+    format: true,
+    code: `<Checkbox>Label</Checkbox>`,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Sizes](#checkbox-sizes)
+
+The default value for the `size` prop is `md`. You can use the `size` prop to modify the checkbox's dimensions, with three available options: `sm`, `md`, and `lg`.
+
+<Canvas>
+  <Story
+    of={CheckboxStories.Medium}
+    source={{
+      format: true,
+      code: `
+        <Checkbox size="md">
+          Label
+        </Checkbox>
+      `,
+    }}
+  />
+</Canvas>
+
+### [Default Checked](#checkbox-default-checked)
+
+To set the checkbox to have a checked state in the initial render, add the `defaultChecked` prop.
+
+<Canvas
+  of={CheckboxStories.DefaultChecked}
+  source={{
+    format: true,
+    code: `<Checkbox defaultChecked>Label</Checkbox>`,
+  }}
+/>
+
+### [Indeterminate](#checkbox-indeterminate)
+
+Using the `checked="indeterminate"` to indicate a checkbox with only some related options selected.
+
+<Canvas
+  of={CheckboxStories.Indeterminate}
+  source={{
+    format: true,
+    code: `<Checkbox checked="indeterminate">Label</Checkbox>`,
+  }}
+/>
+
+### [Custom Color](#checkbox-custom-color)
+
+To custom checkbox control color, use the `colorPalette` prop. The color specified in the color system is required.
+
+By default, the checkbox uses the `accent` color from the theme.
+
+<Canvas
+  of={CheckboxStories.WithRedColor}
+  source={{
+    format: true,
+    code: `<Checkbox colorPalette="red" defaultChecked>Label</Checkbox>`,
+  }}
+/>
+
+### [Disabled](#checkbox-disabled)
+
+Using `disabled` prop to prevent interaction with the checkbox.
+
+<Canvas
+  of={CheckboxStories.Disabled}
+  source={{
+    format: true,
+    code: `<Checkbox disabled>Label</Checkbox>`,
+  }}
+/>
