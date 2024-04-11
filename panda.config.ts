@@ -215,7 +215,8 @@ export default defineConfig({
           'backdropOpacity': ['*'],
           'backdropSaturate': ['*'],
           'backdropSepia': ['*'],
-        }
+        },
+        conditions: ['light', 'dark']
       },{
         properties: {
           'borderRadius': ['*'],
@@ -289,7 +290,6 @@ export default defineConfig({
       }
     ]
   },
-  minify: true,
   jsxFramework: 'react',
   outExtension: 'js',
   // The output directory for your css system

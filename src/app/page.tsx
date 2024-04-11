@@ -12,6 +12,7 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
+      <Box bg="orange.2">Open menu</Box>
        <Accordion.Root defaultValue={['Accordion-1']} collapsible>
         {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (
           <Accordion.Item key={id} value={item}>
