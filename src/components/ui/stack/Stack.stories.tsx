@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, HStack, VStack, Stack, Grid, GridItem } from '@/components/ui';
+import { Box, HStack, VStack, Stack } from '@/components/ui';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Stack> = {

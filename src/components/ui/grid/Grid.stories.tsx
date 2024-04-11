@@ -1,8 +1,5 @@
 import React from 'react';
-import classNames from 'classnames/bind';
-import { Grid, GridItem, Box } from '@/components/ui';
-import styles from '@/components/ui/grid/grid.module.css';
-const cx = classNames.bind(styles);
+import { Grid, GridItem } from '@/components/ui';
 
 const gridTemplateColumns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const gridTemplateRows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
