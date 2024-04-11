@@ -129,7 +129,7 @@ export const Overview = {
                         borderColor="gray.2 "
                       ></Box>
 
-                      <p>{colors}</p>
+                      <p>{colors.substring('colors.'.length)}</p>
                     </div>
                   );
                 })}
