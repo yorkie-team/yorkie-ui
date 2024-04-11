@@ -140,18 +140,18 @@ export const Overview = {
   render: () => {
     return (
       <Grid columns={4}>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 1
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 2
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 3
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           Column 4
-        </Box>
+        </GridItem>
       </Grid>
     );
   },
@@ -160,43 +160,43 @@ export const Overview = {
 export const ResponsiveGrid = {
   render: () => {
     return (
-      <Grid gap={6} columns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+      <Grid gap={6} gridTemplateColumns={{ base: 1, sm: 4, md: 6, lg: 10, xl: 12 }}>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           1
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           2
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           3
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           4
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           5
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           6
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           7
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           8
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           9
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           10
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           11
-        </Box>
-        <Box className={cx('item')} color="accent.fg" bg="accent.default">
+        </GridItem>
+        <GridItem py="4" px="6" color="white" bg="accent.default">
           12
-        </Box>
+        </GridItem>
       </Grid>
     );
   },

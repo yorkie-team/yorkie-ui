@@ -63,3 +63,12 @@ export const FontWeight = () => {
     </>
   );
 };
+
+export const ResponsiveFont = () => {
+  return (
+    <>
+      <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Heading</Heading>
+      <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Heading</Heading>
+    </>
+  )
+}

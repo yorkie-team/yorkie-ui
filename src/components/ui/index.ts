@@ -22,18 +22,13 @@ export * from './text';
 export * from './heading';
 export * from './code';
 export * from './dialog';
-export {
-    Grid,
-    GridItem,
-    Box,
-    Flex,
-    Spacer,
-    AspectRatio,
-    Center,
-    HStack,
-    VStack,
-    Stack,
-    Circle,
-    Square,
-    Container,
-} from '@/styled/jsx';
+export * from './box';
+export * from './grid';
+export * from './flex';
+export * from './spacer';
+export * from './aspectRatio';
+export * from './center';
+export * from './stack';
+export * from './circle';
+export * from './square';
+export * from './container';

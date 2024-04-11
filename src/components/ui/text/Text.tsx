@@ -10,8 +10,8 @@ export type TextProps = {
   HTMLStyledProps<As>;
 
 export const Text = (props: TextProps) => {
-  const { as = 'p', ...localProps } = props;
+  const { variant, size, as = 'p', ...localProps } = props;
   const Dynamic = useMemo(() => styled(as, text) as StyledComponent<As>, [as]);
 
-  return <Dynamic {...localProps} />;
+  return <Dynamic {...localProps} className={text({ variant, size})} />;
 };

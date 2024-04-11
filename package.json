@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
   },
   "scripts": {
     "test-alias": "tsc-alias --verbose",
-    "build": "pnpm run clean && pnpm panda && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run test-alias",
+    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run test-alias",
     "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
     "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/",
@@ -50,6 +50,7 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
+    "style": "pnpm panda codegen",
     "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts"
   },
   "dependencies": {
@@ -75,6 +76,7 @@
     "react-icons": "^5.0.1",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
+    "ts-loader": "^9.5.1",
     "tsc-alias": "^1.8.8"
   },
   "devDependencies": {

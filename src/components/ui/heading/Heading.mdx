@@ -81,3 +81,20 @@ To adjust the weight of text, use the `fontWeight` prop.
     `,
   }}
 />
+
+### [Responsive Heading](#Heading)
+
+You can adjust the heading according to screen.
+
+<Canvas
+  of={HeadingStories.ResponsiveFont}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Heading</Heading>
+        <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Heading</Heading>
+      </div>
+    `,
+  }}
+/>
