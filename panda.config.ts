@@ -158,19 +158,20 @@ export default defineConfig({
           'minBlockSize': ['*'],
           'maxHeight': ['*'],
           'maxBlockSize': ['*'],
-        },
-      },
-      {
-        properties: {
           'color': ['*'],
           'fontFamily': ['*'],
           'fontSize': ['*'],
+          'lineHeight': ['*'],
           'fontWeight': ['*'],
+          'textAlign': ['*'],
+        },
+        responsive: true,
+      },
+      {
+        properties: {
           'fontSmoothing': ['*'],
           'fontVariantNumeric': ['*'],
           'letterSpacing': ['*'],
-          'lineHeight': ['*'],
-          'textAlign': ['*'],
           'textDecoration': ['*'],
           'textDecorationColor': ['*'],
           'textDecorationStyle': ['*'],
