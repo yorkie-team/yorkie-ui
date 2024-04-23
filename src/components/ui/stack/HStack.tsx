@@ -3,7 +3,7 @@ import {
   styled,
   type HTMLStyledProps,
 } from '@/styled/jsx';
-import { sHstackProperties } from '@/styled/patterns';
+import { HstackProperties} from '@/styled/patterns';
 
 export type HStackProps = HTMLStyledProps<'div'> & HstackProperties;
 
