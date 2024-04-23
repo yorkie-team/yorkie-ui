@@ -11,9 +11,7 @@ export type BoxProps = HTMLStyledProps<'div'> & BoxProperties;
 
 export const Box = forwardRef<HTMLDivElement, BoxProps>(
   (props: BoxProps, ref) => {
-
-    const StyledLink = styled('div');
-    return <StyledLink ref={ref}  {...props} />;
+    return <styled.div ref={ref} {...props}/>;
   },
 );
 Box.displayName = 'Box';
