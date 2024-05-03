@@ -152,3 +152,19 @@ Can add Icon with `icon` props as `ReactNode` and `position` props: `start` and 
     `,
   }}
 />
+
+### [Link](#button-link)
+
+Can use a link as a button by `as` props: `link`
+
+<Canvas
+  of={ButtonStories.Link}
+  source={{
+    format: true,
+    code: `
+       <Button variant="outline" as="link" href="https://yorkie.dev">
+        Website Link
+      </Button>
+    `,
+  }}
+/>

@@ -146,3 +146,16 @@ export const Icon: Story = {
     );
   },
 };
+
+
+export const Link: Story = {
+  render: (args) => {
+    return (
+      <Flex gap="6" align="center">
+        <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
+          Website Link
+        </Button>
+      </Flex>
+    );
+  },
+};

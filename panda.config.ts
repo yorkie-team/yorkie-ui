@@ -21,7 +21,7 @@ import { cardSlotRecipe } from '@/components/ui/card/CardRecipe';
 import { toastSlotRecipe } from '@/components/ui/toast/ToastRecipe';
 import { labelRecipe } from '@/components/ui/label/LabelRecipe';
 import { dialogSlotRecipe } from '@/components/ui/dialog/DialogRecipe';
-
+import { linkRecipe } from '@/components/ui/link/LinkRecipe';
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
@@ -73,7 +73,8 @@ export default defineConfig({
       icon: iconRecipe,
       text: textRecipe,
       code: codeRecipe,
-      label: labelRecipe
+      label: labelRecipe,
+      link: linkRecipe
     },
   },
   staticCss: {

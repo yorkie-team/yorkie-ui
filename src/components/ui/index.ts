@@ -32,3 +32,4 @@ export * from './stack';
 export * from './circle';
 export * from './square';
 export * from './container';
+export * from './link';
