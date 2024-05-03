@@ -28,7 +28,7 @@ export const Overview: Story  = {
   render: (args) => {
     return (
       <>
-      <Link {...args} href="https://yorkie-ui.dev" >
+      <Link {...args} href="https://yorkie.dev" >
         This is a <strong>a</strong> element.
       </Link>
     </>
