@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@/components/ui';
 import { Flex } from '@/styled/jsx';
+import { CheckIcon } from '@/components/ui';
 
 const meta = {
   title: 'FORM / Button',
@@ -128,6 +129,18 @@ export const ColorPalette: Story = {
       <Flex gap="6" align="center">
         <Button {...args} colorPalette="red">
           Color Palette
+        </Button>
+      </Flex>
+    );
+  },
+};
+
+export const Icon: Story = {
+  render: (args) => {
+    return (
+      <Flex gap="6" align="center">
+        <Button {...args} icon={<CheckIcon stroke="#fff" />} position="start">
+          Icon Check
         </Button>
       </Flex>
     );
