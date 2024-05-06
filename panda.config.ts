@@ -159,17 +159,16 @@ export default defineConfig({
           'minBlockSize': ['*'],
           'maxHeight': ['*'],
           'maxBlockSize': ['*'],
-          'color': ['*'],
-          'fontFamily': ['*'],
-          'fontSize': ['*'],
-          'lineHeight': ['*'],
-          'fontWeight': ['*'],
-          'textAlign': ['*'],
         },
         responsive: true,
       },
       {
         properties: {
+          'fontFamily': ['*'],
+          'fontSize': ['*'],
+          'lineHeight': ['*'],
+          'fontWeight': ['*'],
+          'textAlign': ['*'],
           'fontSmoothing': ['*'],
           'fontVariantNumeric': ['*'],
           'letterSpacing': ['*'],
@@ -188,10 +187,9 @@ export default defineConfig({
           'textWrap': ['*'],
           'truncate': ['*'],
           'lineClamp': ['*'],
-          'listStyleType': ['*'],
-          'listStylePosition': ['*'],
-          'listStyleImage': ['*'],
+          'textStyle': ['*']
         },
+        responsive: true,
       },{
         properties: {
           'backgroundPosition': ['*'],
@@ -217,6 +215,7 @@ export default defineConfig({
           'backdropOpacity': ['*'],
           'backdropSaturate': ['*'],
           'backdropSepia': ['*'],
+          'color': ['*'],
         },
         conditions: ['light', 'dark']
       },{
@@ -287,7 +286,9 @@ export default defineConfig({
           'container': ['*'],
           'containerName': ['*'],
           'containerType': ['*'],
-          'textStyle': ['*']
+          'listStyleType': ['*'],
+          'listStylePosition': ['*'],
+          'listStyleImage': ['*'],
         }
       }
     ]
