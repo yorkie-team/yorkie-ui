@@ -29,27 +29,29 @@ export const Overview: Story  = {
     return (
       <>
       <Link {...args} href="https://yorkie.dev" >
-        This is a <strong>a</strong> element.
+        This is a <strong>a</strong> link.
       </Link>
     </>
     );
-  },
+  }
 };
 
 export const FontSize = () => {
   return (
     <>
-      <Link textStyle="xs">Yorike</Link>
-      <Link textStyle="sm">Yorike</Link>
-      <Link textStyle="md">Yorike</Link>
-      <Link textStyle="lg">Yorike</Link>
-      <Link textStyle="xl">Yorike</Link>
-      <Link textStyle="2xl">Yorike</Link>
-      <Link textStyle="3xl">Yorike</Link>
-      <Link textStyle="4xl">Yorike</Link>
-      <Link textStyle="5xl">Yorike</Link>
-      <Link textStyle="6xl">Yorike</Link>
-      <Link textStyle="7xl">Yorike</Link>
+      <Link textStyle="xs">Yorike</Link><br/>
+      <Link textStyle="sm">Yorike</Link><br/>
+      <Link textStyle="md">Yorike</Link><br/>
+      <Link textStyle="lg">Yorike</Link><br/>
+      <Link textStyle="xl">Yorike</Link><br/>
+      <Link textStyle="2xl">Yorike</Link><br/>
+      <Link textStyle="3xl">Yorike</Link><br/>
+      <Link textStyle="4xl">Yorike</Link><br/>
+      <Link textStyle="5xl">Yorike</Link><br/>
+      <Link textStyle="6xl">Yorike</Link><br/>
+      <Link textStyle="7xl">Yorike</Link><br/>
+      <Link textStyle="8xl">Yorike</Link><br/>
+      <Link textStyle="9xl">Yorike</Link>
     </>
   );
 };
@@ -57,11 +59,20 @@ export const FontSize = () => {
 export const FontWeight = () => {
   return (
     <>
-      <Link fontWeight="light">Sphinx of black quartz, judge my vow.</Link>
-      <Link fontWeight="normal">Sphinx of black quartz, judge my vow.</Link>
-      <Link fontWeight="medium">Sphinx of black quartz, judge my vow.</Link>
-      <Link fontWeight="semibold">Sphinx of black quartz, judge my vow.</Link>
-      <Link fontWeight="bold">Sphinx of black quartz, judge my vow.</Link>
+      <Link fontWeight="light">Sphinx of black quartz, judge my vow.</Link><br/>
+      <Link fontWeight="normal">Sphinx of black quartz, judge my vow.</Link><br/>
+      <Link fontWeight="medium">Sphinx of black quartz, judge my vow.</Link><br/>
+      <Link fontWeight="semibold">Sphinx of black quartz, judge my vow.</Link><br/>
+      <Link fontWeight="bold">Sphinx of black quartz, judge my vow.</Link><br/>
+    </>
+  );
+};
+
+export const ResponsiveFont = () => {
+  return (
+    <>
+      <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Link</Link><br/>
+      <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Link</Link>
     </>
   );
 };

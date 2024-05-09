@@ -6,6 +6,7 @@ type As = 'p' | 'span' | 'div' | 'label' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h
 
 export type TextProps = {
   as?: As;
+  align?: 'center' | 'right' | 'left';
 } & TextVariantProps &
   HTMLStyledProps<As>;
 

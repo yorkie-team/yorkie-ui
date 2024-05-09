@@ -28,9 +28,7 @@ type Story = StoryObj<typeof Icon>;
 export const Overview: Story = {
   render: (args) => {
     return (
-      <Icon {...args}>
-        <CalendarIcon />
-      </Icon>
+      <Icon {...args} stroke="orange.default" icon={<CalendarIcon />} />
     );
   },
 };
@@ -39,21 +37,12 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Icon size="xs" {...args}>
-          <CalendarIcon />
-        </Icon>
-        <Icon size="sm" {...args}>
-          <CalendarIcon />
-        </Icon>
-        <Icon size="md" {...args}>
-          <CalendarIcon />
-        </Icon>
-        <Icon size="xl" {...args}>
-          <CalendarIcon />
-        </Icon>
-        <Icon size="2xl" {...args}>
-          <CalendarIcon />
-        </Icon>
+        <Icon {...args} size="xs" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="sm" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="md" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="lg" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="xl" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="2xl" icon={<CalendarIcon stroke="#000" />} />
       </Flex>
     );
   },

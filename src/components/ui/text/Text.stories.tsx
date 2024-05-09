@@ -48,17 +48,19 @@ export const Overview: Story  = {
 export const FontSize = () => {
   return (
     <>
-      <Text size="xs">Yorike</Text>
-      <Text size="sm">Yorike</Text>
-      <Text size="md">Yorike</Text>
-      <Text size="lg">Yorike</Text>
-      <Text size="xl">Yorike</Text>
-      <Text size="2xl">Yorike</Text>
-      <Text size="3xl">Yorike</Text>
-      <Text size="4xl">Yorike</Text>
-      <Text size="5xl">Yorike</Text>
-      <Text size="6xl">Yorike</Text>
-      <Text size="7xl">Yorike</Text>
+      <Text fontSize="xs">Yorike</Text>
+      <Text fontSize="sm">Yorike</Text>
+      <Text fontSize="md">Yorike</Text>
+      <Text fontSize="lg">Yorike</Text>
+      <Text fontSize="xl">Yorike</Text>
+      <Text fontSize="2xl">Yorike</Text>
+      <Text fontSize="3xl">Yorike</Text>
+      <Text fontSize="4xl">Yorike</Text>
+      <Text fontSize="5xl">Yorike</Text>
+      <Text fontSize="6xl">Yorike</Text>
+      <Text fontSize="7xl">Yorike</Text>
+      <Text fontSize="8xl">Yorike</Text>
+      <Text fontSize="9xl">Yorike</Text>
     </>
   );
 };
@@ -74,3 +76,12 @@ export const FontWeight = () => {
     </>
   );
 };
+
+export const ResponsiveFont = () => {
+  return (
+    <>
+      <Text fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Text</Text>
+      <Text fontSize={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Heading</Text>
+    </>
+  )
+}

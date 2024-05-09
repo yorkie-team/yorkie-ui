@@ -23,17 +23,17 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (props: ButtonProps) => {
     const {children, icon, position, size, as ='button', href, ...rest }= props;
     const StyledButton = styled(ark.button,button);
-    const IconButton = <Icon size={size}>{icon}</Icon>;
+    const IconButton = <Icon size={size} icon={icon} />;
     if(as == 'link') {
       return <Link href={href}>
-        <StyledButton {...rest}>
+        <StyledButton size={size} {...rest}>
           {position == 'start' && icon && IconButton}
           {children}
           {position == 'end' && icon && IconButton}
         </StyledButton>
       </Link>
     }
-    return <StyledButton {...rest}>
+    return <StyledButton size={size} {...rest}>
         {position == 'start' && icon && IconButton}
         {children}
         {position == 'end' && icon && IconButton}

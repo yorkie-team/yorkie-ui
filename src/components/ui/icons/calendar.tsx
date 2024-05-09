@@ -1,7 +1,7 @@
 export const CalendarIcon = (props: any) => (
   <svg
-    width="28px"
-    height="28px"
+    width="currentWidth"
+    height="currentHeight"
     strokeWidth="1.5"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

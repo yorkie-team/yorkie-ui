@@ -1,4 +1,5 @@
 export const PropertyTypes: { [key: string]: string } = {
+  align: 'textAlign',
   pos: 'position',
   insetX: 'insetInline',
   insetY: 'insetBlock',

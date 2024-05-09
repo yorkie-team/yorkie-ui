@@ -1,7 +1,7 @@
 export const DownIcon = (props: any) => (
   <svg
-    width="28px"
-    height="28px"
+    width="currentWidth"
+    height="currentHeight"
     strokeWidth="1.5"
     viewBox="0 0 24 24"
     fill="none"

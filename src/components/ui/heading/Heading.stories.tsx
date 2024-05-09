@@ -37,17 +37,19 @@ export const Overview: Story  = {
 export const FontSize = () => {
   return (
     <>
-      <Heading size="xs">Ag</Heading>
-      <Heading size="sm">Ag</Heading>
-      <Heading size="md">Ag</Heading>
-      <Heading size="lg">Ag</Heading>
-      <Heading size="xl">Ag</Heading>
-      <Heading size="2xl">Ag</Heading>
-      <Heading size="3xl">Ag</Heading>
-      <Heading size="4xl">Ag</Heading>
-      <Heading size="5xl">Ag</Heading>
-      <Heading size="6xl">Ag</Heading>
-      <Heading size="7xl">Ag</Heading>
+      <Heading fontSize="xs">Ag</Heading>
+      <Heading fontSize="sm">Ag</Heading>
+      <Heading fontSize="md">Ag</Heading>
+      <Heading fontSize="lg">Ag</Heading>
+      <Heading fontSize="xl">Ag</Heading>
+      <Heading fontSize="2xl">Ag</Heading>
+      <Heading fontSize="3xl">Ag</Heading>
+      <Heading fontSize="4xl">Ag</Heading>
+      <Heading fontSize="5xl">Ag</Heading>
+      <Heading fontSize="6xl">Ag</Heading>
+      <Heading fontSize="7xl">Ag</Heading>
+      <Heading fontSize="8xl">Ag</Heading>
+      <Heading fontSize="9xl">Ag</Heading>
     </>
   );
 };
@@ -67,8 +69,8 @@ export const FontWeight = () => {
 export const ResponsiveFont = () => {
   return (
     <>
-      <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Heading</Heading>
-      <Heading as="h1" size={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Heading</Heading>
+      <Heading as="h1" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Heading</Heading>
+      <Heading as="h1" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Heading</Heading>
     </>
   )
 }

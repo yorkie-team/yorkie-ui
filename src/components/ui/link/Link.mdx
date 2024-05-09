@@ -1,0 +1,102 @@
+# Link
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as LinkStories from './Link.stories';
+
+<Meta of={LinkStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Link } from 'yorkie-ui';
+```
+
+## Overview
+
+<Canvas
+  of={LinkStories.Overview}
+  source={{
+    format: true,
+    code: `
+      <Link href="https://yorkie.dev">
+        This is a <strong>a</strong> link.
+      </Link>
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Font Sizes](#link-font-sizes)
+
+Use `size` or `textStyle` for text size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl`, `7xl`, `8xl` and `9xl`. It makes line height and spacing smaller as text size grows and also ensures text size is even for better layout.
+
+<Canvas
+  of={LinkStories.FontSize}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Link fontSize="xs">Ag</Link>
+        <Link fontSize="sm">Ag</Link>
+        <Link fontSize="md">Ag</Link>
+        <Link fontSize="lg">Ag</Link>
+        <Link fontSize="xl">Ag</Link>
+        <Link fontSize="2xl">Ag</Link>
+        <Link fontSize="3xl">Ag</Link>
+        <Link fontSize="4xl">Ag</Link>
+        <Link fontSize="5xl">Ag</Link>
+        <Link fontSize="6xl">Ag</Link>
+        <Link fontSize="7xl">Ag</Link>
+        <Link fontSize="8xl">Ag</Link>
+        <Link fontSize="9xl">Ag</Link>
+      </div>
+    `,
+  }}
+/>
+
+### [Font Weight](#link-font-weight)
+
+To adjust the weight of text, use the `fontWeight` prop.
+
+<Canvas
+  of={LinkStories.FontWeight}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Link fontWeight="light">Sphinx of black quartz, judge my vow.</Link>
+        <Link fontWeight="normal">Sphinx of black quartz, judge my vow.</Link>
+        <Link fontWeight="medium">Sphinx of black quartz, judge my vow.</Link>
+        <Link fontWeight="semibold">Sphinx of black quartz, judge my vow.</Link>
+        <Link fontWeight="bold">Sphinx of black quartz, judge my vow.</Link>
+      </div>
+    `,
+  }}
+/>
+
+### [Responsive Link](#reponsive-link)
+
+You can adjust the Link according to screen.
+
+<Canvas
+  of={LinkStories.ResponsiveFont}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Link</Link>
+        <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Link</Link>
+      </div>
+    `,
+  }}
+/>

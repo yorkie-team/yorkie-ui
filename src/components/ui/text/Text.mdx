@@ -51,7 +51,7 @@ Use the `as` property to specify an HTML tag. This changes the semantic meaning 
 
 ### [Font Sizes](#text-font-sizes)
 
-Use `size` or `textStyle` for text size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl` and `7xl` . It makes line height and spacing smaller as text size grows and also ensures text size is even for better layout.
+Use `size` or `textStyle` for text size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl`, `7xl`, `8xl` and `9xl`. It makes line height and spacing smaller as text size grows and also ensures text size is even for better layout.
 
 <Canvas
   of={TextStories.FontSize}
@@ -70,6 +70,8 @@ Use `size` or `textStyle` for text size include: `xs`, `sm`, `md`, `lg`, `xl`, `
         <Text size="5xl">Yorike</Text>
         <Text size="6xl">Yorike</Text>
         <Text size="7xl">Yorike</Text>
+        <Text size="8xl">Yorike</Text>
+        <Text size="9xl">Yorike</Text>
       </div>
     `,
   }}
@@ -90,6 +92,23 @@ To adjust the weight of text, use the `fontWeight` prop.
         <Text fontWeight="medium">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="semibold">Sphinx of black quartz, judge my vow.</Text>
         <Text fontWeight="bold">Sphinx of black quartz, judge my vow.</Text>
+      </div>
+    `,
+  }}
+/>
+
+### [Responsive Text](#responsive-heading)
+
+You can adjust the text according to screen.
+
+<Canvas
+  of={HeadingStories.ResponsiveFont}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Text fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>Responsive a Text</Text>
+        <Text fontSize={{ base: 'sm', md: 'md', lg: '3xl' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>Responsive a Text</Text>
       </div>
     `,
   }}
