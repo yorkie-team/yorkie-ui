@@ -8,7 +8,7 @@ export type GridProps = HTMLStyledProps<'div'> & GridProperties;
 
 export const Grid = forwardRef<HTMLDivElement, GridProps>(
   (props: GridProps, ref) => {
-    const { gap, columnGap, rowGap, columns, minChildWidth} = props;
+    const { gap, columnGap, rowGap, columns, minChildWidth, className, ...rest} = props;
     const StyledGrid = styled('div',{
       base: {
         gap,
@@ -16,8 +16,9 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(
         rowGap,
         columns,
         minChildWidth,
+        className
       } as GridProps
     });
-    return <StyledGrid ref={ref} className={grid({ gap, columnGap, rowGap, columns, minChildWidth })} {...props}/>;
+    return <StyledGrid {...rest} ref={ref} className={grid({ gap, columnGap, rowGap, columns, minChildWidth}) + className} />;
   },
 );

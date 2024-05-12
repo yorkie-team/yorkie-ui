@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion, Container, DownIcon, Badge, Flex, Checkbox, Box, Menu, Pagination, Popover,Button, Stack, RadioGroup, CloseIcon, Select } from '@/components/ui';
+import { Accordion, Text, Container, DownIcon, Flex, Checkbox, Box, Menu, Pagination, Popover,Button, Stack, RadioGroup, CloseIcon, Select } from '@/components/ui';
 
 export default function Home() {
   const frameworks = ['Option 1', 'Option 2', 'Option 3'];
@@ -12,6 +12,20 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
+      <Text
+        fontSize="6xl"
+        fontWeight="semibold"
+        position="relative"
+        borderWidth={{md: 'sm', lg: 'md'}}
+        overflow="hidden"
+        borderStyle="dashed"
+        borderColor="orange.default"
+        borderRadius="2xl"
+        className="point"
+        zIndex="3"
+      >
+        collaborative
+      </Text>
       <Box bg="orange.2">Open menu</Box>
        <Accordion.Root defaultValue={['Accordion-1']} collapsible>
         {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (
@@ -31,16 +45,11 @@ export default function Home() {
       <Checkbox size="md" mt="4">
         Label
       </Checkbox>
-      <Flex gap="6" align="center"  mt="4">
-        <Badge size="sm">
-          SM
-        </Badge>
-        <Badge size="md">
-          MD
-        </Badge>
-        <Badge size="lg">
-          LG
-        </Badge>
+      <Flex minWidth="max-content" alignItems="center" gap="2" justifyContent="space-between">
+        <Box p="2" fontWeight={700}>
+          Yorkie UI App
+        </Box>
+        <Button colorScheme="teal">Log in</Button>
       </Flex>
       <Box height="240px"  mt="4">
         <Menu.Root>
