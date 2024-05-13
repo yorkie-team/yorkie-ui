@@ -19,6 +19,6 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(
         className
       } as GridProps
     });
-    return <StyledGrid {...rest} ref={ref} className={grid({ gap, columnGap, rowGap, columns, minChildWidth}) + className} />;
+    return <StyledGrid {...rest} ref={ref} className={grid({ gap, columnGap, rowGap, columns, minChildWidth})  + ' ' + className ?? ''} />;
   },
 );
