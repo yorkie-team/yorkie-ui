@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Accordion } from '@/components/ui/accordion';
+import { Accordion, Icon } from '@/components/ui';
 import { DownIcon } from '@/components/ui/icons';
+
 
 const meta = {
   title: 'FEEDBACK / Accordion',
@@ -61,7 +62,7 @@ export const Overview: Story  = {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <DownIcon />
+                <Icon size="md" icon={<DownIcon stroke="#000" />} />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -84,7 +85,7 @@ export const Multiple = {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <DownIcon />
+                <Icon size="md" icon={<DownIcon stroke="#000" />} />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>

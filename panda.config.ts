@@ -132,7 +132,7 @@ export default defineConfig({
       },
       {
         properties: {
-          'display': ['*'],
+          'display': ['none','inline','block','contents','flex', 'grid', 'inline-block', 'inline-flex', 'inline-grid', 'inline-table', 'list-item', 'run-in', 'table', 'table-caption', 'initial', 'inherit' ],
           'flexBasis': ['*'],
           'flex': ['*'],
           'flexDirection': ['*'],
