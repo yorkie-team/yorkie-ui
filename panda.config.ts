@@ -195,6 +195,9 @@ export default defineConfig({
           'minBlockSize': ['*'],
           'maxHeight': ['*'],
           'maxBlockSize': ['*'],
+          'borderWidth': ['*'],
+          'borderRadius': ['*'],
+          'borderColor': ['*'],
         },
         responsive: true,
       },
@@ -256,7 +259,6 @@ export default defineConfig({
         conditions: ['light', 'dark']
       },{
         properties: {
-          'borderRadius': ['*'],
           'borderTopLeftRadius': ['*'],
           'borderTopRightRadius': ['*'],
           'borderBottomRightRadius': ['*'],
@@ -272,12 +274,10 @@ export default defineConfig({
           'borderEndEndRadius': ['*'],
           'borderEndRadius': ['*'],
           'border': ['*'],
-          'borderWidths': ['*'],
           'borderTopWidth': ['*'],
           'borderLeftWidth': ['*'],
           'borderRightWidth': ['*'],
           'borderBottomWidth': ['*'],
-          'borderColor': ['*'],
           'borderInline': ['*'],
           'borderInlineWidth': ['*'],
           'borderInlineColor': ['*'],
