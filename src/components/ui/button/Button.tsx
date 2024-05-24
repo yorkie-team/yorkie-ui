@@ -14,18 +14,22 @@ type ButtonIconProps = {
 
 type ButtonLinkProps = {
   href?: string,
-  as?: 'button' | 'link'
+  as?: 'button' | 'link',
 }
 
-export type ButtonProps = HTMLStyledProps<'button'> & ButtonVariantProps & ButtonIconProps & ButtonLinkProps;
+type ButtonNormalProps = {
+  wLink ?: string,
+  hLink ?: string
+}
+export type ButtonProps = HTMLStyledProps<'button'> & ButtonVariantProps & ButtonIconProps & ButtonLinkProps & ButtonNormalProps;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (props: ButtonProps) => {
-    const {children, icon, position, size, as ='button', href, ...rest }= props;
+    const {children, icon, position, size, as ='button', href, wLink, hLink,...rest }= props;
     const StyledButton = styled(ark.button,button);
     const IconButton = <Icon size={size} icon={icon} />;
     if(as == 'link') {
-      return <Link href={href}>
+      return <Link href={href} width={wLink} height={hLink}>
         <StyledButton size={size} {...rest}>
           {position == 'start' && icon && IconButton}
           {children}
