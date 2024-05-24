@@ -26,7 +26,6 @@ export default function Home() {
       >
         collaborative
       </Text>
-      <Button as="link" fwLink={true} width="100w">hello</Button>
       <Box bg="orange.2">Open menu</Box>
        <Accordion.Root defaultValue={['Accordion-1']} collapsible>
         {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (

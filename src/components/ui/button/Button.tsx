@@ -18,8 +18,8 @@ type ButtonLinkProps = {
 }
 
 type ButtonNormalProps = {
-  wLink ?: string,
-  hLink ?: string
+  wLink?: string,
+  hLink?: string
 }
 export type ButtonProps = HTMLStyledProps<'button'> & ButtonVariantProps & ButtonIconProps & ButtonLinkProps & ButtonNormalProps;
 
