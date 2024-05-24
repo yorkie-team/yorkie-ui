@@ -51,6 +51,10 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
+        sizes:{
+          '100w': { value: '100%' },
+          '50w': {value: '100%'}
+        },
         zIndex: {
           xs: { value: '1' },
           sm: { value: '2' },
@@ -157,6 +161,7 @@ export default defineConfig({
           'alignContent': ['*'],
           'alignItems': ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'],
           'alignSelf': ['*'],
+          'order': ['1', '2','3', '4','5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17','18', '19','20'],
         },
         responsive: true,
       },
