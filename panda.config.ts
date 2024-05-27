@@ -133,6 +133,7 @@ export default defineConfig({
           'float': ['*'],
           'visibility': ['*'],
         },
+        responsive: true,
       },
       {
         properties: {

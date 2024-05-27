@@ -28,8 +28,10 @@
   "typings": "dist/types/index.d.ts",
   "exports": {
     ".": {
+      "import": "./dist/esm/index.js",
       "types": "./dist/types/index.d.ts",
-      "default": "./dist/esm/index.js"
+      "default": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -38,8 +40,9 @@
   },
   "scripts": {
     "test-alias": "tsc-alias --verbose",
-    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run test-alias",
+    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && pnpm run build:esm && pnpm run build:cjs && pnpm run test-alias",
     "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
     "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/",
     "dev": "next dev",
