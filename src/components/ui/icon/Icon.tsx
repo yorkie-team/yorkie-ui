@@ -9,8 +9,12 @@ export interface IconProps extends IconVariantProps, HTMLStyledProps<'svg'> {
 }
 
 export const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
-  const {icon, ...rest} = props;
-  return <StyledIcon ref={ref} {...rest}>{icon}</StyledIcon>;
+  const { icon, ...rest } = props;
+  return (
+    <StyledIcon ref={ref} {...rest}>
+      {icon}
+    </StyledIcon>
+  );
 });
 
 const StyledIcon = styled(ark.svg, icon);
