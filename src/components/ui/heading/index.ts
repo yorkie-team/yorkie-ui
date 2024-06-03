@@ -1,3 +1,4 @@
-import { Heading } from '@/components/ui/heading/Heading';
+import { Heading, HeadingProps } from '@/components/ui/heading/Heading';
 
 export { Heading };
+export type { HeadingProps };
