@@ -61,6 +61,10 @@
     "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts"
   },
   "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
     "@ark-ui/react": "^2.2.3",
     "@pandacss/dev": "^0.36.1",
     "@park-ui/panda-preset": "^0.36.1",
@@ -84,9 +88,7 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "ts-loader": "^9.5.1",
-    "tsc-alias": "^1.8.8"
-  },
-  "devDependencies": {
+    "tsc-alias": "^1.8.8",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.3",
