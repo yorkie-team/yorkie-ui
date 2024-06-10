@@ -13,7 +13,8 @@ export * from './accordion';
 export * from './switch';
 export * from './menu';
 export * from './input';
-export * from './datepicker';
+// TODO(hackerwins): Uncomment this line after adding datepicker component
+// export * from './datepicker';
 export * from './icon';
 export * from './icons';
 export * from './card';
