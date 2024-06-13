@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.5.10-rc2",
+  "version": "0.5.11",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -37,7 +37,8 @@
         "default": "./dist/cjs/index.js"
       }
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./globals.css": "./dist/styles/globals.css"
   },
   "publishConfig": {
     "access": "public"
