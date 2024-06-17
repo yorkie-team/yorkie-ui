@@ -19,7 +19,7 @@ const meta = {
     src: {
       control: { type: 'text' },
       description: `**Image src of Avatar (Optional prop)**
-      \nIf not provided, the avatar will be displayed by the \`name\` prop if provided or the \`UserIcon\` by default.`,
+      \nIf not provided, the avatar will be displayed by the \`name\` prop if provided or the \`IconUser\` by default.`,
     },
     name: {
       control: { type: 'text' },

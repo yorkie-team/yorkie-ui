@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { DatePicker, Input, Button, ChevronLeftIcon, ChevronRightIcon, CalendarIcon, Icon, Box } from '@/components/ui';
+import { DatePicker, Input, Button, IconChevronLeft, IconChevronRight, IconCalendar, Icon, Box } from '@/components/ui';
 
 const meta = {
   title: 'FORM / Datepicker',
@@ -60,13 +60,13 @@ const meta = {
       description: 'Whether to unmount on exit.',
     },
   },
-}satisfies Meta<typeof DatePicker.Root>;
+} satisfies Meta<typeof DatePicker.Root>;
 
 type Story = StoryObj<typeof DatePicker.Root>;
 
 export default meta;
 
-export const Overview: Story  = {
+export const Overview: Story = {
   render: (args) => {
     return (
       <Box {...args} height="160px">
@@ -79,7 +79,7 @@ export const Overview: Story  = {
             <DatePicker.Trigger asChild>
               <Button size="md" variant={'outline'}>
                 <Icon size="md">
-                  <CalendarIcon />
+                  <IconCalendar />
                 </Icon>
               </Button>
             </DatePicker.Trigger>
@@ -92,7 +92,7 @@ export const Overview: Story  = {
                     <DatePicker.ViewControl>
                       <DatePicker.PrevTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronLeftIcon />
+                          <IconChevronLeft />
                         </Button>
                       </DatePicker.PrevTrigger>
                       <DatePicker.ViewTrigger asChild>
@@ -102,7 +102,7 @@ export const Overview: Story  = {
                       </DatePicker.ViewTrigger>
                       <DatePicker.NextTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronRightIcon />
+                          <IconChevronRight />
                         </Button>
                       </DatePicker.NextTrigger>
                     </DatePicker.ViewControl>
@@ -137,7 +137,7 @@ export const Overview: Story  = {
                     <DatePicker.ViewControl>
                       <DatePicker.PrevTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronLeftIcon />
+                          <IconChevronLeft />
                         </Button>
                       </DatePicker.PrevTrigger>
                       <DatePicker.ViewTrigger asChild>
@@ -147,7 +147,7 @@ export const Overview: Story  = {
                       </DatePicker.ViewTrigger>
                       <DatePicker.NextTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronRightIcon />
+                          <IconChevronRight />
                         </Button>
                       </DatePicker.NextTrigger>
                     </DatePicker.ViewControl>
@@ -175,7 +175,7 @@ export const Overview: Story  = {
                     <DatePicker.ViewControl>
                       <DatePicker.PrevTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronLeftIcon />
+                          <IconChevronLeft />
                         </Button>
                       </DatePicker.PrevTrigger>
                       <DatePicker.ViewTrigger asChild>
@@ -185,7 +185,7 @@ export const Overview: Story  = {
                       </DatePicker.ViewTrigger>
                       <DatePicker.NextTrigger asChild>
                         <Button variant="ghost" size="sm">
-                          <ChevronRightIcon />
+                          <IconChevronRight />
                         </Button>
                       </DatePicker.NextTrigger>
                     </DatePicker.ViewControl>

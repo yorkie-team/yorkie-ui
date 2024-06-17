@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion, Icon } from '@/components/ui';
-import { DownIcon } from '@/components/ui/icons';
-
+import { IconDown } from '@/components/ui/icons';
 
 const meta = {
   title: 'FEEDBACK / Accordion',
@@ -47,13 +46,13 @@ const meta = {
       description: 'Whether multiple accordion items can be open at the same time.',
     },
   },
-}satisfies Meta<typeof Accordion.Root>;
+} satisfies Meta<typeof Accordion.Root>;
 
 type Story = StoryObj<typeof Accordion.Root>;
 
 export default meta;
 
-export const Overview: Story  = {
+export const Overview: Story = {
   render: (args) => {
     return (
       <Accordion.Root {...args} defaultValue={['Accordion-1']} collapsible>
@@ -62,7 +61,7 @@ export const Overview: Story  = {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <Icon size="md" icon={<DownIcon stroke="#000" />} />
+                <Icon size="md" icon={<IconDown stroke="#000" />} />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -75,7 +74,6 @@ export const Overview: Story  = {
   },
 };
 
-
 export const Multiple = {
   render: () => {
     return (
@@ -85,7 +83,7 @@ export const Multiple = {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <Icon size="md" icon={<DownIcon stroke="#000" />} />
+                <Icon size="md" icon={<IconDown stroke="#000" />} />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>

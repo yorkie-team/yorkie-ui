@@ -4,33 +4,26 @@ import { css, cx } from '@/styled/css';
 import { splitCssProps } from '@/styled/jsx';
 import { pagination, type PaginationVariantProps } from '@/styled/recipes';
 import type { JsxStyleProps } from '@/styled/types/system-types';
-import { Button, ChevronLeftIcon, ChevronRightIcon} from '@/components/ui';
+import { Button, IconChevronLeft, IconChevronRight } from '@/components/ui';
 
 export type Assign<T, U> = {
-  [K in keyof T]: K extends keyof U ? U[K] : T[K]
-} & U
-export interface PaginationProps
-  extends Assign<JsxStyleProps, PaginationRootProps>,
-    PaginationVariantProps {
-    }
+  [K in keyof T]: K extends keyof U ? U[K] : T[K];
+} & U;
+export interface PaginationProps extends Assign<JsxStyleProps, PaginationRootProps>, PaginationVariantProps {}
 
 export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) => {
-  const [variantProps, paginationProps] = pagination.splitVariantProps(props)
-  const [cssProps, localProps] = splitCssProps(paginationProps)
-  const { className, ...rootProps } = localProps
-  const styles = pagination(variantProps)
+  const [variantProps, paginationProps] = pagination.splitVariantProps(props);
+  const [cssProps, localProps] = splitCssProps(paginationProps);
+  const { className, ...rootProps } = localProps;
+  const styles = pagination(variantProps);
 
   return (
-    <ArkPagination.Root
-      className={cx(styles.root, css(cssProps), className)}
-      ref={ref}
-      {...rootProps}
-    >
+    <ArkPagination.Root className={cx(styles.root, css(cssProps), className)} ref={ref} {...rootProps}>
       {({ pages }) => (
         <>
           <ArkPagination.PrevTrigger className={styles.prevTrigger} asChild>
             <Button variant="ghost" aria-label="Next Page">
-              <ChevronLeftIcon />
+              <IconChevronLeft />
             </Button>
           </ArkPagination.PrevTrigger>
           {pages.map((page, index) =>
@@ -46,13 +39,13 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) 
           )}
           <ArkPagination.NextTrigger className={styles.nextTrigger} asChild>
             <Button variant="ghost" aria-label="Next Page">
-              <ChevronRightIcon />
+              <IconChevronRight />
             </Button>
           </ArkPagination.NextTrigger>
         </>
       )}
     </ArkPagination.Root>
-  )
-})
+  );
+});
 
-Pagination.displayName = 'Pagination'
+Pagination.displayName = 'Pagination';

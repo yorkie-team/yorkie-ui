@@ -1,6 +1,22 @@
-'use client'
+'use client';
 
-import { Accordion, Text, Container, DownIcon, Flex, Checkbox, Box, Menu, Pagination, Popover,Button, Stack, RadioGroup, CloseIcon, Select } from '@/components/ui';
+import {
+  Accordion,
+  Text,
+  Container,
+  IconDown,
+  Flex,
+  Checkbox,
+  Box,
+  Menu,
+  Pagination,
+  Popover,
+  Button,
+  Stack,
+  RadioGroup,
+  IconClose,
+  Select,
+} from '@/components/ui';
 
 export default function Home() {
   const frameworks = ['Option 1', 'Option 2', 'Option 3'];
@@ -16,7 +32,7 @@ export default function Home() {
         fontSize="6xl"
         fontWeight="semibold"
         position="relative"
-        borderWidth={{md: 'sm', lg: 'md'}}
+        borderWidth={{ md: 'sm', lg: 'md' }}
         overflow="hidden"
         borderStyle="dashed"
         borderColor="orange.default"
@@ -27,13 +43,13 @@ export default function Home() {
         collaborative
       </Text>
       <Box bg="orange.2">Open menu</Box>
-       <Accordion.Root defaultValue={['Accordion-1']} collapsible>
+      <Accordion.Root defaultValue={['Accordion-1']} collapsible>
         {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (
           <Accordion.Item key={id} value={item}>
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <DownIcon />
+                <IconDown />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -51,7 +67,7 @@ export default function Home() {
         </Box>
         <Button colorScheme="teal">Log in</Button>
       </Flex>
-      <Box height="240px"  mt="4">
+      <Box height="240px" mt="4">
         <Menu.Root>
           <Menu.Trigger>
             <Box>Open menu</Box>
@@ -68,8 +84,8 @@ export default function Home() {
           </Menu.Positioner>
         </Menu.Root>
       </Box>
-      <Pagination  mt="4" count={5000} pageSize={10} siblingCount={2}></Pagination>
-      <Box height="160px"  mt="4">
+      <Pagination mt="4" count={5000} pageSize={10} siblingCount={2}></Pagination>
+      <Box height="160px" mt="4">
         <Popover.Root>
           <Popover.Trigger asChild>
             <Button>Open Popover</Button>
@@ -87,7 +103,7 @@ export default function Home() {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <CloseIcon />
+                  <IconClose />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -109,7 +125,7 @@ export default function Home() {
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder={'Select a Framework'} />
-            <DownIcon />
+            <IconDown />
           </Select.Trigger>
         </Select.Control>
         <Select.Positioner>
@@ -120,7 +136,7 @@ export default function Home() {
                 <Select.Item key={item.value} item={item}>
                   <Select.ItemText>{item.label}</Select.ItemText>
                   <Select.ItemIndicator>
-                    <DownIcon />
+                    <IconDown />
                   </Select.ItemIndicator>
                 </Select.Item>
               ))}
@@ -129,5 +145,5 @@ export default function Home() {
         </Select.Positioner>
       </Select.Root>
     </Container>
-  )
+  );
 }

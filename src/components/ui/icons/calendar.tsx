@@ -1,11 +1,12 @@
-export const CalendarIcon = (props: any) => (
+export const IconCalendar = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"
     strokeWidth="1.5"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    fill="none" stroke="current"
+    fill="none"
+    stroke="current"
     {...props}
   >
     <path
@@ -14,12 +15,7 @@ export const CalendarIcon = (props: any) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     ></path>
-    <path
-      d="M3 10V6C3 4.89543 3.89543 4 5 4H7"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></path>
+    <path d="M3 10V6C3 4.89543 3.89543 4 5 4H7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
     <path d="M7 2V6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
     <path
       d="M21 10V6C21 4.89543 20.1046 4 19 4H18.5"

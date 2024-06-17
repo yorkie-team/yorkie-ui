@@ -1,4 +1,4 @@
-export const DownIcon = (props: any) => (
+export const IconDown = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

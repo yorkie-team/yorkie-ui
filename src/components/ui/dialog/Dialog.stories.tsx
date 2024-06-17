@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Dialog, Stack, CloseIcon } from '@/components/ui';
+import { Button, Dialog, Stack, IconClose } from '@/components/ui';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Portal } from '@ark-ui/react';
 
@@ -12,7 +12,8 @@ const meta = {
     },
     closeOnInteractOutside: {
       control: { type: 'boolean' },
-      description: 'Change the font size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl` and `7xl`.',
+      description:
+        'Change the font size include: `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `4xl`, `5xl`, `6xl` and `7xl`.',
     },
     defaultOpen: {
       control: { type: 'boolean' },
@@ -45,16 +46,20 @@ const meta = {
       description: '\nElement to receive focus when the dialog is opened. `() => void`',
     },
     onFocusOutside: {
-      description: '\nFunction called when the focus is moved outside the component. `(event: FocusOutsideEvent) => void`',
+      description:
+        '\nFunction called when the focus is moved outside the component. `(event: FocusOutsideEvent) => void`',
     },
     onInteractOutside: {
-      description: '\nFunction called when an interaction happens outside the component. `(event: InteractOutsideEvent) => void`',
+      description:
+        '\nFunction called when an interaction happens outside the component. `(event: InteractOutsideEvent) => void`',
     },
     onOpenChange: {
-      description: '\nCallback to be invoked when the dialog is opened or closed. `(details: OpenChangeDetails) => void`',
+      description:
+        '\nCallback to be invoked when the dialog is opened or closed. `(details: OpenChangeDetails) => void`',
     },
     onPointerDownOutside: {
-      description: '\nFunction called when the pointer is pressed down outside the component. `(event: PointerDownOutsideEvent) => void`',
+      description:
+        '\nFunction called when the pointer is pressed down outside the component. `(event: PointerDownOutsideEvent) => void`',
     },
     open: {
       control: { type: 'boolean' },
@@ -66,19 +71,19 @@ const meta = {
     },
     preventScroll: {
       control: { type: 'boolean' },
-      description: 'Whether to prevent scrolling behind the dialog when it\'s opened.',
+      description: "Whether to prevent scrolling behind the dialog when it's opened.",
     },
     restoreFocus: {
       control: { type: 'boolean' },
       description: 'Whether to restore focus to the element that had focus before the dialog was opened.',
     },
     role: {
-      description: '\nThe dialog\'s role. `dialog` | `alertdialog`',
+      description: "\nThe dialog's role. `dialog` | `alertdialog`",
       default: 'dialog',
     },
     trapFocus: {
       control: { type: 'boolean' },
-      description: 'Whether to trap focus inside the dialog when it\'s opened.',
+      description: "Whether to trap focus inside the dialog when it's opened.",
     },
     unmountOnExit: {
       control: { type: 'boolean' },
@@ -86,46 +91,46 @@ const meta = {
       default: 'false',
     },
   },
-}satisfies Meta<typeof Dialog.Root>;
+} satisfies Meta<typeof Dialog.Root>;
 
 type Story = StoryObj<typeof Dialog.Root>;
 
 export default meta;
 
-export const Overview: Story  = {
+export const Overview: Story = {
   render: (args) => {
     return (
       <Dialog.Root {...args}>
-      <Dialog.Trigger asChild>
-        <Button>Open Dialog</Button>
-      </Dialog.Trigger>
-      <Portal>
-        <Dialog.Backdrop />
-        <Dialog.Positioner>
-          <Dialog.Content>
-            <Stack gap="8" p="6">
-              <Stack gap="1">
-                <Dialog.Title>Dialog Title</Dialog.Title>
-                <Dialog.Description>Dialog Description</Dialog.Description>
+        <Dialog.Trigger asChild>
+          <Button>Open Dialog</Button>
+        </Dialog.Trigger>
+        <Portal>
+          <Dialog.Backdrop />
+          <Dialog.Positioner>
+            <Dialog.Content>
+              <Stack gap="8" p="6">
+                <Stack gap="1">
+                  <Dialog.Title>Dialog Title</Dialog.Title>
+                  <Dialog.Description>Dialog Description</Dialog.Description>
+                </Stack>
+                <Stack gap="3" direction="row" width="full">
+                  <Dialog.CloseTrigger asChild>
+                    <Button variant="outline" width="full">
+                      Cancel
+                    </Button>
+                  </Dialog.CloseTrigger>
+                  <Button width="full">Confirm</Button>
+                </Stack>
               </Stack>
-              <Stack gap="3" direction="row" width="full">
-                <Dialog.CloseTrigger asChild>
-                  <Button variant="outline" width="full">
-                    Cancel
-                  </Button>
-                </Dialog.CloseTrigger>
-                <Button width="full">Confirm</Button>
-              </Stack>
-            </Stack>
-            <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
-              <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <CloseIcon />
-              </Button>
-            </Dialog.CloseTrigger>
-          </Dialog.Content>
-        </Dialog.Positioner>
-      </Portal>
-    </Dialog.Root>
+              <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
+                <Button aria-label="Close Dialog" variant="ghost" size="sm">
+                  <IconClose />
+                </Button>
+              </Dialog.CloseTrigger>
+            </Dialog.Content>
+          </Dialog.Positioner>
+        </Portal>
+      </Dialog.Root>
     );
   },
 };
@@ -156,7 +161,7 @@ export const Controlled = () => {
               </Stack>
               <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
                 <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                  <CloseIcon />
+                  <IconClose />
                 </Button>
               </Dialog.CloseTrigger>
             </Dialog.Content>
@@ -191,7 +196,7 @@ export const LazyMounting = () => {
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <CloseIcon />
+                <IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>
@@ -225,7 +230,7 @@ export const RenderFn = () => {
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <CloseIcon />
+                <IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>

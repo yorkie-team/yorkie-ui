@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@/components/ui';
 import { Flex } from '@/styled/jsx';
-import { CheckIcon } from '@/components/ui';
+import { IconCheck } from '@/components/ui';
 
 const meta = {
   title: 'FORM / Button',
@@ -139,14 +139,13 @@ export const Icon: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Button {...args} icon={<CheckIcon stroke="#fff" />} position="start">
+        <Button {...args} icon={<IconCheck stroke="#fff" />} position="start">
           Icon Check
         </Button>
       </Flex>
     );
   },
 };
-
 
 export const Link: Story = {
   render: (args) => {
