@@ -15,6 +15,7 @@ import { IconCloud } from './icon_cloud_orange';
 import { IconTwinkle } from './icon_twinkle';
 import { IconSmile } from './icon_smile';
 import { IconMessageSquare } from './icon_message_square';
+import { IconMessage } from './icon_message';
 import { IconGitHub } from './icon_github';
 import { IconSlack } from './icon_slack';
 import { IconBackHome } from './icon_back_home';
@@ -68,4 +69,5 @@ export {
   IconArrowLeft,
   IconArrowRight,
   IconLogo,
+  IconMessage,
 };
