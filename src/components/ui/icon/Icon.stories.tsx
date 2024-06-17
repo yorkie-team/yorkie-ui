@@ -2,7 +2,7 @@ import { Icon } from '@/components/ui';
 
 import { Flex } from '@/styled/jsx';
 import type { Meta, StoryObj } from '@storybook/react';
-import { CalendarIcon } from '@/components/ui';
+import { IconCalendar } from '@/components/ui';
 const meta = {
   title: 'FORM / Icon',
   component: Icon,
@@ -27,9 +27,7 @@ type Story = StoryObj<typeof Icon>;
 
 export const Overview: Story = {
   render: (args) => {
-    return (
-      <Icon {...args} stroke="orange.default" icon={<CalendarIcon />} />
-    );
+    return <Icon {...args} stroke="orange.default" icon={<IconCalendar />} />;
   },
 };
 
@@ -37,12 +35,12 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Icon {...args} size="xs" icon={<CalendarIcon stroke="#000" />} />
-        <Icon {...args} size="sm" icon={<CalendarIcon stroke="#000" />} />
-        <Icon {...args} size="md" icon={<CalendarIcon stroke="#000" />} />
-        <Icon {...args} size="lg" icon={<CalendarIcon stroke="#000" />} />
-        <Icon {...args} size="xl" icon={<CalendarIcon stroke="#000" />} />
-        <Icon {...args} size="2xl" icon={<CalendarIcon stroke="#000" />} />
+        <Icon {...args} size="xs" icon={<IconCalendar stroke="#000" />} />
+        <Icon {...args} size="sm" icon={<IconCalendar stroke="#000" />} />
+        <Icon {...args} size="md" icon={<IconCalendar stroke="#000" />} />
+        <Icon {...args} size="lg" icon={<IconCalendar stroke="#000" />} />
+        <Icon {...args} size="xl" icon={<IconCalendar stroke="#000" />} />
+        <Icon {...args} size="2xl" icon={<IconCalendar stroke="#000" />} />
       </Flex>
     );
   },
