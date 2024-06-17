@@ -1,4 +1,4 @@
-export const MinimizeIcon = (props: any) => (
+export const IconMinimize = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

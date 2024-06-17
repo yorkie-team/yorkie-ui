@@ -1,4 +1,4 @@
-export const StarIcon = (props: any) => (
+export const IconStar = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

@@ -1,4 +1,4 @@
-export const ExpandIcon = (props: any) => (
+export const IconExpand = (props: any) => (
   <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fill-rule="evenodd"

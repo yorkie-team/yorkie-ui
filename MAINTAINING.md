@@ -1,10 +1,10 @@
-# Maintaining yorkie-ui
+# Maintaining
 
 ## Releasing a New Version
 
 ### 1. Update the version number.
 
-- Update `version` in [package.json](https://github.com/yorkie-team/yorkie-ui/blob/main/package.json#L3).
+* Update `version` in [package.json](https://github.com/yorkie-team/yorkie-ui/blob/main/package.json#L3).
 
 ### 2. Create Pull Request and merge it into main.
 

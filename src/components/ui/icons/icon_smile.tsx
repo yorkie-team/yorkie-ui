@@ -1,4 +1,4 @@
-export const SmileIcon = (props: any) => (
+export const IconSmile = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

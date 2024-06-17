@@ -1,5 +1,12 @@
-export const StartIcon = (props: any) => (
-  <svg width="currentWidth" height="currentHeight" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const IconStart = (props: any) => (
+  <svg
+    width="currentWidth"
+    height="currentHeight"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

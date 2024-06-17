@@ -1,4 +1,4 @@
-export const GnbMenuIcon = (props: any) => (
+export const IconGnbMenu = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

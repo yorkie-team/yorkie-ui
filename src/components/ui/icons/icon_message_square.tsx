@@ -1,4 +1,4 @@
-export const MessageSquareIcon = (props: any) => (
+export const IconMessageSquare = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

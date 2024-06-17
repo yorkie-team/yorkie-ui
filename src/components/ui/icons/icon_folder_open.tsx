@@ -1,4 +1,4 @@
-export const FolderOpenIcon = (props: any) => (
+export const IconFolderOpen = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

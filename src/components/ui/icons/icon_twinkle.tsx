@@ -1,4 +1,4 @@
-export const TwinkleIcon = (props: any) => (
+export const IconTwinkle = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

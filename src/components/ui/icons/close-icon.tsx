@@ -1,4 +1,4 @@
-export const CloseIcon = (props: any) => (
+export const IconClose = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

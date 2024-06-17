@@ -1,4 +1,4 @@
-export const SlackIcon = (props: any) => (
+export const IconSlack = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"

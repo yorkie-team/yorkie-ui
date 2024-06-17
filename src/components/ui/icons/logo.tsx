@@ -1,4 +1,4 @@
-export const LogoIcon = (props: any) => (
+export const IconLogo = (props: any) => (
   <svg viewBox="0 0 134 36" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M48.2065 9.47549L54.4971 20.5512V26.5823H57.5056V20.5284L63.7961 9.47549H60.6508L56.4799 17.0787L55.9785 18.0839L55.4771 17.0787L51.3518 9.47549H48.2065Z"

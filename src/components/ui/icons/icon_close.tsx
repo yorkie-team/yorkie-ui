@@ -1,4 +1,4 @@
-export const CloseIcon = (props: any) => (
+export const IconClose = (props: any) => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       fill-rule="evenodd"
