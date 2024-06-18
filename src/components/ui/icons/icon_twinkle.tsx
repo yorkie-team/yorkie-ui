@@ -2,11 +2,13 @@ export const IconTwinkle = (props: any) => (
   <svg
     width="currentWidth"
     height="currentHeight"
+    aria-labelledby="twinkleIconTitle"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
+    <title id="twinkleIconTitle">Twinkle Icon</title>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

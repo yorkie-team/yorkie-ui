@@ -7,6 +7,7 @@ import {
   IconDown,
   Flex,
   Checkbox,
+  Icon,
   Box,
   Menu,
   Pagination,
@@ -16,6 +17,7 @@ import {
   RadioGroup,
   IconClose,
   Select,
+  IconCopy,
 } from '@/components/ui';
 
 export default function Home() {
@@ -28,6 +30,7 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
+      <Icon icon={<IconCopy />} stroke="black.a9" size="2xl" />
       <Text
         fontSize="6xl"
         fontWeight="semibold"

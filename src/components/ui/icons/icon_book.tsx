@@ -1,5 +1,6 @@
 export const IconBook = (props: any) => (
   <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <title id="title">Book Icon</title>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
