@@ -35,12 +35,12 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Icon {...args} size="xs" stroke="black.a11" icon={<IconCalendar />} />
-        <Icon {...args} size="sm" stroke="black.a10" icon={<IconCalendar />} />
-        <Icon {...args} size="md" stroke="black.a9" icon={<IconCalendar />} />
-        <Icon {...args} size="lg" stroke="black.a8" icon={<IconCalendar />} />
-        <Icon {...args} size="xl" stroke="black.a7" icon={<IconCalendar />} />
-        <Icon {...args} size="2xl" stroke="black.a6" icon={<IconCalendar />} />
+        <Icon {...args} size="xs" stroke="black.a6" icon={<IconCalendar />} />
+        <Icon {...args} size="sm" stroke="black.a7" icon={<IconCalendar />} />
+        <Icon {...args} size="md" stroke="black.a8" icon={<IconCalendar />} />
+        <Icon {...args} size="lg" stroke="black.a9" icon={<IconCalendar />} />
+        <Icon {...args} size="xl" stroke="black.a10" icon={<IconCalendar />} />
+        <Icon {...args} size="2xl" stroke="black.a11" icon={<IconCalendar />} />
       </Flex>
     );
   },
