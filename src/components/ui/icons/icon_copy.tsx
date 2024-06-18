@@ -1,5 +1,6 @@
 export const IconCopy = (props: any) => (
   <svg
+    aria-label="Copy"
     xmlns="http://www.w3.org/2000/svg"
     width="currentWidth"
     height="currentHeight"

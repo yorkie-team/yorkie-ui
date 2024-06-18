@@ -8,6 +8,7 @@ export const IconStar = (props: any) => (
     role="img"
     {...props}
   >
+    <title id="starTitle">Star Icon</title>
     <g clip-path="url(#clip0_4552_185919)">
       <path
         fill-rule="evenodd"
