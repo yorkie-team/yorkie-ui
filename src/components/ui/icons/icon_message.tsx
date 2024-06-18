@@ -1,5 +1,6 @@
 export const IconMessage = (props: any) => (
   <svg
+    aria-label="Message"
     width="currentWidth"
     height="currentHeight"
     viewBox="0 0 12 12"
