@@ -242,6 +242,7 @@ export default defineConfig({
           borderWidth: ['*'],
           borderRadius: ['*'],
           borderColor: ['*'],
+          stroke: ['*'],
         },
         responsive: true,
       },
