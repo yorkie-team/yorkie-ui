@@ -3,6 +3,7 @@ import { ButtonVariantProps, button } from '@/styled/recipes';
 import { Icon, Link } from '@/components/ui';
 import { forwardRef } from 'react';
 import { styled, type HTMLStyledProps } from '@/styled/jsx';
+import type { Tokens } from '@/styled/tokens';
 
 type ButtonIconProps = {
   icon?: any;
@@ -15,8 +16,8 @@ type ButtonLinkProps = {
 };
 
 type ButtonNormalProps = {
-  wLink?: string;
-  hLink?: string;
+  wLink?: string | object;
+  hLink?: string | object;
 };
 export type ButtonProps = HTMLStyledProps<'button'> &
   ButtonVariantProps &
