@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Popover } from '@/components/ui';
-import { Button } from '@/components/ui';
-import { Stack, Box } from '@/styled/jsx';
-import { CloseIcon } from '@/components/ui/icons';
+import { Button, Stack, Box, Icons } from '@/components/ui';
 
 const meta = {
   title: 'OVERLAY / Popover',
@@ -106,7 +104,7 @@ export const Overview = {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <CloseIcon />
+                  <Icons.IconClose />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -138,7 +136,7 @@ export const AddingAnArrow = {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <CloseIcon />
+                  <Icons.IconClose />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -190,7 +188,7 @@ export const Controlled = () => {
             </Stack>
             <Box position="absolute" top="1" right="1">
               <Popover.CloseTrigger asChild>
-                <CloseIcon />
+                <Icons.IconClose />
               </Popover.CloseTrigger>
             </Box>
           </Popover.Content>
@@ -220,7 +218,7 @@ export const CloseBehavior = () => {
             </Stack>
             <Box position="absolute" top="1" right="1">
               <Popover.CloseTrigger asChild>
-                <CloseIcon />
+                <Icons.IconClose />
               </Popover.CloseTrigger>
             </Box>
           </Popover.Content>
@@ -249,7 +247,7 @@ export const Positioning = () => (
           </Stack>
           <Box position="absolute" top="1" right="1">
             <Popover.CloseTrigger asChild>
-              <CloseIcon />
+              <Icons.IconClose />
             </Popover.CloseTrigger>
           </Box>
         </Popover.Content>
@@ -277,7 +275,7 @@ export const Modal = () => (
           </Stack>
           <Box position="absolute" top="1" right="1">
             <Popover.CloseTrigger asChild>
-              <CloseIcon />
+              <Icons.IconClose />
             </Popover.CloseTrigger>
           </Box>
         </Popover.Content>

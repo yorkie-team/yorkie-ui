@@ -4,7 +4,6 @@ import {
   Accordion,
   Text,
   Container,
-  IconDown,
   Flex,
   Checkbox,
   Icon,
@@ -15,9 +14,8 @@ import {
   Button,
   Stack,
   RadioGroup,
-  IconClose,
   Select,
-  IconCopy,
+  Icons,
 } from '@/components/ui';
 
 export default function Home() {
@@ -30,7 +28,12 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
-      <Icon icon={<IconCopy />} stroke="black.a9" size="2xl" />
+      <Icon icon={<Icons.IconCopy />} stroke="black.a9" size="2xl" />
+      <Button as="link" href="https://yorkie.dev" variant="ghost">
+        Website Link
+      </Button>
+      <Box padding="6" bg="grad.yellow"></Box>
+      <Text color="success.default">Hello</Text>
       <Text
         fontSize="6xl"
         fontWeight="semibold"
@@ -52,7 +55,7 @@ export default function Home() {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <IconDown />
+                <Icons.IconChevDown />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -106,7 +109,7 @@ export default function Home() {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <IconClose />
+                  <Icons.IconClose />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -128,7 +131,7 @@ export default function Home() {
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder={'Select a Framework'} />
-            <IconDown />
+            <Icons.IconChevDown />
           </Select.Trigger>
         </Select.Control>
         <Select.Positioner>
@@ -139,7 +142,7 @@ export default function Home() {
                 <Select.Item key={item.value} item={item}>
                   <Select.ItemText>{item.label}</Select.ItemText>
                   <Select.ItemIndicator>
-                    <IconDown />
+                    <Icon icon={<Icons.IconChevDown />} size="md" />
                   </Select.ItemIndicator>
                 </Select.Item>
               ))}

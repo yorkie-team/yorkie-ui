@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@/components/ui';
-import { DownIcon } from '@/components/ui/icons';
-import { Button } from '../button/Button';
+import { Select, Button, Icons } from '@/components/ui';
 
 const meta = {
   title: 'FORM / Select',
@@ -116,7 +114,7 @@ const meta = {
       description: 'The keys of the selected items',
     },
   },
-}satisfies Meta<typeof Select.Root>;
+} satisfies Meta<typeof Select.Root>;
 
 type Story = StoryObj<typeof Select.Root>;
 
@@ -137,7 +135,7 @@ export const Overview: Story = {
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder={'Select a Framework'} />
-            <DownIcon />
+            <Icons.IconArrow />
           </Select.Trigger>
         </Select.Control>
         <Select.Positioner>
@@ -148,7 +146,7 @@ export const Overview: Story = {
                 <Select.Item key={item.value} item={item}>
                   <Select.ItemText>{item.label}</Select.ItemText>
                   <Select.ItemIndicator>
-                    <DownIcon />
+                    <Icons.IconArrow />
                   </Select.ItemIndicator>
                 </Select.Item>
               ))}
@@ -177,7 +175,7 @@ export const Customization = {
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Framework" />
             <Select.Indicator>
-              <DownIcon />
+              <Icons.IconArrow />
             </Select.Indicator>
           </Select.Trigger>
           <Select.ClearTrigger>
@@ -219,7 +217,7 @@ export const MultipleSelection = {
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Framework" />
             <Select.Indicator>
-              <DownIcon />
+              <Icons.IconArrow />
             </Select.Indicator>
           </Select.Trigger>
           <Select.ClearTrigger>
@@ -261,7 +259,7 @@ export const Multiple = {
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Framework" />
             <Select.Indicator>
-              <DownIcon />
+              <Icons.IconArrow />
             </Select.Indicator>
           </Select.Trigger>
           <Select.ClearTrigger>
@@ -303,7 +301,7 @@ export const Controlled = () => {
         <Select.Trigger>
           <Select.ValueText placeholder="Select a Framework" />
           <Select.Indicator>
-            <DownIcon />
+            <Icons.IconArrow />
           </Select.Indicator>
         </Select.Trigger>
         <Select.ClearTrigger>

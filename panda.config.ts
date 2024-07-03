@@ -51,6 +51,37 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
+        colors: {
+          success: {
+            50: { value: '#EBFAF3' },
+            300: { value: '#85E0B3' },
+            500: { value: '#30A46C' },
+            700: { value: '#1F7A4D' },
+            950: { value: '#05140D' },
+          },
+          error: {
+            50: { value: '#FEE6E6' },
+            300: { value: '#F76E6E' },
+            500: { value: '#E5484D' },
+            700: { value: '#910808' },
+            950: { value: '#180101' },
+          },
+          alert: {
+            50: { value: '#FFF7E6' },
+            300: { value: '#FFCC66' },
+            500: { value: '#FFAA00' },
+            700: { value: '#996600' },
+            950: { value: '#1A1100' },
+          },
+          grad: {
+            yellow: { value: 'linear-gradient(180deg, #FDC433 0%, #FE924D 100%)' },
+            orange: { value: 'linear-gradient(180deg, #FF9754 0%, #F96767 100%)' },
+            red: { value: 'linear-gradient(180deg, #FC94D8 0%, #F44954 100%)' },
+            purple: { value: 'linear-gradient(180deg, #84B5FF 0%, #855CF9 100%)' },
+            blue: { value: 'linear-gradient(180deg, #8DECEC 0%, #3C9AF1 100%)' },
+            green: { value: 'linear-gradient(180deg, #D7E38B 0%, #23C176 100%)' },
+          },
+        },
         sizes: {
           '100w': { value: '100%' },
           '50w': { value: '100%' },
@@ -86,6 +117,52 @@ export default defineConfig({
           '8xl': { value: '14px' },
           '9xl': { value: '15px' },
           '10xl': { value: '16px' },
+        },
+      },
+      semanticTokens: {
+        colors: {
+          success: {
+            default: {
+              value: {
+                base: '{colors.success.500}',
+                _dark: '{colors.success.500}',
+              },
+            },
+            muted: {
+              value: {
+                base: '{colors.success.300}',
+                _dark: '{colors.success.300}',
+              },
+            },
+          },
+          alert: {
+            default: {
+              value: {
+                base: '{colors.alert.500}',
+                _dark: '{colors.alert.500}',
+              },
+            },
+            muted: {
+              value: {
+                base: '{colors.alert.300}',
+                _dark: '{colors.alert.300}',
+              },
+            },
+          },
+          error: {
+            default: {
+              value: {
+                base: '{colors.error.500}',
+                _dark: '{colors.error.500}',
+              },
+            },
+            muted: {
+              value: {
+                base: '{colors.error.300}',
+                _dark: '{colors.error.300}',
+              },
+            },
+          },
         },
       },
     },
@@ -252,7 +329,7 @@ export default defineConfig({
           fontSize: ['*'],
           lineHeight: ['*'],
           fontWeight: ['*'],
-          textAlign: ['*'],
+          textAlign: ['center', 'right', 'left'],
           fontSmoothing: ['*'],
           fontVariantNumeric: ['*'],
           letterSpacing: ['*'],

@@ -1,8 +1,6 @@
-
-
 import type { Token } from '@/styled/tokens/tokens';
 
-const defaultColorLight:Token[] = [
+const defaultColorLight: Token[] = [
   'colors.orange.light.1',
   'colors.orange.light.2',
   'colors.orange.light.3',
@@ -28,7 +26,7 @@ const defaultColorLight:Token[] = [
   'colors.orange.light.a11',
   'colors.orange.light.a12',
 ];
-const defaultColorDark:Token[] = [
+const defaultColorDark: Token[] = [
   'colors.orange.dark.1',
   'colors.orange.dark.2',
   'colors.orange.dark.3',
@@ -55,7 +53,7 @@ const defaultColorDark:Token[] = [
   'colors.orange.dark.a12',
 ];
 
-const orangeColor:Token[] = [
+const orangeColor: Token[] = [
   'colors.orange.1',
   'colors.orange.2',
   'colors.orange.3',
@@ -86,7 +84,7 @@ const orangeColor:Token[] = [
   'colors.orange.text',
 ];
 
-const blackColor:Token[] = [
+const blackColor: Token[] = [
   'colors.black',
   'colors.black.a1',
   'colors.black.a2',
@@ -102,7 +100,7 @@ const blackColor:Token[] = [
   'colors.black.a12',
 ];
 
-const whiteColor:Token[] = [
+const whiteColor: Token[] = [
   'colors.white',
   'colors.white.a1',
   'colors.white.a2',
@@ -119,7 +117,7 @@ const whiteColor:Token[] = [
   'colors.transparent',
 ];
 
-const grayColorLight:Token[] = [
+const grayColorLight: Token[] = [
   'colors.gray.light.1',
   'colors.gray.light.2',
   'colors.gray.light.3',
@@ -146,7 +144,7 @@ const grayColorLight:Token[] = [
   'colors.gray.light.a12',
 ];
 
-const grayColorDark:Token[] = [
+const grayColorDark: Token[] = [
   'colors.gray.dark.1',
   'colors.gray.dark.2',
   'colors.gray.dark.3',
@@ -173,7 +171,7 @@ const grayColorDark:Token[] = [
   'colors.gray.dark.a12',
 ];
 
-const grayColor:Token[] = [
+const grayColor: Token[] = [
   'colors.gray.1',
   'colors.gray.2',
   'colors.gray.3',
@@ -204,7 +202,7 @@ const grayColor:Token[] = [
   'colors.gray.text',
 ];
 
-const neutralColorLight:Token[] = [
+const neutralColorLight: Token[] = [
   'colors.neutral.light.1',
   'colors.neutral.light.2',
   'colors.neutral.light.3',
@@ -231,7 +229,7 @@ const neutralColorLight:Token[] = [
   'colors.neutral.light.a12',
 ];
 
-const neutralColorDark:Token[] = [
+const neutralColorDark: Token[] = [
   'colors.neutral.dark.1',
   'colors.neutral.dark.2',
   'colors.neutral.dark.3',
@@ -258,7 +256,7 @@ const neutralColorDark:Token[] = [
   'colors.neutral.dark.a12',
 ];
 
-const neutralColor:Token[] = [
+const neutralColor: Token[] = [
   'colors.neutral.1',
   'colors.neutral.2',
   'colors.neutral.3',
@@ -289,7 +287,7 @@ const neutralColor:Token[] = [
   'colors.neutral.text',
 ];
 
-const accentColor:Token[] = [
+const accentColor: Token[] = [
   'colors.accent.1',
   'colors.accent.2',
   'colors.accent.3',
@@ -320,7 +318,7 @@ const accentColor:Token[] = [
   'colors.accent.text',
 ];
 
-const functionColor:Token[] = [
+const functionColor: Token[] = [
   'colors.bg.canvas',
   'colors.bg.default',
   'colors.bg.subtle',
@@ -333,7 +331,31 @@ const functionColor:Token[] = [
   'colors.fg.disabled',
 ];
 
-const borderColor:Token[] = ['colors.border.default', 'colors.border.muted', 'colors.border.subtle', 'colors.border.disabled', 'colors.border.outline'];
+const statusColor: Token[] = [
+  'colors.success.default',
+  'colors.success.muted',
+  'colors.alert.default',
+  'colors.alert.muted',
+  'colors.error.default',
+  'colors.error.muted',
+];
+
+const borderColor: Token[] = [
+  'colors.border.default',
+  'colors.border.muted',
+  'colors.border.subtle',
+  'colors.border.disabled',
+  'colors.border.outline',
+];
+
+const gradientColor: Token[] = [
+  'colors.grad.yellow',
+  'colors.grad.orange',
+  'colors.grad.red',
+  'colors.grad.purple',
+  'colors.grad.blue',
+  'colors.grad.green',
+];
 
 export {
   defaultColorLight,
@@ -350,4 +372,6 @@ export {
   accentColor,
   functionColor,
   borderColor,
+  statusColor,
+  gradientColor,
 };

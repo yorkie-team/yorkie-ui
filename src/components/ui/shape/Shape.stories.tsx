@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Center, Circle, HStack, Square, CalendarIcon } from '@/components/ui';
+import { Box, Center, Circle, HStack, Square, Icons } from '@/components/ui';
 
 const meta = {
   title: 'LAYOUT / Shape',
@@ -24,7 +24,7 @@ export const CenterShape = {
         </Center>
         <HStack mt="40px">
           <Center w="40px" h="40px" bg="tomato">
-            <CalendarIcon />
+            <Icons.IconDate />
           </Center>
           <Center w="40px" h="40px" bg="tomato" color="white">
             <Box fontWeight="bold" fontSize="lg">
@@ -42,7 +42,7 @@ export const CircleShape = {
     return (
       <HStack mt="40px">
         <Circle size="40px" bg="tomato" color="white">
-          <CalendarIcon />
+          <Icons.IconDate />
         </Circle>
       </HStack>
     );
@@ -55,7 +55,7 @@ export const SquareShape = {
       <Box>
         <HStack mt="40px">
           <Square size="40px" bg="tomato" color="white">
-            <CalendarIcon />
+            <Icons.IconDate />
           </Square>
         </HStack>
       </Box>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Dialog, Stack, IconClose } from '@/components/ui';
+import { Button, Dialog, Stack, Icons } from '@/components/ui';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Portal } from '@ark-ui/react';
 
@@ -113,7 +113,7 @@ export const Overview: Story = {
                   <Dialog.Title>Dialog Title</Dialog.Title>
                   <Dialog.Description>Dialog Description</Dialog.Description>
                 </Stack>
-                <Stack gap="3" direction="row" width="full">
+                <Stack gap="3" flexDirection="row" width="full">
                   <Dialog.CloseTrigger asChild>
                     <Button variant="outline" width="full">
                       Cancel
@@ -124,7 +124,7 @@ export const Overview: Story = {
               </Stack>
               <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
                 <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                  <IconClose />
+                  <Icons.IconClose />
                 </Button>
               </Dialog.CloseTrigger>
             </Dialog.Content>
@@ -161,7 +161,7 @@ export const Controlled = () => {
               </Stack>
               <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
                 <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                  <IconClose />
+                  <Icons.IconClose />
                 </Button>
               </Dialog.CloseTrigger>
             </Dialog.Content>
@@ -196,7 +196,7 @@ export const LazyMounting = () => {
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <IconClose />
+                <Icons.IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>
@@ -230,7 +230,7 @@ export const RenderFn = () => {
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <IconClose />
+                <Icons.IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>

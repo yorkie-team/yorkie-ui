@@ -37,18 +37,18 @@ A modal window overlays the main content.
                 <Dialog.Title>Dialog Title</Dialog.Title>
                 <Dialog.Description>Dialog Description</Dialog.Description>
               </Stack>
-              <Stack gap="3" direction="row" width="full">
+              <Flex gap="3" direction="row" width="full">
                 <Dialog.CloseTrigger asChild>
                   <Button variant="outline" width="full">
                     Cancel
                   </Button>
                 </Dialog.CloseTrigger>
                 <Button width="full">Confirm</Button>
-              </Stack>
+              </Flex>
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <IconClose />
+                <Icons.IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>
@@ -97,7 +97,7 @@ To implement a controlled Dialog component, you can handle the state of the dial
                 </Stack>
                 <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
                   <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                    <IconClose />
+                    <Icons.IconClose />
                   </Button>
                 </Dialog.CloseTrigger>
               </Dialog.Content>
@@ -139,7 +139,7 @@ Lazy mounting renders dialog content only when the dialog is opened, enhancing p
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <IconClose />
+                <Icons.IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>
@@ -179,7 +179,7 @@ The Dialog component offers the option to use a render function as a child, prov
             </Stack>
             <Dialog.CloseTrigger asChild position="absolute" top="2" right="2">
               <Button aria-label="Close Dialog" variant="ghost" size="sm">
-                <IconClose />
+                <Icons.IconClose />
               </Button>
             </Dialog.CloseTrigger>
           </Dialog.Content>

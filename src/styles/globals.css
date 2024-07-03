@@ -1,1 +1,5 @@
 @layer reset, base, tokens, recipes, utilities;
+
+.docs-story div[scale='1'] {
+  transform: none;
+}
