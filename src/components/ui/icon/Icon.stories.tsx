@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon, Icons, Flex, Grid, Text, Toast } from '@/components/ui';
 import { listIcons } from '@/components/ui/icons';

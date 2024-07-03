@@ -4,7 +4,6 @@ import { Icon, Link } from '@/components/ui';
 import type { LinkProps } from '@/components/ui';
 import { forwardRef } from 'react';
 import { styled, type HTMLStyledProps } from '@/styled/jsx';
-import type { Tokens } from '@/styled/tokens';
 
 type ButtonIconProps = {
   icon?: any;

@@ -59,8 +59,7 @@
     "deploy-storybook": "gh-pages -d storybook-static",
     "style": "panda codegen",
     "icon": "node generateIcons.js",
-    "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts",
-    "t": "pnpm run build:esm && pnpm run build:cjs"
+    "sync-figma-to-tokens": "ts-node-esm -P tsconfig.json tokens/sync_figma_to_tokens.ts"
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
