@@ -33,6 +33,7 @@
       "@/styles/*": ["./src/styles/*"]
     }
   },
+  "typeRoots": ["./node_modules/@types", "./src/lib/declarations.d.ts"],
   "compileOnSave": false,
   "exclude": ["node_modules", "dist"],
   "include": ["src"]

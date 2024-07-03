@@ -6,7 +6,7 @@ const { optimize } = require('svgo');
 const iconsDir = path.join(__dirname, 'src/components/ui/icons');
 
 // src to create index.tsx
-const outputFile = path.join(__dirname, 'src/components/ui/icons/index.ts');
+const outputFile = path.join(__dirname, 'src/components/ui/icons/index.tsx');
 
 // Rest Size Icon
 fs.readdir(iconsDir, (err, files) => {
@@ -94,7 +94,7 @@ fs.readdir(iconsDir, (err, files) => {
     .map((file) => {
       const baseName = path.basename(file, '.svg');
       const componentName = `Icon${toCamelCase(baseName)}`;
-      return `import { ReactComponent as ${componentName} } from './${file}';`;
+      return `import { ReactComponent as ${componentName} } from '@/components/ui/icons/${file}';`;
     })
     .join('\n');
 

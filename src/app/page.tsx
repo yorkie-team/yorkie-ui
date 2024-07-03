@@ -4,7 +4,6 @@ import {
   Accordion,
   Text,
   Container,
-  IconChevDown,
   Flex,
   Checkbox,
   Icon,
@@ -15,9 +14,8 @@ import {
   Button,
   Stack,
   RadioGroup,
-  IconClose,
   Select,
-  IconCopy,
+  Icons,
 } from '@/components/ui';
 
 export default function Home() {
@@ -30,7 +28,7 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
-      <Icon icon={<IconCopy />} stroke="black.a9" size="2xl" />
+      <Icon icon={<Icons.IconCopy />} stroke="black.a9" size="2xl" />
       <Button as="link" href="https://yorkie.dev" variant="ghost">
         Website Link
       </Button>
@@ -57,7 +55,7 @@ export default function Home() {
             <Accordion.ItemTrigger>
               {item}
               <Accordion.ItemIndicator>
-                <IconChevDown />
+                <Icons.IconChevDown />
               </Accordion.ItemIndicator>
             </Accordion.ItemTrigger>
             <Accordion.ItemContent>
@@ -111,7 +109,7 @@ export default function Home() {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <IconClose />
+                  <Icons.IconClose />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -133,7 +131,7 @@ export default function Home() {
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder={'Select a Framework'} />
-            <IconChevDown />
+            <Icons.IconChevDown />
           </Select.Trigger>
         </Select.Control>
         <Select.Positioner>
@@ -144,7 +142,7 @@ export default function Home() {
                 <Select.Item key={item.value} item={item}>
                   <Select.ItemText>{item.label}</Select.ItemText>
                   <Select.ItemIndicator>
-                    <Icon icon={<IconChevDown />} size="md" />
+                    <Icon icon={<Icons.IconChevDown />} size="md" />
                   </Select.ItemIndicator>
                 </Select.Item>
               ))}
