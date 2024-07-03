@@ -18,6 +18,7 @@
     "types": ["node", "jest"],
     "jsx": "react-jsx",
     "outDir": "./dist/",
+    "noImplicitAny": true,
     "plugins": [
       {
         "name": "next"
@@ -30,7 +31,7 @@
       "@/stories/*": ["./src/stories/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/styles/*": ["./src/styles/*"]
-    },
+    }
   },
   "compileOnSave": false,
   "exclude": ["node_modules", "dist"],

@@ -37,7 +37,7 @@ The `Select` element presents a collection of choices for the user to select fro
           <Select.Control>
             <Select.Trigger>
               <Select.ValueText placeholder={'Select a Framework'} />
-              <DownIcon />
+              <Icons.IconArrow />
             </Select.Trigger>
           </Select.Control>
           <Select.Positioner>
@@ -48,7 +48,7 @@ The `Select` element presents a collection of choices for the user to select fro
                     <Select.Item key={item.value} item={item}>
                     <Select.ItemText>{item.label}</Select.ItemText>
                     <Select.ItemIndicator>
-                        <DownIcon />
+                        <Icons.IconArrow />
                     </Select.ItemIndicator>
                     </Select.Item>
                 ))}
@@ -82,7 +82,7 @@ For advanced customizations and like `disabled` item properties.
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Framework" />
             <Select.Indicator>
-              <DownIcon />
+              <Icons.IconArrow />
             </Select.Indicator>
           </Select.Trigger>
           <Select.ClearTrigger>
@@ -130,7 +130,7 @@ To allow for the selection of multiple items, follow these steps:
             <Select.Trigger>
               <Select.ValueText placeholder="Select a Framework" />
               <Select.Indicator>
-                <ChevronDownIcon />
+                <ChevronIcons.IconArrow />
               </Select.Indicator>
             </Select.Trigger>
             <Select.ClearTrigger>Clear</Select.ClearTrigger>

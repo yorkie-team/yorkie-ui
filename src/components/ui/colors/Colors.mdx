@@ -7,6 +7,7 @@ import * as ColorsStories from './Colors.stories';
 
 - [Import](#import)
 - [Overview](#overview)
+- [Dark Light Theme](#dark-light-theme)
 
 ## Overview
 
@@ -27,20 +28,20 @@ export default function Home() {
     <Box color="gray.3" bg="orange.3">
       Hello Yorkie
     </Box>
-  )
+  );
 }
 ```
 
 <Canvas of={ColorsStories.Overview} sourceState="none" />
 
-### [Dark/Light Theme](#dark-light-theme)
+## Dark Light Theme
 
 Use dark mode theme we need to add attributes `data-theme`
 
 ```html
-<html data-theme="dark">
-</html>
+<html data-theme="dark"></html>
 ```
+
 and just use color with name have support light/dark theme.
 
 ```js

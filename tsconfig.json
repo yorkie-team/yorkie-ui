@@ -9,16 +9,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".storybook"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "styled-system",
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook", "generateIcons.js"],
+  "exclude": ["node_modules", "dist", "styled-system"]
 }

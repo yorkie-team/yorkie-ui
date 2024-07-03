@@ -4,7 +4,7 @@ import { css, cx } from '@/styled/css';
 import { splitCssProps } from '@/styled/jsx';
 import { pagination, type PaginationVariantProps } from '@/styled/recipes';
 import type { JsxStyleProps } from '@/styled/types/system-types';
-import { Button, IconChevronLeft, IconChevronRight } from '@/components/ui';
+import { Button, Icons } from '@/components/ui';
 
 export type Assign<T, U> = {
   [K in keyof T]: K extends keyof U ? U[K] : T[K];
@@ -23,7 +23,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) 
         <>
           <ArkPagination.PrevTrigger className={styles.prevTrigger} asChild>
             <Button variant="ghost" aria-label="Next Page">
-              <IconChevronLeft />
+              <Icons.IconChevLeft />
             </Button>
           </ArkPagination.PrevTrigger>
           {pages.map((page, index) =>
@@ -39,7 +39,7 @@ export const Pagination = forwardRef<HTMLElement, PaginationProps>((props, ref) 
           )}
           <ArkPagination.NextTrigger className={styles.nextTrigger} asChild>
             <Button variant="ghost" aria-label="Next Page">
-              <IconChevronRight />
+              <Icons.IconChevRight />
             </Button>
           </ArkPagination.NextTrigger>
         </>

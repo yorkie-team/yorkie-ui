@@ -18,6 +18,8 @@ import {
   accentColor,
   functionColor,
   borderColor,
+  statusColor,
+  gradientColor,
 } from '@/components/ui/colors/constant';
 
 const meta = {
@@ -102,6 +104,16 @@ const colors: ColorItem[] = [
     name: 'Border Color',
     path: 'bordercolor',
     color: borderColor,
+  },
+  {
+    name: 'Status Color',
+    path: 'statuscolor',
+    color: statusColor,
+  },
+  {
+    name: 'Gradient Color',
+    path: 'gradientcolor',
+    color: gradientColor,
   },
 ];
 export const Overview = {
