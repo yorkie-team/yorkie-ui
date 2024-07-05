@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "copy-to-clipboard": "^3.3.3",
     "react": "^18",
     "react-dom": "^18"
@@ -107,9 +108,8 @@
     "react-icons": "^5.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
-    "rollup": "^4.0.0",
+    "rollup": "^4.18.0",
     "rollup-plugin-preserve-directives": "^0.4.0",
-    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-tsconfig-paths": "^1.5.2",
     "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "^8.0.0",
