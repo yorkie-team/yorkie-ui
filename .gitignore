@@ -37,6 +37,5 @@ next-env.d.ts
 
 /dist
 /styled-system
-
 /storybook-static
 /.rollup.cache
