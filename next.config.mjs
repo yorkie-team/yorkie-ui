@@ -2,7 +2,6 @@ import remarkGfm from 'remark-gfm';
 import remarkFrontmatter from 'remark-frontmatter';
 import createMDX from '@next/mdx';
 import { merge } from 'webpack-merge';
-import path from 'path';
 
 const withMdx = createMDX({
   experimental: {
