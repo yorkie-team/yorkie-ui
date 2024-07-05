@@ -19,6 +19,13 @@
     "jsx": "react-jsx",
     "outDir": "./dist/",
     "noImplicitAny": true,
+    "noImplicitReturns": true, // Requires all function paths to return a value
+    "noImplicitThis": true, // Disallows 'this' expressions with an implicit any type
+    "strictNullChecks": true, // Null checks are strict
+    "strictFunctionTypes": true, // Function types have strict checking
+    "strictPropertyInitialization": true, // Requires all class properties to be initialized
+    "strictBindCallApply": true, // Ensures correct 'bind', 'call', and 'apply' methods usage
+    "noUncheckedIndexedAccess": true, // Prevents property access errors on 'null' or 'undefined' values
     "plugins": [
       {
         "name": "next"
@@ -33,7 +40,7 @@
       "@/styles/*": ["./src/styles/*"]
     }
   },
-  "typeRoots": ["./node_modules/@types", "./src/lib/declarations.d.ts"],
+  "typeRoots": ["./node_modules/@types"],
   "compileOnSave": false,
   "exclude": ["node_modules", "dist"],
   "include": ["src"]

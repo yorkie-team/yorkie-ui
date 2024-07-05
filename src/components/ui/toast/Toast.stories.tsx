@@ -1,6 +1,5 @@
 import React from 'react';
-import { Toast } from '@/components/ui';
-import { CloseIcon } from '@/components/ui/icons';
+import { Toast, Icons } from '@/components/ui';
 import { createToaster } from '@ark-ui/react/toast';
 import { Button } from '../button/Button';
 
@@ -66,7 +65,7 @@ export const Overview = () => {
           <Toast.Description>{toast.description}</Toast.Description>
           <Toast.CloseTrigger asChild>
             <span>
-              <CloseIcon />
+              <Icons.IconClose />
             </span>
           </Toast.CloseTrigger>
         </Toast.Root>
