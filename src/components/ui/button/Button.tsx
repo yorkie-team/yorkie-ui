@@ -1,9 +1,8 @@
 import { ark } from '@ark-ui/react';
 import { ButtonVariantProps, button } from '@/styled/recipes';
-import { Icon, Link } from '@/components/ui';
-import type { LinkProps } from '@/components/ui';
-import { forwardRef } from 'react';
-import { styled, type HTMLStyledProps } from '@/styled/jsx';
+import { Icon, Link, LinkProps } from '@/components/ui';
+
+import { styled, HTMLStyledProps } from '@/styled/jsx';
 
 type ButtonIconProps = {
   icon?: any;
@@ -29,7 +28,7 @@ export type ButtonProps = HTMLStyledProps<'button'> &
 
 const StyledButton = styled(ark.button, button);
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   const { children, icon, position, size, as = 'button', href, wLink, hLink, ...rest } = props;
 
   if (as === 'link' && href) {
@@ -49,6 +48,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonP
       {position === 'end' && icon && <Icon size={size} icon={icon} />}
     </StyledButton>
   );
-});
+};
 
 Button.displayName = 'Button';

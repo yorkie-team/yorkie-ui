@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
     "esModuleInterop": true,
     "inlineSourceMap": false,
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -17,7 +16,6 @@
     "traceResolution": false,
     "types": ["node", "jest"],
     "jsx": "react-jsx",
-    "outDir": "./dist/",
     "noImplicitAny": true,
     "noImplicitReturns": true, // Requires all function paths to return a value
     "noImplicitThis": true, // Disallows 'this' expressions with an implicit any type
