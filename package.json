@@ -35,17 +35,20 @@
     "access": "public"
   },
   "scripts": {
-    "build": "pnpm run clean && npm run style && pnpm run build:panda && npx rollup -c",
+    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && npx rollup -c",
+    "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
+    "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
+    "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/esm && copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/cjs",
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
     "start": "next start",
     "lint": "next lint --fix && stylelint --fix \"src/**/*.{css,scss}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "style": "panda codegen",
-    "icon": "node generateIcons.js"
+    "style": "panda codegen"
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
