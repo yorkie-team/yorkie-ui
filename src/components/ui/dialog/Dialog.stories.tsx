@@ -71,19 +71,19 @@ const meta = {
     },
     preventScroll: {
       control: { type: 'boolean' },
-      description: "Whether to prevent scrolling behind the dialog when it's opened.",
+      description: 'Whether to prevent scrolling behind the dialog when it\'s opened.',
     },
     restoreFocus: {
       control: { type: 'boolean' },
       description: 'Whether to restore focus to the element that had focus before the dialog was opened.',
     },
     role: {
-      description: "\nThe dialog's role. `dialog` | `alertdialog`",
+      description: '\nThe dialog\'s role. `dialog` | `alertdialog`',
       default: 'dialog',
     },
     trapFocus: {
       control: { type: 'boolean' },
-      description: "Whether to trap focus inside the dialog when it's opened.",
+      description: 'Whether to trap focus inside the dialog when it\'s opened.',
     },
     unmountOnExit: {
       control: { type: 'boolean' },
