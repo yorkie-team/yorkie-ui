@@ -39,7 +39,7 @@
     "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
     "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
-    "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/esm && copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/cjs",
+    "copy:styled-system": "copyfiles ./styled-system/**/*.js ./styled-system/*.js dist/esm && copyfiles ./styled-system/**/*.js ./styled-system/*.js dist/cjs",
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
     "start": "next start",
