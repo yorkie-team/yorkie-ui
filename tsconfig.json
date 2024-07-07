@@ -7,7 +7,7 @@
     "noEmit": true,
     "module": "esnext",
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook", "generateIcons.js"],
   "exclude": ["node_modules", "dist", "styled-system"]

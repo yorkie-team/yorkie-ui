@@ -35,8 +35,7 @@
     "access": "public"
   },
   "scripts": {
-    "test-alias": "tsc-alias --verbose",
-    "build": "pnpm run clean && npm run style && pnpm run build:panda && npx rollup -c && pnpm run test-alias",
+    "build": "pnpm run clean && npm run style && pnpm run build:panda && npx rollup -c",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
