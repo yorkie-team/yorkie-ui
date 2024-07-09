@@ -1,14 +1,47 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "target": "ESNext",
+    "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "incremental": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "pretty": true,
+    "traceResolution": false,
+    "types": ["node", "jest"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/styled/*": ["./styled-system/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/stories/*": ["./src/stories/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/styles/*": ["./src/styles/*"]
+    },
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "noEmit": true,
-    "module": "esnext",
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    //
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook", "generateIcons.js"],
-  "exclude": ["node_modules", "dist", "styled-system"]
+  "compileOnSave": false,
+  "exclude": ["node_modules", "dist", "styled-system"],
+  "include": ["src", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook", "generateIcons.js"]
 }

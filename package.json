@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.5.19",
+  "version": "0.5.23",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -21,8 +21,10 @@
   "files": [
     "dist"
   ],
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
@@ -35,11 +37,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "pnpm run clean && pnpm panda codegen && pnpm run copy:styled-system && pnpm run build:panda && npx rollup -c",
-    "build:esm": "tsc -b tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
-    "build:cjs": "tsc -b tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
+    "build": "pnpm run clean && pnpm panda codegen && pnpm run build:panda && rollup -c rollup.config.mjs ",
     "build:panda": "mkdir -p dist/styles && panda cssgen --outfile dist/styles/globals.css",
-    "copy:styled-system": "copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/esm && copyfiles ./styled-system/**/*.{d.ts,js} ./styled-system/*.{d.ts,js} dist/cjs",
     "dev": "next dev",
     "clean": "rm -rf dist tsconfig.tsbuildinfo actions chains connectors query",
     "start": "next start",
@@ -57,7 +56,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "rollup-plugin-peer-deps-external": "^2.2.4",
     "@babel/core": "^7.24.7",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
@@ -113,6 +111,8 @@
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-preserve-directives": "^0.4.0",
     "rollup-plugin-tsconfig-paths": "^1.5.2",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -120,7 +120,7 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "ts-loader": "^9.5.1",
-    "tsc-alias": "^1.8.8",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.4.2",
     "typescript-eslint": "^7.2.0",
     "url-loader": "^4.1.1",
