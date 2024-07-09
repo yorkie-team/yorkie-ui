@@ -8,7 +8,7 @@ Yorkie UI is a component library that helps build UIs faster. The goal is to mak
 
 ## Install
 
-UI components are written in React. It requires Storybook version 8.0.0 and up.
+UI components are written in React. It requires Storybook version 8.0.0, and up. types/react: ^18.2.68, react: ^18.
 
 Add Yorkie UI to your project.
 
