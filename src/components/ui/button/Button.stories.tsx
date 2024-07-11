@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, Icons, Flex } from '@/components/ui';
+import { Button, Icons, Flex, Text } from '@/components/ui';
 const meta = {
   title: 'FORM / Button',
   component: Button,
@@ -147,11 +147,60 @@ export const Icon: Story = {
 export const Link: Story = {
   render: (args) => {
     return (
-      <Flex gap="6" align="center">
-        <Button {...args} variant="ghost" decoration="ghost" as="link" href="https://yorkie.dev">
+      <div>
+        <Text fontSize="sm" fontWeight="500">
+          No Decoration
+        </Text>
+        <Button {...args} variant="link" decoration="ghost" as="link" href="https://yorkie.dev">
           Button Link
         </Button>
-      </Flex>
+        <Text fontSize="sm" fontWeight="500" marginTop="10">
+          Decoration
+        </Text>
+        <Button {...args} variant="link" decoration="link" as="link" href="https://yorkie.dev">
+          Button Link
+        </Button>
+        <Text fontSize="sm" fontWeight="500" marginTop="10">
+          Variant
+        </Text>
+        <Flex gap="6" align="center">
+          <Button {...args} variant="solid" decoration="ghost" as="link" href="https://yorkie.dev">
+            Solid
+          </Button>
+          <Button {...args} variant="ghost" decoration="ghost" as="link" href="https://yorkie.dev">
+            Outline
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev">
+            Ghost
+          </Button>
+          <Button {...args} variant="link" decoration="ghost" as="link" href="https://yorkie.dev">
+            Link
+          </Button>
+        </Flex>
+        <Text fontSize="sm" fontWeight="500" marginTop="10">
+          Size{' '}
+        </Text>
+        <Flex gap="6" align="center">
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="xs">
+            XS
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="sm">
+            SM
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="md">
+            MD
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="lg">
+            LG
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="xl">
+            XL
+          </Button>
+          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="2xl">
+            2XL
+          </Button>
+        </Flex>
+      </div>
     );
   },
 };
