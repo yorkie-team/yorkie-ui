@@ -36,6 +36,7 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
+        <Icon icon={<Icons.IconBook />} stroke="neutral.2" />
         <Icon {...args} size="xs" stroke="black.a6" icon={<Icons.IconDate />} />
         <Icon {...args} size="sm" stroke="black.a7" icon={<Icons.IconDate />} />
         <Icon {...args} size="md" stroke="black.a8" icon={<Icons.IconDate />} />
