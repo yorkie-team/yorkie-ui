@@ -227,7 +227,5 @@ export const linkRecipe = defineRecipe({
   },
   defaultVariants: {
     decoration: 'ghost',
-    variant: 'outline',
-    size: 'md',
   },
 });
