@@ -29,11 +29,23 @@ export type ButtonProps = HTMLStyledProps<'button'> &
 const StyledButton = styled(ark.button, button);
 
 export const Button = (props: ButtonProps) => {
-  const { children, icon, position, size, as = 'button', href, wLink, hLink, ...rest } = props;
+  const {
+    children,
+    icon,
+    position,
+    size = 'md',
+    as = 'button',
+    href,
+    wLink,
+    hLink,
+    variant,
+    decoration,
+    ...rest
+  } = props;
 
   if (as === 'link' && href) {
     return (
-      <Link href={href} width={wLink} height={hLink} decoration="ghost" {...rest}>
+      <Link {...rest} href={href} width={wLink} height={hLink} decoration={decoration} size={size} variant={variant}>
         {position === 'start' && icon && <Icon size={size} icon={icon} />}
         {children}
         {position === 'end' && icon && <Icon size={size} icon={icon} />}
@@ -42,7 +54,7 @@ export const Button = (props: ButtonProps) => {
   }
 
   return (
-    <StyledButton size={size} {...rest}>
+    <StyledButton {...rest} size={size}>
       {position === 'start' && icon && <Icon size={size} icon={icon} />}
       {children}
       {position === 'end' && icon && <Icon size={size} icon={icon} />}
