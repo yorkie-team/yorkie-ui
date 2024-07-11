@@ -26,9 +26,9 @@ export const linkRecipe = defineRecipe({
         background: 'colorPalette.default',
         color: 'colorPalette.fg',
         colorPalette: 'accent',
-        textDecorationColor: 'transparent',
         _hover: {
           background: 'colorPalette.emphasized',
+          textDecorationColor: 'transparent',
         },
         _focusVisible: {
           outline: '2px solid',
@@ -53,6 +53,7 @@ export const linkRecipe = defineRecipe({
         textDecorationColor: 'transparent',
         _hover: {
           background: 'colorPalette.a2',
+          textDecorationColor: 'transparent',
         },
         _disabled: {
           borderColor: 'border.disabled',
@@ -85,6 +86,7 @@ export const linkRecipe = defineRecipe({
         textDecorationColor: 'transparent',
         _hover: {
           background: 'colorPalette.a3',
+          textDecorationColor: 'transparent',
         },
         _selected: {
           background: 'colorPalette.a3',
