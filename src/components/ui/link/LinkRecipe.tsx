@@ -4,7 +4,7 @@ export const linkRecipe = defineRecipe({
   className: 'link',
   base: {
     alignItems: 'center',
-    color: 'neutral.11',
+    color: 'neutral.12',
     colorPalette: 'accent',
     cursor: 'pointer',
     display: 'inline-flex',
@@ -17,7 +17,7 @@ export const linkRecipe = defineRecipe({
       height: '1em',
     },
     _hover: {
-      textDecorationColor: 'orange.default',
+      textDecorationColor: 'neutral.12',
     },
   },
   variants: {
@@ -214,20 +214,18 @@ export const linkRecipe = defineRecipe({
       ghost: {
         textDecorationColor: 'transparent',
         _hover: {
-          textDecorationColor: 'orange.default',
+          textDecorationColor: 'neutral.12',
         },
       },
       link: {
         textDecorationColor: 'neutral.12',
         _hover: {
-          textDecorationColor: 'orange.default',
+          textDecorationColor: 'neutral.12',
         },
       },
     },
   },
   defaultVariants: {
     decoration: 'ghost',
-    variant: 'outline',
-    size: 'md',
   },
 });
