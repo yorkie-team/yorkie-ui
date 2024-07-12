@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Menu } from '@ark-ui/react';
 import type { ComponentProps } from 'react';
@@ -17,10 +17,13 @@ export const ContextTrigger = withContext(styled(Menu.ContextTrigger), 'contextT
 export const Item = withContext(styled(Menu.Item), 'item');
 export const ItemGroup = withContext(styled(Menu.ItemGroup), 'itemGroup');
 export const ItemGroupLabel = withContext(styled(Menu.ItemGroupLabel), 'itemGroupLabel');
-export const OptionItem = withContext(styled(Menu.OptionItem), 'optionItem');
 export const Separator = withContext(styled(Menu.Separator), 'separator');
 export const Trigger = withContext(styled(Menu.Trigger), 'trigger');
 export const TriggerItem = withContext(styled(Menu.TriggerItem), 'triggerItem');
+export const RadioItemGroup = withContext(Menu.RadioItemGroup, 'itemGroup');
+export const RadioItem = withContext(Menu.RadioItem, 'item');
+export const ItemIndicator = withContext(Menu.ItemIndicator, 'itemIndicator');
+export const ItemText = withContext(Menu.ItemText, 'itemText');
 
 export interface RootProps extends ComponentProps<typeof Root> {}
 export interface ContentProps extends ComponentProps<typeof Content> {}
@@ -30,8 +33,11 @@ export interface ArrowTip extends ComponentProps<typeof ArrowTip> {}
 export interface ContextTrigger extends ComponentProps<typeof ContextTrigger> {}
 export interface ItemGroupLabel extends ComponentProps<typeof ItemGroupLabel> {}
 export interface ItemGroup extends ComponentProps<typeof ItemGroup> {}
-export interface OptionItem extends ComponentProps<typeof OptionItem> {}
 export interface Positioner extends ComponentProps<typeof Positioner> {}
 export interface Separator extends ComponentProps<typeof Separator> {}
 export interface Trigger extends ComponentProps<typeof Trigger> {}
 export interface TriggerItem extends ComponentProps<typeof TriggerItem> {}
+export interface RadioItemGroup extends ComponentProps<typeof RadioItemGroup> {}
+export interface RadioItem extends ComponentProps<typeof RadioItem> {}
+export interface ItemIndicator extends ComponentProps<typeof ItemIndicator> {}
+export interface ItemText extends ComponentProps<typeof ItemText> {}

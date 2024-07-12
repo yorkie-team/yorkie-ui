@@ -1,4 +1,4 @@
-import { avatarAnatomy } from '@ark-ui/anatomy';
+import { avatarAnatomy } from '@ark-ui/react';
 import { defineSlotRecipe } from '@pandacss/dev';
 
 /**

@@ -1,4 +1,4 @@
-import { toastAnatomy } from '@ark-ui/anatomy';
+import { toastAnatomy } from '@ark-ui/react';
 import { defineSlotRecipe } from '@pandacss/dev';
 
 export const toastSlotRecipe = defineSlotRecipe({
@@ -18,9 +18,6 @@ export const toastSlotRecipe = defineSlotRecipe({
       _closed: {
         animation: 'slideOutFromBottom 0.2s ease-out',
       },
-    },
-    group: {
-      p: '4',
     },
     title: {
       color: 'fg.default',

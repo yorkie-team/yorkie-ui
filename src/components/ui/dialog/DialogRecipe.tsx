@@ -1,5 +1,5 @@
-import { dialogAnatomy } from '@ark-ui/anatomy'
-import { defineSlotRecipe } from '@pandacss/dev'
+import { dialogAnatomy } from '@ark-ui/react';
+import { defineSlotRecipe } from '@pandacss/dev';
 
 export const dialogSlotRecipe = defineSlotRecipe({
   className: 'dialog',
@@ -58,4 +58,4 @@ export const dialogSlotRecipe = defineSlotRecipe({
       textStyle: 'sm',
     },
   },
-})
+});
