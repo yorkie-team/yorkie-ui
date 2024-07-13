@@ -3,6 +3,7 @@ import { Icon, Icons, Flex, Grid, Text, Toast } from '@/components/ui';
 import { listIcons } from '@/components/ui/icons';
 import copy from 'copy-to-clipboard';
 import { createToaster } from '@ark-ui/react';
+import { useEffect, useRef, useState } from 'react';
 
 const meta = {
   title: 'FORM / Icon',
@@ -36,7 +37,7 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Icon icon={<Icons.IconBook />} stroke="neutral.2" />
+        <Icon icon={<Icons.IconBook />} />
         <Icon {...args} size="xs" stroke="black.a6" icon={<Icons.IconDate />} />
         <Icon {...args} size="sm" stroke="black.a7" icon={<Icons.IconDate />} />
         <Icon {...args} size="md" stroke="black.a8" icon={<Icons.IconDate />} />
@@ -48,55 +49,101 @@ export const Sizes: Story = {
   },
 };
 
-export const Gallery: Story = {
-  render: () => {
-    const handleClick = (iconName: string) => {
-      // Copy icon name to clipboard
-      copy(`<Icon icon={<Icons.${iconName}/>} />`);
-      toast.create({
-        title: 'Success',
-        description: 'You copied icon successfully',
-        type: 'success',
-        duration: 20000,
-        removeDelay: 250,
-      });
-    };
-    const [Toaster, toast] = createToaster({
-      placement: 'top-start',
-      render(toast) {
-        return (
-          <Toast.Root>
-            <Toast.Title>{toast.title}</Toast.Title>
-            <Toast.Description>{toast.description}</Toast.Description>
-            <Toast.CloseTrigger cursor="pointer">
-              <Icon icon={<Icons.IconClose />} size="sm" />
-            </Toast.CloseTrigger>
-          </Toast.Root>
-        );
-      },
+type handleClickCopy = {
+  iconName: string;
+  strokeColor: string;
+};
+interface IconComponentWrapperProps {
+  iconName: string;
+  IconComponent: any;
+  handleClick: ({ iconName, strokeColor }: handleClickCopy) => void;
+}
+
+const IconList = () => {
+  const handleClick = ({ iconName, strokeColor }: handleClickCopy) => {
+    const strokeProp = strokeColor === 'initial' ? '' : ` stroke={${strokeColor}}`;
+    // Copy icon name to clipboard
+    copy(`<Icon icon={<Icons.${iconName}/>} ${strokeProp}  />`);
+    toast.create({
+      title: 'Success',
+      description: 'You copied icon successfully',
+      type: 'success',
+      duration: 20000,
+      removeDelay: 250,
     });
-    return (
-      <Grid gridTemplateColumns="6">
-        {Object.keys(listIcons).map((iconName) => {
-          const IconComponent = listIcons[iconName];
-          return (
-            <Flex
-              key={iconName}
-              marginBottom="10"
-              justifyContent="center"
-              flexDirection="column"
-              onClick={() => handleClick(iconName)}
-              cursor="pointer"
-            >
-              <Icon margin="auto" icon={<IconComponent />} size="lg" />
-              <Text margin="auto" size="xs" color="neutral.10" marginTop="2">
-                {iconName}
-              </Text>
-            </Flex>
-          );
-        })}
-        <Toaster />
-      </Grid>
-    );
+  };
+
+  const [Toaster, toast] = createToaster({
+    placement: 'top-start',
+    render(toast) {
+      return (
+        <Toast.Root>
+          <Toast.Title>{toast.title}</Toast.Title>
+          <Toast.Description>{toast.description}</Toast.Description>
+          <Toast.CloseTrigger cursor="pointer">
+            <Icon icon={<Icons.IconClose />} size="sm" />
+          </Toast.CloseTrigger>
+        </Toast.Root>
+      );
+    },
+  });
+
+  return (
+    <Grid gridTemplateColumns="6">
+      {Object.keys(listIcons).map((iconName) => (
+        <IconComponentWrapper
+          key={iconName}
+          iconName={iconName}
+          IconComponent={listIcons[iconName]}
+          handleClick={handleClick}
+        />
+      ))}
+      <Toaster />
+    </Grid>
+  );
+};
+const IconComponentWrapper: React.FC<IconComponentWrapperProps> = ({ iconName, IconComponent, handleClick }) => {
+  const [strokeColor, setStrokeColor] = useState('initial');
+  const svgRef = useRef<SVGSVGElement | null>(null);
+
+  useEffect(() => {
+    if (svgRef.current) {
+      const paths = svgRef.current.querySelectorAll('path');
+      let hasFill = false;
+
+      paths.forEach((path) => {
+        const fillValue = path.getAttribute('fill');
+        if (fillValue && fillValue !== 'none') {
+          hasFill = true;
+        }
+      });
+
+      if (hasFill) {
+        setStrokeColor('initial'); // Default value if there is a fill
+      } else {
+        setStrokeColor('neutral.12'); // Change strokeColor if there is no fill or fill is 'none'
+      }
+    }
+  }, [IconComponent]);
+
+  return (
+    <Flex
+      marginBottom="10"
+      justifyContent="center"
+      flexDirection="column"
+      onClick={() => handleClick({ iconName, strokeColor })}
+      cursor="pointer"
+    >
+      <Icon margin="auto" icon={<Icon icon={<IconComponent />} ref={svgRef} />} size="lg" stroke={strokeColor} />
+      <Text margin="auto" size="xs" color="neutral.10" marginTop="2">
+        {iconName}
+      </Text>
+    </Flex>
+  );
+};
+
+export const Gallery: Story = {
+  render: (args) => {
+    return <IconList {...args} />;
   },
 };

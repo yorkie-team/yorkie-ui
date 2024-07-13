@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.5.29",
+  "version": "0.5.28",
   "description": "Yorkie UI",
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^2.2.3",
+    "@storybook/addon-console": "^3.0.0",
     "react": "^18",
     "react-dom": "^18"
   },
