@@ -5,19 +5,12 @@
     "allowJs": true,
     "esModuleInterop": true,
     "inlineSourceMap": false,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "listEmittedFiles": false,
     "listFiles": false,
     "pretty": true,
     "traceResolution": false,
-    "types": [
-      "node",
-      "jest"
-    ],
+    "types": ["node", "jest"],
     "plugins": [
       {
         "name": "next"
@@ -25,21 +18,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/styled/*": [
-        "./styled-system/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/stories/*": [
-        "./src/stories/*"
-      ],
-      "@/lib/*": [
-        "./src/lib/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ]
+      "@/styled/*": ["./styled-system/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/stories/*": ["./src/stories/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/styles/*": ["./src/styles/*"]
     },
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -48,7 +31,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     /* Linting */
     "strict": true,
@@ -56,23 +39,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     //
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "incremental": true
+    "allowSyntheticDefaultImports": true
   },
   "compileOnSave": false,
-  "exclude": [
-    "node_modules",
-    "dist",
-    "styled-system"
-  ],
-  "include": [
-    "src",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".storybook",
-    "generateIcons.js"
-  ]
+  "exclude": ["node_modules", "dist", "styled-system"],
+  "include": ["src", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook", "generateIcons.js"]
 }

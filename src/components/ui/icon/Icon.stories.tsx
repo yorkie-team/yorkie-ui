@@ -119,9 +119,9 @@ const IconComponentWrapper: React.FC<IconComponentWrapperProps> = ({ iconName, I
       });
 
       if (hasFill) {
-        setStrokeColor('initial'); // Default value if there is a fill
+        setStrokeColor('initial');
       } else {
-        setStrokeColor('neutral.12'); // Change strokeColor if there is no fill or fill is 'none'
+        setStrokeColor('neutral.12');
       }
     }
   }, [IconComponent]);
