@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Accordion } from '@ark-ui/react/accordion';
 import type { ComponentProps } from 'react';

@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Accordion,
   Text,
   Container,
   Flex,
@@ -29,6 +28,18 @@ export default function Home() {
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
       <Icon icon={<Icons.IconCopy />} stroke="black.a9" size="2xl" />
+      <Button
+        width={{ base: '100w', lg: 'fit' }}
+        wLink={{ base: '100w', lg: 'fit' }}
+        as="link"
+        href="/docs/getting-started"
+        icon={<Icon icon={<Icons.IconBook />} stroke="neutral.2" />}
+        position="start"
+        variant="solid"
+        size="xl"
+      >
+        Getting Started
+      </Button>
       <Button as="link" href="https://yorkie.dev" variant="ghost">
         Website Link
       </Button>
@@ -49,21 +60,6 @@ export default function Home() {
         collaborative
       </Text>
       <Box bg="orange.2">Open menu</Box>
-      <Accordion.Root defaultValue={['Accordion-1']} collapsible>
-        {['Accordion-1', 'Accordion-2', 'Accordion-3'].map((item, id) => (
-          <Accordion.Item key={id} value={item}>
-            <Accordion.ItemTrigger>
-              {item}
-              <Accordion.ItemIndicator>
-                <Icons.IconChevDown />
-              </Accordion.ItemIndicator>
-            </Accordion.ItemTrigger>
-            <Accordion.ItemContent>
-              <div>{item} is a JavaScript library for building user interfaces.</div>
-            </Accordion.ItemContent>
-          </Accordion.Item>
-        ))}
-      </Accordion.Root>
       <Checkbox size="md" mt="4">
         Label
       </Checkbox>

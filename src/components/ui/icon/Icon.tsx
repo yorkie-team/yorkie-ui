@@ -11,7 +11,7 @@ export interface IconProps extends IconVariantProps, HTMLStyledProps<'svg'> {
 export const Icon = forwardRef<SVGSVGElement, IconProps>((props, ref) => {
   const { icon, ...rest } = props;
   return (
-    <StyledIcon ref={ref} {...rest}>
+    <StyledIcon {...rest} ref={ref}>
       {icon}
     </StyledIcon>
   );
