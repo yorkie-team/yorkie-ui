@@ -85,16 +85,35 @@ export const FontWeight = () => {
 export const ResponsiveFont = () => {
   return (
     <>
-      <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}>
+      <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}>
         Responsive a Link
       </Link>
       <br />
       <Link
         href="https://yorkie.dev"
-        fontSize={{ base: 'sm', md: 'md', lg: '3xl' }}
+        fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
         fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}
       >
         Responsive a Link
+      </Link>
+    </>
+  );
+};
+
+export const Decoration = () => {
+  return (
+    <>
+      <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}>
+        Decoration Ghost
+      </Link>
+      <br />
+      <Link
+        href="https://yorkie.dev"
+        decoration="link"
+        fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}
+        fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}
+      >
+        Decoration
       </Link>
     </>
   );

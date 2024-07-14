@@ -1,24 +1,29 @@
 import { ark } from '@ark-ui/react/factory';
 import { HTMLStyledProps, styled } from '@/styled/jsx';
-import { link, LinkVariantProps } from '@/styled/recipes';
+import { link, LinkVariantProps, button } from '@/styled/recipes';
+import { forwardRef } from 'react';
 
-export type typeDecoration = {
-  decoration?: 'ghost' | 'link';
-};
-export type LinkProps = {
-  decoration?: typeDecoration;
-  variant?: 'solid' | 'outline' | 'ghost' | 'link';
-} & LinkVariantProps &
+// Combining anchor and button props
+export type LinkProps = { as?: 'button' | 'link' } & LinkVariantProps &
   HTMLStyledProps<'a'> &
   HTMLStyledProps<'button'>;
 
-export const Link = (props: LinkProps) => {
-  const { decoration, children, variant, size } = props;
-  const Dynamic = styled(ark.a, link);
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
+  const { children, size, variant = 'link', decoration, as, ...rest } = props;
+  const Dynamic = as === 'link' ? styled(ark.a) : styled(ark.a, link);
+  if (as === 'link') {
+    return (
+      <Dynamic {...rest} className={button({ size, decoration, variant })} ref={ref}>
+        {children}
+      </Dynamic>
+    );
+  } else {
+    return (
+      <Dynamic {...rest} ref={ref} className={link({ size, decoration, variant })}>
+        {children}
+      </Dynamic>
+    );
+  }
+});
 
-  return (
-    <Dynamic {...props} className={link({ decoration, variant, size })}>
-      {children}
-    </Dynamic>
-  );
-};
+Link.displayName = 'Link';
