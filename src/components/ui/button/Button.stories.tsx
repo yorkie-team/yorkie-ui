@@ -164,39 +164,39 @@ export const Link: Story = {
           Variant
         </Text>
         <Flex gap="6" align="center">
-          <Button {...args} variant="solid" decoration="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="solid" as="link" href="https://yorkie.dev">
             Solid
           </Button>
-          <Button {...args} variant="ghost" decoration="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="ghost" as="link" href="https://yorkie.dev">
             Outline
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
             Ghost
           </Button>
-          <Button {...args} variant="link" decoration="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="link" decoration="link" as="link" href="https://yorkie.dev">
             Link
           </Button>
         </Flex>
         <Text fontSize="sm" fontWeight="500" marginTop="10">
-          Size{' '}
+          Size
         </Text>
         <Flex gap="6" align="center">
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="xs">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="xs">
             XS
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="sm">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="sm">
             SM
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="md">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="md">
             MD
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="lg">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="lg">
             LG
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="xl">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="xl">
             XL
           </Button>
-          <Button {...args} variant="outline" decoration="ghost" as="link" href="https://yorkie.dev" size="2xl">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="2xl">
             2XL
           </Button>
         </Flex>

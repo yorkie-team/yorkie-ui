@@ -37,6 +37,7 @@ export const buttonRecipe = defineRecipe({
         colorPalette: 'accent',
         _hover: {
           background: 'colorPalette.emphasized',
+          textDecorationColor: 'transparent',
         },
         _focusVisible: {
           outline: '2px solid',
@@ -58,8 +59,10 @@ export const buttonRecipe = defineRecipe({
         borderColor: 'colorPalette.a8',
         color: 'colorPalette.text',
         colorPalette: 'gray',
+        textDecorationColor: 'transparent',
         _hover: {
           background: 'colorPalette.a2',
+          textDecorationColor: 'transparent',
         },
         _disabled: {
           borderColor: 'border.disabled',
@@ -89,8 +92,10 @@ export const buttonRecipe = defineRecipe({
       ghost: {
         color: 'colorPalette.text',
         colorPalette: 'gray',
+        textDecorationColor: 'transparent',
         _hover: {
           background: 'colorPalette.a3',
+          textDecorationColor: 'transparent',
         },
         _selected: {
           background: 'colorPalette.a3',
@@ -111,6 +116,8 @@ export const buttonRecipe = defineRecipe({
       },
       link: {
         verticalAlign: 'baseline',
+        textUnderlineOffset: '0.125em',
+        textDecoration: 'underline 0.1em transparent',
         _disabled: {
           color: 'border.disabled',
           cursor: 'not-allowed',
@@ -211,6 +218,26 @@ export const buttonRecipe = defineRecipe({
         '& svg': {
           width: '6',
           height: '6',
+        },
+      },
+    },
+    decoration: {
+      ghost: {
+        textDecorationColor: 'transparent',
+        _hover: {
+          textDecorationColor: 'neutral.12',
+        },
+      },
+      link: {
+        textDecorationColor: 'neutral.12',
+        _hover: {
+          textDecorationColor: 'neutral.11',
+        },
+      },
+      none: {
+        textDecorationColor: 'transparent',
+        _hover: {
+          textDecorationColor: 'transparent',
         },
       },
     },
