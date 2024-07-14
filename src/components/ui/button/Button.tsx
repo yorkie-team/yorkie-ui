@@ -54,7 +54,7 @@ export const Button = (props: ButtonProps) => {
   }
 
   return (
-    <StyledButton {...rest} size={size}>
+    <StyledButton {...rest} variant={variant} size={size}>
       {position === 'start' && icon && <Icon size={size} icon={icon} />}
       {children}
       {position === 'end' && icon && <Icon size={size} icon={icon} />}
