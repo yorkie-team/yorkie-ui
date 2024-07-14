@@ -1,6 +1,6 @@
 import { ark } from '@ark-ui/react';
 import { ButtonVariantProps, button } from '@/styled/recipes';
-import { Icon, Link, LinkProps } from '@/components/ui';
+import { Icon, Link, LinkProps, typeDecoration } from '@/components/ui';
 
 import { styled, HTMLStyledProps } from '@/styled/jsx';
 import { forwardRef } from 'react';
@@ -13,6 +13,7 @@ type ButtonIconProps = {
 type ButtonLinkProps = {
   href?: string;
   as?: 'button' | 'link';
+  decoration?: typeDecoration;
 };
 
 type ButtonNormalProps = {
