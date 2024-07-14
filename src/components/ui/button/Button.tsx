@@ -1,6 +1,6 @@
 import { ark } from '@ark-ui/react';
 import { ButtonVariantProps, button } from '@/styled/recipes';
-import { Icon, Link, LinkProps } from '@/components/ui';
+import { Icon, Link, LinkProps, typeDecoration } from '@/components/ui';
 
 import { styled, HTMLStyledProps } from '@/styled/jsx';
 
@@ -12,6 +12,7 @@ type ButtonIconProps = {
 type ButtonLinkProps = {
   href?: string;
   as?: 'button' | 'link';
+  decoration?: typeDecoration;
 };
 
 type ButtonNormalProps = {
@@ -29,23 +30,11 @@ export type ButtonProps = HTMLStyledProps<'button'> &
 const StyledButton = styled(ark.button, button);
 
 export const Button = (props: ButtonProps) => {
-  const {
-    children,
-    icon,
-    position,
-    size = 'md',
-    as = 'button',
-    href,
-    wLink,
-    hLink,
-    variant,
-    decoration,
-    ...rest
-  } = props;
+  const { children, icon, position, size = 'md', as = 'button', href, wLink, hLink, decoration, ...rest } = props;
 
   if (as === 'link' && href) {
     return (
-      <Link {...rest} href={href} width={wLink} height={hLink} decoration={decoration} size={size} variant={variant}>
+      <Link {...rest} href={href} width={wLink} height={hLink} decoration={decoration} size={size}>
         {position === 'start' && icon && <Icon size={size} icon={icon} />}
         {children}
         {position === 'end' && icon && <Icon size={size} icon={icon} />}
@@ -54,7 +43,7 @@ export const Button = (props: ButtonProps) => {
   }
 
   return (
-    <StyledButton {...rest} variant={variant} size={size}>
+    <StyledButton {...rest} size={size}>
       {position === 'start' && icon && <Icon size={size} icon={icon} />}
       {children}
       {position === 'end' && icon && <Icon size={size} icon={icon} />}
