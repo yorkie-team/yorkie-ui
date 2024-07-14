@@ -173,7 +173,7 @@ export const Link: Story = {
           <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
             Ghost
           </Button>
-          <Button {...args} variant="link" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="link" decoration="link" as="link" href="https://yorkie.dev">
             Link
           </Button>
         </Flex>
