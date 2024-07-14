@@ -64,7 +64,7 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Button {...args} size="xs">
+        <Button {...args} size={{ base: 'sm', lg: 'lg' }}>
           XS
         </Button>
         <Button {...args} size="sm">

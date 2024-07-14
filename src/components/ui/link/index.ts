@@ -1,4 +1,4 @@
-import { Link, LinkProps } from '@/components/ui/link/Link';
+import { Link, LinkProps, typDecoration } from '@/components/ui/link/Link';
 
 export { Link };
-export type { LinkProps };
+export type { LinkProps, typDecoration };

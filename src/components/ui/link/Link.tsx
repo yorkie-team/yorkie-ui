@@ -2,12 +2,15 @@ import { ark } from '@ark-ui/react/factory';
 import { HTMLStyledProps, styled } from '@/styled/jsx';
 import { link, LinkVariantProps } from '@/styled/recipes';
 
-export type LinkProps = {
+export type typeDecoration = {
   decoration?: 'ghost' | 'link';
+};
+export type LinkProps = {
+  decoration?: typeDecoration;
   variant?: 'solid' | 'outline' | 'ghost' | 'link';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 } & LinkVariantProps &
-  HTMLStyledProps<'a'>;
+  HTMLStyledProps<'a'> &
+  HTMLStyledProps<'button'>;
 
 export const Link = (props: LinkProps) => {
   const { decoration, children, variant, size } = props;
