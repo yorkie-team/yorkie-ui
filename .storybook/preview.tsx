@@ -1,9 +1,12 @@
 import * as React from 'react';
 import type { Preview } from '@storybook/react';
 import '@/styles/globals.css';
+import { withConsole } from '@storybook/addon-console';
+import { addons } from '@storybook/addons';
 
 const preview: Preview = {
   parameters: {
+    console: withConsole(),
     actions: { argTypesRegex: '^on[A-Z].*' },
     options: {
       storySort: {

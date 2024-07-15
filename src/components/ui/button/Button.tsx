@@ -3,6 +3,7 @@ import { ButtonVariantProps, button } from '@/styled/recipes';
 import { Icon, Link, LinkProps } from '@/components/ui';
 
 import { styled, HTMLStyledProps } from '@/styled/jsx';
+import { forwardRef } from 'react';
 
 type ButtonIconProps = {
   icon?: any;
@@ -28,24 +29,12 @@ export type ButtonProps = HTMLStyledProps<'button'> &
 
 const StyledButton = styled(ark.button, button);
 
-export const Button = (props: ButtonProps) => {
-  const {
-    children,
-    icon,
-    position,
-    size = 'md',
-    as = 'button',
-    href,
-    wLink,
-    hLink,
-    variant,
-    decoration,
-    ...rest
-  } = props;
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+  const { children, icon, position, size = 'md', as = 'button', href, wLink, hLink, decoration, ...rest } = props;
 
   if (as === 'link' && href) {
     return (
-      <Link {...rest} href={href} width={wLink} height={hLink} decoration={decoration} size={size} variant={variant}>
+      <Link {...rest} href={href} as={as} width={wLink} height={hLink} decoration={decoration} size={size}>
         {position === 'start' && icon && <Icon size={size} icon={icon} />}
         {children}
         {position === 'end' && icon && <Icon size={size} icon={icon} />}
@@ -54,12 +43,12 @@ export const Button = (props: ButtonProps) => {
   }
 
   return (
-    <StyledButton {...rest} size={size}>
+    <StyledButton {...rest} size={size} ref={ref}>
       {position === 'start' && icon && <Icon size={size} icon={icon} />}
       {children}
       {position === 'end' && icon && <Icon size={size} icon={icon} />}
     </StyledButton>
   );
-};
+});
 
 Button.displayName = 'Button';

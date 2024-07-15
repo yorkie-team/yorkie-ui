@@ -100,3 +100,22 @@ You can adjust the Link according to screen.
     `,
   }}
 />
+
+### [Decoration](#decoration)
+
+You can use decoration or not use decoration.
+
+<Canvas
+  of={LinkStories.Decoration}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Link href="https://yorkie.dev" fontSize={{ base: 'sm', md: 'md', lg: 'lg' }}>Decoration Ghost</Link>
+        <Link href="https://yorkie.dev" decoration="link" fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} fontWeight={{ base: 'normal', md: 'medium', lg: 'semibold' }}>
+          Decoration
+        </Link>
+      </div>
+    `,
+  }}
+/>

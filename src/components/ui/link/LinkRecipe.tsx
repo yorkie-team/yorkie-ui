@@ -220,7 +220,7 @@ export const linkRecipe = defineRecipe({
       link: {
         textDecorationColor: 'neutral.12',
         _hover: {
-          textDecorationColor: 'neutral.12',
+          textDecorationColor: 'neutral.11',
         },
       },
     },

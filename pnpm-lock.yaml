@@ -11,6 +11,9 @@ importers:
       '@ark-ui/react':
         specifier: ^3.5.0
         version: 3.5.0(@internationalized/date@3.5.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@storybook/addon-console':
+        specifier: ^3.0.0
+        version: 3.0.0(@storybook/addon-actions@8.2.2(storybook@8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8))))(react@18.3.1)
       react:
         specifier: ^18
         version: 18.3.1
@@ -147,15 +150,9 @@ importers:
       next-themes:
         specifier: ^0.2.1
         version: 0.2.1(next@14.1.0(@babel/core@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      npm:
-        specifier: ^10.5.0
-        version: 10.8.2
       panda:
         specifier: ^0.6.5
         version: 0.6.5(debug@4.3.5)
-      pnpm:
-        specifier: ^8.15.5
-        version: 8.15.8
       postcss:
         specifier: ^8.4.38
         version: 8.4.39
@@ -1922,6 +1919,12 @@ packages:
     resolution: {integrity: sha512-m/xJe7uKL+kfJx7pQcHwAeIvJ3tdLIpDGrMAVDNDJHcAxfe44cFjIInaV/1HKf3y5Awap+DZFW66ekkxuI9zzA==}
     peerDependencies:
       storybook: ^8.2.2
+
+  '@storybook/addon-console@3.0.0':
+    resolution: {integrity: sha512-2pD2c9KNWuPIWlprqmWoZYrNQnG2qoDg7fAAXXNK6YDc5x/ZpK0cfOyfz/Gpdeje4QUmttZKAVjH0nOZDuxfvw==}
+    peerDependencies:
+      '@storybook/addon-actions': '*'
+      react: '*'
 
   '@storybook/addon-controls@8.2.2':
     resolution: {integrity: sha512-y241aOANGzT5XBADUIvALwG/xF5eC6UItzmWJaFvOzSBCq74GIA0+Hu9atyFdvFQbXOrdvPWC4jR+9iuBFRxAA==}
@@ -6632,80 +6635,6 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  npm@10.8.2:
-    resolution: {integrity: sha512-x/AIjFIKRllrhcb48dqUNAAZl0ig9+qMuN91RpZo3Cb2+zuibfh+KISl6+kVVyktDz230JKc208UkQwwMqyB+w==}
-    engines: {node: ^18.17.0 || >=20.5.0}
-    hasBin: true
-    bundledDependencies:
-      - '@isaacs/string-locale-compare'
-      - '@npmcli/arborist'
-      - '@npmcli/config'
-      - '@npmcli/fs'
-      - '@npmcli/map-workspaces'
-      - '@npmcli/package-json'
-      - '@npmcli/promise-spawn'
-      - '@npmcli/redact'
-      - '@npmcli/run-script'
-      - '@sigstore/tuf'
-      - abbrev
-      - archy
-      - cacache
-      - chalk
-      - ci-info
-      - cli-columns
-      - fastest-levenshtein
-      - fs-minipass
-      - glob
-      - graceful-fs
-      - hosted-git-info
-      - ini
-      - init-package-json
-      - is-cidr
-      - json-parse-even-better-errors
-      - libnpmaccess
-      - libnpmdiff
-      - libnpmexec
-      - libnpmfund
-      - libnpmhook
-      - libnpmorg
-      - libnpmpack
-      - libnpmpublish
-      - libnpmsearch
-      - libnpmteam
-      - libnpmversion
-      - make-fetch-happen
-      - minimatch
-      - minipass
-      - minipass-pipeline
-      - ms
-      - node-gyp
-      - nopt
-      - normalize-package-data
-      - npm-audit-report
-      - npm-install-checks
-      - npm-package-arg
-      - npm-pick-manifest
-      - npm-profile
-      - npm-registry-fetch
-      - npm-user-validate
-      - p-map
-      - pacote
-      - parse-conflict-json
-      - proc-log
-      - qrcode-terminal
-      - read
-      - semver
-      - spdx-expression-parse
-      - ssri
-      - supports-color
-      - tar
-      - text-table
-      - tiny-relative-date
-      - treeverse
-      - validate-npm-package-name
-      - which
-      - write-file-atomic
-
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
@@ -7036,11 +6965,6 @@ packages:
   pnp-webpack-plugin@1.7.0:
     resolution: {integrity: sha512-2Rb3vm+EXble/sMXNSu6eoBx8e79gKqhNq9F5ZWW6ERNCTE/Q0wQNne5541tE5vKjfM8hpNCYL+LGc1YTfI0dg==}
     engines: {node: '>=6'}
-
-  pnpm@8.15.8:
-    resolution: {integrity: sha512-0aAp4aRHrZC8ls1YsPrUhtKZPVMYVjlve6vy2D6xgju4PFo9D8GPZ1stEDIdSesWH+zjb+gTSqWCPs0hX+7Tkg==}
-    engines: {node: '>=16.14'}
-    hasBin: true
 
   polished@4.3.1:
     resolution: {integrity: sha512-OBatVyC/N7SCW/FaDHrSd+vn0o5cS855TOmYi4OkdWUMSJCET/xip//ch8xGUvtr3i44X9LVyWwQlRMTN3pwSA==}
@@ -10754,6 +10678,12 @@ snapshots:
       memoizerific: 1.11.3
       storybook: 8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8))
       ts-dedent: 2.2.0
+
+  '@storybook/addon-console@3.0.0(@storybook/addon-actions@8.2.2(storybook@8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8))))(react@18.3.1)':
+    dependencies:
+      '@storybook/addon-actions': 8.2.2(storybook@8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8)))
+      '@storybook/global': 5.0.0
+      react: 18.3.1
 
   '@storybook/addon-controls@8.2.2(storybook@8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8)))':
     dependencies:
@@ -17514,8 +17444,6 @@ snapshots:
     dependencies:
       path-key: 4.0.0
 
-  npm@10.8.2: {}
-
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
@@ -17926,8 +17854,6 @@ snapshots:
       ts-pnp: 1.2.0(typescript@5.5.3)
     transitivePeerDependencies:
       - typescript
-
-  pnpm@8.15.8: {}
 
   polished@4.3.1:
     dependencies:

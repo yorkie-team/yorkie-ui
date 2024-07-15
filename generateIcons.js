@@ -29,12 +29,18 @@ fs.readdir(iconsDir, (err, files) => {
               },
             },
             'removeDimensions', // After add removeDimensions once again.
-            // {
-            //   name: 'addAttributesToSVGElement',
-            //   params: {
-            //     attributes: [{ width: 'currentWidth', height: 'currentHeight' }],
-            //   },
-            // },
+            {
+              name: 'removeAttrs',
+              params: {
+                attrs: '(stroke)', // Remove stroke attribute
+              },
+            },
+            {
+              name: 'addAttributesToSVGElement',
+              params: {
+                attributes: [{ stroke: 'inherit' }],
+              },
+            },
           ],
         });
 
