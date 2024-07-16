@@ -13,7 +13,7 @@ import { accordionSlotRecipe } from '@/components/ui/accordion/AccordionRecipe';
 import { switchSlotRecipe } from '@/components/ui/switch/SwitchRecipe';
 import { datePickerSlotRecipe } from '@/components/ui/datepicker/DatepickerRecipe';
 import { inputRecipe } from '@/components/ui/input/InputRecipe';
-import { iconRecipe } from '@/components/ui/icon/IconRecipe';
+import { iconRecipe } from '@/components/ui/icons/IconRecipe';
 import { textRecipe } from '@/components/ui/text/TextRecipe';
 import { codeRecipe } from '@/components/ui/code/CodeRecipe';
 import { cardSlotRecipe } from '@/components/ui/card/CardRecipe';
