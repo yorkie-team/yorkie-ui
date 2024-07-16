@@ -1,19 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, CheckCircleIcon, Stars01Icon, Flex, Text } from '@/components/ui';
+import { Button, CheckCircleIcon, Flex, Text } from '@/components/ui';
 const meta = {
   title: 'FORM / Button',
   component: Button,
   argTypes: {
     size: {
       control: { type: 'radio' },
-      options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+      options: ['sm', 'md', 'lg'],
       description: `**Size of Button - default: \`md\`. **
-      \n \`xs:\` fontSize: 12px, height: 32px
       \n \`sm:\`: fontSize: 14px, height: 36px
       \n \`md:\` fontSize: 14px, height: 40px
-      \n \`lg:\` fontSize: 16px, height: 44px
-      \n \`xl:\` fontSize: 16px, height: 48px
-      \n \`2xl:\` fontSize: 18px, height: 64px `,
+      \n \`lg:\` fontSize: 16px, height: 44px`,
     },
     variant: {
       control: { type: 'radio' },
@@ -64,9 +61,6 @@ export const Sizes: Story = {
   render: (args) => {
     return (
       <Flex gap="6" align="center">
-        <Button {...args} size="xs">
-          XS
-        </Button>
         <Button {...args} size="sm">
           SM
         </Button>
@@ -75,12 +69,6 @@ export const Sizes: Story = {
         </Button>
         <Button {...args} size="lg">
           LG
-        </Button>
-        <Button {...args} size="xl">
-          XL
-        </Button>
-        <Button {...args} size="2xl">
-          2XL
         </Button>
       </Flex>
     );
@@ -136,13 +124,17 @@ export const Icon: Story = {
   render: () => {
     return (
       <Flex gap="6" align="center">
+        <Button size="sm" variant="outline">
+          <CheckCircleIcon />
+          Icon Check
+        </Button>
         <Button>
           <CheckCircleIcon />
           Icon Check
         </Button>
-        <Button variant="outline" size="lg">
-          <Stars01Icon />
-          Icon Stars
+        <Button size="lg">
+          <CheckCircleIcon />
+          Icon Check
         </Button>
       </Flex>
     );
@@ -172,10 +164,10 @@ export const Link: Story = {
           <Button {...args} variant="solid" as="link" href="https://yorkie.dev">
             Solid
           </Button>
-          <Button {...args} variant="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
             Outline
           </Button>
-          <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
+          <Button {...args} variant="ghost" as="link" href="https://yorkie.dev">
             Ghost
           </Button>
           <Button {...args} variant="link" decoration="link" as="link" href="https://yorkie.dev">
@@ -186,9 +178,6 @@ export const Link: Story = {
           Size
         </Text>
         <Flex gap="6" align="center">
-          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="xs">
-            XS
-          </Button>
           <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="sm">
             SM
           </Button>
@@ -197,12 +186,6 @@ export const Link: Story = {
           </Button>
           <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="lg">
             LG
-          </Button>
-          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="xl">
-            XL
-          </Button>
-          <Button {...args} variant="outline" as="link" href="https://yorkie.dev" size="2xl">
-            2XL
           </Button>
         </Flex>
       </div>

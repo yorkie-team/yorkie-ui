@@ -1,21 +1,21 @@
-import type { Tokens } from '@pandacss/dev'
+import type { Tokens } from '@pandacss/dev';
 
 export const fontSizes: Tokens['fontSizes'] = {
-  '2xs': { value: '0.5rem' },
-  xs: { value: '0.75rem' },
-  sm: { value: '0.875rem' },
-  md: { value: '1rem' },
-  lg: { value: '1.125rem' },
-  xl: { value: '1.25rem' },
-  '2xl': { value: '1.5rem' },
-  '3xl': { value: '1.875rem' },
-  '4xl': { value: '2.25rem' },
-  '5xl': { value: '3rem' },
-  '6xl': { value: '3.75rem' },
-  '7xl': { value: '4.5rem' },
-  '8xl': { value: '6rem' },
-  '9xl': { value: '8rem' },
-}
+  '2xs': { value: '0.5rem', description: '8px' },
+  xs: { value: '0.75rem', description: '12px' },
+  sm: { value: '0.875rem', description: '14px' },
+  md: { value: '1rem', description: '16px' },
+  lg: { value: '1.125rem', description: '18px' },
+  xl: { value: '1.25rem', description: '20px' },
+  '2xl': { value: '1.5rem', description: '24px' },
+  '3xl': { value: '1.875rem', description: '30px' },
+  '4xl': { value: '2.25rem', description: '36px' },
+  '5xl': { value: '3rem', description: '48px' },
+  '6xl': { value: '3.75rem', description: '60px' },
+  '7xl': { value: '4.5rem', description: '72px' },
+  '8xl': { value: '6rem', description: '96px' },
+  '9xl': { value: '8rem', description: '128px' },
+};
 
 export const fontWeights: Tokens['fontWeights'] = {
   thin: { value: '100' },
@@ -27,7 +27,7 @@ export const fontWeights: Tokens['fontWeights'] = {
   bold: { value: '700' },
   extrabold: { value: '800' },
   black: { value: '900' },
-}
+};
 
 export const letterSpacings: Tokens['letterSpacings'] = {
   tighter: { value: '-0.05em' },
@@ -36,7 +36,7 @@ export const letterSpacings: Tokens['letterSpacings'] = {
   wide: { value: '0.025em' },
   wider: { value: '0.05em' },
   widest: { value: '0.1em' },
-}
+};
 
 export const lineHeights: Tokens['lineHeights'] = {
   none: { value: '1' },
@@ -44,7 +44,7 @@ export const lineHeights: Tokens['lineHeights'] = {
   normal: { value: '1.5' },
   relaxed: { value: '1.75' },
   loose: { value: '2' },
-}
+};
 
 export const fonts: Tokens['fonts'] = {
   sans: {
@@ -80,4 +80,4 @@ export const fonts: Tokens['fonts'] = {
       'monospace',
     ],
   },
-}
+};
