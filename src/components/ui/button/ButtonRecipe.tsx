@@ -1,14 +1,11 @@
 import { defineRecipe } from '@pandacss/dev';
 
-/**
- * Update styles for Button component.
- */
 export const buttonRecipe = defineRecipe({
   className: 'button',
   base: {
     alignItems: 'center',
     appearance: 'none',
-    borderRadius: 'l2',
+    borderRadius: 'sm',
     cursor: 'pointer',
     display: 'inline-flex',
     fontWeight: 'semibold',
@@ -37,11 +34,10 @@ export const buttonRecipe = defineRecipe({
         colorPalette: 'accent',
         _hover: {
           background: 'colorPalette.emphasized',
-          textDecorationColor: 'transparent',
         },
         _focusVisible: {
           outline: '2px solid',
-          outlineColor: 'colorPalette.default',
+          outlineColor: 'colorPalette.border',
           outlineOffset: '2px',
         },
         _disabled: {
@@ -56,15 +52,15 @@ export const buttonRecipe = defineRecipe({
       },
       outline: {
         borderWidth: '1px',
-        borderColor: 'colorPalette.a8',
-        color: 'colorPalette.text',
-        colorPalette: 'gray',
-        textDecorationColor: 'transparent',
+        background: 'colorPalette.default.alpha',
+        borderColor: 'colorPalette.border.alpha',
+        color: 'colorPalette.fg.alpha',
+        colorPalette: 'accent',
         _hover: {
-          background: 'colorPalette.a2',
-          textDecorationColor: 'transparent',
+          background: 'colorPalette.emphasized.alpha',
         },
         _disabled: {
+          background: 'bg.disabled',
           borderColor: 'border.disabled',
           color: 'fg.disabled',
           cursor: 'not-allowed',
@@ -76,48 +72,21 @@ export const buttonRecipe = defineRecipe({
         },
         _focusVisible: {
           outline: '2px solid',
-          outlineColor: 'colorPalette.default',
+          outlineColor: 'colorPalette.border',
           outlineOffset: '2px',
         },
         _selected: {
-          background: 'accent.default',
-          borderColor: 'accent.default',
-          color: 'accent.fg',
+          background: 'colorPalette.default',
+          borderColor: 'colorPalette.default',
+          color: 'colorPalette.fg',
           _hover: {
-            background: 'accent.emphasized',
-            borderColor: 'accent.emphasized',
+            background: 'colorPalette.emphasized',
+            borderColor: 'colorPalette.emphasized',
           },
-        },
-      },
-      ghost: {
-        color: 'colorPalette.text',
-        colorPalette: 'gray',
-        textDecorationColor: 'transparent',
-        _hover: {
-          background: 'colorPalette.a3',
-          textDecorationColor: 'transparent',
-        },
-        _selected: {
-          background: 'colorPalette.a3',
-        },
-        _disabled: {
-          color: 'fg.disabled',
-          cursor: 'not-allowed',
-          _hover: {
-            background: 'transparent',
-            color: 'fg.disabled',
-          },
-        },
-        _focusVisible: {
-          outline: '2px solid',
-          outlineColor: 'colorPalette.default',
-          outlineOffset: '2px',
         },
       },
       link: {
         verticalAlign: 'baseline',
-        textUnderlineOffset: '0.125em',
-        textDecoration: 'underline 0.1em transparent',
         _disabled: {
           color: 'border.disabled',
           cursor: 'not-allowed',
@@ -128,28 +97,6 @@ export const buttonRecipe = defineRecipe({
         height: 'auto!',
         px: '0!',
         minW: '0!',
-      },
-      subtle: {
-        background: 'colorPalette.a3',
-        color: 'colorPalette.text',
-        colorPalette: 'gray',
-        _hover: {
-          background: 'colorPalette.a4',
-        },
-        _focusVisible: {
-          outline: '2px solid',
-          outlineColor: 'colorPalette.default',
-          outlineOffset: '2px',
-        },
-        _disabled: {
-          background: 'bg.disabled',
-          color: 'fg.disabled',
-          cursor: 'not-allowed',
-          _hover: {
-            background: 'bg.disabled',
-            color: 'fg.disabled',
-          },
-        },
       },
     },
     size: {
@@ -218,26 +165,6 @@ export const buttonRecipe = defineRecipe({
         '& svg': {
           width: '6',
           height: '6',
-        },
-      },
-    },
-    decoration: {
-      ghost: {
-        textDecorationColor: 'transparent',
-        _hover: {
-          textDecorationColor: 'neutral.12',
-        },
-      },
-      link: {
-        textDecorationColor: 'neutral.12',
-        _hover: {
-          textDecorationColor: 'neutral.11',
-        },
-      },
-      none: {
-        textDecorationColor: 'transparent',
-        _hover: {
-          textDecorationColor: 'transparent',
         },
       },
     },

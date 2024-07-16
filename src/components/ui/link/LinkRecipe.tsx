@@ -48,7 +48,7 @@ export const linkRecipe = defineRecipe({
       outline: {
         borderWidth: '1px',
         borderColor: 'colorPalette.a8',
-        color: 'colorPalette.text',
+        color: 'colorPalette.fg',
         colorPalette: 'gray',
         textDecorationColor: 'transparent',
         _hover: {
@@ -81,7 +81,7 @@ export const linkRecipe = defineRecipe({
         },
       },
       ghost: {
-        color: 'colorPalette.text',
+        color: 'colorPalette.fg',
         colorPalette: 'gray',
         textDecorationColor: 'transparent',
         _hover: {
@@ -120,7 +120,7 @@ export const linkRecipe = defineRecipe({
       },
       subtle: {
         background: 'colorPalette.a3',
-        color: 'colorPalette.text',
+        color: 'colorPalette.fg',
         colorPalette: 'gray',
         _hover: {
           background: 'colorPalette.a4',

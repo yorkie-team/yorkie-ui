@@ -31,7 +31,7 @@ export default meta;
 interface ColorItem {
   name: string;
   path?: string;
-  color: string[];
+  color: Token[];
 }
 
 const colors: ColorItem[] = [
@@ -135,13 +135,13 @@ export const Overview = {
                         h="50px"
                         mt="10"
                         width="100%"
-                        style={{ background: token.var(colors as Token) }}
+                        // style={{ background: token.var(colors as Token) }}
                         borderRadius="md"
                         borderWidth="thin"
-                        borderColor="gray.2 "
+                        borderColor="gray.200"
+                        bg={colors.substring('colors.'.length)}
                       ></Box>
-
-                      <p>{colors.substring('colors.'.length)}</p>
+                      <p>{colors.substring('colors.primitives.'.length)}</p>
                     </div>
                   );
                 })}

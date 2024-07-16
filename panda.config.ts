@@ -1,39 +1,10 @@
 import { defineConfig } from '@pandacss/dev';
-import { createPreset } from '@park-ui/panda-preset';
-import { avatarSlotRecipe } from '@/components/ui/avatar/AvatarSlotRecipe';
-import { buttonRecipe } from '@/components/ui/button/ButtonRecipe';
-import { checkboxSlotRecipe } from '@/components/ui/checkbox/CheckboxSlotRecipe';
-import { selectSlotRecipe } from '@/components/ui/select/SelectRecipe';
-import { badgeRecipe } from '@/components/ui/badge/BadgeRecipe';
-import { paginationSlotRecipe } from '@/components/ui/pagination/PaginationRecipe';
-import { popoverSlotRecipe } from '@/components/ui/popover/PopoverRecipe';
-import { radioGroupSlotRecipe } from '@/components/ui/radio/RadioRecipe';
-import { tabsSlotRecipe } from '@/components/ui/tabs/TabRecipe';
-import { tooltipSlotRecipe } from '@/components/ui/tooltip/TooltipRecipe';
-import { accordionSlotRecipe } from '@/components/ui/accordion/AccordionRecipe';
-import { switchSlotRecipe } from '@/components/ui/switch/SwitchRecipe';
-import { datePickerSlotRecipe } from '@/components/ui/datepicker/DatepickerRecipe';
-import { inputRecipe } from '@/components/ui/input/InputRecipe';
-import { iconRecipe } from '@/components/ui/icon/IconRecipe';
-import { textRecipe } from '@/components/ui/text/TextRecipe';
-import { codeRecipe } from '@/components/ui/code/CodeRecipe';
-import { cardSlotRecipe } from '@/components/ui/card/CardRecipe';
-import { toastSlotRecipe } from '@/components/ui/toast/ToastRecipe';
-import { labelRecipe } from '@/components/ui/label/LabelRecipe';
-import { dialogSlotRecipe } from '@/components/ui/dialog/DialogRecipe';
-import { linkRecipe } from '@/components/ui/link/LinkRecipe';
+import { yorkiePreset } from './panda';
+
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
-  presets: [
-    '@pandacss/preset-base',
-    '@park-ui/panda-preset',
-    createPreset({
-      accentColor: 'orange',
-      grayColor: 'neutral',
-      borderRadius: 'sm',
-    }),
-  ],
+  presets: ['@pandacss/preset-base', yorkiePreset],
 
   // Where to look for your css declarations
   include: ['./src/**/*.{ts,tsx,js,jsx}'],
@@ -41,162 +12,15 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
-  conditions: {
-    extend: {
-      light: '[data-theme=light] &',
-      dark: '[data-theme=dark] &',
-    },
-  },
-  // Useful for theme customization
-  theme: {
-    extend: {
-      tokens: {
-        colors: {
-          success: {
-            50: { value: '#EBFAF3' },
-            300: { value: '#85E0B3' },
-            500: { value: '#30A46C' },
-            700: { value: '#1F7A4D' },
-            950: { value: '#05140D' },
-          },
-          error: {
-            50: { value: '#FEE6E6' },
-            300: { value: '#F76E6E' },
-            500: { value: '#E5484D' },
-            700: { value: '#910808' },
-            950: { value: '#180101' },
-          },
-          alert: {
-            50: { value: '#FFF7E6' },
-            300: { value: '#FFCC66' },
-            500: { value: '#FFAA00' },
-            700: { value: '#996600' },
-            950: { value: '#1A1100' },
-          },
-          grad: {
-            yellow: { value: 'linear-gradient(180deg, #FDC433 0%, #FE924D 100%)' },
-            orange: { value: 'linear-gradient(180deg, #FF9754 0%, #F96767 100%)' },
-            red: { value: 'linear-gradient(180deg, #FC94D8 0%, #F44954 100%)' },
-            purple: { value: 'linear-gradient(180deg, #84B5FF 0%, #855CF9 100%)' },
-            blue: { value: 'linear-gradient(180deg, #8DECEC 0%, #3C9AF1 100%)' },
-            green: { value: 'linear-gradient(180deg, #D7E38B 0%, #23C176 100%)' },
-          },
-        },
-        sizes: {
-          '100w': { value: '100%' },
-          '50w': { value: '100%' },
-        },
-        zIndex: {
-          xs: { value: '1' },
-          sm: { value: '2' },
-          md: { value: '3' },
-          lg: { value: '4' },
-          xl: { value: '5' },
-          '2xl': { value: '200' },
-          '3xl': { value: '300' },
-          '4xl': { value: '400' },
-          '5xl': { value: '500' },
-          '6xl': { value: '600' },
-          '7xl': { value: '700' },
-          '8xl': { value: '800' },
-          '9xl': { value: '900' },
-          '10xl': { value: '1000' },
-        },
-        borderWidths: {
-          xs: { value: '1px' },
-          sm: { value: '2px' },
-          md: { value: '3px' },
-          lg: { value: '4px' },
-          xl: { value: '5px' },
-          '2xl': { value: '6px' },
-          '3xl': { value: '8px' },
-          '4xl': { value: '9px' },
-          '5xl': { value: '10px' },
-          '6xl': { value: '12px' },
-          '7xl': { value: '13px' },
-          '8xl': { value: '14px' },
-          '9xl': { value: '15px' },
-          '10xl': { value: '16px' },
-        },
-      },
-      semanticTokens: {
-        colors: {
-          success: {
-            default: {
-              value: {
-                base: '{colors.success.500}',
-                _dark: '{colors.success.500}',
-              },
-            },
-            muted: {
-              value: {
-                base: '{colors.success.300}',
-                _dark: '{colors.success.300}',
-              },
-            },
-          },
-          alert: {
-            default: {
-              value: {
-                base: '{colors.alert.500}',
-                _dark: '{colors.alert.500}',
-              },
-            },
-            muted: {
-              value: {
-                base: '{colors.alert.300}',
-                _dark: '{colors.alert.300}',
-              },
-            },
-          },
-          error: {
-            default: {
-              value: {
-                base: '{colors.error.500}',
-                _dark: '{colors.error.500}',
-              },
-            },
-            muted: {
-              value: {
-                base: '{colors.error.300}',
-                _dark: '{colors.error.300}',
-              },
-            },
-          },
-        },
-      },
-      slotRecipes: {
-        avatar: avatarSlotRecipe,
-        checkbox: checkboxSlotRecipe,
-        pagination: paginationSlotRecipe,
-        popover: popoverSlotRecipe,
-        radioGroup: radioGroupSlotRecipe,
-        tabs: tabsSlotRecipe,
-        tooltip: tooltipSlotRecipe,
-        accordion: accordionSlotRecipe,
-        switchs: switchSlotRecipe,
-        datePicker: datePickerSlotRecipe,
-        select: selectSlotRecipe,
-        card: cardSlotRecipe,
-        toast: toastSlotRecipe,
-        radio: radioGroupSlotRecipe,
-        dialog: dialogSlotRecipe,
-      },
-      recipes: {
-        button: buttonRecipe,
-        badge: badgeRecipe,
-        input: inputRecipe,
-        icon: iconRecipe,
-        text: textRecipe,
-        code: codeRecipe,
-        label: labelRecipe,
-        link: linkRecipe,
-      },
-    },
-  },
+  conditions: {},
   staticCss: {
     recipes: '*',
     css: [
+      {
+        properties: {
+          colorPalette: ['*'],
+        },
+      },
       {
         properties: {
           aspectRatio: ['*'],
