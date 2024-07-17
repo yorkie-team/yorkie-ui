@@ -21,6 +21,7 @@ import { toastSlotRecipe } from '@/components/ui/toast/ToastRecipe';
 import { labelRecipe } from '@/components/ui/label/LabelRecipe';
 import { dialogSlotRecipe } from '@/components/ui/dialog/DialogRecipe';
 import { linkRecipe } from '@/components/ui/link/LinkRecipe';
+import { menu } from '@/components/ui/menu/MenuRecipe';
 
 export const recipes: Record<string, Partial<RecipeConfig<RecipeVariantRecord>>> = {
   button: buttonRecipe,
@@ -31,6 +32,7 @@ export const recipes: Record<string, Partial<RecipeConfig<RecipeVariantRecord>>>
   code: codeRecipe,
   label: labelRecipe,
   link: linkRecipe,
+  menu,
 };
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {

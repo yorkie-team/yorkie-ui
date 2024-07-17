@@ -6,8 +6,8 @@ import { checkbox, type CheckboxVariantProps } from '@/styled/recipes';
 import type { JsxStyleProps } from '@/styled/types/system-types';
 
 export type Assign<T, U> = {
-  [K in keyof T]: K extends keyof U ? U[K] : T[K]
-} & U
+  [K in keyof T]: K extends keyof U ? U[K] : T[K];
+} & U;
 
 export interface CheckboxProps extends Assign<JsxStyleProps, CheckboxRootProps>, CheckboxVariantProps {
   children?: ReactNode;
@@ -21,15 +21,16 @@ export const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>((props, ref)
 
   return (
     <ArkCheckbox.Root ref={ref} className={cx(styles.root, css(cssProps), className)} {...rootProps}>
-      {(state) => (
-        <>
-          <ArkCheckbox.Control className={styles.control}>
-            {state.isChecked && <CheckIcon />}
-            {state.isIndeterminate && <MinusIcon />}
-          </ArkCheckbox.Control>
-          {children && <ArkCheckbox.Label className={styles.label}>{children}</ArkCheckbox.Label>}
-        </>
-      )}
+      <ArkCheckbox.Control>
+        <ArkCheckbox.Indicator>
+          <CheckIcon />
+        </ArkCheckbox.Indicator>
+        <ArkCheckbox.Indicator indeterminate>
+          <MinusIcon />
+        </ArkCheckbox.Indicator>
+      </ArkCheckbox.Control>
+      {children && <ArkCheckbox.Label>{children}</ArkCheckbox.Label>}
+      <ArkCheckbox.HiddenInput />
     </ArkCheckbox.Root>
   );
 });

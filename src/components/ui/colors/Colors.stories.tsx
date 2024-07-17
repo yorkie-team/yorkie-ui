@@ -1,25 +1,17 @@
 import React from 'react';
 import { Box, Grid } from '@/components/ui';
-import { token } from '@/styled/tokens';
 import type { Token } from '@/styled/tokens/tokens';
 
 import {
-  defaultColorLight,
-  defaultColorDark,
-  blackColor,
-  whiteColor,
-  grayColorLight,
-  grayColorDark,
-  neutralColorLight,
-  neutralColorDark,
-  neutralColor,
+  redColor,
   orangeColor,
+  yellowColor,
+  greenColor,
+  blueColor,
+  purpleColor,
   grayColor,
-  accentColor,
   functionColor,
   borderColor,
-  statusColor,
-  gradientColor,
 } from '@/components/ui/colors/constant';
 
 const meta = {
@@ -36,64 +28,39 @@ interface ColorItem {
 
 const colors: ColorItem[] = [
   {
-    name: 'Primary Color',
-    path: 'primarycolor',
+    name: 'Red',
+    path: 'redcolor',
+    color: redColor,
+  },
+  {
+    name: 'Orange',
+    path: 'orangecolor',
     color: orangeColor,
   },
   {
-    name: 'Light Primary Color',
-    path: 'lightprimarycolor',
-    color: defaultColorLight,
+    name: 'Yellow',
+    path: 'yellowcolor',
+    color: yellowColor,
   },
   {
-    name: 'Dark Primary Color',
-    path: 'darkprimarycolor',
-    color: defaultColorDark,
+    name: 'Green',
+    path: 'greencolor',
+    color: greenColor,
   },
   {
-    name: 'Black Color',
-    path: 'blackcolor',
-    color: blackColor,
+    name: 'Blue',
+    path: 'bluecolor',
+    color: blueColor,
   },
   {
-    name: 'White Color',
-    path: 'whitecolor',
-    color: whiteColor,
+    name: 'Purple',
+    path: 'purplecolor',
+    color: purpleColor,
   },
   {
-    name: 'Gray Color',
+    name: 'Gray',
     path: 'graycolor',
     color: grayColor,
-  },
-  {
-    name: 'Light Gray Color',
-    path: 'lightgraycolor',
-    color: grayColorLight,
-  },
-  {
-    name: 'Dark Gray Color',
-    path: 'darkgraycolor',
-    color: grayColorDark,
-  },
-  {
-    name: 'Dark Neutral Color',
-    path: 'darkneutralcolor',
-    color: neutralColorDark,
-  },
-  {
-    name: 'Light Neutral Color',
-    path: 'lightneutralcolor',
-    color: neutralColorLight,
-  },
-  {
-    name: 'Neutral Color',
-    path: 'neutralcolor',
-    color: neutralColor,
-  },
-  {
-    name: 'Accent Color',
-    path: 'accentcolor',
-    color: accentColor,
   },
   {
     name: 'Function Color',
@@ -104,16 +71,6 @@ const colors: ColorItem[] = [
     name: 'Border Color',
     path: 'bordercolor',
     color: borderColor,
-  },
-  {
-    name: 'Status Color',
-    path: 'statuscolor',
-    color: statusColor,
-  },
-  {
-    name: 'Gradient Color',
-    path: 'gradientcolor',
-    color: gradientColor,
   },
 ];
 export const Overview = {
@@ -135,13 +92,12 @@ export const Overview = {
                         h="50px"
                         mt="10"
                         width="100%"
-                        // style={{ background: token.var(colors as Token) }}
                         borderRadius="md"
                         borderWidth="thin"
                         borderColor="gray.200"
                         bg={colors.substring('colors.'.length)}
                       ></Box>
-                      <p>{colors.substring('colors.primitives.'.length)}</p>
+                      <p>{colors.substring('colors.'.length)}</p>
                     </div>
                   );
                 })}

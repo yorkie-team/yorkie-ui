@@ -39,7 +39,20 @@ export default [
       }),
       typescript({ tsconfig: './tsconfig.json', exclude: ['**/src/stories/**', '**/*.stories.tsx'] }),
       image(),
-      svgr(),
+      svgr({
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeViewBox: false,
+                },
+              },
+            },
+          ],
+        },
+      }),
       commonjs(), // Convert CommonJS modules to ES6
       preserveDirectives(),
       terser(), // Minify in production
@@ -53,7 +66,20 @@ export default [
       peerDepsExternal(),
       tsConfigPaths(), // Ensure this comes before nodeResolve
       image(),
-      svgr(),
+      svgr({
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  removeViewBox: false,
+                },
+              },
+            },
+          ],
+        },
+      }),
       dts(),
     ],
     external: ['react', 'react-dom', 'prop-types'], // Exclude these from bundle

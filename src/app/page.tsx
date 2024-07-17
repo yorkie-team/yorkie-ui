@@ -5,7 +5,6 @@ import {
   Container,
   Flex,
   Checkbox,
-  Icon,
   Box,
   Menu,
   Pagination,
@@ -14,7 +13,8 @@ import {
   Stack,
   RadioGroup,
   Select,
-  Icons,
+  BookOpen01Icon,
+  ChevronRightIcon,
 } from '@/components/ui';
 
 export default function Home() {
@@ -27,20 +27,19 @@ export default function Home() {
   ];
   return (
     <Container py={{ base: '12', md: '16' }} maxW="7xl">
-      <Icon icon={<Icons.IconCopy />} stroke="black.a9" size="2xl" />
+      <BookOpen01Icon />
       <Button
         width={{ base: '100w', lg: 'fit' }}
         wLink={{ base: '100w', lg: 'fit' }}
         as="link"
         href="/docs/getting-started"
-        icon={<Icon icon={<Icons.IconBook />} stroke="neutral.2" />}
-        position="start"
         variant="solid"
-        size="xl"
+        size="lg"
       >
+        <BookOpen01Icon />
         Getting Started
       </Button>
-      <Button as="link" href="https://yorkie.dev" variant="ghost">
+      <Button as="link" href="https://yorkie.dev" variant="link">
         Website Link
       </Button>
       <Box padding="6" bg="grad.yellow"></Box>
@@ -76,12 +75,12 @@ export default function Home() {
           </Menu.Trigger>
           <Menu.Positioner>
             <Menu.Content>
-              <Menu.Item id="search">Search</Menu.Item>
-              <Menu.Item id="undo">Undo</Menu.Item>
-              <Menu.Item id="delivery" disabled>
+              <Menu.Item value="search">Search</Menu.Item>
+              <Menu.Item value="undo">Undo</Menu.Item>
+              <Menu.Item value="delivery" disabled>
                 Delivery
               </Menu.Item>
-              <Menu.Item id="unlink">Unlink</Menu.Item>
+              <Menu.Item value="unlink">Unlink</Menu.Item>
             </Menu.Content>
           </Menu.Positioner>
         </Menu.Root>
@@ -105,7 +104,7 @@ export default function Home() {
               </Stack>
               <Box position="absolute" top="1" right="1">
                 <Popover.CloseTrigger asChild>
-                  <Icons.IconClose />
+                  <ChevronRightIcon />
                 </Popover.CloseTrigger>
               </Box>
             </Popover.Content>
@@ -127,19 +126,17 @@ export default function Home() {
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder={'Select a Framework'} />
-            <Icons.IconChevDown />
+            <ChevronRightIcon />
           </Select.Trigger>
         </Select.Control>
         <Select.Positioner>
           <Select.Content>
             <Select.ItemGroup id="framework">
-              <Select.ItemGroupLabel htmlFor="framework">Framework</Select.ItemGroupLabel>
+              <Select.ItemGroupLabel>Framework</Select.ItemGroupLabel>
               {items.map((item) => (
                 <Select.Item key={item.value} item={item}>
                   <Select.ItemText>{item.label}</Select.ItemText>
-                  <Select.ItemIndicator>
-                    <Icon icon={<Icons.IconChevDown />} size="md" />
-                  </Select.ItemIndicator>
+                  <Select.ItemIndicator></Select.ItemIndicator>
                 </Select.Item>
               ))}
             </Select.ItemGroup>

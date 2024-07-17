@@ -80,31 +80,6 @@ export const linkRecipe = defineRecipe({
           },
         },
       },
-      ghost: {
-        color: 'colorPalette.fg',
-        colorPalette: 'gray',
-        textDecorationColor: 'transparent',
-        _hover: {
-          background: 'colorPalette.a3',
-          textDecorationColor: 'transparent',
-        },
-        _selected: {
-          background: 'colorPalette.a3',
-        },
-        _disabled: {
-          color: 'fg.disabled',
-          cursor: 'not-allowed',
-          _hover: {
-            background: 'transparent',
-            color: 'fg.disabled',
-          },
-        },
-        _focusVisible: {
-          outline: '2px solid',
-          outlineColor: 'colorPalette.default',
-          outlineOffset: '2px',
-        },
-      },
       link: {
         verticalAlign: 'baseline',
         _disabled: {
@@ -118,42 +93,8 @@ export const linkRecipe = defineRecipe({
         px: '0!',
         minW: '0!',
       },
-      subtle: {
-        background: 'colorPalette.a3',
-        color: 'colorPalette.fg',
-        colorPalette: 'gray',
-        _hover: {
-          background: 'colorPalette.a4',
-        },
-        _focusVisible: {
-          outline: '2px solid',
-          outlineColor: 'colorPalette.default',
-          outlineOffset: '2px',
-        },
-        _disabled: {
-          background: 'bg.disabled',
-          color: 'fg.disabled',
-          cursor: 'not-allowed',
-          _hover: {
-            background: 'bg.disabled',
-            color: 'fg.disabled',
-          },
-        },
-      },
     },
     size: {
-      xs: {
-        h: '8',
-        minW: '8',
-        textStyle: 'xs',
-        px: '3',
-        gap: '2',
-        '& svg': {
-          fontSize: 'md',
-          width: '4',
-          height: '4',
-        },
-      },
       sm: {
         h: '9',
         minW: '9',
@@ -187,36 +128,8 @@ export const linkRecipe = defineRecipe({
           height: '5',
         },
       },
-      xl: {
-        h: '12',
-        minW: '12',
-        textStyle: 'md',
-        px: '5',
-        gap: '2.5',
-        '& svg': {
-          width: '5',
-          height: '5',
-        },
-      },
-      '2xl': {
-        h: '16',
-        minW: '16',
-        textStyle: 'lg',
-        px: '7',
-        gap: '3',
-        '& svg': {
-          width: '6',
-          height: '6',
-        },
-      },
     },
     decoration: {
-      ghost: {
-        textDecorationColor: 'transparent',
-        _hover: {
-          textDecorationColor: 'neutral.12',
-        },
-      },
       link: {
         textDecorationColor: 'neutral.12',
         _hover: {
@@ -226,6 +139,6 @@ export const linkRecipe = defineRecipe({
     },
   },
   defaultVariants: {
-    decoration: 'ghost',
+    decoration: 'link',
   },
 });

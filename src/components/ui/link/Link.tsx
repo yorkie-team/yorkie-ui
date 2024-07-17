@@ -13,7 +13,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const Dynamic = as === 'link' ? styled(ark.a) : styled(ark.a, link);
   if (as === 'link') {
     return (
-      <Dynamic {...rest} className={button({ size, decoration, variant })} ref={ref}>
+      <Dynamic {...rest} className={button({ size, variant })} ref={ref}>
         {children}
       </Dynamic>
     );

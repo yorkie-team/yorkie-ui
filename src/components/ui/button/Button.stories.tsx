@@ -14,11 +14,10 @@ const meta = {
     },
     variant: {
       control: { type: 'radio' },
-      options: ['solid', 'outline', 'ghost', 'link'],
+      options: ['solid', 'outline', 'link'],
       description: `**Variant of Button - default: \`solid\`. **
       \n \`solid:\` uniform background color for buttons
       \n \`outline:\` the border or edge surrounding buttons
-      \n \`ghost:\` style characterized by a transparent or semi-transparent background and a visible border
       \n \`link:\` styles designed to resemble traditional hyperlinks`,
     },
     disabled: {
@@ -85,9 +84,6 @@ export const Variant: Story = {
         <Button {...args} variant="outline">
           Outline
         </Button>
-        <Button {...args} variant="ghost">
-          Ghost
-        </Button>
         <Button {...args} variant="link">
           Link
         </Button>
@@ -148,7 +144,7 @@ export const Link: Story = {
         <Text fontSize="sm" fontWeight="500">
           No Decoration
         </Text>
-        <Button {...args} variant="link" decoration="ghost" as="link" href="https://yorkie.dev">
+        <Button {...args} variant="link" as="link" href="https://yorkie.dev">
           Button Link
         </Button>
         <Text fontSize="sm" fontWeight="500" marginTop="10">
@@ -167,7 +163,7 @@ export const Link: Story = {
           <Button {...args} variant="outline" as="link" href="https://yorkie.dev">
             Outline
           </Button>
-          <Button {...args} variant="ghost" as="link" href="https://yorkie.dev">
+          <Button {...args} as="link" href="https://yorkie.dev">
             Ghost
           </Button>
           <Button {...args} variant="link" decoration="link" as="link" href="https://yorkie.dev">
