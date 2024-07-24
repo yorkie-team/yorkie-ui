@@ -1,5 +1,8 @@
 import type { Preview } from '@storybook/react';
+import { withThemeByClassName } from '@storybook/addon-themes';
+
 import '@yorkie-ui/components/dist/styles.css';
+import './preview.css';
 
 const preview: Preview = {
   parameters: {
@@ -17,6 +20,12 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    withThemeByClassName({
+      themes: { light: '', dark: 'dark' },
+      defaultTheme: 'light',
+    }),
+  ],
 };
 
 export default preview;

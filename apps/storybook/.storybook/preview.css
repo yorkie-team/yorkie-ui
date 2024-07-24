@@ -1,0 +1,13 @@
+.docs-story,
+#storybook-root {
+  background: #fefdfb;
+}
+
+.dark .docs-story,
+.dark #storybook-root {
+  background-color: #332e2b;
+}
+
+#storybook-root {
+  padding: 20px;
+}
