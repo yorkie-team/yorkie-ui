@@ -1,0 +1,123 @@
+# Button
+
+import { Controls, Canvas, Meta } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+- [Import](#import)
+- [Overview](#overview)
+- [Props](#props)
+- [Examples](#examples)
+
+## Import
+
+```jsx
+import { Button } from 'yorkie-ui';
+```
+
+## Overview
+
+Buttons empower users to take action with a single tap. Incorporate them into your design for a seamless and efficient user experience.
+
+<Canvas
+  of={ButtonStories.Basic}
+  source={{
+    format: true,
+    code: `
+      <Button>
+        Default
+      </Button>
+    `,
+  }}
+/>
+
+## Props
+
+<Controls />
+
+## Examples
+
+### [Sizes](#button-sizes)
+
+There are 3 sizes: `sm`, `md` and `lg`.
+
+<Canvas
+  of={ButtonStories.Sizes}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button size="sm">
+          SM
+        </Button>
+        <Button size="md">
+          MD
+        </Button>
+        <Button size="lg">
+          LG
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+### [Variant](#button-variant)
+
+There are 3 types: `solid`, `outline` and `link`.
+
+<Canvas
+  of={ButtonStories.Variant}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button variant="solid">
+          Solid
+        </Button>
+        <Button variant="outline">
+          Outline
+        </Button>
+        <Button variant="link">
+          Link
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+### [Disabled](#button-disabled)
+
+By using the `disabled` prop, you can quickly and easily convey to your users that a button is unavailable for selection.
+
+<Canvas
+  of={ButtonStories.Disabled}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button disabled>
+          Disabled
+        </Button>
+      </div>
+    `,
+  }}
+/>
+
+### [Color Palette](#button-color)
+
+Use the defined color codes in the system to change the background for the button.
+
+<Canvas
+  of={ButtonStories.ColorPalette}
+  source={{
+    format: true,
+    code: `
+      <div>
+        <Button colorPalette="red">
+          Color Palette
+        </Button>
+      </div>
+    `,
+  }}
+/>
