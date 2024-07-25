@@ -1,6 +1,6 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+# Yorkie UI
 
-<Meta title="Introduction" />
+Welcome to the Yorkie UI component library!
 
 # Get started
 
@@ -20,7 +20,6 @@ Add styles imports to the root of your project.
 
 ```
 import 'yorkie-ui/styles.css';
-
 ```
 
 ### **Use**
