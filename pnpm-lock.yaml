@@ -59,9 +59,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.3.4(@types/node@20.14.11)(lightningcss@1.25.1))
-      '@yorkie-ui/components':
+      '@yorkie-ui/core':
         specifier: workspace:^
-        version: link:../../packages/components
+        version: link:../../packages/core
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -105,9 +105,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
-      '@yorkie-ui/components':
+      '@yorkie-ui/core':
         specifier: workspace:^
-        version: link:../../packages/components
+        version: link:../../packages/core
       eslint:
         specifier: ^8
         version: 8.57.0
@@ -118,7 +118,7 @@ importers:
         specifier: ^5
         version: 5.5.4
 
-  packages/components:
+  packages/core:
     dependencies:
       '@ark-ui/react':
         specifier: ^3.5.0

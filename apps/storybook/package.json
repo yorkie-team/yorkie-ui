@@ -1,10 +1,10 @@
 {
   "name": "@yorkie-ui/storybook",
   "private": true,
-  "version": "0.5.33",
+  "version": "0.5.33-rc",
   "type": "module",
   "scripts": {
-    "prebuild": "pnpm --filter @yorkie-ui/components build",
+    "prebuild": "pnpm --filter @yorkie-ui/core build",
     "build": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "dev": "pnpm prebuild && storybook dev -p 6006"
@@ -28,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "@yorkie-ui/components": "workspace:^",
+    "@yorkie-ui/core": "workspace:^",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",

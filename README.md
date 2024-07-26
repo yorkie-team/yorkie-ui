@@ -13,13 +13,13 @@ UI components are written in React. It requires react: ^18.
 Install Yorkie UI to your project.
 
 ```
-npm install --save yorkie-ui
+npm install --save @yorkie-ui/core
 ```
 
 Add styles imports to the root of your project.
 
 ```
-import 'yorkie-ui/styles.css';
+import '@yorkie-ui/core/dist/styles.css';
 ```
 
 ### **Use**
@@ -27,7 +27,7 @@ import 'yorkie-ui/styles.css';
 Import components you want into your UI
 
 ```jsx
-import { Button } from 'yorkie-ui';
+import { Button } from '@yorkie-ui/core';
 ```
 
 and use them like so

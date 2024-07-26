@@ -1,6 +1,6 @@
 {
-  "name": "@yorkie-ui/components",
-  "version": "0.5.33",
+  "name": "@yorkie-ui/core",
+  "version": "0.5.33-rc",
   "type": "module",
   "main": "./src/index.ts",
   "publishConfig": {
