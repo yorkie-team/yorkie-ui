@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@yorkie-ui/components';
+import { Button } from '@yorkie-ui/core';
 const meta = {
   title: 'COMPONENTS / Button',
   component: Button,

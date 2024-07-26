@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 
-import '@yorkie-ui/components/dist/styles.css';
+import '@yorkie-ui/core/dist/styles.css';
 import './preview.css';
 
 const preview: Preview = {

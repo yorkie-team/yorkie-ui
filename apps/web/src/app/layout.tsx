@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '@yorkie-ui/components/dist/styles.css';
+import '@yorkie-ui/core/dist/styles.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

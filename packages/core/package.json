@@ -1,5 +1,5 @@
 {
-  "name": "@yorkie-ui/components",
+  "name": "@yorkie-ui/core",
   "version": "0.5.33",
   "type": "module",
   "main": "./src/index.ts",

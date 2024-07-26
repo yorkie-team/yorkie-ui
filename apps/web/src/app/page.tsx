@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@yorkie-ui/components';
+import { Button } from '@yorkie-ui/core';
 
 export default function Home() {
   return (
