@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "build:storybook": "pnpm prestorybook && storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prestorybook": "pnpm --filter @yorkie-ui/components build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "react": "^18.3.1",
