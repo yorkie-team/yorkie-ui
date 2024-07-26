@@ -1,14 +1,13 @@
 {
   "name": "@yorkie-ui/storybook",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.5.33",
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
-    "build:storybook": "pnpm prestorybook && storybook build",
+    "prebuild": "pnpm --filter @yorkie-ui/components build",
+    "build": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prestorybook": "pnpm --filter @yorkie-ui/components build",
-    "storybook": "storybook dev -p 6006"
+    "dev": "pnpm prebuild && storybook dev -p 6006"
   },
   "dependencies": {
     "react": "^18.3.1",
