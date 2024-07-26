@@ -22,8 +22,7 @@ jobs:
 
       - name: Build 🔧
         run: |
-          cd apps/storybook
-          pnpm build:storybook
+          pnpm run build
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3

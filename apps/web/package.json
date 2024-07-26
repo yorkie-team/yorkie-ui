@@ -1,8 +1,9 @@
 {
-  "name": "@yorkie-ui/test",
-  "version": "0.0.1",
+  "name": "@yorkie-ui/web",
+  "version": "0.5.33",
   "private": true,
   "scripts": {
+    "prebuild": "pnpm --filter @yorkie-ui/components build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

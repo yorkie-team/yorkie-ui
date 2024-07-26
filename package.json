@@ -1,10 +1,12 @@
 {
   "name": "yorkie-ui",
-  "version": "0.0.1",
+  "version": "0.5.33",
   "description": "",
   "packageManager": "pnpm@9.3.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev",
+    "version": "pnpm -r exec -- npm version $npm_package_version"
   },
   "keywords": []
 }
