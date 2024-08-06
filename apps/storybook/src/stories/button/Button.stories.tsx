@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@yorkie-ui/core';
+import { Button, Flex } from '@yorkie-ui/core';
 const meta = {
   title: 'COMPONENTS / Button',
   component: Button,
@@ -85,7 +85,7 @@ export const Basic: Story = {
 export const Sizes: Story = {
   render: (args) => {
     return (
-      <>
+      <Flex gap="200" alignItems="center">
         <Button {...args} size="sm">
           SM
         </Button>
@@ -95,7 +95,7 @@ export const Sizes: Story = {
         <Button {...args} size="lg">
           LG
         </Button>
-      </>
+      </Flex>
     );
   },
 };
@@ -103,7 +103,7 @@ export const Sizes: Story = {
 export const Variant: Story = {
   render: (args) => {
     return (
-      <>
+      <Flex gap="200" alignItems="center">
         <Button {...args} variant="solid">
           Solid
         </Button>
@@ -113,7 +113,7 @@ export const Variant: Story = {
         <Button {...args} variant="link">
           Link
         </Button>
-      </>
+      </Flex>
     );
   },
 };

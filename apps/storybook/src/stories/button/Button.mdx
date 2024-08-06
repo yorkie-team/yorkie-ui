@@ -47,7 +47,7 @@ There are 3 sizes: `sm`, `md` and `lg`.
   source={{
     format: true,
     code: `
-      <div>
+      <Flex gap="200" alignItems="center">
         <Button size="sm">
           SM
         </Button>
@@ -57,7 +57,7 @@ There are 3 sizes: `sm`, `md` and `lg`.
         <Button size="lg">
           LG
         </Button>
-      </div>
+      </Flex>
     `,
   }}
 />
@@ -73,7 +73,7 @@ There are 3 types: `solid`, `outline` and `link`.
   source={{
     format: true,
     code: `
-      <div>
+      <Flex gap="200" alignItems="center">
         <Button variant="solid">
           Solid
         </Button>
@@ -83,7 +83,7 @@ There are 3 types: `solid`, `outline` and `link`.
         <Button variant="link">
           Link
         </Button>
-      </div>
+      </Flex>
     `,
   }}
 />
@@ -97,11 +97,9 @@ By using the `disabled` prop, you can quickly and easily convey to your users th
   source={{
     format: true,
     code: `
-      <div>
         <Button disabled>
           Disabled
         </Button>
-      </div>
     `,
   }}
 />
@@ -115,11 +113,9 @@ Use the defined color codes in the system to change the background for the butto
   source={{
     format: true,
     code: `
-      <div>
         <Button colorPalette="red">
           Color Palette
         </Button>
-      </div>
     `,
   }}
 />
