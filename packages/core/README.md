@@ -14,7 +14,7 @@ Import the styles and components you need from `@yorkie-ui/core`:
 
 ```tsx
 // import the styles
-import '@yorkie-ui/core/dist/styles.css';
+import '@yorkie-ui/core/styles.css';
 
 // import button component
 import { Button } from '@yorkie-ui/core';
