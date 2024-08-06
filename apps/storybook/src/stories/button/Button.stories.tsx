@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@yorkie-ui/core';
+import { Button, Flex } from '@yorkie-ui/core';
 const meta = {
   title: 'COMPONENTS / Button',
   component: Button,
@@ -39,7 +39,23 @@ const meta = {
     },
     colorPalette: {
       control: { type: 'radio' },
-      options: ['accent', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'gray', 'white', 'transparent'],
+      options: [
+        'accent',
+        'neutral',
+        'success',
+        'info',
+        'warning',
+        'danger',
+        'red',
+        'orange',
+        'yellow',
+        'green',
+        'blue',
+        'purple',
+        'gray',
+        'white',
+        'transparent',
+      ],
       description: 'Apply a predefined color palette to the button',
       table: {
         defaultValue: { summary: 'accent' },
@@ -69,7 +85,7 @@ export const Basic: Story = {
 export const Sizes: Story = {
   render: (args) => {
     return (
-      <>
+      <Flex gap="200" alignItems="center">
         <Button {...args} size="sm">
           SM
         </Button>
@@ -79,7 +95,7 @@ export const Sizes: Story = {
         <Button {...args} size="lg">
           LG
         </Button>
-      </>
+      </Flex>
     );
   },
 };
@@ -87,7 +103,7 @@ export const Sizes: Story = {
 export const Variant: Story = {
   render: (args) => {
     return (
-      <>
+      <Flex gap="200" alignItems="center">
         <Button {...args} variant="solid">
           Solid
         </Button>
@@ -97,7 +113,7 @@ export const Variant: Story = {
         <Button {...args} variant="link">
           Link
         </Button>
-      </>
+      </Flex>
     );
   },
 };
@@ -120,6 +136,20 @@ export const ColorPalette: Story = {
       <>
         <Button {...args} colorPalette="red">
           Color Palette
+        </Button>
+      </>
+    );
+  },
+};
+
+export const AsChild: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Button asChild {...args}>
+          <a href="https://yorkie.dev/yorkie-ui/" target="_blank">
+            Yorkie UI
+          </a>
         </Button>
       </>
     );

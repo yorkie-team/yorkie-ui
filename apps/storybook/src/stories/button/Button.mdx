@@ -47,7 +47,7 @@ There are 3 sizes: `sm`, `md` and `lg`.
   source={{
     format: true,
     code: `
-      <div>
+      <Flex gap="200" alignItems="center">
         <Button size="sm">
           SM
         </Button>
@@ -57,7 +57,7 @@ There are 3 sizes: `sm`, `md` and `lg`.
         <Button size="lg">
           LG
         </Button>
-      </div>
+      </Flex>
     `,
   }}
 />
@@ -66,12 +66,14 @@ There are 3 sizes: `sm`, `md` and `lg`.
 
 There are 3 types: `solid`, `outline` and `link`.
 
+(The link style has not been implemented yet.)
+
 <Canvas
   of={ButtonStories.Variant}
   source={{
     format: true,
     code: `
-      <div>
+      <Flex gap="200" alignItems="center">
         <Button variant="solid">
           Solid
         </Button>
@@ -81,7 +83,7 @@ There are 3 types: `solid`, `outline` and `link`.
         <Button variant="link">
           Link
         </Button>
-      </div>
+      </Flex>
     `,
   }}
 />
@@ -95,11 +97,9 @@ By using the `disabled` prop, you can quickly and easily convey to your users th
   source={{
     format: true,
     code: `
-      <div>
         <Button disabled>
           Disabled
         </Button>
-      </div>
     `,
   }}
 />
@@ -113,11 +113,27 @@ Use the defined color codes in the system to change the background for the butto
   source={{
     format: true,
     code: `
-      <div>
         <Button colorPalette="red">
           Color Palette
         </Button>
-      </div>
+    `,
+  }}
+/>
+
+### [Renders as a link](#button-asChild)
+
+Use the `asChild` prop to render the button as a link.
+
+<Canvas
+  of={ButtonStories.AsChild}
+  source={{
+    format: true,
+    code: `
+        <Button asChild>
+          <a href="https://yorkie.dev/yorkie-ui/" target="_blank">
+            Yorkie UI
+          </a>
+        </Button>
     `,
   }}
 />

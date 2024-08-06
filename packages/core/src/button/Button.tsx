@@ -1,9 +1,11 @@
 import { ark } from '@ark-ui/react';
-import { ButtonVariantProps, button } from '../../styled-system/recipes';
-import { styled, HTMLStyledProps } from '../../styled-system/jsx';
+import { button } from '../../styled-system/recipes';
+import { styled } from '../../styled-system/jsx';
+import type { ComponentProps } from '../../styled-system/types';
+
 import { forwardRef } from 'react';
 
-export type ButtonProps = HTMLStyledProps<'button'> & ButtonVariantProps;
+export type ButtonProps = ComponentProps<typeof StyledButton>;
 
 const StyledButton = styled(ark.button, button);
 
