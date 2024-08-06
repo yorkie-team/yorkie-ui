@@ -1,7 +1,7 @@
 {
   "name": "@yorkie-ui/storybook",
   "private": true,
-  "version": "0.5.33-rc",
+  "version": "0.5.33-rc3",
   "type": "module",
   "scripts": {
     "prebuild": "pnpm --filter @yorkie-ui/core build",
