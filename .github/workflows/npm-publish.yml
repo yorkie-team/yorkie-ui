@@ -13,11 +13,13 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+
       - name: Setup Node 🔧
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
+
       - name: Install Dependencies
         run: |
           npm install -g pnpm
@@ -28,6 +30,6 @@ jobs:
           pnpm run build
 
       - name: Deploy 🚀
-        run: pnpm publish --access public --no-git-checks
+        run: pnpm --filter @yorkie-ui/core publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
