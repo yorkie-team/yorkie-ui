@@ -1,46 +1,30 @@
 # Yorkie UI
 
-Welcome to the Yorkie UI component library!
+Yorkie UI is a set of components and styles for building Yorkie's homepage and dashboard. It is built with React and styled-components.
 
-# Get started
+## Contributing
 
-Yorkie UI is a component library that helps build UIs faster. The goal is to make building UIs more productive.
+### Building the project
 
-## Install
+To build the project, run the following command:
 
-UI components are written in React. It requires react: ^18.
+```bash
+# If you already have pnpm installed, you can skip this step
+npm install -g pnpm
 
-Install Yorkie UI to your project.
+# Install dependencies
+pnpm i
 
-```
-npm install --save @yorkie-ui/core
-```
-
-Add styles imports to the root of your project.
-
-```
-import '@yorkie-ui/core/dist/styles.css';
+# Build the project
+pnpm run build
 ```
 
-### **Use**
+### Running the project
 
-Import components you want into your UI
+To run the project, run the following command:
 
-```jsx
-import { Button } from '@yorkie-ui/core';
+```bash
+pnpm run dev
 ```
 
-and use them like so
-
-```jsx
-const example = () => (
-  <Button
-    variant="outline"
-    onClick={() => {
-      console.log('click!');
-    }}
-  >
-    Click me
-  </Button>
-);
-```
+This will open a new browser window with the storybook running on `http://localhost:6006`.
