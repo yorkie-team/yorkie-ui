@@ -141,3 +141,17 @@ export const ColorPalette: Story = {
     );
   },
 };
+
+export const AsChild: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Button asChild {...args}>
+          <a href="https://yorkie.dev/yorkie-ui/" target="_blank">
+            Yorkie UI
+          </a>
+        </Button>
+      </>
+    );
+  },
+};

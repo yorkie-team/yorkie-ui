@@ -119,3 +119,21 @@ Use the defined color codes in the system to change the background for the butto
     `,
   }}
 />
+
+### [Renders as a link](#button-asChild)
+
+Use the `asChild` prop to render the button as a link.
+
+<Canvas
+  of={ButtonStories.AsChild}
+  source={{
+    format: true,
+    code: `
+        <Button asChild>
+          <a href="https://yorkie.dev/yorkie-ui/" target="_blank">
+            Yorkie UI
+          </a>
+        </Button>
+    `,
+  }}
+/>
