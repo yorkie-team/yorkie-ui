@@ -1,6 +1,6 @@
 {
   "name": "yorkie-ui",
-  "version": "0.5.33-rc",
+  "version": "0.5.33-rc3",
   "description": "",
   "packageManager": "pnpm@9.3.0",
   "scripts": {

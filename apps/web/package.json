@@ -1,6 +1,6 @@
 {
   "name": "@yorkie-ui/web",
-  "version": "0.5.33-rc",
+  "version": "0.5.33-rc3",
   "private": true,
   "scripts": {
     "prebuild": "pnpm --filter @yorkie-ui/core build",
