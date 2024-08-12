@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { styled, type HTMLStyledProps } from '../../styled-system/jsx';
-import { flex, FlexProperties } from '../../styled-system/patterns';
+import { styled, type HTMLStyledProps } from '../../../styled-system/jsx';
+import { flex, FlexProperties } from '../../../styled-system/patterns';
 
 export type FlexProps = HTMLStyledProps<'div'> & FlexProperties;
 
