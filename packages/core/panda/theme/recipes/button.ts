@@ -99,7 +99,7 @@ export const button = defineRecipe({
     },
     size: {
       sm: {
-        textStyle: 'xs',
+        textStyle: 'sm',
         px: '300',
         py: '150',
         minHeight: '800',
@@ -109,7 +109,7 @@ export const button = defineRecipe({
         },
       },
       md: {
-        textStyle: 'sm',
+        textStyle: 'md',
         px: '400',
         py: '200',
         minHeight: '1000',
@@ -119,7 +119,7 @@ export const button = defineRecipe({
         },
       },
       lg: {
-        textStyle: 'md',
+        textStyle: 'lg',
         fontWeight: 'semibold',
         px: '600',
         py: '300',
