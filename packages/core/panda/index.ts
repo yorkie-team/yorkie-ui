@@ -5,7 +5,7 @@ import { keyframes } from './theme/keyframes';
 import { createSemanticTokens } from './theme/semantic-tokens';
 import { textStyles } from './theme/text-styles';
 import { createTokens } from './theme/tokens';
-import { recipes } from './theme/recipes';
+import { recipes, slotRecipes } from './theme/recipes';
 
 const tokens = createTokens();
 const semanticTokens = createSemanticTokens();
@@ -15,6 +15,7 @@ export const yorkiePreset = definePreset({
       breakpoints,
       keyframes,
       recipes,
+      slotRecipes,
       semanticTokens,
       textStyles,
       tokens,
