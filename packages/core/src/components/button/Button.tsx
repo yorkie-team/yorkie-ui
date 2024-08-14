@@ -1,7 +1,7 @@
 import { ark } from '@ark-ui/react';
-import { button } from '../../styled-system/recipes';
-import { styled } from '../../styled-system/jsx';
-import type { ComponentProps } from '../../styled-system/types';
+import { button } from '../../../styled-system/recipes';
+import { styled } from '../../../styled-system/jsx';
+import type { ComponentProps } from '../../../styled-system/types';
 
 import { forwardRef } from 'react';
 

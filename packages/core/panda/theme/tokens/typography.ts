@@ -1,32 +1,24 @@
 import type { Tokens } from '@pandacss/dev';
 
 export const fontSizes: Tokens['fontSizes'] = {
-  '2xs': { value: '8px', description: '0.5rem' },
-  xs: { value: '12px', description: '0.75rem' },
-  sm: { value: '14px', description: '0.875rem' },
-  md: { value: '16px', description: '1rem' },
-  lg: { value: '18px', description: '1.125rem' },
+  xs: { value: '10px', description: '0.625rem' },
+  sm: { value: '12px', description: '0.75rem' },
+  md: { value: '14px', description: '0.875rem' },
+  lg: { value: '16px', description: '1rem' },
   xl: { value: '20px', description: '1.25rem' },
   '2xl': { value: '24px', description: '1.5rem' },
   '3xl': { value: '30px', description: '1.875rem' },
   '4xl': { value: '36px', description: '2.25rem' },
   '5xl': { value: '48px', description: '3rem' },
   '6xl': { value: '60px', description: '3.75rem' },
-  '7xl': { value: '72px', description: '4.5rem' },
-  '8xl': { value: '96px', description: '6rem' },
-  '9xl': { value: '128px', description: '8rem' },
 };
 
 export const fontWeights: Tokens['fontWeights'] = {
-  thin: { value: '100' },
-  extralight: { value: '200' },
   light: { value: '300' },
-  normal: { value: '400' },
+  regular: { value: '400' },
   medium: { value: '500' },
   semibold: { value: '600' },
-  bold: { value: '700' },
   extrabold: { value: '800' },
-  black: { value: '900' },
 };
 
 export const letterSpacings: Tokens['letterSpacings'] = {
